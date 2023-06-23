@@ -1,0 +1,328 @@
+.seccion-flexbox {
+  display: flex;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.columna-scrollable {
+  flex: 0 0 20%; /* Cada columna ocupa el 25% del ancho */
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.columna-scrollable::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.columna-scrollable::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.columna-scrollable::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.qt-cont {
+  border: solid black;
+  margin-top: 27px;
+}
+
+.p-qt {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.name-qt {
+  text-align: end;
+  font-size: 14px;
+  font-family: Light;
+  margin-top: 10px;
+}
+
+.second-cont-atendeme {
+  height: 100vh;
+  margin-top: -100vh;
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.atendeme-title {
+  color: #fe6970;
+  font-size: 80px;
+  margin-left: 122px;
+  margin-top: 264px;
+  width: fit-content;
+  z-index: 100;
+}
+.atendeme-button {
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+}
+
+/* Gallery */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px; /* Adjust the gap between the boxes as needed */
+  justify-items: center;
+  align-items: center;
+  /* overflow: hidden; */
+  height: 100vh;
+  transform: translateY(
+    calc(50% - 100vh / 2 - 175px)
+  ); /* Adjust the translateY value */
+}
+
+.grid-container:hover {
+  transform: translateY(0%);
+}
+
+.grid-container::before,
+.grid-container::after {
+  content: ""; /* Add this line back */
+  display: block;
+}
+
+.grid-container::before {
+  grid-column: 1 / 6; /* Extend across all columns */
+  grid-row: 1 / 2; /* Place before the first row */
+}
+
+.grid-container::after {
+  grid-column: 1 / 6; /* Extend across all columns */
+  grid-row: 4 / 5; /* Place after the last row */
+}
+
+.grid-container > div {
+  width: 300px; /* Adjust the width to make the boxes wider */
+  height: 300px; /* Adjust the height to make the boxes taller */
+  background-color: #ccc;
+  margin: 0 10px; /* Adjust the horizontal margin as needed */
+}
+
+.box {
+  background-size: cover;
+  transition: transform 0.3s;
+  border: solid black 0.5px;
+}
+.box:hover {
+  transform: scale(1.2);
+}
+/* Pruebas */
+.expanded-container {
+  width: 120vw; /* Make the container 20% wider than the viewport */
+  height: 120vh; /* Make the container 20% taller than the viewport */
+  /* margin: -10vh -10vw; Center the container horizontally and vertically */
+  background-color: gray; /* Set the background color to gray */
+  transition: transform 0.2s ease; /* Add a smooth transition effect */
+}
+.expanded-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* .container {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  position: absolute;
+} */
+
+/* Pushmorgen */
+.cont-push-morgen {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.container-push {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+}
+/* .interactivo-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+
+/* Particles */
+.particles-cont {
+  height: 100vh;
+}
+
+/* Morgen Falling */
+
+.morgens-falling {
+  position: sticky;
+}
+
+.image-falling-button {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+}
+
+.falling-images {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.falling-images img {
+  position: absolute;
+  width: 50px; /* Adjust the width as needed */
+  animation: fallingAnimation 1s linear forwards,
+    bouncingAnimation 0.3s ease-in-out infinite;
+}
+
+@keyframes fallingAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes bouncingAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Malo */
+.falling-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.falling-text-cont {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.falling-button {
+  border: solid 1px black;
+  background-color: #dccb00;
+  cursor: pointer;
+}
+
+.falling-button {
+  margin-left: 50px;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 100px;
+}
+
+/* Comunidad */
+
+.comunidad-cont {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.comunidad-left {
+  width: 60%;
+
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.comunidad-right {
+  width: 40%;
+}
+.comu-right-top {
+  height: 50%;
+  background-color: #dc3349;
+  margin: 0;
+  border: solid black;
+  border-bottom: 0;
+}
+
+.comu-right-bottom {
+  height: 50%;
+  background-color: #dccb00;
+  margin: 0;
+  border: solid black;
+}
+.comunidad-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.button-text-comu {
+  padding-top: 100px;
+  padding-left: 125px;
+}
+
+/* YoMor */
+
+.yoMor-text {
+  color: white;
+  width: 500px;
+  font-size: 25px;
+  margin-left: 265px;
+}
+
+.yoMor-text-link {
+  display: flex;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-family: "Light";
+  margin-left: 265px;
+  text-decoration: underline;
+  z-index: 1000;
+}
+.spikes {
+  position: relative;
+  background: #dccb00;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.spikes::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: -0%;
+  bottom: 100%;
+  z-index: 10;
+  display: block;
+  height: 50px;
+  background-size: 50px 100%;
+  background-image: linear-gradient(45deg, #dccb00 25%, transparent 25%),
+    linear-gradient(-45deg, #dccb00 25%, transparent 25%);
+
+  background-position: 0 100%;
+}
+
+/* star */

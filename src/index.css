@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "ExtraLight";
+  src: local("ClashDisplay-Extralight"),
+    url("./Fonts/ClashDisplay-Extralight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Light";
+  src: local("ClashDisplay-Light"),
+    url("./Fonts/ClashDisplay-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium";
+  src: local("ClashDisplay-Medium"),
+    url("./Fonts/ClashDisplay-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular";
+  src: local("ClashDisplay-Regular"),
+    url("./Fonts/ClashDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SemiBold";
+  src: local("ClashDisplay-Semibold"),
+    url("./Fonts/ClashDisplay-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold";
+  src: local("ClashDisplay-Bold"),
+    url("./Fonts/ClashDisplay-Bold.ttf") format("truetype");
+}

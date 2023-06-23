@@ -1,0 +1,395 @@
+body {
+  cursor: url("../Assets/svg/probando.png"), auto;
+  font-family: "Regular";
+  margin: 0 auto;
+}
+a {
+  cursor: url("../Assets/svg/probando.png"), auto;
+}
+
+.cursor-balde {
+  cursor: url("../Assets/svg/balde.png"), auto;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  font-size: 30px;
+  font-family: "SemiBold";
+}
+
+h4 {
+  font-family: "Medium";
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.custom-btn__text {
+  color: white;
+}
+
+.inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 100;
+}
+
+/* #full-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100vh;
+} */
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  background-repeat: none;
+}
+
+#full-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 775px;
+}
+
+.contenedor-custom {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  margin-top: 100px;
+}
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  min-height: 775px;
+  margin-top: -20px;
+}
+
+.circle-wrapper {
+  position: relative;
+}
+
+.circle-button {
+  position: absolute;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 50px;
+  right: 70px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.plus-icon {
+  cursor: url("../Assets/svg/probando.png"), auto !important;
+  cursor: pointer;
+  display: flex;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #dfb000;
+  color: #fff;
+  transition: all 1s ease;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.menu-open {
+  transform: translateX(0%);
+}
+
+/* NAVBAR */
+.navbar-container {
+  display: flex;
+  height: 100vh;
+}
+
+.navbar-left-section {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.navbar-right-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.navbar-title {
+  font-size: 55px;
+  line-height: 0;
+  color: black;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  border: solid black;
+  margin-left: 100px;
+}
+
+.toggle-button-link {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-button-link.active {
+  background-color: black;
+  color: #dfb000;
+}
+.contact {
+  margin-left: 100px;
+  color: black;
+}
+.contact-me {
+  margin-left: 100px;
+}
+
+.news {
+  font-size: 14px;
+  font-family: Medium;
+  line-height: 17px;
+  color: black;
+}
+/* input {
+  width: 330px;
+  height: 45px;
+  background: transparent;
+  border: solid;
+} */
+
+/* input {
+  width: "100%";
+  height: "100%";
+  background: "transparent";
+  border: "solid";
+  border-width: "1px";
+  border-color: "black";
+  padding-left: "10px";
+}  */
+.email-container {
+  width: 330px;
+  height: 45px;
+  position: relative;
+}
+
+.email-input {
+  width: 83%;
+  height: 100%;
+  background: transparent;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  padding-left: 10px;
+  padding-right: 45px;
+  font-family: Medium;
+}
+.email-input::placeholder {
+  color: black;
+}
+
+.email-input:focus {
+  outline: black; /* Remove the focus outline */
+}
+
+.submit-button {
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 28%;
+  height: calc(100% - -2px);
+  background: #dccb00;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Medium;
+  border-left: 1px solid black;
+}
+
+.yoMor:hover {
+  color: #dc3349;
+  transition: color 0.5s;
+}
+.obras:hover {
+  color: #005da2;
+  transition: color 0.5s;
+}
+.comunidad:hover {
+  color: #ae79ef;
+  transition: color 0.5s;
+}
+.revista:hover {
+  color: #7d9f00;
+  transition: color 0.5s;
+}
+.interactivo:hover {
+  color: #4590e6;
+  transition: color 0.5s;
+}
+.merch:hover {
+  color: #dc3349;
+  transition: color 0.5s;
+}
+.agenda:hover {
+  color: #ff3910;
+  transition: color 0.5s;
+}
+
+/* pop-upcont */
+.popup-container {
+  position: fixed;
+  top: 70px;
+  bottom: 70px;
+  left: 100px;
+  right: 100px;
+  background-color: var(--color);
+  padding: 20px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.8);
+  min-height: 475px;
+}
+
+.popup-container.open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-container .close-button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.popup-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* FORM */
+
+.special-form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.special-form h3 {
+  margin-right: 10px;
+  color: white;
+  font-size: 40px;
+}
+
+.special-form input,
+.special-form textarea {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 34px;
+  padding: 5px;
+
+  color: white;
+  font-size: 40px;
+  font-family: Medium;
+  width: 100px;
+}
+
+.popup-form-cont {
+  padding-top: 100px;
+  padding-left: 150px;
+}
+
+@media (max-height: 750px) {
+  .popup-form-cont {
+    padding-top: 30px;
+  }
+}
+
+.special-form input::placeholder,
+.special-form textarea::placeholder {
+  /* color: rgba(0, 0, 0, 0.4); */
+  color: #ffffff;
+  opacity: 0.21;
+  font-size: 40px;
+  font-family: Medium;
+}
+
+.special-form input[type="number"]::-webkit-inner-spin-button,
+.special-form input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: none;
+}
+
+.special-form input[type="number"] {
+  width: 90px;
+}
+
+.special-form input[type="text"] {
+  width: 200px;
+}
+
+.special-form textarea {
+  width: 950px;
+  height: 200px;
+  margin-left: -8px;
+  resize: none;
+}

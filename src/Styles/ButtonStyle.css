@@ -1,0 +1,201 @@
+.custom-btn {
+  display: inline-flex;
+  position: relative;
+  color: #000;
+  text-align: center;
+}
+
+.custom-btn:hover .custom-btn__wrapper {
+  transform: translate(10px, -10px);
+}
+
+.HoverEffect {
+  display: inline-block;
+  position: absolute;
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HoverEffect,
+.HoverEffect__basic {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.HoverEffect__basic {
+  z-index: 1;
+}
+
+.HoverEffect__basic__bg-c-button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.1s ease-out;
+}
+/* Probe descomentando y funcionó */
+.HoverEffect__basic__bg-c-button--01 {
+  background: var(--color);
+  z-index: 3;
+}
+
+.HoverEffect__basic__bg-c-button--02 {
+  /* background: var(--color); */
+  z-index: 2;
+}
+.custom-btn:hover {
+  /* background: var(--hover-color); */
+  z-index: 2;
+}
+
+.HoverEffect__basic__bg-c-button--03 {
+  background: var(--color);
+  z-index: 1;
+}
+/* Para poder ver el hoverrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+
+/* .custom-btn:hover .HoverEffect__basic__bg-c-button--01 {
+  background: var(--hover-color);
+} */
+
+.custom-btn:hover .HoverEffect__basic__bg-c-button--02 {
+  background: var(--hover-color);
+}
+
+.custom-btn:hover .HoverEffect__basic__bg-c-button--03 {
+  background: var(--hover-color);
+}
+
+.custom-btn:hover .HoverEffect__basic__bg-c-button {
+  border: 2px solid black;
+  /* border-radius: 47px; */
+}
+/* Para pner el hover out */
+
+.HoverEffect--oval .HoverEffect__basic__bg-c-button {
+  border-radius: 200px;
+}
+
+.c-button--round:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--01,
+.c-infos-widget:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--01,
+.c-listen-widget__wrapper:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--01,
+.c-podcast-card__icon:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--01,
+.c-title-button:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--01,
+.custom-btn:hover > .HoverEffect--enabled .HoverEffect__basic__bg-c-button--01 {
+  background: var(--hover-color);
+  top: -10px;
+  left: 10px;
+}
+
+.c-button--round:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--02,
+.c-infos-widget:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--02,
+.c-listen-widget__wrapper:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--02,
+.c-podcast-card__icon:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--02,
+.c-title-button:hover
+  > .HoverEffect--enabled
+  .HoverEffect__basic__bg-c-button--02,
+.custom-btn:hover > .HoverEffect--enabled .HoverEffect__basic__bg-c-button--02 {
+  top: -5px;
+  left: 5px;
+  opacity: 1;
+}
+
+.custom-btn__wrapper {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-out;
+  line-height: 30px;
+  width: var(--width);
+  height: var(--height);
+}
+
+.btn-small,
+.custom-btn--small {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.125rem;
+  letter-spacing: 0;
+  padding: 25px;
+  /* padding: 1.875rem 2.375rem; */
+  /* width: 210px; */
+  /* height: 55px; */
+}
+
+/* .circulo {
+  position: absolute;
+  width: 696px;
+  height: 696px;
+  left: calc(50% - 696px / 2);
+  top: calc(42% - 696px / 2 + 69px);
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #fe6970;
+  stroke-dasharray: 0 0 20 20;
+}
+
+.circulo-animado {
+  animation: girar 10s infinite linear;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.circulo-animado {
+  position: absolute;
+  width: 696px;
+  height: 696px;
+  left: calc(50% - 696px / 2);
+  top: calc(50% - 696px / 2);
+  animation: rotate 30s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #fe6970;
+  stroke-dasharray: 0 0 20 20;
+}
