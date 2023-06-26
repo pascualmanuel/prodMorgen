@@ -92,7 +92,7 @@ function SpikeButton() {
               }
             }}
           />
-          <div
+          {/* <div
             className="center-text"
             style={{
               position: "absolute",
@@ -112,7 +112,7 @@ function SpikeButton() {
             >
               Comunidad
             </p>
-          </div>
+          </div> */}
         </div>
       </Link>
       {/* <div>

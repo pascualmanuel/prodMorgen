@@ -3,11 +3,9 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
-import YoMorBack from "../Assets/yomor2.png";
-import YoMorBackDos from "../Assets/yomor3.png";
-import YoMorBackTres from "../Assets/yomor4.png";
-import YoMorBack4 from "../Assets/yomor5.webp";
-import Prueba from "../Assets/pruebita.png";
+import YoMorBack from "../Assets/blabla.webp";
+import YoMorBackDos from "../Assets/blabla2.webp";
+import YoMorBack4 from "../Assets/blabla3.webp";
 import SpikeButton from "../Components/SpikeButton";
 import Itau from "../Assets/svg/itau-logo.png";
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
@@ -28,7 +26,7 @@ function YoMorgen() {
     height: "950px",
     backgroundImage: `url(${YoMorBackDos})`,
     backgroundRepeat: " no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundPosition: "top right",
   };
   const additionalTextStyle = {
@@ -47,7 +45,7 @@ function YoMorgen() {
   return (
     <>
       <div style={{ backgroundColor: "black", minWidth: "1250px" }}>
-        {/* <BackgroundDiv /> */}
+        <BackgroundDiv />
         <div style={YoMorStyle}></div>
         <div style={YoMorStyleDos}>
           <div>
@@ -130,14 +128,16 @@ function YoMorgen() {
               Ailin Kirjner
             </h4>
           </div>
-          <SpikeButtonTwo />
+          <div>
+            <SpikeButtonTwo />
+            <SpikeButton />
+          </div>
         </div>
-        <div style={{ backgroundColor: "#dccb00", height: 200 }}>
+        {/* <div style={{ backgroundColor: "#dccb00", height: 200 }}>
           <SpikeButton />
-        </div>
+        </div> */}
       </div>
-      {/* <div style={{ backgroundColor: "#dccb00" }}> */}
-      {/* </div> */}
+
       <div className="footer-yomor">
         <h4 style={{ marginRight: 25, fontFamily: "Light" }}>
           Con el apoyo de
