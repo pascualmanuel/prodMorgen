@@ -319,11 +319,18 @@
   z-index: 10;
   display: block;
   height: 50px;
-  background-size: 50px 100%;
-  background-image: linear-gradient(45deg, #dccb00 25%, transparent 25%),
-    linear-gradient(-45deg, #dccb00 25%, transparent 25%);
-
+  /* Adjust the background-size and background-position values below */
+  background-size: 100px 100%;
+  background-image: linear-gradient(45deg, #dccb00 33.33%, transparent 33.33%),
+    linear-gradient(-45deg, #dccb00 33.33%, transparent 33.33%);
   background-position: 0 100%;
 }
 
 /* star */
+.footer-yomor {
+  background-color: #dccb00;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
