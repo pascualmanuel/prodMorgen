@@ -3,6 +3,7 @@ import "../Styles/Atendeme.css";
 import Img1 from "../Assets/svg/Star.svg";
 import Img2 from "../Assets/svg/Star2.svg";
 import Img3 from "../Assets/svg/Star3.svg";
+
 import { Link } from "react-router-dom";
 
 function SpikeButton() {
@@ -12,9 +13,12 @@ function SpikeButton() {
         <div
           className="cont-svgs"
           style={{
-            position: "sticky",
+            position: "absolute",
+            marginTop: "-137px",
+            right: "400px",
             width: 290,
             height: 290,
+            zIndex: 100,
           }}
         >
           <img
@@ -88,12 +92,12 @@ function SpikeButton() {
               }
             }}
           />
-          <div
+          {/* <div
             className="center-text"
             style={{
               position: "absolute",
-              top: "38%",
-              left: "21%",
+              top: "40%",
+              left: "26%",
               // transform: "translate(-50%, 187px%)",
               zIndex: "10",
               pointerEvents: "none",
@@ -106,9 +110,9 @@ function SpikeButton() {
                 fontSize: "24px",
               }}
             >
-              Ir a Comunidad
+              Comunidad
             </p>
-          </div>
+          </div> */}
         </div>
       </Link>
       {/* <div>

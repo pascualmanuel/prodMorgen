@@ -3,12 +3,14 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
-import YoMorBack from "../Assets/yomor2.png";
-import YoMorBackDos from "../Assets/yomor3.png";
-import YoMorBackTres from "../Assets/yomor4.png";
-import YoMorBack4 from "../Assets/yomor5.png";
-import Prueba from "../Assets/pruebita.png";
+import YoMorBack from "../Assets/blabla.webp";
+import YoMorBackDos from "../Assets/blabla2.webp";
+import YoMorBack4 from "../Assets/blabla3.webp";
 import SpikeButton from "../Components/SpikeButton";
+import Itau from "../Assets/svg/itau-logo.png";
+import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
+import SpikeButtonTwo from "../Components/SpikeButtonTwo";
+
 function YoMorgen() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
 
@@ -25,7 +27,7 @@ function YoMorgen() {
     backgroundImage: `url(${YoMorBackDos})`,
     backgroundRepeat: " no-repeat",
     backgroundSize: "contain",
-    backgroundPosition: "right",
+    backgroundPosition: "top right",
   };
   const additionalTextStyle = {
     // backgroundImage: `url(${YoMorBackTres})`,
@@ -38,7 +40,7 @@ function YoMorgen() {
 
   if (showAdditionalText) {
     YoMorStyleDos.backgroundImage = `url(${YoMorBack4})`;
-    YoMorStyleDos.height = "2000px";
+    YoMorStyleDos.height = "1487px";
   }
   return (
     <>
@@ -126,10 +128,29 @@ function YoMorgen() {
               Ailin Kirjner
             </h4>
           </div>
-          <SpikeButton />
+          <div>
+            <SpikeButtonTwo />
+            <SpikeButton />
+          </div>
         </div>
+        {/* <div style={{ backgroundColor: "#dccb00", height: 200 }}>
+          <SpikeButton />
+        </div> */}
       </div>
-      <div></div>
+
+      <div className="footer-yomor">
+        <h4 style={{ marginRight: 25, fontFamily: "Light" }}>
+          Con el apoyo de
+        </h4>
+
+        <img
+          src={Caba}
+          width={225}
+          height={55}
+          style={{ marginRight: 100, marginLeft: 70 }}
+        />
+        <img src={Itau} width={60} height={60} />
+      </div>
     </>
   );
 }
