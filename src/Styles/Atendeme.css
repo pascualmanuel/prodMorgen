@@ -299,6 +299,7 @@
   margin-left: 265px;
   text-decoration: underline;
   /* z-index: 1000; */
+  pointer-events: auto;
 }
 .spikes {
   position: relative;

@@ -78,24 +78,35 @@ function YoMorgen() {
                 </p>
               </div>
             ) : (
-              <p className="yoMor-text-link" onClick={handleClick}>
-                <svg
-                  width="25"
-                  height="25"
-                  viewBox="0 0 45 45"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{ marginRight: "10px" }}
-                >
-                  <path d="M5 22L40 22" stroke="white" strokeWidth="3" />
-                  <path
-                    d="M22.5 39.5L22.5 4.5"
-                    stroke="white"
-                    strokeWidth="3"
-                  />
-                </svg>
-                Seguir Leyendo
-              </p>
+              <>
+                <p className="yoMor-text-link">
+                  <svg
+                    width="25"
+                    height="25"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ marginRight: "10px" }}
+                  >
+                    <path d="M5 22L40 22" stroke="white" strokeWidth="3" />
+                    <path
+                      d="M22.5 39.5L22.5 4.5"
+                      stroke="white"
+                      strokeWidth="3"
+                    />
+                  </svg>
+                  Seguir Leyendo
+                </p>
+                <div
+                  onClick={handleClick}
+                  style={{
+                    zIndex: 10000,
+                    position: "absolute",
+                    width: "485px",
+                    height: "75px",
+                  }}
+                ></div>
+              </>
             )}
           </div>
         </div>
