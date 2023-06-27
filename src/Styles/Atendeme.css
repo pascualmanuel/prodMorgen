@@ -256,7 +256,7 @@
   width: 40%;
 }
 .comu-right-top {
-  height: 49.99%;
+  height: 50%;
   background-color: #dc3349;
   margin: 0;
   border: solid black;
@@ -264,7 +264,7 @@
 }
 
 .comu-right-bottom {
-  height: 49.5%;
+  height: 50%;
   background-color: #dccb00;
   margin: 0;
   border: solid black;
@@ -328,10 +328,13 @@
 
 /* star */
 .footer-yomor {
+  position: absolute;
   background-color: #dccb00;
   height: 130px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 100px;
+  z-index: 100;
 }
