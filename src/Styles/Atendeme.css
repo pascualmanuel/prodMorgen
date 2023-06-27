@@ -328,10 +328,13 @@
 
 /* star */
 .footer-yomor {
+  position: absolute;
   background-color: #dccb00;
   height: 130px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 100px;
+  z-index: 100;
 }

@@ -1,4 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import "./Styles/App.css";
 import "./Fonts/ClashDisplay-Bold.ttf";
 import "./Fonts/ClashDisplay-Extralight.ttf";
@@ -15,15 +17,24 @@ import Bueno from "./Components/Bueno";
 
 import Interactivo from "./Pages/Interactivo";
 import MorgensFallingCopy from "./Components/MorgensFallingCopy";
-
 import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
 import SpikeButton from "./Components/SpikeButton";
+
+function ScrollToTop() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

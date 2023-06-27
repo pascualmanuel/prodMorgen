@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import ComuBack from "../Assets/comunidad/comu-back.png";
-import ComuBackDos from "../Assets/comunidad/frame.png";
+import ComuBackDos from "../Assets/comunidad/frame.webp";
 
 import BackgroundDiv from "../Components/BackgroundDiv";
 import CustomButton from "../Components/CustomButton";
@@ -10,7 +10,7 @@ import CustomButton from "../Components/CustomButton";
 function Comunidad() {
   const comStyle = {
     backgroundImage: `url(${ComuBackDos})`,
-    backgroundPosition: "bottom",
+
     backgroundRepeat: " no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "bottom",
@@ -91,6 +91,9 @@ function Comunidad() {
           </div>
         </div>
       </div>
+      {/* <div
+        style={{ height: "200vh", width: "100vw", backgroundColor: "red" }}
+      ></div> */}
     </>
   );
 }

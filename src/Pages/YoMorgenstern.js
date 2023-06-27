@@ -112,7 +112,7 @@ function YoMorgen() {
             )}
           </div>
         </div>
-        <div className="spikes" style={{ zIndex: "100" }}>
+        <div className="spikes" style={{ zIndex: "110" }}>
           <div>
             <h2 style={{ fontSize: "50px" }}>Idea y desarrollo:</h2>
 
