@@ -91,6 +91,9 @@ function Comunidad() {
           </div>
         </div>
       </div>
+      {/* <div
+        style={{ height: "200vh", width: "100vw", backgroundColor: "red" }}
+      ></div> */}
     </>
   );
 }
