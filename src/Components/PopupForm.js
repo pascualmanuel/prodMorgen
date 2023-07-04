@@ -1,13 +1,13 @@
 import React from "react";
 import CustomButton from "./CustomButton";
-import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 const PopupForm = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   const location = useLocation();
-  const { pathname } = window.location;
+  const {pathname} = window.location;
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,13 +41,14 @@ const PopupForm = () => {
       : "Presentate brevemente, y contanos de qué forma te gustaría participar";
 
   const prueba = (
-    <span style={{ fontSize: "20px", fontFamily: "Light" }}>Envíar</span>
+    <span style={{fontSize: "20px", fontFamily: "Light"}}>Envíar</span>
   );
 
   return (
     <>
       <div className="popup-form-cont">
         <form className="special-form">
+          <p className="participar-popup">PARTICIPAR</p>
           {pathname !== "/gallery" && (
             <div className="form-row">
               <h3>Me llamo</h3>

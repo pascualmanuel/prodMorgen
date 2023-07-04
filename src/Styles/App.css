@@ -77,7 +77,11 @@ h4 {
   min-height: 775px;
   margin-top: -20px;
 }
-
+@media (max-height: 720px) {
+  .circle-container {
+    margin-top: -51px;
+  }
+}
 .circle-wrapper {
   position: relative;
 }
@@ -283,6 +287,7 @@ h4 {
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: scale(0.8);
   min-height: 475px;
+  min-width: 1000px;
 }
 
 .popup-container.open {
@@ -317,6 +322,19 @@ h4 {
   pointer-events: auto;
 }
 
+.participar-popup {
+  color: white;
+  font-family: SemiBold;
+}
+
+/* FORM SUPPORT */
+.support-cont {
+  display: flex;
+  margin-left: 60px;
+  margin-right: 60px;
+  align-items: center;
+  height: 100%;
+}
 /* FORM */
 
 .special-form {
@@ -352,15 +370,20 @@ h4 {
 }
 
 .popup-form-cont {
-  padding-top: 100px;
-  padding-left: 150px;
+  /* padding-top: 100px;
+  padding-left: 150px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-@media (max-height: 750px) {
+/* @media (max-height: 750px) {
   .popup-form-cont {
-    padding-top: 30px;
+    padding-top: 50px;
   }
-}
+} */
 
 .special-form input::placeholder,
 .special-form textarea::placeholder {
@@ -392,4 +415,132 @@ h4 {
   height: 200px;
   margin-left: -8px;
   resize: none;
+}
+
+/* mercadopafgo button */
+
+:root {
+  --switches-bg-color: #7d9f00;
+  --switches-label-color: #000;
+  --switch-bg-color: #dccb00;
+  --switch-text-color: #000;
+}
+
+.switches-container {
+  width: 16rem;
+  position: relative;
+  display: flex;
+  padding: 0;
+  position: relative;
+  background: var(--switches-bg-color);
+  line-height: 3rem;
+  border-radius: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: solid;
+  font-family: Medium;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.switches-container label {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--switches-label-color);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.switch-wrapper {
+  position: absolute;
+  top: -1px;
+  right: 128px;
+  bottom: 0px;
+  width: 50%;
+  padding-top: 1px;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  /* transition: transform 1s; */
+  /* height: 43px; */
+}
+
+/* switch box highlighter */
+.switch {
+  border-radius: 3rem;
+  background: var(--switch-bg-color);
+  height: 100%;
+}
+
+.switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  color: var(--switch-text-color);
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: -1px;
+  border: solid;
+  border-radius: 100px;
+}
+
+/* slide the switch box from right to left */
+.switches-container input:nth-of-type(1):checked ~ .switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.switches-container input:nth-of-type(2):checked ~ .switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.switches-container
+  input:nth-of-type(1):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.switches-container
+  input:nth-of-type(2):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(2) {
+  opacity: 1;
+}
+
+.right-cont-pop-community {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: -50px;
+}
+
+.support-button {
+  height: 80px;
+  border-radius: 100px;
+  border: solid;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Medium;
 }

@@ -1,20 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import Matter from "matter-js";
 import MorAzul from "../Assets/interactivo/particles/mor-azul2.png";
 import MorLila from "../Assets/interactivo/particles/mor-lila2.png";
 import MorMaiz from "../Assets/interactivo/particles/mor-maiz2.png";
 import MorRojo from "../Assets/interactivo/particles/mor-rojo2.png";
-
+import Mormor from "../Assets/interactivo/particles/prueba2.png";
 const MatterJSDemo = () => {
   const canvasRef = useRef(null);
   const engineRef = useRef(null);
   const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
 
   const createObject = () => {
-    const { Bodies, Composite } = Matter;
-    const x = Math.random() * (window.innerWidth - 80) + 40; // Random X position within the canvas width
+    const {Bodies, Composite} = Matter;
+    const x = Math.random() * (window.innerWidth - 80) + 40;
+    const angleInDegrees = Math.random() * 140; // Generate a random angle between 0 and 140 degrees
+    const angleInRadians = (angleInDegrees * Math.PI) / 180; // Convert the angle from degrees to radians
+
     const box = Bodies.rectangle(x, 0, 80, 230, {
-      //80 de ancho 200 de largo
+      angle: angleInRadians, // Set the initial angle of the body
       render: {
         sprite: {
           texture: textures[Math.floor(Math.random() * textures.length)],
@@ -28,15 +31,8 @@ const MatterJSDemo = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const {
-      Engine,
-      Render,
-      Runner,
-      Bodies,
-      Composite,
-      Mouse,
-      MouseConstraint,
-    } = Matter;
+    const {Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint} =
+      Matter;
 
     // create an engine
     const engine = Engine.create();
@@ -51,6 +47,9 @@ const MatterJSDemo = () => {
         wireframes: false,
         width: window.innerWidth,
         height: 690,
+        pixelRatio: "auto",
+        textureFilter: "linear", // or 'nearest'
+        pixelRatio: 2, // or 3
       },
     });
 
@@ -137,11 +136,11 @@ const MatterJSDemo = () => {
   return (
     <div className="falling-cont">
       <div className="falling-text-cont">
-        <h4 style={{ fontSize: "50px" }}>
-          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar
+        <h4 style={{fontSize: "50px"}}>
+          <span style={{textDecoration: "line-through"}}>No</span> hay lugar
           para un otro
         </h4>
-        <h3 onClick={addButtonClickHandler} className="falling-button">
+        <h3 onClick={addButtonClickHandler} className="falling-button" >
           Sumar otro
         </h3>
       </div>
