@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import {Link} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import {useState} from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
-import YoMorBack from "../Assets/blabla.webp";
-import YoMorBackDos from "../Assets/blabla2.webp";
-import YoMorBack4 from "../Assets/blabla3.webp";
+import YoMorBack from "../Assets/yomor/yomor1-1.png";
+import YoMorBackDos from "../Assets/yomor/yomor1-2.png";
+import YoMorBack4 from "../Assets/yomor/yomor1-3.png";
 import SpikeButton from "../Components/SpikeButton";
 import Itau from "../Assets/svg/itau-logo.png";
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
@@ -44,7 +44,7 @@ function YoMorgen() {
   }
   return (
     <>
-      <div style={{ backgroundColor: "black", minWidth: "1250px" }}>
+      <div style={{backgroundColor: "black", minWidth: "1250px"}}>
         <BackgroundDiv />
         <div style={YoMorStyle}></div>
         <div style={YoMorStyleDos}>
@@ -55,7 +55,7 @@ function YoMorgen() {
               Parte de un único dibujo, un único modelo, no hay lugar para un
               Otro. Es uno y a la vez una reiteración de hombres inalterables,
               inexpresivos, inalámbricos. Es personaje y al mismo tiempo
-              escenario. 
+              escenario.
             </p>
             {showAdditionalText ? (
               <div style={additionalTextStyle}>
@@ -88,7 +88,7 @@ function YoMorgen() {
                     viewBox="0 0 45 45"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    style={{ marginRight: "10px" }}
+                    style={{marginRight: "10px"}}
                   >
                     <path d="M5 22L40 22" stroke="white" strokeWidth="3" />
                     <path
@@ -112,9 +112,9 @@ function YoMorgen() {
             )}
           </div>
         </div>
-        <div className="spikes" style={{ zIndex: "110" }}>
+        <div className="spikes" style={{zIndex: "110"}}>
           <div>
-            <h2 style={{ fontSize: "50px" }}>Idea y desarrollo:</h2>
+            <h2 style={{fontSize: "50px"}}>Idea y desarrollo:</h2>
 
             <h4
               style={{
@@ -139,17 +139,15 @@ function YoMorgen() {
       </div>
 
       <div className="footer-yomor">
-        <h4 style={{ marginRight: 25, fontFamily: "Light" }}>
-          Con el apoyo de
-        </h4>
+        <h4 style={{marginRight: 25, fontFamily: "Light"}}>Con el apoyo de</h4>
 
         <img
           src={Caba}
           width={225}
           height={55}
-          style={{ marginRight: 100, marginLeft: 70 }}
+          style={{marginRight: 100, marginLeft: 70}}
         />
-        <img src={Itau} width={60} height={60} />
+        <img src={Itau} width={50} height={50} />
       </div>
     </>
   );

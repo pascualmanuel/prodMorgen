@@ -3,7 +3,7 @@ import "../Styles/Atendeme.css";
 import Img1 from "../Assets/svg/Star2-1.svg";
 import Img2 from "../Assets/svg/Star2-2.svg";
 import Img3 from "../Assets/svg/Star2-3.svg";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function SpikeButtonTwo() {
   return (
@@ -19,11 +19,11 @@ function SpikeButtonTwo() {
         >
           <img
             src={Img1}
-            alt="Image 1"
+            alt="Obras"
             className="spike-b2-cls-2"
             style={{
               position: "absolute",
-              left: 0,
+              left: 1,
               top: 0,
               transition: "transform 0.5s",
               zIndex: 3,
@@ -48,7 +48,7 @@ function SpikeButtonTwo() {
           />
           <img
             src={Img2}
-            alt="Image 2"
+            alt="obras"
             className="spike-b2-cls-3"
             style={{
               position: "absolute",
@@ -61,7 +61,7 @@ function SpikeButtonTwo() {
           />
           <img
             src={Img3}
-            alt="Image 3"
+            alt="obras"
             className="spike-b2-cls-4"
             style={{
               position: "absolute",

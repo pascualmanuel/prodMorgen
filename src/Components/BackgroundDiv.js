@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import "../Styles/App.css";
 import MorgenImg from "../Assets/MORGEN_AMARILLO.png";
+import MorgenImgSvg from "../Assets/morgen-svg.svg";
 
 const BackgroundDiv = () => {
   const canvasRef = useRef(null);
@@ -79,17 +80,18 @@ const BackgroundDiv = () => {
       <div ref={containerRef}>
         <canvas
           ref={canvasRef}
-          style={{ position: "fixed", top: 0, left: 0, zIndex: "100" }}
+          style={{position: "fixed", top: 0, left: 0, zIndex: "100"}}
         />
         <div className="wrapper">
           <div className="inside">
-            <h2 style={{ fontSize: "100px", color: "white", zIndex: "2" }}>
+            <h2 style={{fontSize: "100px", color: "white", zIndex: "2"}}>
               Yo, Morgenstern
             </h2>
             <img
-              src={MorgenImg}
+              src={MorgenImgSvg}
               alt="Morgen"
-              style={{ position: "absolute" }}
+              style={{position: "absolute"}}
+              width={200}
             />
           </div>
           {/* <MorgenGirando /> */}

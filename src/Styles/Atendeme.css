@@ -224,7 +224,7 @@
 .falling-button {
   border: solid 1px black;
   background-color: #dccb00;
-  cursor: pointer;
+  cursor: url("../Assets/svg/probando.png"), auto !important;
 }
 
 .falling-button {
@@ -335,6 +335,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 200px;
+  padding-bottom: 40px;
+
   z-index: 100;
 }
