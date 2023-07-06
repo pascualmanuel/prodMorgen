@@ -4,7 +4,7 @@ import Img1 from "../Assets/svg/Star.svg";
 import Img2 from "../Assets/svg/Star2.svg";
 import Img3 from "../Assets/svg/Star3.svg";
 
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function SpikeButton() {
   return (
@@ -23,7 +23,7 @@ function SpikeButton() {
         >
           <img
             src={Img1}
-            alt="Image 1"
+            alt="SpikeButton"
             className="cls-2"
             style={{
               position: "absolute",
@@ -52,7 +52,7 @@ function SpikeButton() {
           />
           <img
             src={Img2}
-            alt="Image 2"
+            alt="SpikeButton"
             className="cls-3"
             style={{
               position: "absolute",
@@ -65,7 +65,7 @@ function SpikeButton() {
           />
           <img
             src={Img3}
-            alt="Image 3"
+            alt="SpikeButton"
             className="cls-4"
             style={{
               position: "absolute",

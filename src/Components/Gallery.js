@@ -84,6 +84,7 @@ const ImageSection = () => {
   }, []);
 
   const [images, setImages] = useState([]);
+  
   useEffect(() => {
     const fetchImages = async () => {
       try {
