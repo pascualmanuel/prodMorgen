@@ -544,3 +544,87 @@ h4 {
   justify-content: center;
   font-family: Medium;
 }
+
+/* AGENDA */
+.agenda-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+.left-agenda-cont {
+  display: flex;
+  width: 60%;
+  background-image: url("../Assets/perro-morgen.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 90px;
+  align-items: center;
+}
+
+.right-agenda-cont {
+  width: 40%;
+  border-left: 2px solid black;
+  height: 100vh;
+}
+
+.agenda-button {
+  position: absolute;
+  top: 510px;
+  left: 515px;
+}
+
+@media (max-height: 770px) {
+  .agenda-button {
+    top: 440px;
+    left: 470px;
+  }
+}
+
+/* timeline */
+
+.timeline {
+  /* margin-left: 100px; */
+  margin-left: 12px;
+  overflow: visible;
+}
+
+.entry {
+  margin-left: 20px;
+  position: relative;
+  padding-left: 30px;
+  /*   border: 2px solid black; */
+  /*   border-radius: 5px; */
+  min-width: 100px;
+  max-width: 150px;
+  height: 100px;
+  overflow: visible;
+}
+
+.core {
+  width: inherit;
+  height: inherit;
+}
+
+.entry:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: black;
+  top: 35%;
+  left: -19%;
+}
+
+.entry:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 180%;
+  display: block;
+  border-radius: 0px;
+  /* background: black; */
+  left: -19%;
+}

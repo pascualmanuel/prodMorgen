@@ -38,7 +38,10 @@ function Header() {
 
   if (menuOpen === true) {
     colorStroke = "black";
-  } else if (location.pathname === "/atendeme") {
+  } else if (
+    location.pathname === "/atendeme" ||
+    location.pathname === "/agenda"
+  ) {
     colorStroke = "black";
   }
 
@@ -200,7 +203,6 @@ function Header() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             style={{ transform: `rotate(${iconRotation}deg)` }}
-
           >
             <path d="M5 22L40 22" stroke={colorStroke} strokeWidth="3" />
             <path

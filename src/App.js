@@ -20,6 +20,7 @@ import MorgensFallingCopy from "./Components/MorgensFallingCopy";
 import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
 import SpikeButton from "./Components/SpikeButton";
+import Agenda from "./Pages/Agenda";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -45,7 +46,7 @@ function App() {
           <Route path="/bueno" element={<MorgensFallingCopy />} />
           <Route path="/malo" element={<Malo />} />
           <Route path="/comunidad" element={<Comunidad />} />
-          <Route path="/spike" element={<SpikeButton />} />
+          <Route path="/agenda" element={<Agenda />} />
         </Routes>
       </BrowserRouter>
     </>
