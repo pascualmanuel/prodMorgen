@@ -21,6 +21,7 @@ import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
 import SpikeButton from "./Components/SpikeButton";
 import Agenda from "./Pages/Agenda";
+import Obras from "./Pages/Obras";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -47,6 +48,7 @@ function App() {
           <Route path="/malo" element={<Malo />} />
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/agenda" element={<Agenda />} />
+          <Route path="/obras" element={<Obras />} />
         </Routes>
       </BrowserRouter>
     </>

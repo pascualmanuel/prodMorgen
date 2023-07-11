@@ -1,7 +1,7 @@
 import "../Styles/App.css";
 import MorgenGirando from "../Components/MorgenGirando";
 import CustomButton from "../Components/CustomButton";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Prueba.css";
 
@@ -13,41 +13,6 @@ function Home() {
       document.body.classList.remove("no-scroll");
     };
   }, []);
-
-  // useEffect(() => {
-  //   const isPruebaPage = location.pathname === "/";
-  //   const bodyElement = document.body;
-
-  //   // Add or remove the 'no-scroll' class based on the page
-  //   if (isPruebaPage) {
-  //     bodyElement.classList.add("no-scroll");
-  //   } else {
-  //     bodyElement.classList.remove("no-scroll");
-  //   }
-
-  //   // Optionally, scroll to the top of the page when navigating to the Prueba page
-  //   if (isPruebaPage) {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, [location]);
-
-  // useEffect(() => {
-  //   function handleWindowResize() {
-  //     const viewportHeight = window.innerHeight;
-  //     if (viewportHeight <= 670) {
-  //       document.body.classList.remove("no-scroll");
-  //     } else {
-  //       document.body.classList.add("no-scroll");
-  //     }
-  //   }
-
-  //   handleWindowResize();
-
-  //   window.addEventListener("resize", handleWindowResize);
-  //   return () => {
-  //     window.removeEventListener("resize", handleWindowResize);
-  //   };
-  // }, []);
 
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
@@ -169,6 +134,33 @@ function Home() {
     },
   ];
 
+  const [showNewsPopup, setShowNewsPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNewsPopup(true);
+    }, 4000); // 7 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    let transitionTimer;
+
+    const popupElement = document.getElementById("news-popup");
+
+    if (popupElement) {
+      if (showNewsPopup) {
+        transitionTimer = setTimeout(() => {
+          popupElement.classList.add("show");
+        }, 100);
+      } else {
+        popupElement.classList.remove("show");
+      }
+    }
+    return () => clearTimeout(transitionTimer);
+  }, [showNewsPopup]);
+
   const circumference = 2000; // Circumference of the circle in pixels
   const buttonWidth = 200;
   const buttonHeight = 200;
@@ -217,6 +209,15 @@ function Home() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696">
           <circle className="cls-1" cx="348" cy="348" r={radio} />
         </svg>
+      </div>
+
+      <div>
+        {showNewsPopup && (
+          <div id="news-popup" className="news-popup">
+            {/* Pop-up content */}
+            Hel
+          </div>
+        )}
       </div>
     </>
   );

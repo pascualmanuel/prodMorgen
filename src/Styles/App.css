@@ -567,6 +567,7 @@ h4 {
   width: 40%;
   border-left: 2px solid black;
   height: 100vh;
+  overflow-y: auto;
 }
 
 .agenda-button {
@@ -627,4 +628,56 @@ h4 {
   border-radius: 0px;
   /* background: black; */
   left: -19%;
+}
+
+/* news popup */
+
+.news-popup {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  width: 500px;
+  height: 280px;
+  background-color: #fe6970; /* Adjust background color as needed */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+  z-index: 1000;
+  border: solid black;
+}
+
+.news-popup.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+}
+
+/* accordion */
+
+.accordion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.accordion-tab {
+  width: 58px;
+  height: 100vh;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.accordion-tab.active {
+  width: 58px;
+  background-color: #aaa;
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+}
+
+.accordion-content.active {
+  width: 100%;
+  display: block;
+  opacity: 1;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import PerroMorgen from "../Assets/perro-morgen.png";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
@@ -30,15 +30,11 @@ function Agenda() {
 
   const fechasAgenda = [
     {
-      fechas: "25/09/2023",
-      descripcion: "Intervención de mural en plaza serrano",
-      color: "yellow",
+      fechas: "10/04/2024",
+      descripcion: "Lorem impsum",
+      color: "pink",
     },
-    {
-      fechas: "02/10/2023",
-      descripcion: "Intervención de mural en plaza serrano",
-      color: "black",
-    },
+
     {
       fechas: "28/10/2023",
       descripcion: "Intervención de mural en plaza serrano",
@@ -62,7 +58,7 @@ function Agenda() {
     {
       fechas: "15/12/2023",
       descripcion: "Intervención de mural en plaza serrano",
-      color: "yellow",
+      color: "red",
     },
     {
       fechas: "15/12/2023",
@@ -72,7 +68,37 @@ function Agenda() {
     {
       fechas: "15/12/2023",
       descripcion: "Intervención de mural en plaza serrano",
+      color: "brown",
+    },
+    {
+      fechas: "15/12/2023",
+      descripcion: "Intervención de mural en plaza serrano",
+      color: "red",
+    },
+    {
+      fechas: "15/12/2023",
+      descripcion: "Intervención de mural en plaza serrano",
       color: "yellow",
+    },
+    {
+      fechas: "15/12/2023",
+      descripcion: "Intervención de mural en plaza serrano",
+      color: "brown",
+    },
+    {
+      fechas: "15/12/2023",
+      descripcion: "Intervención de mural en plaza serrano",
+      color: "red",
+    },
+    {
+      fechas: "15/12/2023",
+      descripcion: "Intervención de mural en plaza serrano",
+      color: "yellow",
+    },
+    {
+      fechas: "15/12/2023",
+      descripcion: "Intervención de mural en plaza serrano",
+      color: "brown",
     },
   ];
 
@@ -112,29 +138,6 @@ function Agenda() {
               </>
             ))}
           </div>
-
-          {/* <div className="entry">
-            <div className="core">
-              <h3>2005</h3>
-              Information 3
-            </div>
-            <br />
-            <br />
-            <div className="entry">
-              <div className="core">
-                <h3>2010</h3>
-                Information 2
-              </div>
-            </div>
-            <br />
-            <br />
-            <div className="entry">
-              <div className="core">
-                <h3>2010</h3>
-                Information 3
-              </div>
-            </div>
-          </div>*/}
         </div>
       </div>
       {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
