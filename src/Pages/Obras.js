@@ -1,20 +1,44 @@
 import React from "react";
 import Accordion from "../Components/Accordion";
 import Gallery from "../Components/Gallery";
+import SpikeButtonThree from "../Components/SpikeButtonThree";
+import { useState, useEffect } from "react";
+import Popup from "../Components/PopUp";
+import ConexionInestable from "../Components/ConexionInestable";
+import Inadvertido from "../Components/Inadvertido";
 
 const Obras = () => {
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
+  const [showPopup, setShowPopup] = useState(false);
+  const openPopup = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   const accordionItems = [
     {
-      title: "Tab 1",
+      title: " Conexión intestable",
+      subtitle: "Composiciones digitales",
       content: (
         <>
-          <Gallery />
+          <ConexionInestable />
         </>
       ),
       color: "#005DA2", // Specify the color for Tab 1
     },
     {
-      title: "Tab 2",
+      title: " Desnudos",
+      subtitle: "Pinturas",
       content: (
         <>
           <div
@@ -25,22 +49,20 @@ const Obras = () => {
       color: "#4590E6", // Specify the color for Tab 1
     },
     {
-      title: "Tab 3",
+      title: " Inadvertido",
+      subtitle: "Collage",
       content: (
         <>
-          <div
-            style={{
-              height: "100%",
-              width: "100%",
-              backgroundColor: "ablique",
-            }}
-          ></div>
+          <div className="gallery-inad-container">
+            <Inadvertido />
+          </div>
         </>
       ),
       color: "#7D9F00", // Specify the color for Tab 1
     },
     {
-      title: "Tab 4",
+      title: " Habla morgen",
+      subtitle: "textos",
       content: (
         <>
           <div
@@ -51,7 +73,10 @@ const Obras = () => {
       color: "#AE79EF", // Specify the color for Tab 1
     },
     {
-      title: "Tab 5",
+      title: " Sellos",
+
+      subtitle: "Lorem ipsum",
+
       content: (
         <>
           <div
@@ -62,7 +87,8 @@ const Obras = () => {
       color: "#DCCB00", // Specify the color for Tab 1
     },
     {
-      title: "Tab 6",
+      title: " animaciones",
+      subtitle: "Lorem ipsum",
       content: (
         <>
           <div
@@ -73,7 +99,8 @@ const Obras = () => {
       color: "#FE6970", // Specify the color for Tab 1
     },
     {
-      title: "Tab 7",
+      title: "futuro inmediato",
+      subtitle: "Lorem ipsum",
       content: (
         <>
           <div
@@ -86,9 +113,18 @@ const Obras = () => {
   ];
 
   return (
-    <div className="obras-container">
-      <Accordion items={accordionItems} />
-    </div>
+    <>
+      <div className="obras-container">
+        <div className="obras-left">
+          <h2 style={{ fontSize: 70 }}>Obras</h2>
+          <div onClick={openPopup} className="obras-spike-button">
+            <SpikeButtonThree />
+          </div>
+        </div>
+        <Accordion items={accordionItems} />
+      </div>
+      {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
+    </>
   );
 };
 

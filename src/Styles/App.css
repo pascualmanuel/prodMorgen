@@ -1,7 +1,7 @@
 body {
   cursor: url("../Assets/svg/probando.png"), auto;
   font-family: "Regular";
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 a {
   cursor: url("../Assets/svg/probando.png"), auto;
@@ -654,7 +654,7 @@ h4 {
 
 /* accordion */
 
-.accordion {
+/* .accordion {
   display: flex;
   justify-content: flex-end;
 }
@@ -680,4 +680,202 @@ h4 {
   width: 100%;
   display: block;
   opacity: 1;
+} */
+
+.accordion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.accordion-tab {
+  width: 58px;
+  border: 0.5px solid #000;
+  box-sizing: border-box;
+  height: 100vh;
+  cursor: pointer;
+  transition: background-color 0.8s ease;
+  z-index: 100;
+  transition: width 0.2s;
+}
+
+.accordion-tab.active {
+  /* background-color: #aaa; */
+  /* border-right: solid 1px; */
+}
+
+.accordion-tab:hover {
+  width: calc(58px + 20px);
+}
+
+.accordion-content {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.8s ease;
+  z-index: 100;
+}
+
+.accordion-content.active {
+  width: 100%;
+  overflow: visible;
+  z-index: 200;
+}
+
+.obras-left {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  z-index: 0;
+}
+
+.obras-spike-button {
+  position: absolute;
+  bottom: 325px;
+  left: 500px;
+}
+
+.accordion-title {
+  transform: rotate(-90deg);
+  margin-top: 37vh;
+  font-size: 20px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+.accordion-subtitle {
+  transform: rotate(-90deg);
+  margin-top: 44vh;
+  font-family: Light;
+  white-space: nowrap;
+  color: transparent;
+  text-transform: capitalize;
+}
+
+.accordion-tab:hover .accordion-subtitle {
+  color: black;
+}
+
+.flechita {
+  fill: transparent;
+}
+
+.accordion-tab.active .flechita {
+  fill: black !important;
+}
+
+.accordion-tab.active .accordion-subtitle {
+  color: transparent;
+}
+
+/* conexion intestable */
+
+.image-gallery-conexion {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  /* overflow-x: hidden; */
+  height: 100vh;
+}
+
+.conextion-row {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+.conextion-row::-webkit-scrollbar {
+  width: 0px;
+}
+
+.conextion-row::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.conextion-row::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.image-container-conexion {
+  position: relative;
+}
+
+.conexion-images {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+
+/* .conextion-row:last-child {
+  margin-bottom: 0;
+} */
+
+.popup-conexion {
+  position: fixed;
+  top: 70px;
+  bottom: 70px;
+  left: 100px;
+  right: 100px;
+  background-color: white;
+  padding: 20px;
+  border: 3px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.popup-conexion .close-button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.popup-conexion img {
+  width: 350px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.popup-conexion-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.popup-conexion input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.popup-conexion button {
+  padding: 5px 10px;
+}
+
+.popup-trigger-conexion {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* Inadvertido */
+
+.horizontal-inad-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.inad-container {
+  flex: 0 0 55%;
+  scroll-snap-align: start;
+  margin-right: 10px;
+}
+
+.gallery-inad-image {
+  width: 100%;
+  height: 100vh;
 }

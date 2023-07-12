@@ -24,7 +24,7 @@ function Home() {
       secondColor: "#7D9F00",
       thirdColor: "#DFB000",
       // backColor: "transparent",
-      link: "/",
+      link: "/obras",
       border: "",
       width: homeButtonWidth,
       height: homeButtonHeight,

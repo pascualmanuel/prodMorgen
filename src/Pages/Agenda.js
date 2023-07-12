@@ -18,7 +18,7 @@ function Agenda() {
     backgroundPosition: "bottom",
   };
 
-  console.log(showPopup);
+
 
   const openPopup = () => {
     setShowPopup(true);

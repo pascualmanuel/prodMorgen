@@ -40,13 +40,16 @@ const Popup = ({ isOpen, onClose }) => {
     backColorPop = "#FE6970";
   } else if (
     location.pathname === "/comunidad" ||
-    location.pathname === "/agenda"
+    location.pathname === "/agenda" ||
+    location.pathname === "/obras"
   ) {
     backColorPop = "#7D9F00";
   }
 
   const showCommunity =
-    location.pathname === "/comunidad" || location.pathname === "/agenda";
+    location.pathname === "/comunidad" ||
+    location.pathname === "/agenda" ||
+    location.pathname === "/obras";
   const showAtendeme =
     location.pathname === "/atendeme" || location.pathname === "/gallery";
 
