@@ -9,7 +9,7 @@ import IconTag from "../Assets/svg/icon-tag.svg";
 import StarPrueba from "../Assets/svg/star-apoyar.svg";
 import PopupObras from "./PopupObras";
 
-const ConexionInestable = () => {
+const Desnudos = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -25,30 +25,30 @@ const ConexionInestable = () => {
   };
 
   const imagesFirstRow = [
-    FirstImage1,
-    FirstImage2,
-    FirstImage3,
     FirstImage4,
+    FirstImage3,
     FirstImage5,
+    FirstImage2,
     FirstImage6,
+    FirstImage1,
   ];
 
   const imagesSecondRow = [
-    FirstImage3,
-    FirstImage5,
-    FirstImage4,
-    FirstImage2,
     FirstImage1,
+    FirstImage4,
+    FirstImage3,
     FirstImage6,
+    FirstImage2,
+    FirstImage5,
   ];
 
   const imagesThirdRow = [
-    FirstImage2,
-    FirstImage6,
-    FirstImage5,
     FirstImage4,
-    FirstImage3,
+    FirstImage6,
+    FirstImage2,
+    FirstImage5,
     FirstImage1,
+    FirstImage3,
   ];
 
   return (
@@ -117,4 +117,4 @@ const ConexionInestable = () => {
   );
 };
 
-export default ConexionInestable;
+export default Desnudos;

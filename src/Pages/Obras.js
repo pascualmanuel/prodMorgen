@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Popup from "../Components/PopUp";
 import ConexionInestable from "../Components/ConexionInestable";
 import Inadvertido from "../Components/Inadvertido";
+import Desnudos from "../Components/Desnudos";
+import HablaMorgen from "../Components/HablaMorgen";
 
 const Obras = () => {
   useEffect(() => {
@@ -41,9 +43,7 @@ const Obras = () => {
       subtitle: "Pinturas",
       content: (
         <>
-          <div
-            style={{ height: "100%", width: "100%", backgroundColor: "yellow" }}
-          ></div>
+          <Desnudos />
         </>
       ),
       color: "#4590E6", // Specify the color for Tab 1
@@ -65,9 +65,7 @@ const Obras = () => {
       subtitle: "textos",
       content: (
         <>
-          <div
-            style={{ height: "100%", width: "100%", backgroundColor: "cream" }}
-          ></div>
+          <HablaMorgen />
         </>
       ),
       color: "#AE79EF", // Specify the color for Tab 1

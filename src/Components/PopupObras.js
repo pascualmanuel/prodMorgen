@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+
 const PopupObras = ({ selectedImage, closePopup }) => {
   useEffect(() => {
     const handleEscapeKey = (event) => {
@@ -22,6 +23,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [closePopup]);
+
   return (
     <div className="popup-conexion">
       <div>
@@ -32,7 +34,22 @@ const PopupObras = ({ selectedImage, closePopup }) => {
         <p style={{ fontSize: 20, marginBottom: 60 }}>
           Dejá tu mail y recibí la información de compra.
         </p>
-        <input type="email" placeholder="Enter your email" />
+        <div className="contact-me" style={{ marginLeft: 0 }}>
+          <div className="email-container">
+            <input
+              type="email"
+              placeholder="Dirección de e-mail"
+              className="email-input"
+            />
+            <button
+              type="submit"
+              className="submit-button"
+              style={{ background: "#FE6970" }}
+            >
+              Envíar
+            </button>
+          </div>
+        </div>
       </div>
       <span className="close-button" onClick={closePopup}>
         <svg

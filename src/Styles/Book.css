@@ -1,0 +1,43 @@
+.hablamor-carousel {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  /* flex-direction: column; */
+}
+
+.hablamor-image-container {
+  display: flex;
+  overflow: hidden;
+  width: 83%;
+  height: 600px;
+  justify-content: center;
+}
+
+.hablamor-image-container img {
+  width: auto;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.hablamor-carousel-controls {
+  position: absolute;
+  bottom: 0px;
+  right: 90px;
+}
+
+.hablamor-prev-button,
+.hablamor-next-button {
+  display: block;
+  /* Add styling for the buttons as needed */
+}
+
+@media (max-width: 1439px) {
+  .hablamor-image-container {
+    height: 500px;
+  }
+}

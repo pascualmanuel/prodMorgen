@@ -40,7 +40,8 @@ function Header() {
     colorStroke = "black";
   } else if (
     location.pathname === "/atendeme" ||
-    location.pathname === "/agenda"
+    location.pathname === "/agenda" ||
+    location.pathname === "/gallery"
   ) {
     colorStroke = "black";
   }

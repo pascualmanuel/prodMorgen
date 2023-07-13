@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MorgenGirando from "../Components/MorgenGirando";
 import PushMorgen from "../Components/PushMorgen";
 import Atendeme from "../Components/Atendeme";
@@ -11,6 +11,14 @@ import Malo from "../Components/Malo.js";
 function Interactivo() {
   const [selectedColor, setSelectedColor] = useState("#FE6970");
   const [selectedCircle, setSelectedCircle] = useState("circle1");
+
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
 
   const lineStyle = {
     width: "500px",
