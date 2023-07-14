@@ -22,7 +22,8 @@ import Comunidad from "./Pages/Comunidad";
 import SpikeButton from "./Components/SpikeButton";
 import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
-import HablaMorgen from "./Components/HablaMorgen";
+
+import Book from "./Components/Book";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -50,7 +51,8 @@ function App() {
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/obras" element={<Obras />} />
-          <Route path="/hablamorgen" element={<HablaMorgen />} />
+
+          <Route path="/book" element={<Book />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "../Styles/App.css"; // Create a CSS file for styling
+import React, { useState, useEffect } from "react";
+import "../Styles/App.css";
 
 const Accordion = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -17,7 +17,9 @@ const Accordion = ({ items }) => {
         <React.Fragment key={index}>
           <div
             className={`accordion-tab ${isActive}`}
-            onClick={() => handleClick(index)}
+            onClick={() => {
+              handleClick(index);
+            }}
             style={tabStyle}
           >
             <p className="accordion-subtitle">{item.subtitle}</p>

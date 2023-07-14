@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Accordion from "../Components/Accordion";
 import Gallery from "../Components/Gallery";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
@@ -7,7 +7,7 @@ import Popup from "../Components/PopUp";
 import ConexionInestable from "../Components/ConexionInestable";
 import Inadvertido from "../Components/Inadvertido";
 import Desnudos from "../Components/Desnudos";
-import HablaMorgen from "../Components/HablaMorgen";
+import Book from "../Components/Book";
 
 const Obras = () => {
   useEffect(() => {
@@ -65,7 +65,7 @@ const Obras = () => {
       subtitle: "textos",
       content: (
         <>
-          <HablaMorgen />
+          <Book />
         </>
       ),
       color: "#AE79EF", // Specify the color for Tab 1

@@ -6,6 +6,7 @@ import PerroMorgen from "../Assets/perro-morgen.png";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 import Popup from "../Components/PopUp";
+import Book from "../Components/Book";
 
 function Agenda() {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,8 +18,6 @@ function Agenda() {
     backgroundSize: "contain",
     backgroundPosition: "bottom",
   };
-
-
 
   const openPopup = () => {
     setShowPopup(true);
@@ -140,6 +139,7 @@ function Agenda() {
           </div>
         </div>
       </div>
+
       {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
     </>
   );
