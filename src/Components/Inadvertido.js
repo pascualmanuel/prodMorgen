@@ -20,20 +20,6 @@ import Prueba from "../Assets/frenchfood3.jpg";
 import IconTag from "../Assets/svg/icon-tag.svg";
 import PopupObras from "./PopupObras";
 const Inadvertido = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const openPopup = (image) => {
-    setSelectedImage(image);
-    setShowPopup(true);
-    console.log(image);
-  };
-
-  const closePopup = () => {
-    setSelectedImage(null);
-    setShowPopup(false);
-  };
-
   const images = [
     // Prueba,
     // Prueba,
@@ -95,15 +81,10 @@ const Inadvertido = () => {
               src={image}
               alt={`Image ${index + 1}`}
               className="gallery-inad-image"
-              onClick={() => openPopup(image)}
             />
-            <img src={IconTag} width={40} className="icontag-inad" />
           </div>
         ))}
       </div>
-      {showPopup && (
-        <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
-      )}
     </div>
   );
 };

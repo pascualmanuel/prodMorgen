@@ -8,6 +8,9 @@ import ConexionInestable from "../Components/ConexionInestable";
 import Inadvertido from "../Components/Inadvertido";
 import Desnudos from "../Components/Desnudos";
 import Book from "../Components/Book";
+import Estampas from "../Components/Estampas";
+import FuturoInmediato from "../Components/FuturoInmediato";
+import Animaciones from "../Components/Animaciones";
 
 const Obras = () => {
   useEffect(() => {
@@ -71,27 +74,24 @@ const Obras = () => {
       color: "#AE79EF", // Specify the color for Tab 1
     },
     {
-      title: " Sellos",
+      title: " Estampas",
 
-      subtitle: "Lorem ipsum",
+      // subtitle: "Lorem ipsum",
 
       content: (
         <>
-          <div
-            style={{ height: "100%", width: "100%", backgroundColor: "cream" }}
-          ></div>
+          <Estampas />
         </>
       ),
       color: "#DCCB00", // Specify the color for Tab 1
     },
     {
       title: " animaciones",
-      subtitle: "Lorem ipsum",
+      // subtitle: "Lorem ipsum",
       content: (
         <>
-          <div
-            style={{ height: "100%", width: "100%", backgroundColor: "yellow" }}
-          ></div>
+          {" "}
+          <Animaciones />
         </>
       ),
       color: "#FE6970", // Specify the color for Tab 1
@@ -101,12 +101,12 @@ const Obras = () => {
       subtitle: "Lorem ipsum",
       content: (
         <>
-          <div
-            style={{ height: "100%", width: "100%", backgroundColor: "red" }}
-          ></div>
+          <div className="gallery-inad-container">
+            <FuturoInmediato />
+          </div>
         </>
       ),
-      color: "#FF3910", // Specify the color for Tab 1
+      color: "#DCCB00", // Specify the color for Tab 1
     },
   ];
 

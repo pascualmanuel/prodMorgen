@@ -13,13 +13,12 @@ import Header from "./Pages/Header";
 import YoMorgen from "./Pages/YoMorgenstern";
 import Atendeme from "./Components/Atendeme";
 import Gallery from "./Components/Gallery";
-import Bueno from "./Components/Bueno";
 
 import Interactivo from "./Pages/Interactivo";
 import MorgensFallingCopy from "./Components/MorgensFallingCopy";
 import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
-import SpikeButton from "./Components/SpikeButton";
+
 import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
 

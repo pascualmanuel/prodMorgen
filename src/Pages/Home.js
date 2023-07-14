@@ -139,7 +139,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNewsPopup(true);
-    }, 4000); // 7 seconds delay
+    }, 5000); // 7 seconds delay
 
     return () => clearTimeout(timer);
   }, []);
