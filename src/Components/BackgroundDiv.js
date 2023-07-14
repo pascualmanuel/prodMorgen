@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/App.css";
 import MorgenImg from "../Assets/MORGEN_AMARILLO.png";
 import MorgenImgSvg from "../Assets/morgen-svg.svg";
@@ -7,6 +7,26 @@ const BackgroundDiv = () => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const imgRef = useRef(null);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  let MorgenWidthYoMorgen = 200;
+
+  if (window.innerWidth < 1420) {
+    MorgenWidthYoMorgen -= (MorgenWidthYoMorgen * 15) / 100;
+    // bookWidth -= (bookWidth * 10) / 100;
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -80,18 +100,24 @@ const BackgroundDiv = () => {
       <div ref={containerRef}>
         <canvas
           ref={canvasRef}
-          style={{position: "fixed", top: 0, left: 0, zIndex: "100"}}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: "100",
+            height: "100vh",
+          }}
         />
-        <div className="wrapper">
-          <div className="inside">
-            <h2 style={{fontSize: "100px", color: "white", zIndex: "2"}}>
+        <div className="wrapper full-h">
+          <div className="inside full-h">
+            <h2 style={{ fontSize: "100px", color: "white", zIndex: "2" }}>
               Yo, Morgenstern
             </h2>
             <img
               src={MorgenImgSvg}
               alt="Morgen"
-              style={{position: "absolute"}}
-              width={200}
+              style={{ position: "absolute" }}
+              width={MorgenWidthYoMorgen}
             />
           </div>
           {/* <MorgenGirando /> */}

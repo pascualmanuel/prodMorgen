@@ -1,8 +1,18 @@
+.full-h {
+  height: 100vh;
+}
+@media (min-height: 800px) {
+  .full-h {
+    height: 890px;
+  }
+}
+
 body {
   cursor: url("../Assets/svg/probando.png"), auto;
   font-family: "Regular";
   margin: 0 auto !important;
 }
+
 a {
   cursor: url("../Assets/svg/probando.png"), auto;
 }
@@ -32,7 +42,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   z-index: 100;
 }
 
@@ -47,8 +57,8 @@ h4 {
 } */
 
 .wrapper {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   background-color: black;
   background-size: cover;
   background-repeat: none;
@@ -734,6 +744,12 @@ h4 {
   bottom: 325px;
   left: 500px;
 }
+@media (max-width: 1250px) {
+  .obras-spike-button {
+    bottom: 280px;
+    left: 280px;
+  }
+}
 
 .accordion-title {
   transform: rotate(-90deg);
@@ -800,7 +816,9 @@ h4 {
 
 .conexion-images {
   width: 100%;
-  height: 50vh;
+  /* height: 50vh; */
+  /* EL TEMA ES LAS IMAGENES QUE ELIJE */
+
   object-fit: cover;
   cursor: pointer;
   margin-bottom: -5px;
@@ -875,7 +893,8 @@ h4 {
 
 .gallery-inad-image {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  /* EL TEMA ES LAS IMAGENES QUE ELIGE */
 }
 .horizontal-inad-gallery-container {
   background-color: white;
@@ -920,7 +939,8 @@ h4 {
 
 .gallery-futuro-image {
   width: 100%;
-  height: 70vh;
+  /* height: 70vh; */
+  /* EL TEMA ES LAS IMAGENES QUE ELIJE */
 }
 .last-image .gallery-futuro-image {
   margin-right: 20px;

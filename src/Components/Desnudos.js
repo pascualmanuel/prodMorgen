@@ -53,7 +53,7 @@ const Desnudos = () => {
 
   return (
     <div className="image-gallery-conexion">
-      <div className="conextion-row">
+      <div className="conextion-row cr-1">
         {imagesFirstRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
@@ -72,7 +72,7 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row">
+      <div className="conextion-row cr-2">
         {imagesSecondRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
@@ -91,7 +91,7 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row">
+      <div className="conextion-row cr-3">
         {imagesThirdRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
 import YoMorBack from "../Assets/yomor/yomor1-1.png";
@@ -13,9 +13,33 @@ import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
 function YoMorgen() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  const { pathname } = window.location;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  let heightFirstYoMor = 995;
+  let yoMorBackSeeMore = YoMorBack4;
+
+  if (window.innerWidth > 1565) {
+    heightFirstYoMor = 1350;
+    yoMorBackSeeMore = YoMorBackDos;
+  }
 
   const YoMorStyle = {
-    height: "995px",
+    height: heightFirstYoMor,
     backgroundImage: `url(${YoMorBack})`,
     backgroundRepeat: " no-repeat",
     backgroundSize: "cover",
@@ -26,7 +50,7 @@ function YoMorgen() {
     height: "950px",
     backgroundImage: `url(${YoMorBackDos})`,
     backgroundRepeat: " no-repeat",
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundPosition: "top right",
   };
   const additionalTextStyle = {
@@ -39,16 +63,17 @@ function YoMorgen() {
   };
 
   if (showAdditionalText) {
-    YoMorStyleDos.backgroundImage = `url(${YoMorBack4})`;
-    YoMorStyleDos.height = "1487px";
+    YoMorStyleDos.backgroundImage = `url(${yoMorBackSeeMore})`;
+    YoMorStyleDos.height = "1700px";
   }
+
   return (
     <>
-      <div style={{ backgroundColor: "black", minWidth: "1250px" }}>
+      <div style={{ backgroundColor: "black" }}>
         <BackgroundDiv />
         <div style={YoMorStyle}></div>
         <div style={YoMorStyleDos}>
-          <div>
+          <div className="yoMor-text-grande">
             <p className="yoMor-text">
               Morgenstern es un ensayo artístico acerca de los modos en que nos
               vinculamos con lxs otrxs, el mundo y la información circulante.
@@ -140,7 +165,7 @@ function YoMorgen() {
 
       <div className="footer-yomor">
         <h4 style={{ marginRight: 25, fontFamily: "Light" }}>
-          Con el apoyo de
+          Agradecemos el apoyo dado por
         </h4>
 
         <img

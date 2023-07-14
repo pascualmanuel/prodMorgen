@@ -21,18 +21,6 @@ import IconTag from "../Assets/svg/icon-tag.svg";
 import PopupObras from "./PopupObras";
 const Inadvertido = () => {
   const images = [
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
-    // Prueba,
     InaImg1,
     InaImg2,
     InaImg3,
@@ -43,13 +31,6 @@ const Inadvertido = () => {
     InaImg8,
     InaImg9,
     InaImg10,
-    // InaImg11,
-    // InaImg12,
-    // InaImg13,
-    // InaImg14,
-    // InaImg15,
-    // InaImg16,
-    // InaImg17,
   ];
   useEffect(() => {
     const container = document.querySelector(
