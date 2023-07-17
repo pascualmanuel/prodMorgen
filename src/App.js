@@ -15,7 +15,7 @@ import Atendeme from "./Components/Atendeme";
 import Gallery from "./Components/Gallery";
 
 import Interactivo from "./Pages/Interactivo";
-import MorgensFallingCopy from "./Components/MorgensFallingCopy";
+
 import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
 
@@ -45,7 +45,7 @@ function App() {
           <Route path="/atendeme" element={<Atendeme />} />
           <Route path="/interactivo" element={<Interactivo />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/bueno" element={<MorgensFallingCopy />} />
+
           <Route path="/malo" element={<Malo />} />
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/agenda" element={<Agenda />} />

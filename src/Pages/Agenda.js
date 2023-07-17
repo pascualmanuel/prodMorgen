@@ -7,13 +7,13 @@ import SpikeButtonThree from "../Components/SpikeButtonThree";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 import Popup from "../Components/PopUp";
 import Book from "../Components/Book";
+import "../Styles/App.css";
 
 function Agenda() {
   const [showPopup, setShowPopup] = useState(false);
 
   const comStyle = {
     backgroundImage: `url(${ComuBackDos})`,
-
     backgroundRepeat: " no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "bottom",

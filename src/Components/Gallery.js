@@ -25,10 +25,23 @@ import Gallery17 from "../Assets/gallery-imgs/Gallery-17.png";
 import Gallery18 from "../Assets/gallery-imgs/Gallery-18.png";
 import Gallery19 from "../Assets/gallery-imgs/Gallery-19.png";
 import Gallery20 from "../Assets/gallery-imgs/Gallery-20.png";
+import NextIcon from "../Assets/svg/white-next-icon.svg";
+import PrevIcon from "../Assets/svg/white-prev-icon.svg";
+
 const ImageSection = () => {
   const [transformStyle, setTransformStyle] = useState();
 
   const [showPopup, setShowPopup] = useState(false);
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setSelectedImageIndex(index);
+  };
+
+  const handleModalClose = () => {
+    setSelectedImageIndex(null);
+  };
 
   const openPopup = () => {
     setShowPopup(true);
@@ -83,22 +96,22 @@ const ImageSection = () => {
     };
   }, []);
 
-  const [images, setImages] = useState([]);
-  
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/photos"
-        );
-        setImages(response.data.slice(0, 20)); // Limit to the first 20 images
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      }
-    };
+  // const [images, setImages] = useState([]);
 
-    fetchImages();
-  }, []);
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://jsonplaceholder.typicode.com/photos"
+  //       );
+  //       setImages(response.data.slice(0, 20)); // Limit to the first 20 images
+  //     } catch (error) {
+  //       console.error("Error fetching images:", error);
+  //     }
+  //   };
+
+  //   fetchImages();
+  // }, []);
 
   const galleryImages = [
     Gallery1,
@@ -122,8 +135,52 @@ const ImageSection = () => {
     Gallery19,
     Gallery20,
   ];
+  const handlePrevImage = () => {
+    setSelectedImageIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        return galleryImages.length - 1;
+      } else {
+        return prevIndex - 1;
+      }
+    });
+  };
 
-  console.log(Img);
+  const handleNextImage = () => {
+    setSelectedImageIndex((prevIndex) => {
+      if (prevIndex === galleryImages.length - 1) {
+        return 0;
+      } else {
+        return prevIndex + 1;
+      }
+    });
+  };
+
+  const handleKeyboardNavigation = (event) => {
+    if (event.keyCode === 37) {
+      // Left arrow key
+      handlePrevImage();
+    } else if (event.keyCode === 39) {
+      // Right arrow key
+      handleNextImage();
+    } else if (event.keyCode === 27) {
+      // Esc key
+      handleModalClose();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyboardNavigation);
+    return () => {
+      window.removeEventListener("keydown", handleKeyboardNavigation);
+    };
+  }, []);
+
+  const handleModalClick = (event) => {
+    if (event.target.classList.contains("modal-overlay")) {
+      handleModalClose();
+    }
+  };
+
   return (
     <>
       <div className="image-section" onMouseMove={handleMouseMove}>
@@ -133,6 +190,7 @@ const ImageSection = () => {
               key={index}
               className="box"
               style={{ backgroundImage: `url(${image})` }}
+              onClick={() => handleImageClick(index)}
             ></div>
           ))}
         </div>
@@ -158,6 +216,35 @@ const ImageSection = () => {
           />
         </div>
         {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
+        {selectedImageIndex !== null && (
+          <div className="modal-overlay" onClick={handleModalClick}>
+            <span className="close" onClick={handleModalClose}>
+              &times;
+            </span>
+            <span className="gallery-prev-button">
+              <img width={35} src={PrevIcon} onClick={handlePrevImage} />
+            </span>
+            <div className="modal">
+              <img
+                className="modal-image"
+                src={galleryImages[selectedImageIndex]}
+                alt="Selected Image"
+              />
+              <div className="submodal">
+
+                Hola! <br /> Hola Hola! <br /> Hola{" "}
+              </div>
+            </div>
+            <span className="gallery-next-button">
+              <img
+                width={35}
+                src={NextIcon}
+                onClick={handleNextImage}
+                // style={{ display: Out }}
+              />
+            </span>
+          </div>
+        )}
       </div>
     </>
   );
