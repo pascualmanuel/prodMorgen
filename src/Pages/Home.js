@@ -6,6 +6,9 @@ import React, { useEffect, useState } from "react";
 import "./Prueba.css";
 
 function Home() {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     document.body.classList.add("no-scroll");
 
@@ -16,6 +19,50 @@ function Home() {
 
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
+
+  const { pathname } = window.location;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  let agendaOffsetY = 100;
+  let morgenmerchOffsetY = 170;
+  let interactivoOffsetY = 190;
+  let comunidadOffsetY = 50;
+
+  if (window.innerHeight < 690) {
+    agendaOffsetY = 70;
+  }
+
+  if (window.innerHeight < 650) {
+    agendaOffsetY = 10;
+    morgenmerchOffsetY = 120;
+    interactivoOffsetY = 170;
+    comunidadOffsetY = 10;
+  }
 
   const buttons = [
     {
@@ -44,7 +91,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 50, // Ajusta el desplazamiento vertical del botón
+        offsetY: comunidadOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -73,7 +120,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 100, // Ajusta el desplazamiento vertical del botón
+        offsetY: agendaOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -87,7 +134,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: 40, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 170, // Ajusta el desplazamiento vertical del botón
+        offsetY: morgenmerchOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -101,7 +148,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: -40, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 190, // Ajusta el desplazamiento vertical del botón
+        offsetY: interactivoOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -143,6 +190,10 @@ function Home() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleClosePopup = () => {
+    setShowNewsPopup(false);
+  };
 
   useEffect(() => {
     let transitionTimer;
@@ -214,8 +265,50 @@ function Home() {
       <div>
         {showNewsPopup && (
           <div id="news-popup" className="news-popup">
-            {/* Pop-up content */}
-            Hel
+            <div className="cont-home-pop">
+              {/* Pop-up content */}
+              <h2 style={{ fontSize: 40 }}>
+                Recibí las <br />
+                novedades
+              </h2>
+              <span
+                className="close-button"
+                style={{ marginTop: 33 }}
+                onClick={handleClosePopup}
+              >
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ transform: `rotate(45deg)` }}
+                >
+                  <path d="M5 22L40 22" stroke="black" strokeWidth="3" />
+                  <path
+                    d="M22.5 39.5L22.5 4.5"
+                    stroke="black"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div className="contact-me" style={{ marginLeft: 60 }}>
+              <div className="email-container">
+                <input
+                  type="email"
+                  placeholder="Dirección de e-mail"
+                  className="email-input"
+                />
+                <button
+                  type="submit"
+                  className="submit-button"
+                  style={{ background: "#AE79EF" }}
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>

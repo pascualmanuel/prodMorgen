@@ -14,8 +14,7 @@
   -webkit-animation: AnimationName 59s ease infinite;
   -moz-animation: AnimationName 59s ease infinite;
   animation: AnimationName 59s ease infinite;
-
-  height: 108vh;
+  height: 114vh;
 }
 
 @-webkit-keyframes AnimationName {

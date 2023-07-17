@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {useLocation} from "react-router-dom";
-import {useState} from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 import Popup from "../Components/PopUp";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 
@@ -35,10 +35,10 @@ function Comunidad() {
       <div className="comunidad-cont">
         <div className="comunidad-left" style={comStyle}>
           <div className="comunidad-left-content">
-            <h2 style={{fontSize: 80, marginBottom: 0, width: 500}}>
+            <h2 style={{ fontSize: 80, marginBottom: 0, width: 500 }}>
               Comunidad
             </h2>
-            <p style={{fontSize: 18, width: 500}}>
+            <p style={{ fontSize: 18, width: 500 }}>
               No queremos ser Morgensterns, queremos generar espacios de
               encuentro, construir comunidad para dar lugar a la creatividad, la
               reflexión, la risa. Para eso, proponemos diferentes formas de

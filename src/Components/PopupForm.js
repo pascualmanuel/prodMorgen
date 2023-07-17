@@ -1,13 +1,13 @@
 import React from "react";
 import CustomButton from "./CustomButton";
-import {useLocation} from "react-router-dom";
-import {useEffect, useState} from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const PopupForm = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   const location = useLocation();
-  const {pathname} = window.location;
+  const { pathname } = window.location;
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,8 +40,13 @@ const PopupForm = () => {
       ? "Escribí acá tu comentario. Puede ser una idea, observación, o algo que te interese mencionar sobre nuestro mundo contemporáneo."
       : "Presentate brevemente, y contanos de qué forma te gustaría participar";
 
+  const textOdio =
+    location.pathname === "/atendeme"
+      ? "Escribí acá tu comentario. Puede ser una idea, observación, o algo que te interese mencionar sobre nuestro mundo contemporáneo."
+      : "";
+
   const prueba = (
-    <span style={{fontSize: "20px", fontFamily: "Light"}}>Envíar</span>
+    <span style={{ fontSize: "20px", fontFamily: "Light" }}>Enviar</span>
   );
 
   return (
@@ -66,16 +71,13 @@ const PopupForm = () => {
           <div className="form-row">
             <p
               style={{
-                fontSize: "12px",
+                fontSize: "16px",
                 width: "700px",
                 color: textColor,
                 marginRight: "70px",
               }}
             >
-              Morgenstern busca fomentar un espacio inclusivo y respetuoso de
-              intercambio. No toleramos ni apoyamos ningún tipo de discurso que
-              promueva el odio, la discriminación, el racismo ni ninguna forma
-              de violencia.
+              {textOdio}
             </p>
             <CustomButton
               buttonText={prueba}
@@ -92,7 +94,7 @@ const PopupForm = () => {
           {/* <div className="form-row" style={{ justifyContent: "end" }}>
             <div>
               <CustomButton
-                buttonText={"Envíar"}
+                buttonText={"Enviar"}
                 firstColor={"#FE6970"}
                 secondColor={"#005DA2"}
                 thirdColor={"#4590E6"}

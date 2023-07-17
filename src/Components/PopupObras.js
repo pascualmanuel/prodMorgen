@@ -46,7 +46,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
               className="submit-button"
               style={{ background: "#FE6970" }}
             >
-              Envíar
+              Enviar
             </button>
           </div>
         </div>

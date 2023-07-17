@@ -33,8 +33,11 @@ function CustomButton({
   return (
     <Link to={link} onClick={onClick}>
       <div
-        className="custom-btn custom-btn--small"
-        style={{ "--color": buttonStyle.backColor, display: display }}
+        className="custom-btn custom-btn--small crack"
+        style={{
+          "--color": buttonStyle.backColor,
+          display: display,
+        }}
       >
         <div
           className="HoverEffect HoverEffect--enabled HoverEffect--oval"

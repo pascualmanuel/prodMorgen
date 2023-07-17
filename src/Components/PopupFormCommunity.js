@@ -1,8 +1,8 @@
 import React from "react";
 import CustomButton from "./CustomButton";
-import {useLocation} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const PopupFormCommunity = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
@@ -13,7 +13,7 @@ const PopupFormCommunity = () => {
   };
 
   const location = useLocation();
-  const {pathname} = window.location;
+  const { pathname } = window.location;
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,20 +44,19 @@ const PopupFormCommunity = () => {
       : "Presentate brevemente, y contanos de qué forma te gustaría participar";
 
   const prueba = (
-    <span style={{fontSize: "20px", fontFamily: "Light"}}>Envíar</span>
+    <span style={{ fontSize: "20px", fontFamily: "Light" }}>Enviar</span>
   );
 
   return (
     <>
       <div className="support-cont">
-
-        <div style={{width: "60%"}}>
-          <div style={{width: "555px"}}>
-            <h3 style={{fontSize: "60px", marginTop: "0px"}}>
+        <div style={{ width: "60%" }}>
+          <div style={{ width: "555px" }}>
+            <h3 style={{ fontSize: "60px", marginTop: "0px" }}>
               Tu aporte es clave <br />
-              <span style={{fontFamily: "Light"}}>para este proyecto</span>
+              <span style={{ fontFamily: "Light" }}>para este proyecto</span>
             </h3>
-            <p style={{fontSize: "18px"}}>
+            <p style={{ fontSize: "18px" }}>
               En estos tiempos de desencuentros y conexiones inestables, el
               proyecto Morgenstern busca reflexión y diálogo accesible para
               todes, ¡qué ambicioso! <br />
@@ -93,14 +92,14 @@ const PopupFormCommunity = () => {
               <label htmlFor="switchYearly">Pay Pal</label>
               <div className="switch-wrapper">
                 <div className="switch">
-                  <div style={{opacity: checked ? 1 : 0}}>Mercado Pago</div>
-                  <div style={{opacity: checked ? 0 : 1}}>Pay Pal</div>
+                  <div style={{ opacity: checked ? 1 : 0 }}>Mercado Pago</div>
+                  <div style={{ opacity: checked ? 0 : 1 }}>Pay Pal</div>
                 </div>
               </div>
             </div>
             {checked ? (
               <>
-                <div className="support-button" style={{marginTop: "50px"}}>
+                <div className="support-button" style={{ marginTop: "50px" }}>
                   Aportar $ 1000 ARS
                 </div>
                 <div className="support-button"> Aportar $ 2000 ARS </div>
@@ -108,7 +107,7 @@ const PopupFormCommunity = () => {
               </>
             ) : (
               <>
-                <div className="support-button" style={{marginTop: "50px"}}>
+                <div className="support-button" style={{ marginTop: "50px" }}>
                   Aportar 10USD
                 </div>
                 <div className="support-button"> Aportar 20USD </div>

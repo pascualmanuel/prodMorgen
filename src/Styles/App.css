@@ -87,6 +87,12 @@ h4 {
   min-height: 775px;
   margin-top: -20px;
 }
+
+.cont-home-pop {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
 @media (max-height: 720px) {
   .circle-container {
     margin-top: -51px;
@@ -505,6 +511,7 @@ h4 {
   left: -1px;
   border: solid;
   border-radius: 100px;
+  background-color: #dccb00;
 }
 
 /* slide the switch box from right to left */
@@ -554,6 +561,10 @@ h4 {
   justify-content: center;
   font-family: Medium;
 }
+
+.support-button:hover {
+  background: #dccb00;
+}w
 
 /* AGENDA */
 .agenda-container {
@@ -647,7 +658,7 @@ h4 {
   bottom: 20px; /* Adjust as needed */
   right: 20px; /* Adjust as needed */
   width: 500px;
-  height: 280px;
+  height: 260px;
   background-color: #fe6970; /* Adjust background color as needed */
   opacity: 0;
   visibility: hidden;
@@ -944,4 +955,8 @@ h4 {
 }
 .last-image .gallery-futuro-image {
   margin-right: 20px;
+}
+
+/* 1270 x 690 */
+@media (min-height: 690px) {
 }

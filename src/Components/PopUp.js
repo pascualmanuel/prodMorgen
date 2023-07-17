@@ -34,6 +34,8 @@ const Popup = ({ isOpen, onClose }) => {
 
   let backColorPop = location.pathname === "/gallery" ? "#DC3349" : "#FE6970";
 
+  let strokeColor = location.pathname === "/comunidad" ? "black" : "white";
+
   if (location.pathname === "/gallery") {
     backColorPop = "#DC3349";
   } else if (location.pathname === "/atendeme") {
@@ -78,8 +80,12 @@ const Popup = ({ isOpen, onClose }) => {
             xmlns="http://www.w3.org/2000/svg"
             style={{ transform: `rotate(45deg)` }}
           >
-            <path d="M5 22L40 22" stroke="white" strokeWidth="3" />
-            <path d="M22.5 39.5L22.5 4.5" stroke="white" strokeWidth="3" />
+            <path d="M5 22L40 22" stroke={strokeColor} strokeWidth="3" />
+            <path
+              d="M22.5 39.5L22.5 4.5"
+              stroke={strokeColor}
+              strokeWidth="3"
+            />
           </svg>
         </span>
         {/* </div> */}

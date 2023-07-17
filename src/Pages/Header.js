@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import FbLogo from "../Assets/svg/fb-svg.svg";
@@ -53,6 +53,15 @@ function Header() {
   } else {
     circleButton = CircleNav;
   }
+
+  const isGalleryOrAtendeme =
+    location.pathname === "/gallery" || location.pathname === "/atendeme";
+
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    navigate("/comunidad"); // Navigate to "/home" route
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -128,7 +137,7 @@ function Header() {
                   className="email-input"
                 />
                 <button type="submit" className="submit-button">
-                  Envíar
+                  Enviar
                 </button>
               </div>
             </div>
@@ -187,33 +196,47 @@ function Header() {
         </div>
       )}
       <div className="nav-bar">
-        {/* <div> */}
-        <div
-          className="plus-icon"
-          onClick={toggleMenu}
-          // style={{ marginRight: "50px" }}
-        >
+        <div className="plus-icon">
           {!menuOpen && isHome && (
             <p style={{ marginRight: "50px", color: "white" }}>ESP</p>
           )}
 
-          <svg
-            width="45"
-            height="45"
-            viewBox="0 0 45 45"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ transform: `rotate(${iconRotation}deg)` }}
-          >
-            <path d="M5 22L40 22" stroke={colorStroke} strokeWidth="3" />
-            <path
-              d="M22.5 39.5L22.5 4.5"
-              stroke={colorStroke}
-              strokeWidth="3"
-            />
-          </svg>
-
-          {/* </div> */}
+          {isGalleryOrAtendeme ? (
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ transform: `rotate(${45}deg)` }}
+              onClick={handleOnClick}
+            >
+              <path d="M5 22L40 22" stroke={colorStroke} strokeWidth="3" />
+              <path
+                d="M22.5 39.5L22.5 4.5"
+                stroke={colorStroke}
+                strokeWidth="3"
+              />
+            </svg>
+          ) : (
+            // Render the default SVG for other paths
+            <svg
+              width="45"
+              height="45"
+              viewBox="0 0 45 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ transform: `rotate(${iconRotation}deg)` }}
+              onClick={toggleMenu}
+            >
+              <path d="M5 22L40 22" stroke={colorStroke} strokeWidth="3" />
+              <path
+                d="M22.5 39.5L22.5 4.5"
+                stroke={colorStroke}
+                strokeWidth="3"
+              />
+            </svg>
+          )}
         </div>
       </div>
     </>

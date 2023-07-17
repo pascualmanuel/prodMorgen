@@ -50,7 +50,6 @@ function App() {
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/obras" element={<Obras />} />
-
           <Route path="/book" element={<Book />} />
         </Routes>
       </BrowserRouter>
