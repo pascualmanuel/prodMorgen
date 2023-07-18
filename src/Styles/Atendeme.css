@@ -261,6 +261,9 @@
   margin: 0;
   border: solid black;
   border-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .comu-right-bottom {
@@ -268,6 +271,9 @@
   background-color: #dccb00;
   margin: 0;
   border: solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .comunidad-left-content {
   display: flex;
@@ -277,8 +283,7 @@
 }
 
 .button-text-comu {
-  padding-top: 100px;
-  padding-left: 125px;
+  margin-left: 60px;
 }
 
 /* YoMor */
@@ -360,6 +365,5 @@
   justify-content: center;
   padding-top: 200px;
   padding-bottom: 40px;
-
   z-index: 100;
 }
