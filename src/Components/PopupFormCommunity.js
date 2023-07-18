@@ -99,19 +99,33 @@ const PopupFormCommunity = () => {
             </div>
             {checked ? (
               <>
-                <div className="support-button" style={{ marginTop: "50px" }}>
-                  Aportar $ 1000 ARS
-                </div>
-                <div className="support-button"> Aportar $ 2000 ARS </div>
-                <div className="support-button"> Aportar $ 5000 ARS </div>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button" style={{ marginTop: "50px" }}>
+                    Aportar $ 1000 ARS
+                  </div>
+                </Link>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button">Aportar $ 2000 ARS </div>{" "}
+                </Link>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button"> Aportar $ 5000 ARS </div>
+                </Link>
               </>
             ) : (
               <>
-                <div className="support-button" style={{ marginTop: "50px" }}>
-                  Aportar 10USD
-                </div>
-                <div className="support-button"> Aportar 20USD </div>
-                <div className="support-button"> Aportar 50USD</div>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button" style={{ marginTop: "50px" }}>
+                    Aportar 10USD
+                  </div>
+                </Link>
+
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button"> Aportar 20USD </div>
+                </Link>
+
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button"> Aportar 50USD</div>
+                </Link>
               </>
             )}
           </div>

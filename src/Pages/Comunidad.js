@@ -46,9 +46,9 @@ function Comunidad() {
               eventos y más. Te invitamos a seguir pensando y creando en
               conjunto como más te guste.
             </p>
-          </div>
-          <div onClick={openPopup}>
-            <SpikeButtonThree />
+            <div onClick={openPopup} style={{ position: "relative" }}>
+              <SpikeButtonThree />
+            </div>
           </div>
         </div>
 

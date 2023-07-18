@@ -41,7 +41,8 @@ function Header() {
   } else if (
     location.pathname === "/atendeme" ||
     location.pathname === "/agenda" ||
-    location.pathname === "/gallery"
+    location.pathname === "/gallery" ||
+    location.pathname === "/obras"
   ) {
     colorStroke = "black";
   }

@@ -7,7 +7,7 @@ import YoMorBack from "../Assets/yomor/yomor1-1.png";
 import YoMorBackDos from "../Assets/yomor/yomor1-2.png";
 import YoMorBack4 from "../Assets/yomor/yomor1-3.png";
 import SpikeButton from "../Components/SpikeButton";
-import Itau from "../Assets/svg/itau-logo.png";
+import Itau from "../Assets/svg/itau-logo2.png";
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
 import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
@@ -164,17 +164,17 @@ function YoMorgen() {
       </div>
 
       <div className="footer-yomor">
-        <h4 style={{ marginRight: 25, fontFamily: "Light" }}>
+        <h4 style={{ marginRight: 25, fontFamily: "Light", fontSize: 18 }}>
           Agradecemos el apoyo dado por
         </h4>
 
         <img
           src={Caba}
           width={225}
-          height={55}
+          height={65}
           style={{ marginRight: 100, marginLeft: 70 }}
         />
-        <img src={Itau} width={50} height={50} />
+        <img src={Itau} width={225} />
       </div>
     </>
   );

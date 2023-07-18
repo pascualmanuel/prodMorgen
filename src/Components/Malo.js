@@ -11,9 +11,17 @@ const MatterJSDemo = () => {
   const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
 
   const createObject = () => {
+    const getRandomAngle = () => {
+      const angles = [-45, 0, 45];
+      const randomIndex = Math.floor(Math.random() * angles.length);
+      return angles[randomIndex];
+    };
+
     const { Bodies, Composite } = Matter;
     const x = Math.random() * (window.innerWidth - 80) + 40;
-    const angleInDegrees = -45; //Math.random() * 140; // Generate a random angle between 0 and 140 degrees
+    // const angleInDegrees = -45 || 0 || 45; //Math.random() * 140; // Generate a random angle between 0 and 140 degrees
+    const angleInDegrees = getRandomAngle();
+
     const angleInRadians = (angleInDegrees * Math.PI) / 180; // Convert the angle from degrees to radians
     console.log(angleInDegrees);
 

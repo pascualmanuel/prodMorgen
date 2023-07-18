@@ -111,7 +111,9 @@ const ConexionInestable = () => {
         ))}
       </div>
       {showPopup && (
-        <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
+        <div className="modal-overlay">
+          <PopupObras selectedImage={selectedImage} closePopup={closePopup} />{" "}
+        </div>
       )}
     </div>
   );

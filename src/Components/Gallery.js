@@ -113,32 +113,156 @@ const ImageSection = () => {
   //   fetchImages();
   // }, []);
 
-  const galleryImages = [
-    Gallery1,
-    Gallery2,
-    Gallery3,
-    Gallery4,
-    Gallery5,
-    Gallery7,
-    Gallery9,
-    Gallery8,
-    Gallery6,
-    Gallery10,
-    Gallery11,
-    Gallery12,
-    Gallery13,
-    Gallery14,
-    Gallery15,
-    Gallery16,
-    Gallery17,
-    Gallery18,
-    Gallery19,
-    Gallery20,
+  const galleryContent = [
+    {
+      photo: Gallery1,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery1,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery3,
+      category: "Historieta ",
+      date: "15/10/20",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery4,
+      category: "Historieta ",
+      date: "10/09/23",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery5,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery7,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery9,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery8,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery6,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery10,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery11,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery12,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery13,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery14,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery15,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery16,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery17,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery18,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery19,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery20,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
   ];
+
+  const selectedImageData =
+    selectedImageIndex !== null ? galleryContent[selectedImageIndex] : null;
+
   const handlePrevImage = () => {
     setSelectedImageIndex((prevIndex) => {
       if (prevIndex === 0) {
-        return galleryImages.length - 1;
+        return galleryContent.length - 1;
       } else {
         return prevIndex - 1;
       }
@@ -147,7 +271,7 @@ const ImageSection = () => {
 
   const handleNextImage = () => {
     setSelectedImageIndex((prevIndex) => {
-      if (prevIndex === galleryImages.length - 1) {
+      if (prevIndex === galleryContent.length - 1) {
         return 0;
       } else {
         return prevIndex + 1;
@@ -180,18 +304,29 @@ const ImageSection = () => {
       handleModalClose();
     }
   };
-
+  console.log(galleryContent.photo?.[selectedImageIndex]);
   return (
     <>
       <div className="image-section" onMouseMove={handleMouseMove}>
         <div className="grid-container" style={{ transform: transformStyle }}>
-          {galleryImages.map((image, index) => (
+          {galleryContent.map((item, index) => (
             <div
               key={index}
               className="box"
-              style={{ backgroundImage: `url(${image})` }}
+              style={{ backgroundImage: `url(${item.photo})` }}
               onClick={() => handleImageClick(index)}
-            ></div>
+            >
+              <div className="image-text">
+                <div className="hover-g-top">
+                  <div className="submodal-category">{item.category}</div>
+                  <div>{item.title}</div>
+                </div>
+                <div className="hover-g-bottom">
+                  <div>{item.date}</div>
+                  <div>{item.author}</div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -216,7 +351,7 @@ const ImageSection = () => {
           />
         </div>
         {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
-        {selectedImageIndex !== null && (
+        {selectedImageData && (
           <div className="modal-overlay" onClick={handleModalClick}>
             <span className="close" onClick={handleModalClose}>
               &times;
@@ -227,21 +362,26 @@ const ImageSection = () => {
             <div className="modal">
               <img
                 className="modal-image"
-                src={galleryImages[selectedImageIndex]}
+                src={selectedImageData.photo}
                 alt="Selected Image"
               />
               <div className="submodal">
+                <div className="submodal-top">
+                  <div className="submodal-category">
+                    {selectedImageData.category}
+                  </div>
+                  <div>{selectedImageData.date}</div>
+                </div>
 
-                Hola! <br /> Hola Hola! <br /> Hola{" "}
+                <div className="submodal-bottom">
+                  <div>{selectedImageData.title}</div>
+
+                  <div>{selectedImageData.author}</div>
+                </div>
               </div>
             </div>
             <span className="gallery-next-button">
-              <img
-                width={35}
-                src={NextIcon}
-                onClick={handleNextImage}
-                // style={{ display: Out }}
-              />
+              <img width={35} src={NextIcon} onClick={handleNextImage} />
             </span>
           </div>
         )}

@@ -236,7 +236,7 @@ function Home() {
     };
   };
 
-  const radio = 310; // Radio del círculo
+  // const radio = 310; // Radio del círculo
 
   return (
     <>
@@ -256,11 +256,13 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="circulo-animado">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696">
-          <circle className="cls-1" cx="348" cy="348" r={radio} />
-        </svg>
-      </div>
+      {/* <div className="animated-circle-cont">
+        <div className="circulo-animado">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696">
+            <circle className="cls-1" cx="348" cy="348" r={radio} />
+          </svg>
+        </div>
+      </div> */}
 
       <div>
         {showNewsPopup && (

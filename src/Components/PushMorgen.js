@@ -188,7 +188,7 @@ const PushMorgen = () => {
               color: "white",
             }}
           >
-            clickeame y llename de <br></br> mini morgensterns
+            tu click me llena
           </p>
         </div>
         <img
