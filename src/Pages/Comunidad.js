@@ -30,6 +30,13 @@ function Comunidad() {
     setShowPopup(false);
   };
 
+  let commButtonWidth = "300px";
+
+  if (window.innerWidth < 1320) {
+    commButtonWidth = "280px";
+  }
+
+  // console.log(commButtonWidth);
   return (
     <>
       <div className="comunidad-cont">
@@ -72,7 +79,7 @@ function Comunidad() {
                 thirdColor={"#4590E6"}
                 backColor={"#4590E6"}
                 border={"solid black"}
-                width={"300px"}
+                width={commButtonWidth}
                 height={"25px"}
                 fontFamily={"Regular"}
                 fontSize={"18px"}
@@ -99,7 +106,7 @@ function Comunidad() {
                 thirdColor={"#4590E6"}
                 backColor={"#4590E6"}
                 border={"solid black"}
-                width={"300px"}
+                width={commButtonWidth}
                 height={"25px"}
                 fontSize={"18px"}
                 fontFamily={"Regular"}

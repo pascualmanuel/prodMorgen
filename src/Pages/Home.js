@@ -47,6 +47,7 @@ function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  console.log(viewportWidth, viewportHeight, "hola");
 
   let agendaOffsetY = 100;
   let morgenmerchOffsetY = 170;
@@ -124,7 +125,7 @@ function Home() {
       },
     },
     {
-      buttonText: "Morgen Merch",
+      buttonText: `${viewportWidth} ` + viewportHeight,
       firstColor: "#DFB000",
       secondColor: "#DC3349",
       thirdColor: "#AE79EF",
