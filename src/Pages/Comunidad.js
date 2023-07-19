@@ -8,6 +8,7 @@ import BackgroundDiv from "../Components/BackgroundDiv";
 import CustomButton from "../Components/CustomButton";
 import SpikeButton from "../Components/SpikeButton";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
+import { isIOS } from "react-device-detect";
 
 function Comunidad() {
   const [showPopup, setShowPopup] = useState(false);
@@ -34,6 +35,11 @@ function Comunidad() {
 
   if (window.innerWidth < 1320) {
     commButtonWidth = "280px";
+  }
+
+  let buttonTextSize = "18px";
+  if (isIOS) {
+    buttonTextSize = "16px";
   }
 
   // console.log(commButtonWidth);
@@ -82,7 +88,7 @@ function Comunidad() {
                 width={commButtonWidth}
                 height={"25px"}
                 fontFamily={"Regular"}
-                fontSize={"18px"}
+                fontSize={buttonTextSize}
                 link={"/gallery"}
               />
             </div>
@@ -108,7 +114,7 @@ function Comunidad() {
                 border={"solid black"}
                 width={commButtonWidth}
                 height={"25px"}
-                fontSize={"18px"}
+                fontSize={buttonTextSize}
                 fontFamily={"Regular"}
                 link={"/atendeme"}
               />

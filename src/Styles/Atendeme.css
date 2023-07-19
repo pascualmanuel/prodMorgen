@@ -294,6 +294,12 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .button-text-comu {
+    margin-left: 40px;
+  }
+}
+
 /* YoMor */
 
 .yoMor-text {

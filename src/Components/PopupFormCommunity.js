@@ -3,6 +3,7 @@ import CustomButton from "./CustomButton";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { isIOS, isSafari } from "react-device-detect";
 
 const PopupFormCommunity = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -45,7 +46,7 @@ const PopupFormCommunity = () => {
 
   let topWrapper = "-1px";
   let rightWrapper = "128px";
-  if (isIpad) {
+  if (isSafari || isIOS) {
     topWrapper = "-3px";
     rightWrapper = "131px";
   }
