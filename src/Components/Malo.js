@@ -12,7 +12,7 @@ const MatterJSDemo = () => {
 
   const createObject = () => {
     const getRandomAngle = () => {
-      const angles = [-45, 0, 45];
+      const angles = [-45, , -10, 45];
       const randomIndex = Math.floor(Math.random() * angles.length);
       return angles[randomIndex];
     };

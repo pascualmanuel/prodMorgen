@@ -39,7 +39,7 @@ const Obras = () => {
           <ConexionInestable />
         </>
       ),
-      color: "#005DA2", // Specify the color for Tab 1
+      color: "#4590E6", // Specify the color for Tab 1
     },
     {
       title: " Desnudos",
@@ -49,7 +49,7 @@ const Obras = () => {
           <Desnudos />
         </>
       ),
-      color: "#4590E6", // Specify the color for Tab 1
+      color: "#FE6970", // Specify the color for Tab 1
     },
     {
       title: " Inadvertido",
@@ -61,7 +61,7 @@ const Obras = () => {
           </div>
         </>
       ),
-      color: "#7D9F00", // Specify the color for Tab 1
+      color: "#FF3910", // Specify the color for Tab 1
     },
     {
       title: " Habla morgen",
@@ -83,7 +83,7 @@ const Obras = () => {
           <Estampas />
         </>
       ),
-      color: "#DCCB00", // Specify the color for Tab 1
+      color: "#005DA2", // Specify the color for Tab 1
     },
     {
       title: " animaciones",
@@ -94,7 +94,7 @@ const Obras = () => {
           <Animaciones />
         </>
       ),
-      color: "#FE6970", // Specify the color for Tab 1
+      color: "#7D9F00", // Specify the color for Tab 1
     },
     {
       title: "futuro inmediato",

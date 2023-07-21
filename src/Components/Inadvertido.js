@@ -16,7 +16,7 @@ import InaImg14 from "../Assets/obras/inadvertido/inadvertido-14.png";
 import InaImg15 from "../Assets/obras/inadvertido/inadvertido-15.png";
 import InaImg16 from "../Assets/obras/inadvertido/inadvertido-16.png";
 import InaImg17 from "../Assets/obras/inadvertido/inadvertido-17.png";
-import Prueba from "../Assets/frenchfood3.jpg";
+// import Prueba from "../Assets/frenchfood3.jpg";
 import IconTag from "../Assets/svg/icon-tag.svg";
 import PopupObras from "./PopupObras";
 const Inadvertido = () => {

@@ -317,12 +317,14 @@ const ImageSection = () => {
             >
               <div className="image-text">
                 <div className="hover-g-top">
-                  <div className="submodal-category">{item.category}</div>
-                  <div>{item.title}</div>
+                  {/* <div className="submodal-category">{item.category}</div> */}
+                  <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                    {item.title}
+                  </div>
                 </div>
                 <div className="hover-g-bottom">
-                  <div>{item.date}</div>
-                  <div>{item.author}</div>
+                  {/* <div>{item.date}</div> */}
+                  {/* <div>{item.author}</div> */}
                 </div>
               </div>
             </div>

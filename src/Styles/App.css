@@ -89,7 +89,8 @@ h4 {
   animation: rotate 30s infinite linear;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+
   min-height: 775px;
   max-height: 1100px;
   margin-top: 50px;
@@ -402,12 +403,12 @@ h4 {
 }
 
 /* FORM */
-
+/* 
 .special-form {
   display: flex;
   flex-direction: column;
   border: none;
-}
+} */
 
 .form-row {
   display: flex;
@@ -421,14 +422,20 @@ h4 {
   font-size: 40px;
 }
 
+.special-form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 100%;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
 .special-form input,
 .special-form textarea {
   border: none;
   background-color: transparent;
   outline: none;
-  font-size: 34px;
-  padding: 5px;
-
   color: white;
   font-size: 40px;
   font-family: Medium;
@@ -483,6 +490,48 @@ h4 {
   resize: none;
 }
 
+.p-popupform {
+  font-size: 15px;
+  margin-right: 20px;
+  width: 750px;
+}
+
+@media (max-width: 1260px) {
+  .special-form {
+    width: 80%;
+    flex-wrap: unset;
+  }
+}
+
+@media (max-width: 1200px) {
+  .special-form h3 {
+    font-size: 25px;
+  }
+  .special-form input::placeholder,
+  .special-form textarea::placeholder {
+    color: #ffffff;
+    opacity: 0.21;
+    font-size: 30px;
+    font-family: Medium;
+  }
+  .special-form input {
+    font-size: 25px;
+  }
+  .special-form textarea {
+    font-size: 25px;
+  }
+  .p-popupform {
+    font-size: 13px;
+  }
+  .form-row {
+    margin-bottom: 0px;
+  }
+}
+
+/* top: 190px;
+bottom: 190px;
+right: 180px;
+left: 180px; */
 /* mercadopafgo button */
 
 :root {
@@ -1062,7 +1111,7 @@ h4 {
   overflow: hidden;
 }
 
-@media (max-height: 670px) {
+@media (max-height: 760px) {
   .modal {
     width: 500px;
   }

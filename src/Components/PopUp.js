@@ -1,11 +1,14 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../Styles/App.css";
 import PopupForm from "./PopupForm";
 import { useLocation } from "react-router-dom";
 import PopupFormCommunity from "./PopupFormCommunity";
 
 const Popup = ({ isOpen, onClose }) => {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     const handleEscapeKey = (event) => {
       if (event.key === "Escape") {
@@ -29,7 +32,18 @@ const Popup = ({ isOpen, onClose }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen, onClose]);
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const location = useLocation();
 
   let backColorPop = location.pathname === "/gallery" ? "#DC3349" : "#FE6970";
@@ -48,6 +62,27 @@ const Popup = ({ isOpen, onClose }) => {
     backColorPop = "#7D9F00";
   }
 
+  let popUpTop = "70px";
+  let popUpBottom = "70px";
+  let popUpright = "100px";
+  let popUpleft = "100px";
+
+  if (location.pathname === "/gallery") {
+    popUpTop = "100px";
+    popUpBottom = "100px";
+  }
+  if (window.innerHeight < 665) {
+    popUpTop = "60px";
+    popUpBottom = "60px";
+  }
+
+  if (window.innerWidth > 1700) {
+    popUpTop = "190px";
+    popUpBottom = "190px";
+    popUpright = "200px";
+    popUpleft = "200px";
+  }
+
   const showCommunity =
     location.pathname === "/comunidad" ||
     location.pathname === "/agenda" ||
@@ -59,7 +94,13 @@ const Popup = ({ isOpen, onClose }) => {
     <div className={`popup-overlay ${isOpen ? "open" : ""}`}>
       <div
         className={`popup-container ${isOpen ? "open" : ""}`}
-        style={{ "--color": backColorPop }}
+        style={{
+          "--color": backColorPop,
+          top: popUpTop,
+          bottom: popUpBottom,
+          right: popUpright,
+          left: popUpleft,
+        }}
       >
         {/* <div
           style={{

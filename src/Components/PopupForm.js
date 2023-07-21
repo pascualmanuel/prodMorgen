@@ -69,14 +69,7 @@ const PopupForm = () => {
             <textarea placeholder={textPlaceHolder}></textarea>
           </div>
           <div className="form-row">
-            <p
-              style={{
-                fontSize: "16px",
-                width: "700px",
-                color: textColor,
-                marginRight: "70px",
-              }}
-            >
+            <p className="p-popupform" style={{ color: textColor }}>
               {textOdio}
             </p>
             <CustomButton
