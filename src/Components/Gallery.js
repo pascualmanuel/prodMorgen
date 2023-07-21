@@ -67,8 +67,6 @@ const ImageSection = () => {
   //   return translateX;
   // };
 
-  const leftMax = -260.022;
-  const leftMin = 80;
   // const rightMax = 100;
 
   const getTranslateX = (xPos) => {
@@ -77,7 +75,8 @@ const ImageSection = () => {
     const translateX = (xPos / containerWidth) * translateRange + leftMin;
     return translateX;
   };
-
+  const leftMax = -260.022;
+  const leftMin = 80;
   const topMax = -100;
   const topMin = 60;
 
@@ -304,7 +303,7 @@ const ImageSection = () => {
       handleModalClose();
     }
   };
-  console.log(galleryContent.photo?.[selectedImageIndex]);
+
   return (
     <>
       <div className="image-section" onMouseMove={handleMouseMove}>
