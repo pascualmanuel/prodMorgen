@@ -102,54 +102,51 @@ function Interactivo() {
           {selectedCircle === "circle2" && <Bueno />}
           {selectedCircle === "circle3" && <Malo />}
         </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "52px",
-            left: "33% ",
-            zIndex: "100",
-
-            // display: "flex",
-            // justifyContent: "center",
-          }}
-        >
-          <div style={lineStyle}>
-            <div
-              style={{
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                backgroundColor:
-                  selectedCircle === "circle1" ? "black" : selectedColor,
-                border: "1px solid black",
-              }}
-              className="cursor"
-              onClick={() => handleCircleClick("circle1")}
-            ></div>
-            <div
-              style={{
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                backgroundColor:
-                  selectedCircle === "circle2" ? "black" : selectedColor,
-                border: "1px solid black",
-              }}
-              className="cursor"
-              onClick={() => handleCircleClick("circle2")}
-            ></div>
-            <div
-              style={{
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                backgroundColor:
-                  selectedCircle === "circle3" ? "black" : selectedColor,
-                border: "1px solid black",
-              }}
-              className="cursor"
-              onClick={() => handleCircleClick("circle3")}
-            ></div>
+        <div className="line-interactivo-cont">
+          <div
+            style={{
+              position: "absolute",
+              bottom: "45px",
+            }}
+          >
+            <div style={lineStyle}>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  backgroundColor:
+                    selectedCircle === "circle1" ? "black" : selectedColor,
+                  border: "1px solid black",
+                }}
+                className="cursor"
+                onClick={() => handleCircleClick("circle1")}
+              ></div>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  backgroundColor:
+                    selectedCircle === "circle2" ? "black" : selectedColor,
+                  border: "1px solid black",
+                }}
+                className="cursor"
+                onClick={() => handleCircleClick("circle2")}
+              ></div>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  backgroundColor:
+                    selectedCircle === "circle3" ? "black" : selectedColor,
+                  border: "1px solid black",
+                }}
+                className="cursor"
+                onClick={() => handleCircleClick("circle3")}
+              ></div>
+            </div>
           </div>
         </div>
         <div style={columnStyle} className="cursor-balde">

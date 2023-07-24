@@ -149,7 +149,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -50px;
+  /* margin-top: -50px; */
 }
 /* .interactivo-container {
   height: 100vh;

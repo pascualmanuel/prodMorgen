@@ -1211,3 +1211,11 @@ left: 180px; */
 .box:hover .image-text {
   opacity: 1;
 }
+
+.line-interactivo-cont {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  bottom: 60px;
+}

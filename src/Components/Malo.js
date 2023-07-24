@@ -62,7 +62,7 @@ const MatterJSDemo = () => {
         background: "transparent",
         wireframes: false,
         width: window.innerWidth,
-        height: 690,
+        height: window.innerHeight - 50,
         pixelRatio: "auto",
         textureFilter: "linear", // or 'nearest'
         pixelRatio: 2, // or 3
@@ -112,6 +112,7 @@ const MatterJSDemo = () => {
         },
       }
     );
+    console.log(window.innerHeight - 50, "ja");
 
     // add all of the bodies to the world
     Composite.add(engine.world, [ground, leftWall, rightWall]);
