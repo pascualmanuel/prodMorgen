@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
 import MorAzul from "../Assets/interactivo/particles/mor-azul2.png";
 import MorLila from "../Assets/interactivo/particles/mor-lila2.png";
@@ -11,10 +11,19 @@ const MatterJSDemo = () => {
   const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
 
   const createObject = () => {
-    const {Bodies, Composite} = Matter;
+    const getRandomAngle = () => {
+      const angles = [-45, , -10, 45];
+      const randomIndex = Math.floor(Math.random() * angles.length);
+      return angles[randomIndex];
+    };
+
+    const { Bodies, Composite } = Matter;
     const x = Math.random() * (window.innerWidth - 80) + 40;
-    const angleInDegrees = Math.random() * 140; // Generate a random angle between 0 and 140 degrees
+    // const angleInDegrees = -45 || 0 || 45; //Math.random() * 140; // Generate a random angle between 0 and 140 degrees
+    const angleInDegrees = getRandomAngle();
+
     const angleInRadians = (angleInDegrees * Math.PI) / 180; // Convert the angle from degrees to radians
+    console.log(angleInDegrees);
 
     const box = Bodies.rectangle(x, 0, 80, 230, {
       angle: angleInRadians, // Set the initial angle of the body
@@ -31,8 +40,15 @@ const MatterJSDemo = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const {Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint} =
-      Matter;
+    const {
+      Engine,
+      Render,
+      Runner,
+      Bodies,
+      Composite,
+      Mouse,
+      MouseConstraint,
+    } = Matter;
 
     // create an engine
     const engine = Engine.create();
@@ -46,7 +62,7 @@ const MatterJSDemo = () => {
         background: "transparent",
         wireframes: false,
         width: window.innerWidth,
-        height: 690,
+        height: window.innerHeight - 50,
         pixelRatio: "auto",
         textureFilter: "linear", // or 'nearest'
         pixelRatio: 2, // or 3
@@ -96,6 +112,7 @@ const MatterJSDemo = () => {
         },
       }
     );
+    console.log(window.innerHeight - 50, "ja");
 
     // add all of the bodies to the world
     Composite.add(engine.world, [ground, leftWall, rightWall]);
@@ -136,11 +153,11 @@ const MatterJSDemo = () => {
   return (
     <div className="falling-cont">
       <div className="falling-text-cont">
-        <h4 style={{fontSize: "50px"}}>
-          <span style={{textDecoration: "line-through"}}>No</span> hay lugar
+        <h4 style={{ fontSize: "50px" }}>
+          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar
           para un otro
         </h4>
-        <h3 onClick={addButtonClickHandler} className="falling-button" >
+        <h3 onClick={addButtonClickHandler} className="falling-button">
           Sumar otro
         </h3>
       </div>

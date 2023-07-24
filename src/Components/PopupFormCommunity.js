@@ -1,19 +1,29 @@
 import React from "react";
 import CustomButton from "./CustomButton";
-import {useLocation} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { isIOS, isSafari } from "react-device-detect";
+
 const PopupFormCommunity = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [checked, setChecked] = useState(true);
+
+  const [isIpad, setIsIpad] = useState(false);
+
+  useEffect(() => {
+    // Check if the User-Agent contains "iPad"
+    const userAgent = navigator.userAgent.toLowerCase();
+    setIsIpad(userAgent.includes("ipad"));
+  }, []);
 
   const handleChange = () => {
     setChecked(!checked);
   };
 
   const location = useLocation();
-  const {pathname} = window.location;
+  const { pathname } = window.location;
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,12 +38,17 @@ const PopupFormCommunity = () => {
     };
   }, []);
 
-  if (viewportWidth <= 768) {
-    // textContent = "This is the text content for small screens.";
-  } else if (viewportWidth <= 1024) {
-    // textContent = "This is the text content for medium screens.";
-  } else {
-    // textContent = "This is the text content for large screens.";
+  let fontAporte = "60px";
+
+  if (viewportHeight < 680) {
+    fontAporte = "45px";
+  }
+
+  let topWrapper = "-1px";
+  let rightWrapper = "128px";
+  if (isSafari || isIOS) {
+    topWrapper = "-3px";
+    rightWrapper = "131px";
   }
 
   const textColor = location.pathname === "/gallery" ? "#FE6970" : "#DC3349";
@@ -44,20 +59,19 @@ const PopupFormCommunity = () => {
       : "Presentate brevemente, y contanos de qué forma te gustaría participar";
 
   const prueba = (
-    <span style={{fontSize: "20px", fontFamily: "Light"}}>Envíar</span>
+    <span style={{ fontSize: "20px", fontFamily: "Light" }}>Enviar</span>
   );
 
   return (
     <>
       <div className="support-cont">
-
-        <div style={{width: "60%"}}>
-          <div style={{width: "555px"}}>
-            <h3 style={{fontSize: "60px", marginTop: "0px"}}>
+        <div>
+          <div>
+            <h3 className="support-h3">
               Tu aporte es clave <br />
-              <span style={{fontFamily: "Light"}}>para este proyecto</span>
+              <span style={{ fontFamily: "Light" }}>para este proyecto</span>
             </h3>
-            <p style={{fontSize: "18px"}}>
+            <p className="support-p">
               En estos tiempos de desencuentros y conexiones inestables, el
               proyecto Morgenstern busca reflexión y diálogo accesible para
               todes, ¡qué ambicioso! <br />
@@ -91,28 +105,51 @@ const PopupFormCommunity = () => {
               />
               <label htmlFor="switchMonthly">Mercado Pago</label>
               <label htmlFor="switchYearly">Pay Pal</label>
-              <div className="switch-wrapper">
+              <div
+                className="switch-wrapper"
+                style={{ top: topWrapper, right: rightWrapper }}
+              >
                 <div className="switch">
-                  <div style={{opacity: checked ? 1 : 0}}>Mercado Pago</div>
-                  <div style={{opacity: checked ? 0 : 1}}>Pay Pal</div>
+                  <div style={{ opacity: checked ? 1 : 0 }}>Mercado Pago</div>
+                  <div style={{ opacity: checked ? 0 : 1 }}>Pay Pal</div>
                 </div>
               </div>
             </div>
             {checked ? (
               <>
-                <div className="support-button" style={{marginTop: "50px"}}>
-                  Aportar $ 1000 ARS
-                </div>
-                <div className="support-button"> Aportar $ 2000 ARS </div>
-                <div className="support-button"> Aportar $ 5000 ARS </div>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button" style={{ marginTop: "50px" }}>
+                    Aportar $ 1000 ARS
+                  </div>
+                </Link>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button">Aportar $ 2000 ARS </div>{" "}
+                </Link>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button" style={{ marginBottom: 0 }}>
+                    {" "}
+                    Aportar $ 5000 ARS{" "}
+                  </div>
+                </Link>
               </>
             ) : (
               <>
-                <div className="support-button" style={{marginTop: "50px"}}>
-                  Aportar 10USD
-                </div>
-                <div className="support-button"> Aportar 20USD </div>
-                <div className="support-button"> Aportar 50USD</div>
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button" style={{ marginTop: "50px" }}>
+                    Aportar 10USD
+                  </div>
+                </Link>
+
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button"> Aportar 20USD </div>
+                </Link>
+
+                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                  <div className="support-button" style={{ marginBottom: 0 }}>
+                    {" "}
+                    Aportar 50USD
+                  </div>
+                </Link>
               </>
             )}
           </div>

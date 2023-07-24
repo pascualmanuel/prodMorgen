@@ -13,13 +13,16 @@ import Header from "./Pages/Header";
 import YoMorgen from "./Pages/YoMorgenstern";
 import Atendeme from "./Components/Atendeme";
 import Gallery from "./Components/Gallery";
-import Bueno from "./Components/Bueno";
 
 import Interactivo from "./Pages/Interactivo";
-import MorgensFallingCopy from "./Components/MorgensFallingCopy";
+
 import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
-import SpikeButton from "./Components/SpikeButton";
+
+import Agenda from "./Pages/Agenda";
+import Obras from "./Pages/Obras";
+
+import Book from "./Components/Book";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -42,10 +45,12 @@ function App() {
           <Route path="/atendeme" element={<Atendeme />} />
           <Route path="/interactivo" element={<Interactivo />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/bueno" element={<MorgensFallingCopy />} />
+
           <Route path="/malo" element={<Malo />} />
           <Route path="/comunidad" element={<Comunidad />} />
-          <Route path="/spike" element={<SpikeButton />} />
+          <Route path="/agenda" element={<Agenda />} />
+          <Route path="/obras" element={<Obras />} />
+          <Route path="/book" element={<Book />} />
         </Routes>
       </BrowserRouter>
     </>

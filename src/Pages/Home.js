@@ -1,11 +1,14 @@
 import "../Styles/App.css";
 import MorgenGirando from "../Components/MorgenGirando";
 import CustomButton from "../Components/CustomButton";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Prueba.css";
 
 function Home() {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     document.body.classList.add("no-scroll");
 
@@ -14,43 +17,53 @@ function Home() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const isPruebaPage = location.pathname === "/";
-  //   const bodyElement = document.body;
-
-  //   // Add or remove the 'no-scroll' class based on the page
-  //   if (isPruebaPage) {
-  //     bodyElement.classList.add("no-scroll");
-  //   } else {
-  //     bodyElement.classList.remove("no-scroll");
-  //   }
-
-  //   // Optionally, scroll to the top of the page when navigating to the Prueba page
-  //   if (isPruebaPage) {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, [location]);
-
-  // useEffect(() => {
-  //   function handleWindowResize() {
-  //     const viewportHeight = window.innerHeight;
-  //     if (viewportHeight <= 670) {
-  //       document.body.classList.remove("no-scroll");
-  //     } else {
-  //       document.body.classList.add("no-scroll");
-  //     }
-  //   }
-
-  //   handleWindowResize();
-
-  //   window.addEventListener("resize", handleWindowResize);
-  //   return () => {
-  //     window.removeEventListener("resize", handleWindowResize);
-  //   };
-  // }, []);
-
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
+
+  const { pathname } = window.location;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  console.log(viewportWidth, viewportHeight, "hola");
+
+  let agendaOffsetY = 100;
+  let morgenmerchOffsetY = 170;
+  let interactivoOffsetY = 190;
+  let comunidadOffsetY = 50;
+
+  if (window.innerHeight < 690) {
+    agendaOffsetY = 70;
+  }
+
+  if (window.innerHeight < 650) {
+    agendaOffsetY = 10;
+    morgenmerchOffsetY = 120;
+    interactivoOffsetY = 170;
+    comunidadOffsetY = 10;
+  }
 
   const buttons = [
     {
@@ -59,7 +72,7 @@ function Home() {
       secondColor: "#7D9F00",
       thirdColor: "#DFB000",
       // backColor: "transparent",
-      link: "/",
+      link: "/obras",
       border: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -79,7 +92,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 50, // Ajusta el desplazamiento vertical del botón
+        offsetY: comunidadOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -102,17 +115,17 @@ function Home() {
       firstColor: "#005DA2",
       secondColor: "#DC3349",
       thirdColor: "#DFB000",
-      link: "/",
+      link: "/agenda",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
         offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 100, // Ajusta el desplazamiento vertical del botón
+        offsetY: agendaOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
-      buttonText: "Morgen Merch",
+      buttonText: `${viewportWidth} ` + viewportHeight,
       firstColor: "#DFB000",
       secondColor: "#DC3349",
       thirdColor: "#AE79EF",
@@ -122,7 +135,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: 40, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 170, // Ajusta el desplazamiento vertical del botón
+        offsetY: morgenmerchOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -136,7 +149,7 @@ function Home() {
       height: homeButtonHeight,
       position: {
         offsetX: -40, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 190, // Ajusta el desplazamiento vertical del botón
+        offsetY: interactivoOffsetY, // Ajusta el desplazamiento vertical del botón
       },
     },
     {
@@ -169,6 +182,37 @@ function Home() {
     },
   ];
 
+  const [showNewsPopup, setShowNewsPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNewsPopup(true);
+    }, 5000); // 7 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowNewsPopup(false);
+  };
+
+  useEffect(() => {
+    let transitionTimer;
+
+    const popupElement = document.getElementById("news-popup");
+
+    if (popupElement) {
+      if (showNewsPopup) {
+        transitionTimer = setTimeout(() => {
+          popupElement.classList.add("show");
+        }, 100);
+      } else {
+        popupElement.classList.remove("show");
+      }
+    }
+    return () => clearTimeout(transitionTimer);
+  }, [showNewsPopup]);
+
   const circumference = 2000; // Circumference of the circle in pixels
   const buttonWidth = 200;
   const buttonHeight = 200;
@@ -193,7 +237,7 @@ function Home() {
     };
   };
 
-  const radio = 310; // Radio del círculo
+  // const radio = 310; // Radio del círculo
 
   return (
     <>
@@ -213,10 +257,63 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="circulo-animado">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696">
-          <circle className="cls-1" cx="348" cy="348" r={radio} />
-        </svg>
+      {/* <div className="animated-circle-cont">
+        <div className="circulo-animado">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696">
+            <circle className="cls-1" cx="348" cy="348" r={radio} />
+          </svg>
+        </div>
+      </div> */}
+
+      <div>
+        {showNewsPopup && (
+          <div id="news-popup" className="news-popup">
+            <div className="cont-home-pop">
+              {/* Pop-up content */}
+              <h2 style={{ fontSize: 40 }}>
+                Recibí las <br />
+                novedades
+              </h2>
+              <span
+                className="close-button"
+                style={{ marginTop: 33 }}
+                onClick={handleClosePopup}
+              >
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ transform: `rotate(45deg)` }}
+                >
+                  <path d="M5 22L40 22" stroke="black" strokeWidth="3" />
+                  <path
+                    d="M22.5 39.5L22.5 4.5"
+                    stroke="black"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div className="contact-me" style={{ marginLeft: 60 }}>
+              <div className="email-container">
+                <input
+                  type="email"
+                  placeholder="Dirección de e-mail"
+                  className="email-input"
+                />
+                <button
+                  type="submit"
+                  className="submit-button"
+                  style={{ background: "#AE79EF" }}
+                >
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

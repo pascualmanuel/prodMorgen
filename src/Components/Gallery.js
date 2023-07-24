@@ -25,10 +25,23 @@ import Gallery17 from "../Assets/gallery-imgs/Gallery-17.png";
 import Gallery18 from "../Assets/gallery-imgs/Gallery-18.png";
 import Gallery19 from "../Assets/gallery-imgs/Gallery-19.png";
 import Gallery20 from "../Assets/gallery-imgs/Gallery-20.png";
+import NextIcon from "../Assets/svg/white-next-icon.svg";
+import PrevIcon from "../Assets/svg/white-prev-icon.svg";
+
 const ImageSection = () => {
   const [transformStyle, setTransformStyle] = useState();
 
   const [showPopup, setShowPopup] = useState(false);
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setSelectedImageIndex(index);
+  };
+
+  const handleModalClose = () => {
+    setSelectedImageIndex(null);
+  };
 
   const openPopup = () => {
     setShowPopup(true);
@@ -54,8 +67,6 @@ const ImageSection = () => {
   //   return translateX;
   // };
 
-  const leftMax = -260.022;
-  const leftMin = 80;
   // const rightMax = 100;
 
   const getTranslateX = (xPos) => {
@@ -64,7 +75,8 @@ const ImageSection = () => {
     const translateX = (xPos / containerWidth) * translateRange + leftMin;
     return translateX;
   };
-
+  const leftMax = -260.022;
+  const leftMin = 80;
   const topMax = -100;
   const topMin = 60;
 
@@ -83,57 +95,239 @@ const ImageSection = () => {
     };
   }, []);
 
-  const [images, setImages] = useState([]);
-  
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/photos"
-        );
-        setImages(response.data.slice(0, 20)); // Limit to the first 20 images
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      }
-    };
+  // const [images, setImages] = useState([]);
 
-    fetchImages();
-  }, []);
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://jsonplaceholder.typicode.com/photos"
+  //       );
+  //       setImages(response.data.slice(0, 20)); // Limit to the first 20 images
+  //     } catch (error) {
+  //       console.error("Error fetching images:", error);
+  //     }
+  //   };
 
-  const galleryImages = [
-    Gallery1,
-    Gallery2,
-    Gallery3,
-    Gallery4,
-    Gallery5,
-    Gallery7,
-    Gallery9,
-    Gallery8,
-    Gallery6,
-    Gallery10,
-    Gallery11,
-    Gallery12,
-    Gallery13,
-    Gallery14,
-    Gallery15,
-    Gallery16,
-    Gallery17,
-    Gallery18,
-    Gallery19,
-    Gallery20,
+  //   fetchImages();
+  // }, []);
+
+  const galleryContent = [
+    {
+      photo: Gallery1,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery1,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery3,
+      category: "Historieta ",
+      date: "15/10/20",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery4,
+      category: "Historieta ",
+      date: "10/09/23",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery5,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery7,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery9,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery8,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery6,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery10,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery11,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery12,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery13,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery14,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery15,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery16,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery17,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery18,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery19,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      photo: Gallery20,
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
   ];
 
-  console.log(Img);
+  const selectedImageData =
+    selectedImageIndex !== null ? galleryContent[selectedImageIndex] : null;
+
+  const handlePrevImage = () => {
+    setSelectedImageIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        return galleryContent.length - 1;
+      } else {
+        return prevIndex - 1;
+      }
+    });
+  };
+
+  const handleNextImage = () => {
+    setSelectedImageIndex((prevIndex) => {
+      if (prevIndex === galleryContent.length - 1) {
+        return 0;
+      } else {
+        return prevIndex + 1;
+      }
+    });
+  };
+
+  const handleKeyboardNavigation = (event) => {
+    if (event.keyCode === 37) {
+      // Left arrow key
+      handlePrevImage();
+    } else if (event.keyCode === 39) {
+      // Right arrow key
+      handleNextImage();
+    } else if (event.keyCode === 27) {
+      // Esc key
+      handleModalClose();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyboardNavigation);
+    return () => {
+      window.removeEventListener("keydown", handleKeyboardNavigation);
+    };
+  }, []);
+
+  const handleModalClick = (event) => {
+    if (event.target.classList.contains("modal-overlay")) {
+      handleModalClose();
+    }
+  };
+
   return (
     <>
       <div className="image-section" onMouseMove={handleMouseMove}>
         <div className="grid-container" style={{ transform: transformStyle }}>
-          {galleryImages.map((image, index) => (
+          {galleryContent.map((item, index) => (
             <div
               key={index}
               className="box"
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
+              style={{ backgroundImage: `url(${item.photo})` }}
+              onClick={() => handleImageClick(index)}
+            >
+              <div className="image-text">
+                <div className="hover-g-top">
+                  {/* <div className="submodal-category">{item.category}</div> */}
+                  <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                    {item.title}
+                  </div>
+                </div>
+                <div className="hover-g-bottom">
+                  {/* <div>{item.date}</div> */}
+                  {/* <div>{item.author}</div> */}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -158,6 +352,40 @@ const ImageSection = () => {
           />
         </div>
         {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
+        {selectedImageData && (
+          <div className="modal-overlay" onClick={handleModalClick}>
+            <span className="close" onClick={handleModalClose}>
+              &times;
+            </span>
+            <span className="gallery-prev-button">
+              <img width={35} src={PrevIcon} onClick={handlePrevImage} />
+            </span>
+            <div className="modal">
+              <img
+                className="modal-image"
+                src={selectedImageData.photo}
+                alt="Selected Image"
+              />
+              <div className="submodal">
+                <div className="submodal-top">
+                  <div className="submodal-category">
+                    {selectedImageData.category}
+                  </div>
+                  <div>{selectedImageData.date}</div>
+                </div>
+
+                <div className="submodal-bottom">
+                  <div>{selectedImageData.title}</div>
+
+                  <div>{selectedImageData.author}</div>
+                </div>
+              </div>
+            </div>
+            <span className="gallery-next-button">
+              <img width={35} src={NextIcon} onClick={handleNextImage} />
+            </span>
+          </div>
+        )}
       </div>
     </>
   );

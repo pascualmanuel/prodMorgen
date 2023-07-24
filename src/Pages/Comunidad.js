@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {useLocation} from "react-router-dom";
-import {useState} from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 import Popup from "../Components/PopUp";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 
@@ -8,6 +8,7 @@ import BackgroundDiv from "../Components/BackgroundDiv";
 import CustomButton from "../Components/CustomButton";
 import SpikeButton from "../Components/SpikeButton";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
+import { isIOS } from "react-device-detect";
 
 function Comunidad() {
   const [showPopup, setShowPopup] = useState(false);
@@ -30,15 +31,27 @@ function Comunidad() {
     setShowPopup(false);
   };
 
+  let commButtonWidth = "300px";
+
+  if (window.innerWidth < 1320) {
+    commButtonWidth = "280px";
+  }
+
+  let buttonTextSize = "18px";
+  if (isIOS) {
+    buttonTextSize = "16px";
+  }
+
+  // console.log(commButtonWidth);
   return (
     <>
       <div className="comunidad-cont">
         <div className="comunidad-left" style={comStyle}>
           <div className="comunidad-left-content">
-            <h2 style={{fontSize: 80, marginBottom: 0, width: 500}}>
+            <h2 style={{ fontSize: 80, marginBottom: 0, width: 500 }}>
               Comunidad
             </h2>
-            <p style={{fontSize: 18, width: 500}}>
+            <p style={{ fontSize: 18, width: 500 }}>
               No queremos ser Morgensterns, queremos generar espacios de
               encuentro, construir comunidad para dar lugar a la creatividad, la
               reflexión, la risa. Para eso, proponemos diferentes formas de
@@ -46,9 +59,9 @@ function Comunidad() {
               eventos y más. Te invitamos a seguir pensando y creando en
               conjunto como más te guste.
             </p>
-          </div>
-          <div onClick={openPopup}>
-            <SpikeButtonThree />
+            <div onClick={openPopup} style={{ position: "relative" }}>
+              <SpikeButtonThree />
+            </div>
           </div>
         </div>
 
@@ -72,10 +85,10 @@ function Comunidad() {
                 thirdColor={"#4590E6"}
                 backColor={"#4590E6"}
                 border={"solid black"}
-                width={"300px"}
+                width={commButtonWidth}
                 height={"25px"}
                 fontFamily={"Regular"}
-                fontSize={"18px"}
+                fontSize={buttonTextSize}
                 link={"/gallery"}
               />
             </div>
@@ -99,9 +112,9 @@ function Comunidad() {
                 thirdColor={"#4590E6"}
                 backColor={"#4590E6"}
                 border={"solid black"}
-                width={"300px"}
+                width={commButtonWidth}
                 height={"25px"}
-                fontSize={"18px"}
+                fontSize={buttonTextSize}
                 fontFamily={"Regular"}
                 link={"/atendeme"}
               />

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import BlackMorgen from "../Assets/interactivo/morg-linea.png";
 import Sticker1 from "../Assets/interactivo/morgenPush/sf1.png";
 import Sticker2 from "../Assets/interactivo/morgenPush/sf2.png";
@@ -43,6 +43,26 @@ import html2canvas from "html2canvas";
 const PushMorgen = () => {
   const [stickers, setStickers] = useState([]);
   const [playCount, setPlayCount] = useState(0);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+      console.log("first");
+    };
+
+    window.addEventListener("resize", updateWindowWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Clear stickers array on window resize
+    setStickers([]);
+  }, [windowWidth]);
 
   const canvasRef = useRef(null);
 
@@ -148,6 +168,7 @@ const PushMorgen = () => {
       link.click();
     });
   };
+
   return (
     <>
       <div className="container-push">
@@ -188,7 +209,7 @@ const PushMorgen = () => {
               color: "white",
             }}
           >
-            clickeame y llename de <br></br> mini morgensterns
+            tu click me llena
           </p>
         </div>
         <img

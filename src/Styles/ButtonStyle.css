@@ -53,9 +53,8 @@
   /* background: var(--hover-color); */
   z-index: 2;
 }
-
 .HoverEffect__basic__bg-c-button--03 {
-  background: var(--color);
+  /* background: var(--color); */
   z-index: 1;
 }
 /* Para poder ver el hoverrrrrrrrrrrrrrrrrrrrrrrrrrrr */
@@ -80,6 +79,7 @@
 
 .HoverEffect--oval .HoverEffect__basic__bg-c-button {
   border-radius: 200px;
+  /* border-radius: 50px; */
 }
 
 .c-button--round:hover
@@ -175,7 +175,7 @@
     transform: rotate(360deg);
   }
 } */
-
+/* 
 .circulo-animado {
   position: absolute;
   width: 696px;
@@ -192,10 +192,14 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .cls-1 {
   fill: none;
   stroke: #fe6970;
   stroke-dasharray: 0 0 20 20;
+}
+
+.crack:hover {
+  /* border-color: transparent !important; */
 }
