@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
 import "./Styles/App.css";
 import "./Fonts/ClashDisplay-Bold.ttf";
 import "./Fonts/ClashDisplay-Extralight.ttf";
@@ -13,16 +12,13 @@ import Header from "./Pages/Header";
 import YoMorgen from "./Pages/YoMorgenstern";
 import Atendeme from "./Components/Atendeme";
 import Gallery from "./Components/Gallery";
-
 import Interactivo from "./Pages/Interactivo";
-
 import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
-
 import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
-
 import Book from "./Components/Book";
+import Inadvertido from "./Components/Inadvertido";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -45,7 +41,6 @@ function App() {
           <Route path="/atendeme" element={<Atendeme />} />
           <Route path="/interactivo" element={<Interactivo />} />
           <Route path="/gallery" element={<Gallery />} />
-
           <Route path="/malo" element={<Malo />} />
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/agenda" element={<Agenda />} />

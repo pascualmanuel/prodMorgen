@@ -39,7 +39,7 @@ const Obras = () => {
           <ConexionInestable />
         </>
       ),
-      color: "#4590E6", // Specify the color for Tab 1
+      color: "#4590E6",
     },
     {
       title: " Desnudos",
@@ -49,7 +49,7 @@ const Obras = () => {
           <Desnudos />
         </>
       ),
-      color: "#FE6970", // Specify the color for Tab 1
+      color: "#FE6970",
     },
     {
       title: " Inadvertido",
@@ -61,7 +61,7 @@ const Obras = () => {
           </div>
         </>
       ),
-      color: "#FF3910", // Specify the color for Tab 1
+      color: "#FF3910",
     },
     {
       title: " Habla morgen",
@@ -71,7 +71,7 @@ const Obras = () => {
           <Book />
         </>
       ),
-      color: "#AE79EF", // Specify the color for Tab 1
+      color: "#AE79EF",
     },
     {
       title: " Estampas",
@@ -83,7 +83,7 @@ const Obras = () => {
           <Estampas />
         </>
       ),
-      color: "#005DA2", // Specify the color for Tab 1
+      color: "#005DA2",
     },
     {
       title: " animaciones",
@@ -94,7 +94,7 @@ const Obras = () => {
           <Animaciones />
         </>
       ),
-      color: "#7D9F00", // Specify the color for Tab 1
+      color: "#7D9F00",
     },
     {
       title: "futuro inmediato",
@@ -106,7 +106,7 @@ const Obras = () => {
           </div>
         </>
       ),
-      color: "#DCCB00", // Specify the color for Tab 1
+      color: "#DCCB00",
     },
   ];
 

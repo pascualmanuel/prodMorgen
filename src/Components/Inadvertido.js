@@ -9,29 +9,33 @@ import InaImg7 from "../Assets/obras/inadvertido/inadvertido-7.png";
 import InaImg8 from "../Assets/obras/inadvertido/inadvertido-8.png";
 import InaImg9 from "../Assets/obras/inadvertido/inadvertido-9.png";
 import InaImg10 from "../Assets/obras/inadvertido/inadvertido-10.png";
-import InaImg11 from "../Assets/obras/inadvertido/inadvertido-11.png";
-import InaImg12 from "../Assets/obras/inadvertido/inadvertido-12.png";
-import InaImg13 from "../Assets/obras/inadvertido/inadvertido-13.png";
-import InaImg14 from "../Assets/obras/inadvertido/inadvertido-14.png";
-import InaImg15 from "../Assets/obras/inadvertido/inadvertido-15.png";
-import InaImg16 from "../Assets/obras/inadvertido/inadvertido-16.png";
-import InaImg17 from "../Assets/obras/inadvertido/inadvertido-17.png";
+import InaImg11 from "../Assets/obras/inadvertido/inadvertido-15.png";
+import InaImg12 from "../Assets/obras/inadvertido/inadvertido-34.png";
+import InaImg13 from "../Assets/obras/inadvertido/inadvertido-36.png";
+import InaImg14 from "../Assets/obras/inadvertido/inadvertido-33.png";
+import InaImg15 from "../Assets/obras/inadvertido/inadvertido-31.png";
+import InaImg16 from "../Assets/obras/inadvertido/inadvertido-39.png";
+import InaImg17 from "../Assets/obras/inadvertido/inadvertido-37.png";
+import InaImg18 from "../Assets/obras/inadvertido/inadvertido-29.png";
+import InaImg19 from "../Assets/obras/inadvertido/inadvertido-40.png";
+import InaImg20 from "../Assets/obras/inadvertido/inadvertido-38.png";
 // import Prueba from "../Assets/frenchfood3.jpg";
 import IconTag from "../Assets/svg/icon-tag.svg";
 import PopupObras from "./PopupObras";
 const Inadvertido = () => {
   const images = [
-    InaImg1,
-    InaImg2,
-    InaImg3,
-    InaImg4,
-    InaImg5,
-    InaImg6,
-    InaImg7,
-    InaImg8,
-    InaImg9,
-    InaImg10,
+    InaImg13,
+    InaImg14,
+    InaImg17,
+    InaImg15,
+    InaImg16,
+    InaImg12,
+    InaImg18,
+    InaImg19,
+    InaImg11,
+    InaImg20,
   ];
+
   useEffect(() => {
     const container = document.querySelector(
       ".horizontal-inad-gallery-container"

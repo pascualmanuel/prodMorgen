@@ -2,20 +2,21 @@ import "../Styles/App.css";
 import MorgenGirando from "../Components/MorgenGirando";
 import CustomButton from "../Components/CustomButton";
 import React, { useEffect, useState } from "react";
-
+import { MobileView } from "react-device-detect";
+import MobileHome from "../Components/MobileHome";
 import "./Prueba.css";
 
 function Home() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
-  useEffect(() => {
-    document.body.classList.add("no-scroll");
+  // useEffect(() => {
+  //   document.body.classList.add("no-scroll");
 
-    return () => {
-      document.body.classList.remove("no-scroll");
-    };
-  }, []);
+  //   return () => {
+  //     document.body.classList.remove("no-scroll");
+  //   };
+  // }, []);
 
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
@@ -237,36 +238,35 @@ function Home() {
     };
   };
 
-  // const radio = 310; // Radio del círculo
+  const isMobileView = () => {
+    return viewportWidth <= 768; // You can adjust the width threshold based on your requirements
+  };
 
   return (
     <>
-      <div className="home-container">
-        <div className="circle-container">
-          <div className="circle-wrapper">
-            {buttons.map((button, index) => (
-              <div
-                key={index}
-                className="circle-button"
-                style={getButtonPosition(index)}
-              >
-                <CustomButton {...button} />
-              </div>
-            ))}
-            <MorgenGirando />
+      {isMobileView() && <MobileHome />}
+
+      {!isMobileView() && (
+        <div className="home-container">
+          <div className="circle-container">
+            <div className="circle-wrapper">
+              {buttons.map((button, index) => (
+                <div
+                  key={index}
+                  className="circle-button"
+                  style={getButtonPosition(index)}
+                >
+                  <CustomButton {...button} />
+                </div>
+              ))}
+              <MorgenGirando />
+            </div>
           </div>
         </div>
-      </div>
-      {/* <div className="animated-circle-cont">
-        <div className="circulo-animado">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 696">
-            <circle className="cls-1" cx="348" cy="348" r={radio} />
-          </svg>
-        </div>
-      </div> */}
+      )}
 
       <div>
-        {showNewsPopup && (
+        {!isMobileView() && showNewsPopup && (
           <div id="news-popup" className="news-popup">
             <div className="cont-home-pop">
               {/* Pop-up content */}
