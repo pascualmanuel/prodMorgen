@@ -55,6 +55,11 @@ function Header() {
     circleButton = CircleNav;
   }
 
+  let marginObras = 0;
+  if (location.pathname === "/obras") {
+    marginObras = -7;
+  }
+
   const isGalleryOrAtendeme =
     location.pathname === "/gallery" || location.pathname === "/atendeme";
 
@@ -149,22 +154,22 @@ function Header() {
                 Yo, Morgenstern
               </h2>
             </Link>
-            <Link>
+            <Link to={"/obras"}>
               <h2 onClick={closeMenu} className="navbar-title obras">
                 Obras
               </h2>
             </Link>
-            <Link>
+            <Link to={"/comunidad"}>
               <h2 onClick={closeMenu} className="navbar-title comunidad">
                 Comunidad
               </h2>
             </Link>
-            <Link>
+            <Link to={"/larevista"}>
               <h2 onClick={closeMenu} className="navbar-title revista">
                 La revista
               </h2>
             </Link>
-            <Link to={"/particu"}>
+            <Link to={"/interactivo"}>
               <h2 onClick={closeMenu} className="navbar-title interactivo">
                 Interactivo
               </h2>
@@ -174,7 +179,7 @@ function Header() {
                 Morgen Merch
               </h2>
             </Link>
-            <Link>
+            <Link to={"/agenda"}>
               <h2 onClick={closeMenu} className="navbar-title agenda">
                 Agenda
               </h2>
@@ -197,7 +202,7 @@ function Header() {
         </div>
       )}
       <div className="nav-bar">
-        <div className="plus-icon">
+        <div className="plus-icon" style={{ marginRight: marginObras }}>
           {!menuOpen && isHome && (
             <p style={{ marginRight: "50px", color: "white" }}>ESP</p>
           )}

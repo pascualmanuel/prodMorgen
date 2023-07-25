@@ -198,6 +198,18 @@ h4 {
   color: black;
 }
 
+@media (max-height: 680px) {
+  .navbar-title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .navbar-title {
+    font-size: 45px;
+  }
+}
+
 .toggle-button {
   display: flex;
   justify-content: center;
@@ -798,36 +810,6 @@ left: 180px; */
   z-index: 1000;
 }
 
-/* accordion */
-
-/* .accordion {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.accordion-tab {
-  width: 58px;
-  height: 100vh;
-  background-color: #ddd;
-  cursor: pointer;
-}
-
-.accordion-tab.active {
-  width: 58px;
-  background-color: #aaa;
-}
-
-.accordion-content {
-  display: none;
-  overflow: hidden;
-}
-
-.accordion-content.active {
-  width: 100%;
-  display: block;
-  opacity: 1;
-} */
-
 .accordion {
   display: flex;
   justify-content: flex-end;
@@ -1215,6 +1197,6 @@ left: 180px; */
   width: 100vw;
   display: flex;
   justify-content: center;
-  z-index: 1000;
+  z-index: 990;
   bottom: 60px;
 }
