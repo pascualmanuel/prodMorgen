@@ -8,6 +8,8 @@ import YoMorBackDos from "../Assets/yomor/yomor1-2.png";
 import YoMorBack4 from "../Assets/yomor/yomor1-3.png";
 import SpikeButton from "../Components/SpikeButton";
 import Itau from "../Assets/svg/itau-logo2.png";
+import Itau2 from "../Assets/svg/itau-logo.png";
+
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
 import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
@@ -38,7 +40,7 @@ function YoMorgen() {
     yoMorBackSeeMore = YoMorBackDos;
   }
 
-  const YoMorStyle = {
+  let YoMorStyle = {
     height: heightFirstYoMor,
     backgroundImage: `url(${YoMorBack})`,
     backgroundRepeat: " no-repeat",
@@ -46,29 +48,53 @@ function YoMorgen() {
     backgroundPosition: "right",
   };
 
-  const YoMorStyleDos = {
+  let YoMorStyleDos = {
     height: "950px",
     backgroundImage: `url(${YoMorBackDos})`,
     backgroundRepeat: " no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "top right",
   };
-  const additionalTextStyle = {
-    // backgroundImage: `url(${YoMorBackTres})`,
-    // backgroundRepeat: " no-repeat",
-    // backgroundSize: "cover",
+  let additionalTextStyle = {
+    // width:80%;
   };
   const handleClick = () => {
     setShowAdditionalText(true);
   };
 
+  let continueReadingStyle = {
+    zIndex: 10000,
+    position: "absolute",
+    width: "485px",
+    height: "75px",
+  };
   if (showAdditionalText) {
     YoMorStyleDos.backgroundImage = `url(${yoMorBackSeeMore})`;
     YoMorStyleDos.height = "1700px";
   }
 
-
-  
+  if (window.innerWidth < 720) {
+    YoMorStyle = {
+      height: "400px",
+      backgroundImage: `url(${YoMorBack})`,
+      backgroundRepeat: " no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "right",
+    };
+    YoMorStyleDos = {
+      height: "400px",
+      backgroundImage: `url(${YoMorBackDos})`,
+      backgroundRepeat: " no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "top right",
+    };
+    continueReadingStyle = {
+      zIndex: 10000,
+      position: "absolute",
+      width: "250px",
+      height: "75px",
+    };
+  }
 
   return (
     <>
@@ -127,38 +153,32 @@ function YoMorgen() {
                   </svg>
                   Seguir Leyendo
                 </p>
-                <div
-                  onClick={handleClick}
-                  style={{
-                    zIndex: 10000,
-                    position: "absolute",
-                    width: "485px",
-                    height: "75px",
-                  }}
-                ></div>
+                <div onClick={handleClick} style={continueReadingStyle}></div>
               </>
             )}
           </div>
         </div>
         <div className="spikes" style={{ zIndex: "110" }}>
           <div>
-            <h2 style={{ fontSize: "50px" }}>Idea y desarrollo:</h2>
+            <h2 className="spikes-title">Idea y desarrollo:</h2>
 
             <h4
               style={{
                 // position: "absolute",
-                fontSize: "50px",
                 fontFamily: "Light",
                 paddingBottom: "50px",
                 borderBottom: "solid 1px",
               }}
+              className="ailin-title"
             >
               Ailin Kirjner
             </h4>
           </div>
           <div>
-            <SpikeButtonTwo />
-            <SpikeButton />
+            <span className="spike-yomor">
+              <SpikeButtonTwo />
+              <SpikeButton />
+            </span>
           </div>
         </div>
         {/* <div style={{ backgroundColor: "#dccb00", height: 200 }}>
@@ -167,17 +187,10 @@ function YoMorgen() {
       </div>
 
       <div className="footer-yomor">
-        <h4 style={{ marginRight: 25, fontFamily: "Light", fontSize: 18 }}>
-          Agradecemos el apoyo dado por
-        </h4>
+        <h4 className="apoyo-yomor">Agradecemos el apoyo dado por</h4>
 
-        <img
-          src={Caba}
-          width={225}
-          height={65}
-          style={{ marginRight: 100, marginLeft: 70 }}
-        />
-        <img src={Itau} width={225} />
+        <img src={Caba} className="sponsor-caba" />
+        <img src={Itau} className="sponsor-itau" />
       </div>
     </>
   );

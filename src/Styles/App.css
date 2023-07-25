@@ -1261,10 +1261,7 @@ left: 180px; */
   }
 
   .email-input {
-    /* height: 94%; */
-    /* width: 83.1%; */
     border-radius: 0px;
-    /* height: 100% !important; */
   }
 
   .submit-button {
@@ -1288,6 +1285,7 @@ left: 180px; */
     margin-right: 30px;
   }
 }
+
 
 @media (max-width: 400px) {
   .email-container {

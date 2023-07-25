@@ -302,6 +302,11 @@
 
 /* YoMor */
 
+.apoyo-yomor {
+  margin-right: 25px;
+  font-family: "Light";
+  font-size: 18px;
+}
 .yoMor-text {
   color: white;
   width: 500px;
@@ -329,6 +334,23 @@
   justify-content: space-around;
 }
 
+.spikes-title {
+  font-size: 50px;
+}
+
+.ailin-title {
+  font-size: 50px;
+}
+
+.sponsor-caba {
+  margin-right: 100px;
+  margin-left: 70px;
+  width: 225px;
+  height: 65px;
+}
+.sponsor-itau {
+  width: 225px;
+}
 .yoMor-text-grande {
   position: absolute;
   margin-top: -150px;
@@ -362,7 +384,7 @@
   display: block;
   height: 50px;
   /* Adjust the background-size and background-position values below */
-  background-size: 100px 100%;
+  background-size: 70px 100%;
   background-image: linear-gradient(45deg, #dccb00 33.33%, transparent 33.33%),
     linear-gradient(-45deg, #dccb00 33.33%, transparent 33.33%);
   background-position: 0 100%;
@@ -380,4 +402,53 @@
   padding-top: 200px;
   padding-bottom: 40px;
   z-index: 100;
+}
+
+@media (max-width: 720px) {
+  .yoMor-text {
+    margin-left: 10px;
+    width: 80%;
+  }
+  .spike-yomor {
+    display: none;
+  }
+  .spikes {
+    width: 100vw;
+    height: 35vh;
+  }
+  .spikes-title {
+    font-size: 25px;
+  }
+  .ailin-title {
+    font-size: 22px;
+  }
+  .footer-yomor {
+    position: relative;
+    background-color: #dccb00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+  .sponsor-caba {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 120px;
+    height: auto;
+  }
+  .sponsor-itau {
+    width: 110px;
+  }
+  .apoyo-yomor {
+    margin-right: 0px;
+    margin-left: 10px;
+    font-size: 8px;
+  }
+  .yoMor-text-link {
+    margin-left: 25px;
+  }
+  .spikes::before {
+    background-size: 40px 100%;
+  }
 }
