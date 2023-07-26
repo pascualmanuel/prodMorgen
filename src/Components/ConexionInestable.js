@@ -12,6 +12,8 @@ import PopupObras from "./PopupObras";
 const ConexionInestable = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   const openPopup = (image) => {
     setSelectedImage(image);
@@ -51,6 +53,11 @@ const ConexionInestable = () => {
     FirstImage1,
   ];
 
+  let outThird = "block";
+
+  if (window.innerWidth < 720) {
+    outThird = "none";
+  }
   return (
     <div className="image-gallery-conexion">
       <div className="conextion-row">
@@ -91,7 +98,7 @@ const ConexionInestable = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row">
+      <div className="conextion-row" style={{ display: outThird }}>
         {imagesThirdRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img

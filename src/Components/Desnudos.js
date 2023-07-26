@@ -12,6 +12,8 @@ import PopupObras from "./PopupObras";
 const Desnudos = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   const openPopup = (image) => {
     setSelectedImage(image);
@@ -51,6 +53,12 @@ const Desnudos = () => {
     FirstImage3,
   ];
 
+  let outThird = "block";
+
+  if (window.innerWidth < 720) {
+    outThird = "none";
+  }
+
   return (
     <div className="image-gallery-conexion">
       <div className="conextion-row cr-1">
@@ -72,7 +80,7 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row cr-2">
+      <div className="conextion-row" style={{ display: outThird }}>
         {imagesSecondRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
@@ -91,7 +99,7 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row cr-3">
+      <div className="conextion-row" style={{ display: outThird }}>
         {imagesThirdRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
@@ -111,9 +119,9 @@ const Desnudos = () => {
         ))}
       </div>
       {showPopup && (
-              <div className="modal-overlay">
-        <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
-          </div>
+        <div className="modal-overlay">
+          <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
+        </div>
       )}
     </div>
   );
