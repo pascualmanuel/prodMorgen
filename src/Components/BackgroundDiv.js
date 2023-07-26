@@ -105,7 +105,6 @@ const BackgroundDiv = () => {
             top: 0,
             left: 0,
             zIndex: "100",
-            height: "100vh",
           }}
         />
         <div className="wrapper full-h">
@@ -120,7 +119,6 @@ const BackgroundDiv = () => {
               width={MorgenWidthYoMorgen}
             />
           </div>
-          {/* <MorgenGirando /> */}
         </div>
       </div>
     </>

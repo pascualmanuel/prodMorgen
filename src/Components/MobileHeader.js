@@ -55,8 +55,10 @@ function MobileHeader() {
     circleButton = CircleNav;
   }
 
+  let displayCircleMob = "inherit";
+
   if (location.pathname === "/") {
-    circleButton = null;
+    displayCircleMob = "none";
   }
 
   // let marginObras = 0;
@@ -201,9 +203,10 @@ function MobileHeader() {
         <div
           style={{
             position: "fixed",
-            top: "50px",
-            left: "60px",
+            marginTop: "25px",
+            marginLeft: "30px",
             zIndex: "900",
+            display: displayCircleMob,
           }}
         >
           <Link to="/">
@@ -212,11 +215,7 @@ function MobileHeader() {
         </div>
       )}
 
-      <div
-        className="nav-bar"
-        // style={{ justifyContent: menuOpen ? "space-between" : "flex-end" }}
-        style={{ justifyContent: "flex-end" }}
-      >
+      <div className="nav-bar" style={{ justifyContent: "flex-end" }}>
         <div className="plus-icon">
           {!menuOpen && isHome && (
             <p style={{ marginRight: "50px", color: "white" }}></p>

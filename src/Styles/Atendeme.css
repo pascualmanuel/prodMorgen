@@ -404,6 +404,15 @@
   z-index: 100;
 }
 
+.cont-svgs-2 {
+  position: absolute;
+  margin-top: -137px;
+  right: 400px;
+  width: 290px;
+  height: 290px;
+  z-index: 100;
+}
+
 @media (max-width: 720px) {
   .yoMor-text {
     margin-left: 10px;
@@ -450,5 +459,39 @@
   }
   .spikes::before {
     background-size: 40px 100%;
+  }
+  .yoMor-text-grande {
+    position: absolute;
+    margin-top: -70px;
+    margin-left: 14px;
+  }
+  .cont-svgs-2 {
+    position: absolute;
+    margin-top: -20px;
+    right: 20px;
+    width: 130px;
+    z-index: 100;
+  }
+  .yomor-cont-mob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  .yomor-mob-title {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    text-align: center;
+    margin-top: -50px;
+  }
+  .ailin-title {
+    margin-right: 65px;
+  }
+}
+
+@media (max-width: 370px) {
+  .yomor-mob-title {
+    font-size: 40px;
   }
 }

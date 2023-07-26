@@ -4,34 +4,23 @@ import Img1 from "../Assets/svg/Star.svg";
 import Img2 from "../Assets/svg/Star2.svg";
 import Img3 from "../Assets/svg/Star3.svg";
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SpikeButton() {
   return (
     <>
       <Link to="/comunidad">
-        <div
-          className="cont-svgs"
-          style={{
-            position: "absolute",
-            marginTop: "-137px",
-            right: "400px",
-            width: 290,
-            height: 290,
-            zIndex: 100,
-          }}
-        >
+        <div className="cont-svgs-2">
           <img
             src={Img1}
             alt="SpikeButton"
-            className="cls-2"
+            className="cls-2 spike-comm"
             style={{
               position: "absolute",
               left: 0,
               top: 0,
               transition: "transform 0.5s",
               zIndex: 3,
-              width: 290,
             }}
             onMouseEnter={() => {
               const cls2 = document.querySelector(".cls-2");
@@ -53,27 +42,25 @@ function SpikeButton() {
           <img
             src={Img2}
             alt="SpikeButton"
-            className="cls-3"
+            className="cls-3 spike-comm"
             style={{
               position: "absolute",
               left: 0,
               top: 0,
               transition: "transform 0.5s",
               zIndex: 2,
-              width: 290,
             }}
           />
           <img
             src={Img3}
             alt="SpikeButton"
-            className="cls-4"
+            className="cls-4 spike-comm"
             style={{
               position: "absolute",
               left: 0,
               top: 0,
               transition: "transform 0.5s",
               zIndex: 1,
-              width: 290,
             }}
             onMouseEnter={() => {
               const cls2 = document.querySelector(".cls-2");

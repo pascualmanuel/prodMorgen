@@ -9,7 +9,7 @@ import YoMorBack4 from "../Assets/yomor/yomor1-3.png";
 import SpikeButton from "../Components/SpikeButton";
 import Itau from "../Assets/svg/itau-logo2.png";
 import Itau2 from "../Assets/svg/itau-logo.png";
-
+import MorgenImgSvg from "../Assets/morgen-svg.svg";
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
 import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
@@ -68,25 +68,28 @@ function YoMorgen() {
     width: "485px",
     height: "75px",
   };
+  let heightMobileRead = "450px";
+
   if (showAdditionalText) {
     YoMorStyleDos.backgroundImage = `url(${yoMorBackSeeMore})`;
     YoMorStyleDos.height = "1700px";
+    heightMobileRead = "1000px";
   }
 
   if (window.innerWidth < 720) {
     YoMorStyle = {
-      height: "400px",
+      height: "500px",
       backgroundImage: `url(${YoMorBack})`,
       backgroundRepeat: " no-repeat",
-      backgroundSize: "cover",
+      backgroundSize: "contain",
       backgroundPosition: "right",
     };
     YoMorStyleDos = {
-      height: "400px",
+      height: heightMobileRead,
       backgroundImage: `url(${YoMorBackDos})`,
       backgroundRepeat: " no-repeat",
-      backgroundSize: "cover",
-      backgroundPosition: "top right",
+      backgroundSize: "contain",
+      backgroundPosition: "bottom right",
     };
     continueReadingStyle = {
       zIndex: 10000,
@@ -96,10 +99,32 @@ function YoMorgen() {
     };
   }
 
+  if (window.innerWidth < 575) {
+    YoMorStyle = {
+      height: "400px",
+      backgroundImage: `url(${YoMorBack})`,
+      backgroundRepeat: " no-repeat",
+      backgroundSize: "contain",
+      backgroundPosition: "right",
+    };
+  }
+
   return (
     <>
+      {/* <div style={{ backgroundColor: "black" }}> */}
+
       <div style={{ backgroundColor: "black" }}>
-        <BackgroundDiv />
+        {window.innerWidth > 720 ? (
+          <BackgroundDiv />
+        ) : (
+          <div className="yomor-cont-mob">
+            <h2 className="yomor-mob-title">
+              Yo, <br /> Morgenstern
+            </h2>
+            <img src={MorgenImgSvg} alt="Morgen" width={100} />
+          </div>
+        )}
+
         <div style={YoMorStyle}></div>
         <div style={YoMorStyleDos}>
           <div className="yoMor-text-grande">
@@ -177,8 +202,8 @@ function YoMorgen() {
           <div>
             <span className="spike-yomor">
               <SpikeButtonTwo />
-              <SpikeButton />
             </span>
+            <SpikeButton />
           </div>
         </div>
         {/* <div style={{ backgroundColor: "#dccb00", height: 200 }}>
