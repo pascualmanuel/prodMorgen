@@ -859,9 +859,10 @@ left: 180px; */
 
 .obras-spike-button {
   position: absolute;
-  bottom: 325px;
+  bottom: 144px;
   left: 500px;
 }
+
 @media (max-width: 1250px) {
   .obras-spike-button {
     bottom: 280px;
@@ -1217,41 +1218,38 @@ left: 180px; */
 }
 
 /* Accordion Mobile */
-.accordion-header-mob {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 25px;
-  padding-right: 25px;
+
+.accordion-item-mob {
+  border: 1px solid #000;
 }
 
-.accordion-header-content-mob {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  /* Add your desired styles for the title and subtitle container here */
+.accordion-header-mob {
+  padding: 10px;
+  margin-bottom: -1px;
+}
+.accordion-title-mob {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.accordion-content-mob {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item-mob.active-mob .accordion-content-mob {
+  max-height: 1000px; /* You can set any appropriate height value here */
+  transition: max-height 1.5s ease;
 }
 
 .acc-close-icon-mob {
-  font-size: 1.5rem; /* Adjust the size as needed */
-  cursor: pointer;
-  /* Add any additional styles you need for the "X" icon here */
+  font-weight: bold;
+  font-size: 18px;
 }
-
-.accordion-content-mob {
-  /* Add your desired styles for the content here */
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transform-origin: top;
-  transition: max-height 2s ease, opacity 2s ease, transform 2s ease; /* Adjust the transition duration to 2 seconds */
-  transform: scaleY(0); /* Start with scaleY(0) to hide the content */
-}
-
-.accordion-item-mob.active .accordion-content-mob {
-  max-height: 1000px; /* Set a large value to accommodate any height */
-  opacity: 1;
-  transform: scaleY(1); /* Scale the content in the y-axis to 1 when active */
+.obras-welcome {
+  display: flex;
+  justify-content: space-around;
 }
 @media (max-width: 720px) {
   .navbar-container {

@@ -9,18 +9,7 @@ import { Link } from "react-router-dom";
 function SpikeButtonThree() {
   return (
     <>
-      {/* <Link to="/comunidad"> */}
-      <div
-        className="cont-svgs"
-        // style={{
-        //   position: "absolute",
-        //   marginTop: "-30px",
-        //   right: "650px",
-        //   width: 210,
-        //   height: 210,
-        //   zIndex: 100,
-        // }}
-      >
+      <div className="cont-svgs-3">
         <img
           src={Img1}
           alt="ApoyarButton"
@@ -31,7 +20,6 @@ function SpikeButtonThree() {
             top: 0,
             transition: "transform 0.5s",
             zIndex: 3,
-            width: 210,
           }}
           onMouseEnter={() => {
             const cls2 = document.querySelector(".cls-2");
@@ -60,7 +48,6 @@ function SpikeButtonThree() {
             top: 0,
             transition: "transform 0.5s",
             zIndex: 2,
-            width: 210,
           }}
         />
         <img
@@ -73,7 +60,6 @@ function SpikeButtonThree() {
             top: 0,
             transition: "transform 0.5s",
             zIndex: 1,
-            width: 210,
           }}
           onMouseEnter={() => {
             const cls2 = document.querySelector(".cls-2");
@@ -93,7 +79,6 @@ function SpikeButtonThree() {
           }}
         />
       </div>
-      {/* </Link> */}
     </>
   );
 }
