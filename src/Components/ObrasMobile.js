@@ -10,6 +10,7 @@ import Desnudos from "./Desnudos";
 import Book from "./Book";
 import Estampas from "./Estampas";
 import FuturoInmediato from "./FuturoInmediato";
+
 import Animaciones from "./Animaciones";
 import "../Styles/App.css";
 
@@ -72,15 +73,13 @@ const ObrasMobile = () => {
     {
       title: " Conexión intestable",
       subtitle: "Composiciones digitales",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      content: <ConexionInestable />,
       tabColor: "#4590E6",
     },
     {
       title: "Desnudos",
       subtitle: "Pinturas",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      content: <Desnudos />,
       tabColor: "#FE6970",
     },
     {
