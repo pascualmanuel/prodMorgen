@@ -21,8 +21,6 @@ const AccordionItem = ({
   isActive,
   onClick,
 }) => {
-
-
   return (
     <div className={`accordion-item-mob ${isActive ? "active-mob" : ""}`}>
       <div
@@ -59,6 +57,15 @@ const ObrasMobile = () => {
     setActiveAccordionItem((prevActive) =>
       prevActive === index ? null : index
     );
+  };
+
+  const [showPopup, setShowPopup] = useState(false);
+  const openPopup = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   const accordionMobileItems = [
@@ -117,23 +124,28 @@ const ObrasMobile = () => {
   ];
 
   return (
-    <div className="tab-mob-container" style={{ paddingTop: 100 }}>
-      <div className="obras-welcome">
-        <h2 style={{ fontSize: "50px" }}> Obras</h2>
-        <SpikeButtonThree />
+    <>
+      <div className="tab-mob-container" style={{ paddingTop: 100 }}>
+        <div className="obras-welcome">
+          <h2 style={{ fontSize: "50px" }}> Obras</h2>
+          <span onClick={openPopup}>
+            <SpikeButtonThree />
+          </span>
+        </div>
+        {accordionMobileItems.map((item, index) => (
+          <AccordionItem
+            key={index}
+            title={item.title}
+            content={item.content}
+            tabColor={item.tabColor}
+            subtitle={item.subtitle}
+            isActive={activeAccordionItem === index}
+            onClick={() => handleAccordionItemClick(index)}
+          />
+        ))}
       </div>
-      {accordionMobileItems.map((item, index) => (
-        <AccordionItem
-          key={index}
-          title={item.title}
-          content={item.content}
-          tabColor={item.tabColor}
-          subtitle={item.subtitle}
-          isActive={activeAccordionItem === index}
-          onClick={() => handleAccordionItemClick(index)}
-        />
-      ))}
-    </div>
+      {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
+    </>
   );
 };
 

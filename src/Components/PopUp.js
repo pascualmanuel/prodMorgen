@@ -90,28 +90,26 @@ const Popup = ({ isOpen, onClose }) => {
   const showAtendeme =
     location.pathname === "/atendeme" || location.pathname === "/gallery";
 
+  let mobileSuppPopUp = {
+    backgroundColor: backColorPop,
+  };
+  if (window.innerWidth < 720 && location.pathname === "/obras") {
+    mobileSuppPopUp = {
+      position: "fixed",
+      top: "30px",
+      bottom: "30px",
+      left: "30px",
+      right: "30px",
+      minWidth: "280px",
+      backgroundColor: backColorPop,
+    };
+  }
   return (
     <div className={`popup-overlay ${isOpen ? "open" : ""}`}>
       <div
         className={`popup-container ${isOpen ? "open" : ""}`}
-        style={{
-          "--color": backColorPop,
-          top: popUpTop,
-          bottom: popUpBottom,
-          right: popUpright,
-          left: popUpleft,
-        }}
+        style={mobileSuppPopUp}
       >
-        {/* <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "50px",
-            marginLeft: "50px",
-            marginRight: "50px",
-          }}
-        > */}
-
         <span className="close-button" onClick={onClose}>
           <svg
             width="45"

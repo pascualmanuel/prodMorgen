@@ -1319,6 +1319,30 @@ left: 180px; */
     margin-top: 25px;
     margin-right: 30px;
   }
+  .support-cont {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    align-items: stretch;
+    overflow: auto;
+    margin-top: 40px;
+  }
+  .support-button {
+    width: 16rem;
+    height: 60px;
+  }
+  .support-h3 {
+    font-size: 25px;
+  }
+  .popup-container .close-button {
+    top: 15px;
+    right: 15px;
+  }
+  .support-p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 400px) {
