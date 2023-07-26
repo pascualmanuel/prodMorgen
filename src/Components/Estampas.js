@@ -24,7 +24,8 @@ import PopupObras from "./PopupObras";
 const Estampas = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const openPopup = (image) => {
     setSelectedImage(image);
     setShowPopup(true);
@@ -36,25 +37,19 @@ const Estampas = () => {
     setShowPopup(false);
   };
 
-  const imagesFirstRow = [
+  const allImages = [
     FirstImage4,
     FirstImage3,
     FirstImage5,
     FirstImage2,
     FirstImage6,
     FirstImage1,
-  ];
-
-  const imagesSecondRow = [
     FirstImage7,
     FirstImage8,
     FirstImage9,
     FirstImage10,
     FirstImage11,
     FirstImage12,
-  ];
-
-  const imagesThirdRow = [
     FirstImage13,
     FirstImage14,
     FirstImage15,
@@ -62,6 +57,18 @@ const Estampas = () => {
     FirstImage17,
     FirstImage18,
   ];
+
+  let imagesFirstRow = allImages.slice(0, 6);
+  let imagesSecondRow = allImages.slice(6, 12);
+  let imagesThirdRow = allImages.slice(12, 18);
+
+  let outThird = "block";
+
+  if (window.innerWidth < 720) {
+    outThird = "none";
+    imagesFirstRow = allImages.slice(0, 9);
+    imagesSecondRow = allImages.slice(9, 18);
+  }
 
   return (
     <div className="image-gallery-conexion">
@@ -103,7 +110,7 @@ const Estampas = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row">
+      <div className="conextion-row" style={{ display: outThird }}>
         {imagesThirdRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img

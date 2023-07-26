@@ -20,9 +20,21 @@ import Gif2 from "../Assets/obras/animaciones/animaciones-2.gif";
 import Gif3 from "../Assets/obras/animaciones/animaciones-3.gif";
 
 const Animaciones = () => {
-  const gifsFirstRow = [Gif1, Gif2, Gif3];
-  const gifsSecondRow = [Gif3, Gif1, Gif2];
-  const gifsThirdRow = [Gif2, Gif3, Gif1];
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
+  const allGifs = [Gif1, Gif2, Gif3, Gif1, Gif2, Gif3, Gif2, Gif3, Gif1];
+
+  let outThird = "block";
+
+  let gifsFirstRow = allGifs.slice(0, 3);
+  let gifsSecondRow = allGifs.slice(3, 6);
+  let gifsThirdRow = allGifs.slice(6, 9);
+
+  if (window.innerWidth < 720) {
+    outThird = "none";
+    gifsFirstRow = allGifs.slice(0, 9);
+  }
 
   return (
     <div className="image-gallery-conexion">
@@ -38,7 +50,7 @@ const Animaciones = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row">
+      <div className="conextion-row" style={{ display: outThird }}>
         {gifsSecondRow.map((gif, index) => (
           <div className="image-container-conexion" key={index}>
             <img
@@ -50,7 +62,7 @@ const Animaciones = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row">
+      <div className="conextion-row" style={{ display: outThird }}>
         {gifsThirdRow.map((gif, index) => (
           <div className="image-container-conexion" key={index}>
             <img
