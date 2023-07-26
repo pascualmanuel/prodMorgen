@@ -412,6 +412,11 @@
   height: 290px;
   z-index: 100;
 }
+.cont-svgs-3 {
+  width: 290px;
+  height: 210px;
+  z-index: 100;
+}
 
 @media (max-width: 720px) {
   .yoMor-text {
@@ -487,6 +492,10 @@
   }
   .ailin-title {
     margin-right: 65px;
+  }
+  .cont-svgs-3 {
+    position: relative;
+    width: 160px;
   }
 }
 
