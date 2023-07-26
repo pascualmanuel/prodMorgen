@@ -11,6 +11,7 @@ import Book from "./Book";
 import Estampas from "./Estampas";
 import FuturoInmediato from "./FuturoInmediato";
 import Animaciones from "./Animaciones";
+import "../Styles/App.css";
 
 const ObrasMobile = () => {
   useEffect(() => {
@@ -21,22 +22,16 @@ const ObrasMobile = () => {
     };
   }, []);
 
-  const [showPopup, setShowPopup] = useState(false);
-  const openPopup = () => {
-    setShowPopup(true);
-  };
+  const [activeAccordionItem, setActiveAccordionItem] = useState(null);
 
-  const closePopup = () => {
-    setShowPopup(false);
-  };
-
-  const accordionItems = [
+  const accordionMobileItems = [
     {
       title: " Conexión intestable",
       subtitle: "Composiciones digitales",
       content: (
         <>
-          <ConexionInestable />
+          {/* <FirstTab /> */}
+          <h2>Hola</h2>
         </>
       ),
       color: "#4590E6",
@@ -46,7 +41,8 @@ const ObrasMobile = () => {
       subtitle: "Pinturas",
       content: (
         <>
-          <Desnudos />
+          {/* <SecondTab /> */}
+          <h2>Hola</h2>
         </>
       ),
       color: "#FE6970",
@@ -57,7 +53,8 @@ const ObrasMobile = () => {
       content: (
         <>
           <div className="gallery-inad-container">
-            <Inadvertido />
+            {/* <ThirdTab /> */}
+            <h2>Hola</h2>
           </div>
         </>
       ),
@@ -68,7 +65,8 @@ const ObrasMobile = () => {
       subtitle: "textos",
       content: (
         <>
-          <Book />
+          {/* <FourthTab /> */}
+          <h2>Hola</h2>
         </>
       ),
       color: "#AE79EF",
@@ -80,7 +78,8 @@ const ObrasMobile = () => {
 
       content: (
         <>
-          <Estampas />
+          {/* <FivthTab /> */}
+          <h2>Hola</h2>
         </>
       ),
       color: "#005DA2",
@@ -91,7 +90,8 @@ const ObrasMobile = () => {
       content: (
         <>
           {" "}
-          <Animaciones />
+          {/* <SixthTab /> */}
+          <h2>Hola</h2>
         </>
       ),
       color: "#7D9F00",
@@ -102,7 +102,8 @@ const ObrasMobile = () => {
       content: (
         <>
           <div className="gallery-inad-container">
-            <FuturoInmediato />
+            {/* <SeventhTab /> */}
+            <h2>Hola</h2>
           </div>
         </>
       ),
@@ -110,9 +111,45 @@ const ObrasMobile = () => {
     },
   ];
 
+  const handleAccordionItemClick = (index) => {
+    setActiveAccordionItem((prevActive) =>
+      prevActive === index ? null : index
+    );
+  };
+
+  const renderSubtitle = (subtitle, isActive) => {
+    return isActive ? <p>{subtitle}</p> : null;
+  };
+
   return (
     <>
-      <div className="obras-container">Mobile Obras</div>
+      <div className="tab-mob-container">
+        {accordionMobileItems.map((item, index) => (
+          <div
+            key={index}
+            className={`accordion-item-mob ${
+              activeAccordionItem === index ? "active" : ""
+            }`}
+          >
+            <div
+              className="accordion-header-mob"
+              style={{ backgroundColor: item.color }}
+              onClick={() => handleAccordionItemClick(index)}
+            >
+              <div className="accordion-header-content-mob">
+                <h3>{item.title}</h3>
+                {renderSubtitle(item.subtitle, activeAccordionItem === index)}
+              </div>
+              <div className="acc-close-icon-mob">
+                {activeAccordionItem === index ? "X" : ""}
+              </div>
+            </div>
+            {activeAccordionItem === index && (
+              <div className="accordion-content-mob">{item.content}</div>
+            )}
+          </div>
+        ))}
+      </div>
     </>
   );
 };
