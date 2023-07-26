@@ -3,7 +3,7 @@ import "../Styles/Atendeme.css";
 import Img1 from "../Assets/svg/Star2-1.svg";
 import Img2 from "../Assets/svg/Star2-2.svg";
 import Img3 from "../Assets/svg/Star2-3.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SpikeButtonTwo() {
   return (

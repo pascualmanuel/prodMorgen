@@ -120,7 +120,6 @@ const BackgroundDiv = () => {
               width={MorgenWidthYoMorgen}
             />
           </div>
-          {/* <MorgenGirando /> */}
         </div>
       </div>
     </>
