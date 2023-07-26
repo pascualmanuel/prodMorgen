@@ -57,6 +57,7 @@ const Desnudos = () => {
 
   if (window.innerWidth < 720) {
     outThird = "none";
+    
   }
 
   return (
@@ -80,7 +81,7 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      <div className="conextion-row" style={{ display: outThird }}>
+      <div className="conextion-row">
         {imagesSecondRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img

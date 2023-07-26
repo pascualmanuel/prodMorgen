@@ -69,6 +69,9 @@ const Book = () => {
   let bookWidth = 450;
   let bookHeight = 630;
   let Out = "";
+
+  let onePage = false;
+
   if (window.innerWidth < 1420) {
     bookHeight -= (bookHeight * 10) / 100;
     bookWidth -= (bookWidth * 10) / 100;
@@ -84,6 +87,13 @@ const Book = () => {
     bookHeight -= (bookHeight * 20) / 100;
     bookWidth -= (bookWidth * 20) / 100;
     Out = "none";
+  }
+
+  if (window.innerWidth < 720) {
+    bookHeight -= (bookHeight * 0.1) / 100;
+    bookWidth -= (bookWidth * 0.1) / 100;
+    Out = "none";
+    onePage = true;
   }
 
   // if (window.innerHeight < 760) {
@@ -104,8 +114,9 @@ const Book = () => {
           size={"fixed"}
           className="htmlFlip"
           showCover={false}
-          usePortrait={false}
+          usePortrait={onePage}
           ref={flipBookRef}
+          renderOnlyPageLengthChange={true}
         >
           {images.map((image, index) => (
             <div className={`demoPage${index}`} key={index}>

@@ -1,7 +1,25 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const PopupObras = ({ selectedImage, closePopup }) => {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
+  let outImg = "inherit";
+  let inImg = "none";
+  if (window.innerWidth < 720) {
+    outImg = "none";
+    inImg = "inherit";
+  }
+
   useEffect(() => {
     const handleEscapeKey = (event) => {
       if (event.key === "Escape") {
@@ -26,15 +44,16 @@ const PopupObras = ({ selectedImage, closePopup }) => {
 
   return (
     <div className="popup-conexion">
-      <div>
+      <div style={{ display: outImg }}>
         <img src={selectedImage} alt="Popup Image" />
       </div>
       <div className="popup-conexion-right">
-        <h3 style={{ fontSize: 40, marginBottom: 5 }}>Queres que sea tuya?</h3>
-        <p style={{ fontSize: 20, marginBottom: 60 }}>
+        <h3 className="popup-conexion-title">Queres que sea tuya?</h3>
+        <img style={{ display: inImg }} src={selectedImage} alt="Popup Image" />
+        <p className="popup-conexion-subtitle">
           Dejá tu mail y recibí la información de compra.
         </p>
-        <div className="contact-me" style={{ marginLeft: 0 }}>
+        <div className="contact-me-obras" style={{ marginLeft: 0 }}>
           <div className="email-container">
             <input
               type="email"
