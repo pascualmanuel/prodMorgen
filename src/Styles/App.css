@@ -1,3 +1,10 @@
+body {
+  cursor: url("../Assets/svg/probando.png"), auto;
+  font-family: "Regular";
+  margin: 0 auto !important;
+  -webkit-text-size-adjust: none !important;
+}
+
 .full-h {
   height: 100vh;
 }
@@ -7,10 +14,14 @@
   }
 }
 
-body {
-  cursor: url("../Assets/svg/probando.png"), auto;
-  font-family: "Regular";
-  margin: 0 auto !important;
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-height: 630px) {
+  .no-scroll {
+    overflow: auto;
+  }
 }
 
 a {
@@ -1227,6 +1238,11 @@ left: 180px; */
   justify-content: center;
   margin-top: -82vh;
 }
+@media (max-height: 600px) {
+  .mob-home-container {
+    justify-content: flex-start;
+  }
+}
 
 /* Accordion Mobile */
 
@@ -1312,6 +1328,8 @@ left: 180px; */
 
   .submit-button {
     height: 112% !important;
+    top: 1px;
+    /* max-height: 50.5px !important; */
   }
   .nav-bar {
     margin-left: 0px;
@@ -1434,8 +1452,9 @@ left: 180px; */
   .submit-button {
     position: absolute;
     right: -13px;
-    top: 2px;
     width: 32%;
+    height: 112% !important;
+    top: 1px;
   }
 }
 

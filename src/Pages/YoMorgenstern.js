@@ -13,6 +13,8 @@ import MorgenImgSvg from "../Assets/morgen-svg.svg";
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
 import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
+import { deviceDetect, isMobile } from "react-device-detect";
+
 function YoMorgen() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -76,7 +78,17 @@ function YoMorgen() {
     heightMobileRead = "1000px";
   }
 
-  if (window.innerWidth < 720) {
+  if (window.innerWidth < 1000) {
+    YoMorStyleDos = {
+      height: heightMobileRead,
+      backgroundImage: `none`,
+    };
+    YoMorStyle = {
+      backgroundImage: `none`,
+    };
+  }
+
+  if (window.innerWidth < 720 || isMobile) {
     YoMorStyle = {
       height: "500px",
       backgroundImage: `url(${YoMorBack})`,

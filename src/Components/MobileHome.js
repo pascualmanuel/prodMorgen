@@ -1,13 +1,39 @@
 import React from "react";
 import CustomButton from "../Components/CustomButton";
 import Morgen from "../Assets/morgen-trans.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const MobileHome = () => {
   let homeButtonHeight = "15px";
   let homeButtonWidth = "220px";
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const buttons = [
     {
@@ -15,7 +41,7 @@ const MobileHome = () => {
       firstColor: "#FE6970",
       secondColor: "#FF3910",
       thirdColor: "#DC3349",
-      //   link: "/yomorgenstern",
+      link: "/yomorgenstern",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -26,7 +52,7 @@ const MobileHome = () => {
       firstColor: "#DCCB00",
       secondColor: "#7D9F00",
       thirdColor: "#DFB000",
-      //   link: "/obras",
+      link: "/obras",
       border: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -94,9 +120,15 @@ const MobileHome = () => {
   if (viewportHeight < 720) {
     contPadTop = 0.05 * viewportHeight;
   }
+
+  let heightMobCont = "100vh";
+  if (viewportHeight < 600) {
+    heightMobCont = "135vh";
+    contPadTop = 0.11 * viewportHeight;
+  }
   return (
     <>
-      <div className="home-container" style={{ height: "100vh" }}>
+      <div className="home-container" style={{ height: heightMobCont }}>
         <div className="mob-home-container" style={{ paddingTop: contPadTop }}>
           {buttons.map((button, index) => (
             <div key={index} style={{ marginTop: "10px" }}>

@@ -30,6 +30,8 @@ const BackgroundDiv = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return; // Check if the canvas element is available before continuing
+
     const ctx = canvas.getContext("2d");
     let isDrawing = true;
 
@@ -94,22 +96,37 @@ const BackgroundDiv = () => {
       // canvas.removeEventListener("click", handleCanvasClick);
     };
   }, []);
+  const isTouchableScreen =
+    "ontouchstart" in window || navigator.msMaxTouchPoints;
 
+
+    // let isTouchableScreen = 
   return (
     <>
       <div ref={containerRef}>
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            zIndex: "100",
-          }}
-        />
+        {!isTouchableScreen && (
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              zIndex: "100",
+              height: "100vh",
+              width: "100vw",
+            }}
+          />
+        )}
         <div className="wrapper full-h">
           <div className="inside full-h">
-            <h2 style={{ fontSize: "100px", color: "white", zIndex: "2" }}>
+            <h2
+              style={{
+                fontSize: "100px",
+                color: "white",
+                zIndex: "2",
+                textAlign: "center",
+              }}
+            >
               Yo, Morgenstern
             </h2>
             <img
