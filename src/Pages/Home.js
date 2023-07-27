@@ -4,40 +4,25 @@ import CustomButton from "../Components/CustomButton";
 import React, { useEffect, useState } from "react";
 import { MobileView } from "react-device-detect";
 import MobileHome from "../Components/MobileHome";
+
 import "./Prueba.css";
+import { useLocation } from "react-router-dom";
 
 function Home() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
-  // useEffect(() => {
-  //   document.body.classList.add("no-scroll");
-
-  //   return () => {
-  //     document.body.classList.remove("no-scroll");
-  //   };
-  // }, []);
-
-  var homeButtonWidth = "210px";
-  var homeButtonHeight = "55px";
-
-  const { pathname } = window.location;
-
   useEffect(() => {
-    const handleResize = () => {
-      setViewportWidth(window.innerWidth);
-    };
+    document.body.classList.add("no-scroll");
 
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      document.body.classList.remove("no-scroll");
     };
   }, []);
 
   useEffect(() => {
     const handleResize = () => {
+      setViewportWidth(window.innerWidth);
       setViewportHeight(window.innerHeight);
     };
 
@@ -48,6 +33,10 @@ function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  var homeButtonWidth = "210px";
+  var homeButtonHeight = "55px";
+
   console.log(viewportWidth, viewportHeight, "hola");
 
   let agendaOffsetY = 100;
@@ -247,7 +236,7 @@ function Home() {
       {isMobileView() && <MobileHome />}
 
       {!isMobileView() && (
-        <div className="home-container">
+        <div className="home-container" style={{ overflow: "hidden" }}>
           <div className="circle-container">
             <div className="circle-wrapper">
               {buttons.map((button, index) => (
