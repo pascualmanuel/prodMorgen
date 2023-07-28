@@ -242,13 +242,29 @@
   min-width: 1000px;
 }
 
+.comunidad-title {
+  font-size: 80px;
+  margin-bottom: 0px;
+  width: 500px;
+}
+.comunidad-p {
+  font-size: 18px;
+  width: 500px;
+}
+.comunidad-spike {
+  position: relative;
+  left: 165px;
+}
+
+.comu-gallery-atendeme {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: white;
+}
+
 .comunidad-left {
   width: 60%;
-
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .comunidad-right {
@@ -473,7 +489,7 @@
     margin-right: 0px;
     margin-left: 10px;
     font-size: 12px;
-    /* margin-top: 80px; */
+
     font-family: "Regular";
   }
   .yoMor-text-link {
@@ -514,10 +530,114 @@
     position: relative;
     width: 160px;
   }
+  .comunidad-cont {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-width: 340px;
+  }
+  .comunidad-title {
+    font-size: 50px;
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+  .comunidad-p {
+    width: -webkit-fill-available;
+    font-size: 14px;
+
+    margin-left: 40px;
+    margin-right: 25px;
+  }
+  .comunidad-left {
+    width: 100%;
+  }
+  .comunidad-left-content {
+    margin-top: 50px;
+  }
+  .comunidad-spike {
+    position: relative;
+    left: 50px;
+  }
+  .comunidad-right {
+    width: 100vw;
+  }
+  .comu-right-top {
+    height: 85%;
+  }
+  .comu-right-bottom {
+    height: 85%;
+  }
+  .button-text-comu {
+    margin: 0;
+    width: 100%;
+  }
+  .comu-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .comu-gallery-atendeme {
+    margin-left: 30px;
+  }
+  .gallery-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+  }
+  .gallery-box-mob {
+    width: 320px;
+    height: 290px;
+    margin-bottom: 10px;
+    background-size: cover;
+    border: solid 1px;
+  }
+  .gallery-title-mob {
+    color: #dc3349;
+    font-size: 50px;
+    width: 320px;
+  }
+  .columna-scrollable {
+    flex: none;
+    width: 300px;
+    margin-top: 200px;
+  }
+  .atendeme-title {
+    color: #fe6970;
+    font-size: 50px;
+    margin-left: 0;
+    margin-top: 120px;
+    width: -moz-fit-content;
+    /* width: fit-content; */
+    z-index: 100;
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .atendeme-cont-title-mob {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .atendeme-cont-button-mob {
+    width: 97vw;
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: center;
+  }
+  .atendeme-button {
+    position: inherit;
+  }
+  .seccion-flexbox {
+    height: 100vh;
+  }
 }
 
 @media (max-width: 370px) {
   .yomor-mob-title {
     font-size: 40px;
   }
+}
+
+.prueba-atendeme {
+  display: flex;
 }

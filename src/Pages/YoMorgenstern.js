@@ -123,7 +123,6 @@ function YoMorgen() {
 
   return (
     <>
-      {/* <div style={{ backgroundColor: "black" }}> */}
 
       <div style={{ backgroundColor: "black" }}>
         {window.innerWidth > 720 ? (
