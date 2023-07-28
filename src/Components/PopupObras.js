@@ -48,7 +48,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
         <img src={selectedImage} alt="Popup Image" />
       </div>
       <div className="popup-conexion-right">
-        <h3 className="popup-conexion-title">Queres que sea tuya?</h3>
+        <h3 className="popup-conexion-title">Si querés comprar esta obra...</h3>
         <img style={{ display: inImg }} src={selectedImage} alt="Popup Image" />
         <p className="popup-conexion-subtitle">
           Dejá tu mail y recibí la información de compra.

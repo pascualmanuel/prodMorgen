@@ -32,6 +32,8 @@ import Sticker29 from "../Assets/interactivo/morgenPush/sf29.png";
 import Sticker30 from "../Assets/interactivo/morgenPush/sf30.png";
 
 import CircleScreenshot from "../Assets/screenshot-circle.png";
+import ShareCircle from "../Assets/svg/share-button.svg";
+
 import Sound1 from "../Assets/sounds/Sound1.mp3";
 import Sound2 from "../Assets/sounds/Sound2.mp3";
 import Sound3 from "../Assets/sounds/Sound3.mp3";
@@ -43,8 +45,18 @@ import html2canvas from "html2canvas";
 const PushMorgen = () => {
   const [stickers, setStickers] = useState([]);
   const [playCount, setPlayCount] = useState(0);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [imageCircle, setImageCircle] = useState(CircleScreenshot);
+
+  const changeImage = () => {
+    // Change the image source based on the current state
+    setImageCircle(ShareCircle);
+  };
+
+  const revertImage = () => {
+    // Revert the image source back to the original one
+    setImageCircle(CircleScreenshot);
+  };
 
   useEffect(() => {
     const updateWindowWidth = () => {
@@ -178,12 +190,12 @@ const PushMorgen = () => {
             width={330}
             alt="Black Morgen"
             useMap="#imageMap"
+            style={{ userSelect: "none" }}
           />
         </div>
         <map name="imageMap">
           <area shape="poly" coords={polygonPoints} onClick={handleClick} />
         </map>
-
         {stickers.map((sticker, index) => (
           <img
             key={index}
@@ -196,6 +208,7 @@ const PushMorgen = () => {
               top: sticker.top,
               pointerEvents: "none",
               zIndex: "20",
+              userSelect: "none",
             }}
             onClick={handleClick}
           />
@@ -207,16 +220,25 @@ const PushMorgen = () => {
               marginLeft: "380px",
               fontFamily: "SemiBold",
               color: "white",
+              userSelect: "none",
             }}
           >
             tu click me llena
           </p>
         </div>
         <img
-          src={CircleScreenshot}
+          src={imageCircle}
           width={110}
-          style={{ position: "absolute", right: "200px" }}
+          style={{
+            position: "absolute",
+            right: "200px",
+            zIndex: "500",
+            userSelect: "none",
+          }}
           onClick={handleScreenshot}
+          onMouseEnter={changeImage}
+          onMouseLeave={revertImage}
+          className="circle-screen"
         />
       </div>
     </>

@@ -98,7 +98,7 @@ const ObrasDesktop = () => {
     },
     {
       title: "futuro inmediato",
-      subtitle: "Lorem ipsum",
+      subtitle: "fotomontajes",
       content: (
         <>
           <div className="gallery-inad-container">

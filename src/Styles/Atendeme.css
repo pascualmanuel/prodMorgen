@@ -221,11 +221,6 @@
   display: flex;
   align-items: center;
 }
-.falling-button {
-  border: solid 1px black;
-  background-color: #dccb00;
-  cursor: url("../Assets/svg/probando.png"), auto !important;
-}
 
 .falling-button {
   margin-left: 50px;
@@ -233,6 +228,9 @@
   padding-left: 80px;
   padding-right: 80px;
   border-radius: 100px;
+  border: solid 1px black;
+  background-color: #dccb00;
+  user-select: none;
 }
 
 /* Comunidad */
@@ -460,6 +458,7 @@
     justify-content: center;
     padding-top: 0px;
     padding-bottom: 40px;
+    flex-direction: column;
   }
   .sponsor-caba {
     margin-right: 0px;
@@ -473,7 +472,9 @@
   .apoyo-yomor {
     margin-right: 0px;
     margin-left: 10px;
-    font-size: 8px;
+    font-size: 12px;
+    /* margin-top: 80px; */
+    font-family: "Regular";
   }
   .yoMor-text-link {
     margin-left: 25px;

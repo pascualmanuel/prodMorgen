@@ -203,6 +203,8 @@ function Home() {
     return () => clearTimeout(transitionTimer);
   }, [showNewsPopup]);
 
+  
+
   const circumference = 2000; // Circumference of the circle in pixels
   const buttonWidth = 200;
   const buttonHeight = 200;

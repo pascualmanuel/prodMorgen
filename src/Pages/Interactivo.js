@@ -119,7 +119,7 @@ function Interactivo() {
                     selectedCircle === "circle1" ? "black" : selectedColor,
                   border: "1px solid black",
                 }}
-                className="cursor"
+                className="pointer"
                 onClick={() => handleCircleClick("circle1")}
               ></div>
               <div
@@ -131,7 +131,7 @@ function Interactivo() {
                     selectedCircle === "circle2" ? "black" : selectedColor,
                   border: "1px solid black",
                 }}
-                className="cursor"
+                className="pointer"
                 onClick={() => handleCircleClick("circle2")}
               ></div>
               <div
@@ -143,7 +143,7 @@ function Interactivo() {
                     selectedCircle === "circle3" ? "black" : selectedColor,
                   border: "1px solid black",
                 }}
-                className="cursor"
+                className="pointer"
                 onClick={() => handleCircleClick("circle3")}
               ></div>
             </div>

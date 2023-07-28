@@ -226,8 +226,10 @@ function YoMorgen() {
       <div className="footer-yomor">
         <h4 className="apoyo-yomor">Agradecemos el apoyo dado por</h4>
 
-        <img src={Caba} className="sponsor-caba" />
-        <img src={Itau} className="sponsor-itau" />
+        <div>
+          <img src={Caba} className="sponsor-caba" />
+          <img src={Itau} className="sponsor-itau" />
+        </div>
       </div>
     </>
   );
