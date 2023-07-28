@@ -17,7 +17,7 @@ import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
 import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
-import Book from "./Components/Book";
+import Prueba from "./Components/Prueba";
 import Inadvertido from "./Components/Inadvertido";
 
 function ScrollToTop() {
@@ -45,7 +45,7 @@ function App() {
           <Route path="/comunidad" element={<Comunidad />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/obras" element={<Obras />} />
-          <Route path="/book" element={<Book />} />
+          <Route path="/prueba" element={<Prueba />} />
         </Routes>
       </BrowserRouter>
     </>

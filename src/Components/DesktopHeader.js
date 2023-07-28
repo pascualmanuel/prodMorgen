@@ -60,6 +60,12 @@ function HeaderDesktop() {
     marginObras = -7;
   }
 
+  let displayCircleMob = "inherit";
+
+  if (location.pathname === "/") {
+    displayCircleMob = "none";
+  }
+
   const isGalleryOrAtendeme =
     location.pathname === "/gallery" || location.pathname === "/atendeme";
 
@@ -197,7 +203,11 @@ function HeaderDesktop() {
           }}
         >
           <Link to="/">
-            <img src={circleButton} width={50} />
+            <img
+              style={{ userSelect: "none", display: displayCircleMob }}
+              src={circleButton}
+              width={50}
+            />
           </Link>
         </div>
       )}

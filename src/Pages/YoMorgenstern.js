@@ -123,7 +123,6 @@ function YoMorgen() {
 
   return (
     <>
-      {/* <div style={{ backgroundColor: "black" }}> */}
 
       <div style={{ backgroundColor: "black" }}>
         {window.innerWidth > 720 ? (
@@ -226,8 +225,10 @@ function YoMorgen() {
       <div className="footer-yomor">
         <h4 className="apoyo-yomor">Agradecemos el apoyo dado por</h4>
 
-        <img src={Caba} className="sponsor-caba" />
-        <img src={Itau} className="sponsor-itau" />
+        <div>
+          <img src={Caba} className="sponsor-caba" />
+          <img src={Itau} className="sponsor-itau" />
+        </div>
       </div>
     </>
   );

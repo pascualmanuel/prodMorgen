@@ -157,7 +157,7 @@ const MatterJSDemo = () => {
           <span style={{ textDecoration: "line-through" }}>No</span> hay lugar
           para un otro
         </h4>
-        <h3 onClick={addButtonClickHandler} className="falling-button">
+        <h3 onClick={addButtonClickHandler} className="falling-button pointer">
           Sumar otro
         </h3>
       </div>

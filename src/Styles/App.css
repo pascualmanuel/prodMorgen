@@ -1,13 +1,17 @@
 body {
-  cursor: url("../Assets/svg/probando.png"), auto;
+  cursor: url("../Assets/svg/cursor-final.svg"), auto;
   font-family: "Regular";
   margin: 0 auto !important;
-  -webkit-text-size-adjust: none !important;
 }
 
 .full-h {
   height: 100vh;
 }
+
+/* .circle-screen {
+  cursor: url("../Assets/svg/text-cursor.svg"), auto;
+} */
+
 @media (min-height: 800px) {
   .full-h {
     height: 890px;
@@ -23,9 +27,11 @@ body {
     overflow: auto;
   }
 }
-
+.pointer {
+  cursor: url("../Assets/svg/pointer-final.svg"), auto;
+}
 a {
-  cursor: url("../Assets/svg/probando.png"), auto;
+  cursor: url("../Assets/svg/pointer-final.svg"), auto;
   text-decoration: none;
   color: inherit;
 }
@@ -161,7 +167,7 @@ h4 {
 }
 
 .plus-icon {
-  cursor: url("../Assets/svg/probando.png"), auto !important;
+  cursor: url("../Assets/svg/cursor-final.svg"), auto !important;
   cursor: pointer;
   display: flex;
 }
@@ -822,7 +828,7 @@ left: 180px; */
 .news-popup.show {
   opacity: 1;
   visibility: visible;
-  z-index: 1000;
+  z-index: 997;
 }
 
 .accordion {
@@ -1061,7 +1067,7 @@ left: 180px; */
 
 /* futuro */
 .horizontal-futuro-gallery-container {
-  background-color: #dccb00;
+  background-color: white;
   overflow-x: scroll;
 }
 

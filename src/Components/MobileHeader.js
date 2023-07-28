@@ -163,7 +163,7 @@ function MobileHeader() {
           <section className="navbar-right-section">
             <Link to={"/yomorgenstern"}>
               <h2 onClick={closeMenu} className="navbar-title yoMor">
-                Yo, Morgenstern!!
+                Yo, Morgenstern
               </h2>
             </Link>
             <Link to={"/obras"}>

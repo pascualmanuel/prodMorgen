@@ -30,10 +30,22 @@ import PrevIcon from "../Assets/svg/white-prev-icon.svg";
 
 const ImageSection = () => {
   const [transformStyle, setTransformStyle] = useState();
-
   const [showPopup, setShowPopup] = useState(false);
-
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleImageClick = (index) => {
     setSelectedImageIndex(index);
@@ -60,15 +72,6 @@ const ImageSection = () => {
     setTransformStyle(newTransformStyle);
   };
 
-  // const getTranslateX = (xPos) => {
-  //   const leftMax = -400; //pareciera ser right
-  //   const rightMax = 100;
-  //   const translateX = Math.min(Math.max(xPos, leftMax), rightMax);
-  //   return translateX;
-  // };
-
-  // const rightMax = 100;
-
   const getTranslateX = (xPos) => {
     const containerWidth = window.innerWidth; // Width of the container
     const translateRange = containerWidth - (leftMax - leftMin); // Total range for translation
@@ -88,7 +91,9 @@ const ImageSection = () => {
   };
 
   useEffect(() => {
-    document.body.classList.add("no-scroll");
+    if (window.innerWidth > 720) {
+      document.body.classList.add("no-scroll");
+    }
 
     return () => {
       document.body.classList.remove("no-scroll");
@@ -306,18 +311,106 @@ const ImageSection = () => {
 
   return (
     <>
-      <div className="image-section" onMouseMove={handleMouseMove}>
-        <div className="grid-container" style={{ transform: transformStyle }}>
+      {window.innerWidth > 720 ? (
+        <>
+          <div className="image-section" onMouseMove={handleMouseMove}>
+            <div
+              className="grid-container"
+              style={{ transform: transformStyle }}
+            >
+              {galleryContent.map((item, index) => (
+                <div
+                  key={index}
+                  className="box"
+                  style={{ backgroundImage: `url(${item.photo})` }}
+                  onClick={() => handleImageClick(index)}
+                >
+                  <div className="image-text">
+                    <div className="hover-g-top">
+                      <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                        {item.title}
+                      </div>
+                    </div>
+                    <div className="hover-g-bottom">
+                      {/* <div>{item.date}</div> */}
+                      {/* <div>{item.author}</div> */}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="second-cont-atendeme">
+            <h2
+              className="atendeme-title"
+              style={{ color: "#DC3349", pointerEvents: "none" }}
+            >
+              Galería
+            </h2>
+            <div className="atendeme-button">
+              <CustomButton
+                buttonText={"Participar"}
+                firstColor={"#DC3349"}
+                secondColor={"#005DA2"}
+                thirdColor={"#4590E6"}
+                backColor={"#DC3349"}
+                border={"solid black"}
+                onClick={openPopup}
+                width={"235px"}
+                height={"55px"}
+              />
+            </div>
+            {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
+            {selectedImageData && (
+              <div className="modal-overlay" onClick={handleModalClick}>
+                <span className="close" onClick={handleModalClose}>
+                  &times;
+                </span>
+                <span className="gallery-prev-button">
+                  <img width={35} src={PrevIcon} onClick={handlePrevImage} />
+                </span>
+                <div className="modal">
+                  <img
+                    className="modal-image"
+                    src={selectedImageData.photo}
+                    alt="Selected Image"
+                  />
+                  <div className="submodal">
+                    <div className="submodal-top">
+                      <div className="submodal-category">
+                        {selectedImageData.category}
+                      </div>
+                      <div>{selectedImageData.date}</div>
+                    </div>
+
+                    <div className="submodal-bottom">
+                      <div>{selectedImageData.title}</div>
+
+                      <div>{selectedImageData.author}</div>
+                    </div>
+                  </div>
+                </div>
+                <span className="gallery-next-button">
+                  <img width={35} src={NextIcon} onClick={handleNextImage} />
+                </span>
+              </div>
+            )}
+          </div>
+        </>
+      ) : (
+        <div className="gallery-mob">
+          {/* <div> */}
+          <h2 className="gallery-title-mob">Galería</h2>
+          {/* </div> */}
           {galleryContent.map((item, index) => (
             <div
               key={index}
-              className="box"
+              className="gallery-box-mob"
               style={{ backgroundImage: `url(${item.photo})` }}
               onClick={() => handleImageClick(index)}
             >
               <div className="image-text">
                 <div className="hover-g-top">
-                  {/* <div className="submodal-category">{item.category}</div> */}
                   <div style={{ marginBottom: 20, marginLeft: 20 }}>
                     {item.title}
                   </div>
@@ -330,63 +423,7 @@ const ImageSection = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="second-cont-atendeme">
-        <h2
-          className="atendeme-title"
-          style={{ color: "#DC3349", pointerEvents: "none" }}
-        >
-          Galería
-        </h2>
-        <div className="atendeme-button">
-          <CustomButton
-            buttonText={"Participar"}
-            firstColor={"#DC3349"}
-            secondColor={"#005DA2"}
-            thirdColor={"#4590E6"}
-            backColor={"#DC3349"}
-            border={"solid black"}
-            onClick={openPopup}
-            width={"235px"}
-            height={"55px"}
-          />
-        </div>
-        {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
-        {selectedImageData && (
-          <div className="modal-overlay" onClick={handleModalClick}>
-            <span className="close" onClick={handleModalClose}>
-              &times;
-            </span>
-            <span className="gallery-prev-button">
-              <img width={35} src={PrevIcon} onClick={handlePrevImage} />
-            </span>
-            <div className="modal">
-              <img
-                className="modal-image"
-                src={selectedImageData.photo}
-                alt="Selected Image"
-              />
-              <div className="submodal">
-                <div className="submodal-top">
-                  <div className="submodal-category">
-                    {selectedImageData.category}
-                  </div>
-                  <div>{selectedImageData.date}</div>
-                </div>
-
-                <div className="submodal-bottom">
-                  <div>{selectedImageData.title}</div>
-
-                  <div>{selectedImageData.author}</div>
-                </div>
-              </div>
-            </div>
-            <span className="gallery-next-button">
-              <img width={35} src={NextIcon} onClick={handleNextImage} />
-            </span>
-          </div>
-        )}
-      </div>
+      )}
     </>
   );
 };

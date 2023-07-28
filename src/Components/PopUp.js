@@ -8,6 +8,9 @@ import PopupFormCommunity from "./PopupFormCommunity";
 const Popup = ({ isOpen, onClose }) => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const location = useLocation();
+
+  let locPath = location.pathname;
 
   useEffect(() => {
     const handleEscapeKey = (event) => {
@@ -44,21 +47,31 @@ const Popup = ({ isOpen, onClose }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const location = useLocation();
 
   let backColorPop = location.pathname === "/gallery" ? "#DC3349" : "#FE6970";
 
-  let strokeColor = location.pathname === "/comunidad" ? "black" : "white";
+  let strokeColor = "white";
 
-  if (location.pathname === "/gallery") {
-    backColorPop = "#DC3349";
-  } else if (location.pathname === "/atendeme") {
-    backColorPop = "#FE6970";
-  } else if (
-    location.pathname === "/comunidad" ||
+  // if (locPath === "/obras" || "/agenda" || "/comunidad") {
+  //   strokeColor = "black";
+  // } else {
+  //   strokeColor = "red";
+  // }
+
+  if (
+    location.pathname === "/obras" ||
     location.pathname === "/agenda" ||
-    location.pathname === "/obras"
+    location.pathname === "/comunidad"
   ) {
+    strokeColor = "black";
+  }
+
+  console.log(location.pathname);
+  if (locPath === "/gallery") {
+    backColorPop = "#DC3349";
+  } else if (locPath === "/atendeme") {
+    backColorPop = "#FE6970";
+  } else if (locPath === "/comunidad" || "/agenda" || "/obras") {
     backColorPop = "#7D9F00";
   }
 

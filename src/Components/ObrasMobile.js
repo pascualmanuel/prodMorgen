@@ -108,7 +108,7 @@ const ObrasMobile = () => {
     },
     {
       title: "futuro inmediato",
-      subtitle: "Lorem ipsum",
+      subtitle: "fotomontajes",
       content: <FuturoInmediato />,
       tabColor: "#DCCB00",
     },
