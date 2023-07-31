@@ -118,22 +118,18 @@ const Popup = ({ isOpen, onClose }) => {
     };
   }
 
- 
+  if (window.innerWidth < 720 && location.pathname === "/gallery") {
+    mobileSuppPopUp = {
+      position: "fixed",
+      top: "15vh",
+      bottom: "20vh",
+      left: "30px",
+      right: "30px",
+      minWidth: "280px",
+      backgroundColor: backColorPop,
+    };
+  }
 
-  // if (
-  //   window.innerWidth < 720 &&
-  //   (location.pathname === "/comunidad" || location.pathname === "/atendeme")
-  // ) {
-  //   mobileSuppPopUp = {
-  //     position: "fixed",
-  //     top: "30px",
-  //     bottom: "30px",
-  //     left: "30px",
-  //     right: "30px",
-  //     minWidth: "280px",
-  //     backgroundColor: backColorPop,
-  //   };
-  // }
   return (
     <div className={`popup-overlay ${isOpen ? "open" : ""}`}>
       <div
