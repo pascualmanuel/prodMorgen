@@ -42,10 +42,15 @@ function HeaderDesktop() {
     location.pathname === "/atendeme" ||
     location.pathname === "/agenda" ||
     location.pathname === "/gallery" ||
-    location.pathname === "/obras"
+    location.pathname === "/obras" ||
+    location.pathname === "/comunidad"
   ) {
     colorStroke = "black";
   }
+
+  // if (window.innerWidth < 720 && location.pathname === "/comunidad") {
+  //   colorStroke = "black";
+  // }
 
   let circleButton = CircleNav;
 

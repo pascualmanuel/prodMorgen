@@ -106,17 +106,34 @@ const Popup = ({ isOpen, onClose }) => {
   let mobileSuppPopUp = {
     backgroundColor: backColorPop,
   };
-  if (window.innerWidth < 720 && location.pathname === "/obras") {
+  if (window.innerWidth < 720) {
     mobileSuppPopUp = {
       position: "fixed",
       top: "30px",
       bottom: "30px",
       left: "30px",
       right: "30px",
-      minWidth: "280px",
+      minWidth: "265px",
       backgroundColor: backColorPop,
     };
   }
+
+ 
+
+  // if (
+  //   window.innerWidth < 720 &&
+  //   (location.pathname === "/comunidad" || location.pathname === "/atendeme")
+  // ) {
+  //   mobileSuppPopUp = {
+  //     position: "fixed",
+  //     top: "30px",
+  //     bottom: "30px",
+  //     left: "30px",
+  //     right: "30px",
+  //     minWidth: "280px",
+  //     backgroundColor: backColorPop,
+  //   };
+  // }
   return (
     <div className={`popup-overlay ${isOpen ? "open" : ""}`}>
       <div

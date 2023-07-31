@@ -42,7 +42,8 @@ function MobileHeader() {
     location.pathname === "/atendeme" ||
     location.pathname === "/agenda" ||
     location.pathname === "/gallery" ||
-    location.pathname === "/obras"
+    location.pathname === "/obras" ||
+    location.pathname === "/comunidad"
   ) {
     colorStroke = "black";
   }

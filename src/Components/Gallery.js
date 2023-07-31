@@ -349,7 +349,7 @@ const ImageSection = () => {
             </h2>
             <div className="atendeme-button">
               <CustomButton
-                buttonText={"Participar"}
+                buttonText={"Participar!!!"}
                 firstColor={"#DC3349"}
                 secondColor={"#005DA2"}
                 thirdColor={"#4590E6"}
@@ -422,6 +422,20 @@ const ImageSection = () => {
               </div>
             </div>
           ))}
+          <div style={{ position: "fixed", top: "80vh" }}>
+            <CustomButton
+              buttonText={"Participar:("}
+              firstColor={"#DC3349"}
+              secondColor={"#005DA2"}
+              thirdColor={"#4590E6"}
+              backColor={"#DC3349"}
+              border={"solid black"}
+              onClick={openPopup}
+              width={"235px"}
+              height={"25px"}
+            />
+          </div>
+          {showPopup && <Popup isOpen={showPopup} onClose={closePopup} />}
         </div>
       )}
     </>

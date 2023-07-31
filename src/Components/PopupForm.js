@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 
 const PopupForm = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   const location = useLocation();
   const { pathname } = window.location;
 
   useEffect(() => {
     const handleResize = () => {
+      setViewportHeight(window.innerHeight);
       setViewportWidth(window.innerWidth);
     };
 
@@ -25,12 +27,16 @@ const PopupForm = () => {
   let mobileMargins =
     "Morgenstern busca fomentar un espacio inclusivo y respetuoso de intercambio. No toleramos ni apoyamos ningún tipo de discurso que promueva el odio, la discriminación, el racismo ni ninguna forma de violencia.";
 
-  if (viewportWidth <= 768) {
-    // textContent = "This is the text content for small screens.";
-  } else if (viewportWidth <= 1024) {
-    // textContent = "This is the text content for medium screens.";
-  } else {
-    // textContent = "This is the text content for large screens.";
+  let buttonWidth = "95px";
+  let buttonHeight = "15px";
+  if (viewportWidth <= 720) {
+    buttonWidth = "230px";
+    buttonHeight = "10px";
+  }
+
+  if (viewportHeight <= 660) {
+    buttonWidth = "200px";
+    buttonHeight = "5px";
   }
 
   const textColor = location.pathname === "/gallery" ? "#FE6970" : "#DC3349";
@@ -42,7 +48,7 @@ const PopupForm = () => {
 
   const textOdio =
     location.pathname === "/atendeme"
-      ? "Escribí acá tu comentario. Puede ser una idea, observación, o algo que te interese mencionar sobre nuestro mundo contemporáneo."
+      ? "Morgenstern busca fomentar un espacio inclusivo y respetuoso de intercambio. No toleramos ni apoyamos ningún tipo de discurso que promueva el odio, la discriminación, el racismo ni ninguna forma de violencia."
       : "";
 
   const prueba = (
@@ -55,20 +61,23 @@ const PopupForm = () => {
         <form className="special-form">
           <p className="participar-popup">PARTICIPAR</p>
           {pathname !== "/gallery" && (
-            <div className="form-row">
-              <h3>Me llamo</h3>
-              <input type="text" placeholder="Nombre" />
-
-              <h3>y tengo</h3>
-              <input type="number" placeholder="300" />
-              <h3>Años.</h3>
+            <div className="form-row form-row-cont-mob">
+              <div className="form-row-mob">
+                <h3>Me llamo</h3>
+                <input type="text" placeholder="Nombre" />
+              </div>
+              <div className="form-row-mob">
+                <h3>y tengo</h3>
+                <input type="number" placeholder="300" />
+                <h3>Años.</h3>
+              </div>
             </div>
           )}
 
           <div className="form-row">
             <textarea placeholder={textPlaceHolder}></textarea>
           </div>
-          <div className="form-row">
+          <div className="form-row footer-mob-popup">
             <p className="p-popupform" style={{ color: textColor }}>
               {textOdio}
             </p>
@@ -79,8 +88,8 @@ const PopupForm = () => {
               thirdColor={"#4590E6"}
               backColor={"#DC3349"}
               border={"solid black"}
-              width={"95px"}
-              height={"15px"}
+              width={buttonWidth}
+              height={buttonHeight}
               fontSize={"18px"}
             />
           </div>
