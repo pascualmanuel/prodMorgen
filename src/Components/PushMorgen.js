@@ -181,13 +181,43 @@ const PushMorgen = () => {
     });
   };
 
+  let morgenPushWidth = 330;
+
+  let tuClickLlena = {
+    marginBottom: "406px",
+    marginLeft: "380px",
+    fontFamily: "SemiBold",
+    userSelect: "none",
+    color: "white",
+  };
+
+  if (window.innerWidth < 720) {
+    tuClickLlena = {
+      marginBottom: "406px",
+      marginLeft: "260px",
+      fontFamily: "SemiBold",
+      userSelect: "none",
+      color: "white",
+    };
+    morgenPushWidth = 290;
+  }
+  if (window.innerHeight < 660) {
+    tuClickLlena = {
+      marginBottom: "230px",
+      marginLeft: "220px",
+      fontFamily: "SemiBold",
+      userSelect: "none",
+      color: "white",
+    };
+    morgenPushWidth = 230;
+  }
   return (
     <>
       <div className="container-push">
         <div className="cont-push-morgen">
           <img
             src={BlackMorgen}
-            width={330}
+            width={morgenPushWidth}
             alt="Black Morgen"
             useMap="#imageMap"
             style={{ userSelect: "none" }}
@@ -214,17 +244,7 @@ const PushMorgen = () => {
           />
         ))}
         <div style={{ position: "absolute", zIndex: "5" }}>
-          <p
-            style={{
-              marginBottom: "406px",
-              marginLeft: "380px",
-              fontFamily: "SemiBold",
-              color: "white",
-              userSelect: "none",
-            }}
-          >
-            tu click me llena
-          </p>
+          <p style={tuClickLlena}>tu click me llena</p>
         </div>
         <img
           src={imageCircle}

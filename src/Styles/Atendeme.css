@@ -223,6 +223,13 @@
   display: flex;
   align-items: center;
 }
+.title-falling {
+  font-size: 55px;
+}
+
+.out {
+  display: none;
+}
 
 .falling-button {
   margin-left: 50px;
@@ -395,6 +402,12 @@
     margin-left: 100px;
     width: 35%;
     font-size: 25px;
+  }
+  .falling-text-cont {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 @media (max-width: 1000px) and (min-width: 730px) {
@@ -641,6 +654,21 @@
   .participar-popup {
     position: absolute;
     top: 15px;
+  }
+
+  .title-falling {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .falling-button {
+    margin-left: 0px;
+  }
+  .falling-cont {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .out {
+    display: inline;
   }
 }
 
