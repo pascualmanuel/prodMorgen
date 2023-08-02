@@ -203,8 +203,6 @@ function Home() {
     return () => clearTimeout(transitionTimer);
   }, [showNewsPopup]);
 
-  
-
   const circumference = 2000; // Circumference of the circle in pixels
   const buttonWidth = 200;
   const buttonHeight = 200;
@@ -263,7 +261,7 @@ function Home() {
               {/* Pop-up content */}
               <h2 style={{ fontSize: 40 }}>
                 Recibí las <br />
-                novedades
+                novedades hola!
               </h2>
               <span
                 className="close-button"
