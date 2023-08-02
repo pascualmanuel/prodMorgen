@@ -106,17 +106,30 @@ const Popup = ({ isOpen, onClose }) => {
   let mobileSuppPopUp = {
     backgroundColor: backColorPop,
   };
-  if (window.innerWidth < 720 && location.pathname === "/obras") {
+  if (window.innerWidth < 720) {
     mobileSuppPopUp = {
       position: "fixed",
       top: "30px",
       bottom: "30px",
       left: "30px",
       right: "30px",
+      minWidth: "265px",
+      backgroundColor: backColorPop,
+    };
+  }
+
+  if (window.innerWidth < 720 && location.pathname === "/gallery") {
+    mobileSuppPopUp = {
+      position: "fixed",
+      top: "15vh",
+      bottom: "20vh",
+      left: "30px",
+      right: "30px",
       minWidth: "280px",
       backgroundColor: backColorPop,
     };
   }
+
   return (
     <div className={`popup-overlay ${isOpen ? "open" : ""}`}>
       <div

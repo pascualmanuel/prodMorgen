@@ -53,36 +53,21 @@ const PopupFormCommunity = () => {
 
   const textColor = location.pathname === "/gallery" ? "#FE6970" : "#DC3349";
 
-  const textPlaceHolder =
-    location.pathname === "/atendeme"
-      ? "Escribí acá tu comentario. Puede ser una idea, observación, o algo que te interese mencionar sobre nuestro mundo contemporáneo."
-      : "Presentate brevemente, y contanos de qué forma te gustaría participar";
-
   const prueba = (
     <span style={{ fontSize: "20px", fontFamily: "Light" }}>Enviar</span>
   );
 
   return (
     <>
+      <p className="participar-popup" style={{ color: "Black" }}>
+        DONAR
+      </p>
       <div className="support-cont">
         <div>
-          <div>
-            <h3 className="support-h3">
-              Tu aporte es clave <br />
-              <span style={{ fontFamily: "Light" }}>para este proyecto</span>
-            </h3>
-            <p className="support-p">
-              En estos tiempos de desencuentros y conexiones inestables, el
-              proyecto Morgenstern busca reflexión y diálogo accesible para
-              todes, ¡qué ambicioso! <br />
-              <br />
-              Podés donar tus ahorros, convencer a una tía generosa o hacer una
-              contribución significativa vendiendo tus pertenencias. La decisión
-              está en tus manos... <br />
-              También podés optar por formas menos arriesgadas pero igual de
-              efectivas para colaborar.
-            </p>
-          </div>
+          <h3 className="support-h3">Apoya el proyecto</h3>
+          <p className="support-p">
+            Con tu aporte ayudas a que Morgenstern siga creciendo.
+          </p>
         </div>
         <div className="right-cont-pop-community">
           <div className="toggle-button-pay">

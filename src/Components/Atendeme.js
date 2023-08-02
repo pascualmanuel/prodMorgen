@@ -38,6 +38,15 @@ const MiSeccion = () => {
     column.addEventListener("mouseenter", () => {
       clearInterval(scrollInterval);
     });
+
+    if (window.innerWidth < 720) {
+      // Mobile touchstart event
+      column.addEventListener("touchstart", () => {
+        scrollIntervals.current.forEach((interval) => {
+          clearInterval(interval);
+        });
+      });
+    }
   };
 
   useEffect(() => {
@@ -187,11 +196,11 @@ const MiSeccion = () => {
             <p className="p-qt">
               “LO MUY POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO
               PERSONAJE ES QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON
-              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS
+              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS
               SECRETAS INDIVIDUALES PSICOLOGÍAS” conexión que parece, pero no
               es... presencia que no es... trama que no hay... red que no
-              sostiene... alienación, indiferencia, inconsciencia,  anestesia
-              ... no duele más... no duele más? Este es un mensaje que deja una
+              sostiene... alienación, indiferencia, inconsciencia, anestesia ...
+              no duele más... no duele más? Este es un mensaje que deja una
               persona random, Ailin lo elije y lo publica. Este es un mensaje
               que deja una persona random, Ailin lo elije y lo publica.Este es
               un mensaje que deja una persona random, Ailin lo elije y lo
@@ -204,11 +213,11 @@ const MiSeccion = () => {
             <p className="p-qt">
               “LO MUY POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO
               PERSONAJE ES QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON
-              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS
+              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS
               SECRETAS INDIVIDUALES PSICOLOGÍAS” conexión que parece, pero no
               es... presencia que no es... trama que no hay... red que no
-              sostiene... alienación, indiferencia, inconsciencia,  anestesia
-              ... no duele más... no duele más? Este es un mensaje que deja una
+              sostiene... alienación, indiferencia, inconsciencia, anestesia ...
+              no duele más... no duele más? Este es un mensaje que deja una
               persona random, Ailin lo elije y lo publica. Este es un mensaje
               que deja una persona random, Ailin lo elije y lo publica.Este es
               un mensaje que deja una persona random, Ailin lo elije y lo
@@ -221,11 +230,11 @@ const MiSeccion = () => {
             <p className="p-qt">
               “LO MUY POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO
               PERSONAJE ES QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON
-              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS
+              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS
               SECRETAS INDIVIDUALES PSICOLOGÍAS” conexión que parece, pero no
               es... presencia que no es... trama que no hay... red que no
-              sostiene... alienación, indiferencia, inconsciencia,  anestesia
-              ... no duele más... no duele más? Este es un mensaje que deja una
+              sostiene... alienación, indiferencia, inconsciencia, anestesia ...
+              no duele más... no duele más? Este es un mensaje que deja una
               persona random, Ailin lo elije y lo publica. Este es un mensaje
               que deja una persona random, Ailin lo elije y lo publica.Este es
               un mensaje que deja una persona random, Ailin lo elije y lo
@@ -246,7 +255,7 @@ const MiSeccion = () => {
             <p className="p-qt">
               “LO MUY POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO
               PERSONAJE ES QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON
-              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS
+              QUE TODOS NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS
               SECRETAS INDIVIDUALES PSICOLOGÍAS”"
               <span className="name-qt">Manuel - 25 años 1</span>
             </p>
@@ -256,7 +265,7 @@ const MiSeccion = () => {
               "No nos vemos pero te sigo en redes" Cynthia - 30 años “LO MUY
               POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO PERSONAJE ES
               QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON QUE TODOS
-              NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS SECRETAS
+              NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS SECRETAS
               INDIVIDUALES PSICOLOGÍAS”" Manu - 29 años ‘‘Yo, yo yo.. Para mí. A
               mí me pasó lo mismo. Es que cuando yo estuve ahí. Ay! No viste? Yo
               hice uno igual en la escuela! Che, ale, prestame atención, no ves
@@ -282,7 +291,7 @@ const MiSeccion = () => {
               "No nos vemos pero te sigo en redes" Cynthia - 30 años “LO MUY
               POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO PERSONAJE ES
               QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON QUE TODOS
-              NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS SECRETAS
+              NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS SECRETAS
               INDIVIDUALES PSICOLOGÍAS”" Manu - 29 años ‘‘Yo, yo yo.. Para mí. A
               mí me pasó lo mismo. Es que cuando yo estuve ahí. Ay! No viste? Yo
               hice uno igual en la escuela! Che, ale, prestame atención, no ves
@@ -300,7 +309,7 @@ const MiSeccion = () => {
               "No nos vemos pero te sigo en redes" Cynthia - 30 años “LO MUY
               POCO QUE PODRÍA DECIR QUE CREO QUE ESTE IMAGINARIO PERSONAJE ES
               QUE ES UNO DE LOS ÍNTIMOS, OCULTADOS ARQUETIPOS CON QUE TODOS
-              NOSOTROS CARGAMOS ENTRE LOS PLIEGUES  DE NUESTRAS SECRETAS
+              NOSOTROS CARGAMOS ENTRE LOS PLIEGUES DE NUESTRAS SECRETAS
               INDIVIDUALES PSICOLOGÍAS”" Manu - 29 años ‘‘Yo, yo yo.. Para mí. A
               mí me pasó lo mismo. Es que cuando yo estuve ahí. Ay! No viste? Yo
               hice uno igual en la escuela! Che, ale, prestame atención, no ves
@@ -316,10 +325,10 @@ const MiSeccion = () => {
         </div>
       </div>
 
+      {/* <div className="atendeme-cont-title-mob"> */}
+      <h2 className="atendeme-title">Atendeme</h2>
+      {/* </div> */}
       <div className="second-cont-atendeme">
-        <div className="atendeme-cont-title-mob">
-          <h2 className="atendeme-title">Atendeme</h2>
-        </div>
         <div className="atendeme-cont-button-mob">
           <div className="atendeme-button">
             <CustomButton
