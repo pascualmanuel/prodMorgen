@@ -261,7 +261,7 @@ function Home() {
               {/* Pop-up content */}
               <h2 style={{ fontSize: 40 }}>
                 Recibí las <br />
-                novedades hola!
+                novedades
               </h2>
               <span
                 className="close-button"
