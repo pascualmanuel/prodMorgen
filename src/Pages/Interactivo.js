@@ -11,16 +11,32 @@ import Malo from "../Components/Malo.js";
 function Interactivo() {
   const [selectedColor, setSelectedColor] = useState("#FE6970");
   const [selectedCircle, setSelectedCircle] = useState("circle1");
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    document.body.classList.add("no-scroll");
+    document.body.classList.add("no-scroll-interactivo");
 
     return () => {
-      document.body.classList.remove("no-scroll");
+      document.body.classList.remove("no-scroll-interactivo");
     };
   }, []);
 
-  const lineStyle = {
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  let lineStyle = {
     width: "500px",
     height: "1px",
     backgroundColor: "black",
@@ -43,7 +59,7 @@ function Interactivo() {
     setSelectedCircle(circle);
   };
 
-  const columnStyle = {
+  let columnStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
@@ -54,7 +70,7 @@ function Interactivo() {
     zIndex: "100",
   };
 
-  const squareStyle = {
+  let squareStyle = {
     width: "40px",
     height: "40px",
     // cursor: "pointer",
@@ -89,6 +105,42 @@ function Interactivo() {
   const handleSquareClick = (color) => {
     setSelectedColor(color);
   };
+
+  let hola = window.innerWidth;
+
+  const squareCount = colors.length;
+  const squareWidth = Math.min(30, window.innerWidth / squareCount);
+
+  console.log(squareWidth);
+  if (window.innerWidth < 720) {
+    columnStyle = {
+      display: "flex",
+      flexDirection: "row", // Change to "row"
+      justifyContent: "flex-start", // Align items horizontally
+      position: "fixed",
+      bottom: "10%",
+      left: "0",
+      transform: "translate(0, -50%)",
+      zIndex: "100",
+      width: "100%",
+    };
+    squareStyle = {
+      flex: `1 0 ${100 / colors.length}%`, // Distribute equally, regardless of the number of colors
+      aspectRatio: "1 / 1", // Set aspect ratio to maintain square shape
+      // width: "40px",
+      // height: "40px",
+    };
+
+    lineStyle = {
+      width: "80vw",
+      height: "1px",
+      backgroundColor: "black",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      zIndex: "100",
+    };
+  }
 
   return (
     <>

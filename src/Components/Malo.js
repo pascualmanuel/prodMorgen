@@ -10,6 +10,14 @@ const MatterJSDemo = () => {
   const engineRef = useRef(null);
   const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
 
+  useEffect(() => {
+    document.body.classList.add("no-scroll-interactivo");
+
+    return () => {
+      document.body.classList.remove("no-scroll-interactivo");
+    };
+  }, []);
+
   const createObject = () => {
     const getRandomAngle = () => {
       const angles = [-45, , -10, 45];
@@ -153,8 +161,8 @@ const MatterJSDemo = () => {
   return (
     <div className="falling-cont">
       <div className="falling-text-cont">
-        <h4 style={{ fontSize: "50px" }}>
-          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar
+        <h4 style={{ userSelect: "none" }} className="title-falling">
+          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar <br className="out"/>
           para un otro
         </h4>
         <h3 onClick={addButtonClickHandler} className="falling-button pointer">

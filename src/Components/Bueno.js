@@ -9,13 +9,22 @@ import MorAzul from "../Assets/interactivo/particles/mor-azul2.png";
 import MorLila from "../Assets/interactivo/particles/mor-lila2.png";
 import MorMaiz from "../Assets/interactivo/particles/mor-maiz2.png";
 import MorRojo from "../Assets/interactivo/particles/mor-rojo2.png";
-
+import { useEffect } from "react";
 function Bueno() {
   const particlesInit = async (main) => {
     console.log(main);
 
     await loadFull(main);
   };
+
+  useEffect(() => {
+    document.body.classList.add("no-scroll-interactivo");
+
+    return () => {
+      document.body.classList.remove("no-scroll-interactivo");
+    };
+  }, []);
+
 
   const morgensImage = [
     { src: MorAzul, height: 33, width: 10 },

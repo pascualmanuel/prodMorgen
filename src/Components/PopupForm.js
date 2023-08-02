@@ -81,17 +81,19 @@ const PopupForm = () => {
             <p className="p-popupform" style={{ color: textColor }}>
               {textOdio}
             </p>
-            <CustomButton
-              buttonText={prueba}
-              firstColor={"#FE6970"}
-              secondColor={"#005DA2"}
-              thirdColor={"#4590E6"}
-              backColor={"#DC3349"}
-              border={"solid black"}
-              width={buttonWidth}
-              height={buttonHeight}
-              fontSize={"18px"}
-            />
+            <div style={{ position: "fixed", bottom: "45px" }}>
+              <CustomButton
+                buttonText={prueba}
+                firstColor={"#FE6970"}
+                secondColor={"#005DA2"}
+                thirdColor={"#4590E6"}
+                backColor={"#DC3349"}
+                border={"solid black"}
+                width={buttonWidth}
+                height={buttonHeight}
+                fontSize={"18px"}
+              />
+            </div>
           </div>
           {/* <div className="form-row" style={{ justifyContent: "end" }}>
             <div>

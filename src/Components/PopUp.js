@@ -130,6 +130,18 @@ const Popup = ({ isOpen, onClose }) => {
     };
   }
 
+  if (window.innerWidth < 720 && location.pathname === "/atendeme") {
+    mobileSuppPopUp = {
+      position: "fixed",
+      top: "12vh",
+      bottom: "5vh",
+      left: "30px",
+      right: "30px",
+      minWidth: "280px",
+      backgroundColor: backColorPop,
+    };
+  }
+
   return (
     <div className={`popup-overlay ${isOpen ? "open" : ""}`}>
       <div
