@@ -9,14 +9,7 @@ function SpikeButtonTwo() {
   return (
     <>
       <Link to="/obras">
-        <div
-          className="cont-svgs"
-          style={{
-            position: "sticky",
-            width: 290,
-            height: 415,
-          }}
-        >
+        <div className="cont-svgs-obras">
           <img
             src={Img1}
             alt="Obras"
@@ -27,7 +20,6 @@ function SpikeButtonTwo() {
               top: 0,
               transition: "transform 0.5s",
               zIndex: 3,
-              width: 267,
             }}
             onMouseEnter={() => {
               const cls2 = document.querySelector(".spike-b2-cls-2");
@@ -56,7 +48,6 @@ function SpikeButtonTwo() {
               top: 0,
               transition: "transform 0.5s",
               zIndex: 2,
-              width: 267,
             }}
           />
           <img
@@ -69,7 +60,6 @@ function SpikeButtonTwo() {
               top: 0,
               transition: "transform 0.5s",
               zIndex: 1,
-              width: 267,
             }}
             onMouseEnter={() => {
               const cls2 = document.querySelector(".spike-b2-cls-2");
