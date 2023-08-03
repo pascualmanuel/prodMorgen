@@ -686,7 +686,8 @@
     width: 97vw;
     height: 100vh;
     align-items: flex-end;
-    margin-bottom: 13svh;
+    margin-bottom: 15vh;
+    /* 25svh */
     display: flex;
     justify-content: center;
   }

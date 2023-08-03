@@ -121,8 +121,8 @@ const Popup = ({ isOpen, onClose }) => {
   if (window.innerWidth < 720 && location.pathname === "/gallery") {
     mobileSuppPopUp = {
       position: "fixed",
-      top: "15vh",
-      bottom: "20vh",
+      top: "10vh",
+      bottom: "15vh",
       left: "30px",
       right: "30px",
       minWidth: "280px",

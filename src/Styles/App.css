@@ -1494,6 +1494,7 @@ left: 180px; */
   }
   .popup-container {
     /* max-height: 657px; */
+    min-height: 300px;
   }
   .circle-screen {
     display: none;
