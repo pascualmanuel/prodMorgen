@@ -3,14 +3,13 @@ import "../Styles/Atendeme.css";
 import Img1 from "../Assets/svg/Star.svg";
 import Img2 from "../Assets/svg/Star2.svg";
 import Img3 from "../Assets/svg/Star3.svg";
-
 import { Link } from "react-router-dom";
 
 function SpikeButton() {
   return (
     <>
       <Link to="/comunidad">
-        <div className="cont-svgs-2">
+        <div className="cont-svgs-comunidad">
           <img
             src={Img1}
             alt="SpikeButton"
