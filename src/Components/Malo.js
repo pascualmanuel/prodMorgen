@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Matter from "matter-js";
 import MorAzul from "../Assets/interactivo/particles/mor-azul2.png";
 import MorLila from "../Assets/interactivo/particles/mor-lila2.png";
@@ -9,6 +9,20 @@ const MatterJSDemo = () => {
   const canvasRef = useRef(null);
   const engineRef = useRef(null);
   const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     document.body.classList.add("no-scroll-interactivo");
@@ -33,13 +47,24 @@ const MatterJSDemo = () => {
     const angleInRadians = (angleInDegrees * Math.PI) / 180; // Convert the angle from degrees to radians
     console.log(angleInDegrees);
 
-    const box = Bodies.rectangle(x, 0, 80, 230, {
+    let widthBody = 80;
+    let heightBody = 230;
+    let xBodyScale = 0.7;
+    let yBodyScale = 0.7;
+
+    if (window.innerWidth < 720) {
+      widthBody = 40;
+      heightBody = 115;
+      xBodyScale = 0.3;
+      yBodyScale = 0.3;
+    }
+    const box = Bodies.rectangle(x, 0, widthBody, heightBody, {
       angle: angleInRadians, // Set the initial angle of the body
       render: {
         sprite: {
           texture: textures[Math.floor(Math.random() * textures.length)],
-          xScale: 0.7,
-          yScale: 0.7,
+          xScale: xBodyScale,
+          yScale: yBodyScale,
         },
       },
     });
@@ -120,7 +145,7 @@ const MatterJSDemo = () => {
         },
       }
     );
-    console.log(window.innerHeight - 50, "ja");
+    // console.log(window.innerHeight - 50, "ja");
 
     // add all of the bodies to the world
     Composite.add(engine.world, [ground, leftWall, rightWall]);
@@ -162,7 +187,8 @@ const MatterJSDemo = () => {
     <div className="falling-cont">
       <div className="falling-text-cont">
         <h4 style={{ userSelect: "none" }} className="title-falling">
-          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar <br className="out"/>
+          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar{" "}
+          <br className="out" />
           para un otro
         </h4>
         <h3 onClick={addButtonClickHandler} className="falling-button pointer">
