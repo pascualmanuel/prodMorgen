@@ -4,10 +4,29 @@ body {
   margin: 0 auto !important;
 }
 
+.cursor-morgen {
+  /* cursor: url("../Assets/svg/Recurso.svg"), auto; */
+  cursor: url("../Assets//svg/pointer-morgen.svg"), auto;
+}
+
+.cursor-follower {
+  position: absolute;
+  width: 50px; /* Ajusta el tamaño del cursor */
+  height: 50px; /* Ajusta el tamaño del cursor */
+  background-color: transparent;
+  background-image: url("../Assets/MORGEN_AMARILLO.png"); /* Cambia la ruta a tu imagen de cursor */
+  background-size: cover;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .full-h {
   height: 100vh;
 }
 
+.ew {
+  cursor: url("../Assets/svg/text-cursor.svg"), auto;
+}
 @media (min-height: 800px) {
   .full-h {
     height: 890px;

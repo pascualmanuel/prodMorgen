@@ -109,7 +109,8 @@ function Interactivo() {
   let hola = window.innerWidth;
 
   const squareCount = colors.length;
-  const squareWidth = Math.min(30, window.innerWidth / squareCount);
+  const squareWidth = window.innerWidth / squareCount;
+  const squareHeight = 420 / squareCount;
 
   console.log(squareWidth);
   if (window.innerWidth < 720) {
@@ -125,10 +126,10 @@ function Interactivo() {
       width: "100%",
     };
     squareStyle = {
-      flex: `1 0 ${100 / colors.length}%`, // Distribute equally, regardless of the number of colors
-      aspectRatio: "1 / 1", // Set aspect ratio to maintain square shape
-      // width: "40px",
-      // height: "40px",
+      // flex: `1 0 ${100 / colors.length}%`, // Distribute equally, regardless of the number of colors
+      // aspectRatio: "1 / 1", // Set aspect ratio to maintain square shape
+      width: squareWidth,
+      height: squareHeight,
     };
 
     lineStyle = {
