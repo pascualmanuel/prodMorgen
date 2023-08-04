@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import InaImg1 from "../Assets/obras/inadvertido/inadvertido-1.png";
+import InaImg1 from "../Assets/obras/inadvertido/inadvertido-1.webp";
+import InaImg0 from "../Assets/obras/inadvertido/inadvertido-1.png";
 import InaImg2 from "../Assets/obras/inadvertido/inadvertido-2.png";
 import InaImg3 from "../Assets/obras/inadvertido/inadvertido-3.png";
 import InaImg4 from "../Assets/obras/inadvertido/inadvertido-4.png";
@@ -24,6 +25,8 @@ import IconTag from "../Assets/svg/icon-tag.svg";
 import PopupObras from "./PopupObras";
 const Inadvertido = () => {
   const images = [
+    InaImg1,
+    InaImg0,
     InaImg13,
     InaImg14,
     InaImg17,

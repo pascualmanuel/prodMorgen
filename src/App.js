@@ -19,6 +19,7 @@ import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
 import Prueba from "./Components/Prueba";
 import Inadvertido from "./Components/Inadvertido";
+import { LanguageProvider } from "./Hooks/LanguageContext";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -32,22 +33,24 @@ function ScrollToTop() {
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/yomorgenstern" element={<YoMorgen />} />
-          <Route path="/atendeme" element={<Atendeme />} />
-          <Route path="/interactivo" element={<Interactivo />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/malo" element={<Malo />} />
-          <Route path="/comunidad" element={<Comunidad />} />
-          <Route path="/agenda" element={<Agenda />} />
-          <Route path="/obras" element={<Obras />} />
-          <Route path="/prueba" element={<Prueba />} />
-        </Routes>
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/yomorgenstern" element={<YoMorgen />} />
+            <Route path="/atendeme" element={<Atendeme />} />
+            <Route path="/interactivo" element={<Interactivo />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/malo" element={<Malo />} />
+            <Route path="/comunidad" element={<Comunidad />} />
+            <Route path="/agenda" element={<Agenda />} />
+            <Route path="/obras" element={<Obras />} />
+            <Route path="/prueba" element={<Prueba />} />
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </>
   );
 }

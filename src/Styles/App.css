@@ -33,11 +33,11 @@ body {
 } */
 
 .pointer {
-  cursor: url("../Assets/svg/pointer-final.svg"), auto;
+  cursor: url("../Assets/svg/pointer-final.svg"), auto !important;
 }
 
 a {
-  cursor: url("../Assets/svg/pointer-final.svg"), auto;
+  cursor: url("../Assets/svg/pointer-final.svg"), auto !important;
   text-decoration: none;
   color: inherit;
 }
@@ -95,6 +95,8 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .p-pop-up-mob {
   font-size: 35px;
@@ -206,8 +208,8 @@ h4 {
 }
 
 .plus-icon {
-  cursor: url("../Assets/svg/cursor-final.svg"), auto !important;
-  cursor: pointer;
+  /* cursor: url("../Assets/svg/cursor-final.svg"), auto !important; */
+  /* cursor: pointer; */
   display: flex;
 }
 .menu {
@@ -531,14 +533,12 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90%;
+
+  height: 110%;
 }
 
-/* @media (max-height: 750px) {
-  .popup-form-cont {
-    padding-top: 50px;
-  }
-} */
+@media (max-width: 720px) {
+}
 
 .special-form input::placeholder,
 .special-form textarea::placeholder {
@@ -1290,6 +1290,7 @@ left: 180px; */
   display: flex;
   justify-content: center;
 }
+
 @media (max-height: 600px) {
   .mob-home-container {
     justify-content: flex-start;
@@ -1329,6 +1330,18 @@ left: 180px; */
 .obras-welcome {
   display: flex;
   justify-content: space-around;
+}
+
+.button-entendido {
+  background: #dc3349;
+  width: 288px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: solid 1px black;
+  color: white;
 }
 @media (max-width: 720px) {
   .navbar-container {
@@ -1458,6 +1471,10 @@ left: 180px; */
     justify-content: space-evenly;
   }
 
+  .popup-form-cont {
+    height: 90%;
+  }
+
   .popup-conexion img {
     width: 230px;
     object-fit: contain;
@@ -1576,7 +1593,14 @@ left: 180px; */
     width: 180px;
   }
 }
-
+@media (max-height: 590px) {
+  .popup-conexion {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+}
 @media (max-width: 400px) {
   .email-container {
     width: 250px;

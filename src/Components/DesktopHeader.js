@@ -6,27 +6,34 @@ import IgLogo from "../Assets/svg/ig-svg.svg";
 import MailSVG from "../Assets/svg/mail-svg.svg";
 import CircleNav from "../Assets/svg/circle-nav-svg.svg";
 import CircleWhiteNav from "../Assets/svg/circle-nav-white-svg.svg";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 function HeaderDesktop() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [iconRotation, setIconRotation] = useState(0);
-  const [isEnSelected, setIsEnSelected] = useState(false);
-  const [isEsSelected, setIsEsSelected] = useState(true);
+  // const [isEnSelected, setIsEnSelected] = useState(false);
+  // const [isEsSelected, setIsEsSelected] = useState(true);
   const [isHome, setIsHome] = useState(false); // Use useState to track if it's the home page
   const location = useLocation();
 
+  const handleLanguageToggle = () => {
+    toggleLanguage();
+  };
+
+  const { userLanguage, toggleLanguage } = useLanguage();
+  const isEnSelected = userLanguage === "EN";
+  const isEsSelected = userLanguage === "ES";
+
   const handleEsClick = () => {
-    setIsEnSelected(true);
-    setIsEsSelected(false);
-    // cambiar a EN
-    console.log("Cambiar a en");
+    toggleLanguage(); // Cambiar a EN
   };
 
   const handleEnClick = () => {
-    setIsEnSelected(false);
-    setIsEsSelected(true);
-    // cambiar a ES
-    console.log("Cambiar a ES");
+    toggleLanguage(); // Cambiar a ES
+  };
+
+  const translateText = (enText, esText) => {
+    return userLanguage === "EN" ? enText : esText;
   };
 
   const closeMenu = () => {
@@ -100,20 +107,24 @@ function HeaderDesktop() {
         <div className="navbar-container">
           <section className="navbar-left-section">
             <div className="toggle-button">
-              <Link
+              <div
                 to="#"
-                className={`toggle-button-link ${isEnSelected ? "active" : ""}`}
-                onClick={handleEsClick}
-              >
-                EN
-              </Link>
-              <Link
-                to="#"
-                className={`toggle-button-link ${isEsSelected ? "active" : ""}`}
+                className={`toggle-button-link ${
+                  isEnSelected ? "active" : ""
+                } pointer`}
                 onClick={handleEnClick}
               >
+                EN
+              </div>
+              <div
+                to="#"
+                className={`toggle-button-link ${
+                  isEsSelected ? "active" : ""
+                } pointer`}
+                onClick={handleEsClick}
+              >
                 ESP
-              </Link>
+              </div>
             </div>
             <div className="contact">
               <h4 style={{ display: "flex", alignItems: "center" }}>
@@ -145,17 +156,22 @@ function HeaderDesktop() {
               </h4>
             </div>
             <div className="contact-me">
-              <p className="news">Recibí novedades</p>
+              <p className="news">
+                {translateText("Stay tuned", "Recibí Novedades")}
+              </p>
               {/* <input type="email" placeholder="Enter your email" /> */}
               {/* <input /> */}
               <div className="email-container">
                 <input
                   type="email"
-                  placeholder="Dirección de e-mail"
+                  placeholder={translateText(
+                    "e-mail address",
+                    "Dirección de e-mail"
+                  )}
                   className="email-input"
                 />
                 <button type="submit" className="submit-button">
-                  Enviar
+                  {translateText("Send", "Enviar")}
                 </button>
               </div>
             </div>
@@ -163,37 +179,37 @@ function HeaderDesktop() {
           <section className="navbar-right-section">
             <Link to={"/yomorgenstern"}>
               <h2 onClick={closeMenu} className="navbar-title yoMor">
-                Yo, Morgenstern
+                {translateText("Me, Morgenstern", "Yo, Morgenstern")}
               </h2>
             </Link>
             <Link to={"/obras"}>
               <h2 onClick={closeMenu} className="navbar-title obras">
-                Obras
+                {translateText("Works", "Obras")}
               </h2>
             </Link>
             <Link to={"/comunidad"}>
               <h2 onClick={closeMenu} className="navbar-title comunidad">
-                Comunidad
+                {translateText("Community", "Comunidad")}
               </h2>
             </Link>
             <Link to={"/larevista"}>
               <h2 onClick={closeMenu} className="navbar-title revista">
-                La revista
+                {translateText("The magazine", "La revista")}
               </h2>
             </Link>
             <Link to={"/interactivo"}>
               <h2 onClick={closeMenu} className="navbar-title interactivo">
-                Interactivo
+                {translateText("Interactive", "Interactivo")}
               </h2>
             </Link>
             <Link>
               <h2 onClick={closeMenu} className="navbar-title merch">
-                Morgen Merch
+                Morgenmerch
               </h2>
             </Link>
             <Link to={"/agenda"}>
               <h2 onClick={closeMenu} className="navbar-title agenda">
-                Agenda
+                {translateText("Calendar", "Agenda")}
               </h2>
             </Link>
           </section>
@@ -218,9 +234,15 @@ function HeaderDesktop() {
         </div>
       )}
       <div className="nav-bar">
-        <div className="plus-icon" style={{ marginRight: marginObras }}>
+        <div className="plus-icon pointer" style={{ marginRight: marginObras }}>
           {!menuOpen && isHome && (
-            <p style={{ marginRight: "50px", color: "white" }}>ESP</p>
+            <p
+              style={{ marginRight: "50px", color: "white" }}
+              onClick={toggleLanguage}
+              className="pointer"
+            >
+              {userLanguage === "EN" ? "EN" : "ESP"}
+            </p>
           )}
 
           {isGalleryOrAtendeme ? (

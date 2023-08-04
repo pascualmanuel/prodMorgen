@@ -109,6 +109,11 @@ const MiSeccion = () => {
     handleAutoScroll(column4, 0.5, "down");
   }, []);
 
+  let buttonHeight = "55px";
+  if (window.innerWidth < 720) {
+    buttonHeight = "25px";
+  }
+
   return (
     <>
       <div className="seccion-flexbox">
@@ -340,7 +345,7 @@ const MiSeccion = () => {
               border={"solid black"}
               onClick={openPopup}
               width={"235px"}
-              height={"25px"}
+              height={buttonHeight}
             />
           </div>
         </div>

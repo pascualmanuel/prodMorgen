@@ -70,7 +70,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
           </div>
         </div>
       </div>
-      <span className="close-button" onClick={closePopup}>
+      <span className="close-button pointer" onClick={closePopup}>
         <svg
           width="45"
           height="45"

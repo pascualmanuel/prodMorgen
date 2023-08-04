@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton from "../Components/CustomButton";
 import Morgen from "../Assets/morgen-trans.png";
 import { useState, useEffect } from "react";
+
 import "../Styles/App.css";
 const MobileHome = () => {
   let homeButtonHeight = "15px";
@@ -130,20 +131,19 @@ const MobileHome = () => {
     },
   ];
 
-  let marginTopBack = "-77vh"
+  let marginTopBack = "-77vh";
   let contPadTop = 0;
 
   if (viewportHeight < 720) {
     contPadTop = 0.01 * viewportHeight;
-    marginTopBack = "-83vh"
-
+    marginTopBack = "-83vh";
   }
 
   let heightMobCont = "100vh";
   if (viewportHeight < 600) {
     heightMobCont = "135vh";
     contPadTop = "10px";
-    marginTopBack = "-90vh"
+    marginTopBack = "-90vh";
   }
 
   const handleOverlayClick = (event) => {
@@ -162,7 +162,7 @@ const MobileHome = () => {
           ))}
         </div>
 
-        <div className="mob-img-cont" style={{marginTop: marginTopBack}}>
+        <div className="mob-img-cont" style={{ marginTop: marginTopBack }}>
           <img src={Morgen} width={170} />
         </div>
       </div>
@@ -171,19 +171,17 @@ const MobileHome = () => {
         <div className="mob-home-popup-overlay" onClick={handleClosePopup}>
           <div className="mob-home-popup-content">
             <h3 className="p-pop-up-mob">
-              Pasá a una compu para disfrutar de una mejor experiencia.
+              {/* {showFieldByLang(
+                language,
+                "Out of paris",
+                "Afueras de Paris",
+                "Banlieue Parisienne"
+              )} */}
+              Hola
             </h3>
-            <CustomButton
-              buttonText={"Entendido"}
-              // firstColor={"#DC3349"}
-              // secondColor={"#005DA2"}
-              // thirdColor={"#4590E6"}
-              backColor={"#DC3349"}
-              border={"solid black"}
-              onClick={handleClosePopup}
-              width={"235px"}
-              height={"25px"}
-            />
+            <div className="button-entendido">
+              <h2>Entendido</h2>
+            </div>
           </div>
         </div>
       )}
@@ -192,14 +190,3 @@ const MobileHome = () => {
 };
 
 export default MobileHome;
-// {
-//   buttonText: "Comunidad",
-//   firstColor: "#DC3349",
-//   secondColor: "#7D9F00",
-//   thirdColor: "#DFB000",
-//   //   link: "/comunidad",
-//   backColor: "",
-//   width: homeButtonWidth,
-//   height: homeButtonHeight,
-//   fontSize: "26px",
-// },

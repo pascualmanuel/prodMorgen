@@ -24,6 +24,8 @@ const PopupForm = () => {
     };
   }, []);
 
+  let buttonPosition = {};
+
   let mobileMargins =
     "Morgenstern busca fomentar un espacio inclusivo y respetuoso de intercambio. No toleramos ni apoyamos ningún tipo de discurso que promueva el odio, la discriminación, el racismo ni ninguna forma de violencia.";
 
@@ -32,6 +34,10 @@ const PopupForm = () => {
   if (viewportWidth <= 720) {
     buttonWidth = "230px";
     buttonHeight = "10px";
+    buttonPosition = {
+      position: "fixed",
+      bottom: "45px",
+    };
   }
 
   if (viewportHeight <= 660) {
@@ -81,7 +87,7 @@ const PopupForm = () => {
             <p className="p-popupform" style={{ color: textColor }}>
               {textOdio}
             </p>
-            <div style={{ position: "fixed", bottom: "45px" }}>
+            <div style={buttonPosition}>
               <CustomButton
                 buttonText={prueba}
                 firstColor={"#FE6970"}

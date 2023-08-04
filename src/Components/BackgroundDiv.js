@@ -2,12 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import "../Styles/App.css";
 import MorgenImg from "../Assets/MORGEN_AMARILLO.png";
 import MorgenImgSvg from "../Assets/morgen-svg.svg";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 const BackgroundDiv = () => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const imgRef = useRef(null);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const { userLanguage, translateText } = useLanguage();
 
   useEffect(() => {
     const handleResize = () => {
@@ -99,8 +101,7 @@ const BackgroundDiv = () => {
   const isTouchableScreen =
     "ontouchstart" in window || navigator.msMaxTouchPoints;
 
-
-    // let isTouchableScreen = 
+  // let isTouchableScreen =
   return (
     <>
       <div ref={containerRef}>
@@ -127,7 +128,7 @@ const BackgroundDiv = () => {
                 textAlign: "center",
               }}
             >
-              Yo, Morgenstern
+              {translateText("I, Morgenstern", "Yo, Morgenstern")}
             </h2>
             <img
               src={MorgenImgSvg}

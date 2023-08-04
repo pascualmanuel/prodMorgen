@@ -7,11 +7,12 @@ import MobileHome from "../Components/MobileHome";
 
 import "./Prueba.css";
 import { useLocation } from "react-router-dom";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 function Home() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-
+  const { userLanguage, translateText } = useLanguage();
   useEffect(() => {
     document.body.classList.add("no-scroll");
 
@@ -54,10 +55,10 @@ function Home() {
     interactivoOffsetY = 170;
     comunidadOffsetY = 10;
   }
-
+  //    {translateText("I, Morgenstern", "Yo, Morgenstern")}
   const buttons = [
     {
-      buttonText: "Obras",
+      buttonText: translateText("Works", "Obras"),
       firstColor: "#DCCB00",
       secondColor: "#7D9F00",
       thirdColor: "#DFB000",
@@ -72,7 +73,7 @@ function Home() {
       },
     },
     {
-      buttonText: "Comunidad",
+      buttonText: translateText("Community", "Comunidad"),
       firstColor: "#DC3349",
       secondColor: "#7D9F00",
       thirdColor: "#DFB000",
@@ -129,7 +130,7 @@ function Home() {
       },
     },
     {
-      buttonText: "Interactivo",
+      buttonText: translateText("Interactive", "Interactivo"),
       firstColor: "#4590E6",
       secondColor: "#7D9F00",
       thirdColor: "#DFB000",
@@ -143,7 +144,7 @@ function Home() {
       },
     },
     {
-      buttonText: "La Revista",
+      buttonText: translateText("The magazine", "La revista"),
       firstColor: "#AE79EF",
       secondColor: "#005DA2",
       thirdColor: "#4590E6",
@@ -157,7 +158,7 @@ function Home() {
       },
     },
     {
-      buttonText: "Yo, Morgenstern",
+      buttonText: translateText("I, Morgenstern", "Yo, Morgenstern"),
       firstColor: "#FE6970",
       secondColor: "#FF3910",
       thirdColor: "#DC3349",
@@ -258,13 +259,14 @@ function Home() {
         {!isMobileView() && showNewsPopup && (
           <div id="news-popup" className="news-popup">
             <div className="cont-home-pop">
-              {/* Pop-up content */}
               <h2 style={{ fontSize: 40 }}>
-                Recibí las <br />
-                novedades
+                {translateText("Stay tuned", "Recibí las")} <br />
+                {translateText("", "Novedades")}
+                &nbsp;
               </h2>
+
               <span
-                className="close-button"
+                className="close-button pointer"
                 style={{ marginTop: 33 }}
                 onClick={handleClosePopup}
               >
