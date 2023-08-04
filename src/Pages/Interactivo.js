@@ -155,7 +155,7 @@ function Interactivo() {
           {selectedCircle === "circle2" && <Bueno />}
           {selectedCircle === "circle3" && <Malo />}
         </div>
-        <div className="line-interactivo-cont">
+        <div className="line-interactivo-cont cursor">
           <div
             style={{
               position: "absolute",
