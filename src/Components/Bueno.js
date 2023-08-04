@@ -25,7 +25,6 @@ function Bueno() {
     };
   }, []);
 
-
   const morgensImage = [
     { src: MorAzul, height: 33, width: 10 },
     { src: MorLila, height: 33, width: 10 },
@@ -34,7 +33,7 @@ function Bueno() {
   ];
 
   return (
-    <div className="particles-cont">
+    <div className="particles-cont cursor-morgen">
       <Particles
         id="tsparticles"
         init={particlesInit}

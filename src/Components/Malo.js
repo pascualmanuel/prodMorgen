@@ -34,14 +34,14 @@ const MatterJSDemo = () => {
 
   const createObject = () => {
     const getRandomAngle = () => {
-      const angles = [-45, , -10, 45];
+      const angles = [-45, -10, 45];
       const randomIndex = Math.floor(Math.random() * angles.length);
       return angles[randomIndex];
     };
 
     const { Bodies, Composite } = Matter;
     const x = Math.random() * (window.innerWidth - 80) + 40;
-    // const angleInDegrees = -45 || 0 || 45; //Math.random() * 140; // Generate a random angle between 0 and 140 degrees
+
     const angleInDegrees = getRandomAngle();
 
     const angleInRadians = (angleInDegrees * Math.PI) / 180; // Convert the angle from degrees to radians
@@ -103,12 +103,15 @@ const MatterJSDemo = () => {
     });
 
     // create ground
-
+    let coco = 180;
+    if (window.innerWidth < 720) {
+      coco = window.innerWidth * 0.95;
+    }
     const ground = Bodies.rectangle(
       window.innerWidth / 2,
       window.innerHeight + 5,
       window.innerWidth,
-      180, // Height for transparent border
+      coco, // Height for transparent border
       {
         isStatic: true,
         render: {
@@ -187,7 +190,7 @@ const MatterJSDemo = () => {
     <div className="falling-cont">
       <div className="falling-text-cont">
         <h4 style={{ userSelect: "none" }} className="title-falling">
-          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar{" "}
+          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar
           <br className="out" />
           para un otro
         </h4>
