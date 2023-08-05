@@ -1593,7 +1593,7 @@ left: 180px; */
     width: 180px;
   }
 }
-@media (max-height: 590px) {
+@media (max-height: 700px) {
   .popup-conexion {
     left: 0;
     bottom: 0;

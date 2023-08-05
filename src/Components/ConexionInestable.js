@@ -34,7 +34,7 @@ const ConexionInestable = () => {
   const openPopup = (image) => {
     setSelectedImage(image);
     setShowPopup(true);
-    console.log(image);
+
   };
 
   const closePopup = () => {

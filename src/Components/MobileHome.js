@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton from "../Components/CustomButton";
 import Morgen from "../Assets/morgen-trans.png";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 import "../Styles/App.css";
 const MobileHome = () => {
@@ -11,7 +12,7 @@ const MobileHome = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [showPopup, setPopup] = useState(false);
-
+  const { userLanguage, translateText } = useLanguage();
   useEffect(() => {
     const timer = setTimeout(() => {
       setPopup(true);
@@ -171,13 +172,10 @@ const MobileHome = () => {
         <div className="mob-home-popup-overlay" onClick={handleClosePopup}>
           <div className="mob-home-popup-content">
             <h3 className="p-pop-up-mob">
-              {/* {showFieldByLang(
-                language,
-                "Out of paris",
-                "Afueras de Paris",
-                "Banlieue Parisienne"
-              )} */}
-              Hola
+              {translateText(
+                "Go to a computer to enjoy for a better experience.",
+                "Pasá a una compu para disfrutar de una mejor experiencia."
+              )}
             </h3>
             <div className="button-entendido">
               <h2>Entendido</h2>
