@@ -171,13 +171,10 @@ const MobileHome = () => {
         <div className="mob-home-popup-overlay" onClick={handleClosePopup}>
           <div className="mob-home-popup-content">
             <h3 className="p-pop-up-mob">
-              {/* {showFieldByLang(
-                language,
-                "Out of paris",
-                "Afueras de Paris",
-                "Banlieue Parisienne"
-              )} */}
-              Hola
+              {translateText(
+                "Go to a computer to enjoy for a better experience.",
+                "Pasá a una compu para disfrutar de una mejor experiencia."
+              )}
             </h3>
             <div className="button-entendido">
               <h2>Entendido</h2>
