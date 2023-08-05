@@ -71,7 +71,7 @@ const PopupFormCommunity = () => {
         </div>
         <div className="right-cont-pop-community">
           <div className="toggle-button-pay">
-            <div className="switches-container">
+            <div className="switches-container pointer">
               <input
                 type="radio"
                 id="switchMonthly"
@@ -88,8 +88,12 @@ const PopupFormCommunity = () => {
                 checked={!checked}
                 onChange={handleChange}
               />
-              <label htmlFor="switchMonthly">Mercado Pago</label>
-              <label htmlFor="switchYearly">Pay Pal</label>
+              <label className="pointer" htmlFor="switchMonthly">
+                Mercado Pago
+              </label>
+              <label className="pointer" htmlFor="switchYearly">
+                Pay Pal
+              </label>
               <div
                 className="switch-wrapper"
                 style={{ top: topWrapper, right: rightWrapper }}

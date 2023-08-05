@@ -2,13 +2,28 @@ import React from "react";
 import CustomButton from "../Components/CustomButton";
 import Morgen from "../Assets/morgen-trans.png";
 import { useState, useEffect } from "react";
+
+import "../Styles/App.css";
 const MobileHome = () => {
   let homeButtonHeight = "15px";
   let homeButtonWidth = "220px";
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-  
+  const [showPopup, setPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPopup(true);
+    }, 5000); // 7 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClosePopup = () => {
+    setPopup(false);
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
@@ -85,7 +100,7 @@ const MobileHome = () => {
       firstColor: "#DFB000",
       secondColor: "#DC3349",
       thirdColor: "#AE79EF",
-      //   link: "/",
+      link: "/hola",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -116,16 +131,26 @@ const MobileHome = () => {
     },
   ];
 
+  let marginTopBack = "-77vh";
   let contPadTop = 0;
+
   if (viewportHeight < 720) {
-    contPadTop = 0.05 * viewportHeight;
+    contPadTop = 0.01 * viewportHeight;
+    marginTopBack = "-83vh";
   }
 
   let heightMobCont = "100vh";
   if (viewportHeight < 600) {
     heightMobCont = "135vh";
-    contPadTop = 0.11 * viewportHeight;
+    contPadTop = "10px";
+    marginTopBack = "-90vh";
   }
+
+  const handleOverlayClick = (event) => {
+    if (event.target.classList.contains("popup-overlay")) {
+      setPopup(false);
+    }
+  };
   return (
     <>
       <div className="home-container" style={{ height: heightMobCont }}>
@@ -136,10 +161,30 @@ const MobileHome = () => {
             </div>
           ))}
         </div>
-        <div className="mob-img-cont">
+
+        <div className="mob-img-cont" style={{ marginTop: marginTopBack }}>
           <img src={Morgen} width={170} />
         </div>
       </div>
+
+      {showPopup && (
+        <div className="mob-home-popup-overlay" onClick={handleClosePopup}>
+          <div className="mob-home-popup-content">
+            <h3 className="p-pop-up-mob">
+              {/* {showFieldByLang(
+                language,
+                "Out of paris",
+                "Afueras de Paris",
+                "Banlieue Parisienne"
+              )} */}
+              Hola
+            </h3>
+            <div className="button-entendido">
+              <h2>Entendido</h2>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

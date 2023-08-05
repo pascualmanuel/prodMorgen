@@ -107,7 +107,7 @@ function Agenda() {
         <div className="left-agenda-cont">
           {/* <img src={PerroMorgen} width={450} style={{ marginLeft: 70 }} /> */}
           <h2 style={{ fontSize: 90, marginLeft: 150 }}>Agenda</h2>
-          <div onClick={openPopup} className="agenda-button">
+          <div onClick={openPopup} className="agenda-button pointer">
             <SpikeButtonThree />
           </div>
         </div>

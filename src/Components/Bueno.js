@@ -1,8 +1,7 @@
 // import "../Styles/Styles.css";
 import "../Styles/App.css";
 import Particles from "react-tsparticles";
-import Sonic from "../Assets/sonic.png";
-import Stich from "../Assets/stich.webp";
+
 import Morgen from "../Assets/MORGEN_NEGRO.png";
 import { loadFull } from "tsparticles";
 import MorAzul from "../Assets/interactivo/particles/mor-azul2.png";
