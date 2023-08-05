@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton from "../Components/CustomButton";
 import Morgen from "../Assets/morgen-trans.png";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 import "../Styles/App.css";
 const MobileHome = () => {
@@ -11,7 +12,7 @@ const MobileHome = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [showPopup, setPopup] = useState(false);
-
+  const { userLanguage, translateText } = useLanguage();
   useEffect(() => {
     const timer = setTimeout(() => {
       setPopup(true);
