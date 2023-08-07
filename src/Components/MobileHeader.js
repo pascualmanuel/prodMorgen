@@ -171,37 +171,37 @@ function MobileHeader() {
           </section>
           <section className="navbar-right-section">
             <Link to={"/yomorgenstern"}>
-              <h2 onClick={closeMenu} className="navbar-title yoMor">
+              <h2 onClick={closeMenu} className="navbar-title-mob yoMor">
                 {translateText("I, Morgenstern", "Yo, Morgenstern")}
               </h2>
             </Link>
             <Link to={"/obras"}>
-              <h2 onClick={closeMenu} className="navbar-title obras">
+              <h2 onClick={closeMenu} className="navbar-title-mob obras">
                 {translateText("Works", "Obras")}
               </h2>
             </Link>
             <Link to={"/comunidad"}>
-              <h2 onClick={closeMenu} className="navbar-title comunidad">
+              <h2 onClick={closeMenu} className="navbar-title-mob comunidad">
                 {translateText("Community", "Comunidad")}
               </h2>
             </Link>
             <Link to={"/larevista"}>
-              <h2 onClick={closeMenu} className="navbar-title revista">
+              <h2 onClick={closeMenu} className="navbar-title-mob revista">
                 {translateText("The magazine", "La revista")}
               </h2>
             </Link>
             <Link to={"/interactivo"}>
-              <h2 onClick={closeMenu} className="navbar-title interactivo">
+              <h2 onClick={closeMenu} className="navbar-title-mob interactivo">
                 {translateText("Interactive", "Interactivo")}
               </h2>
             </Link>
             <Link>
-              <h2 onClick={closeMenu} className="navbar-title merch">
+              <h2 onClick={closeMenu} className="navbar-title-mob merch">
                 Morgenmerch
               </h2>
             </Link>
             <Link to={"/agenda"}>
-              <h2 onClick={closeMenu} className="navbar-title agenda">
+              <h2 onClick={closeMenu} className="navbar-title-mob agenda">
                 {translateText("Calendar", "Agenda")}
               </h2>
             </Link>

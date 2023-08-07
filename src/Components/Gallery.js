@@ -374,7 +374,7 @@ const ImageSection = () => {
               </h2>
               <div className="atendeme-button">
                 <CustomButton
-                  buttonText={"Participar!!!"}
+                  buttonText={"Participar"}
                   firstColor={"#DC3349"}
                   secondColor={"#005DA2"}
                   thirdColor={"#4590E6"}

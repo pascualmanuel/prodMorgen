@@ -63,7 +63,7 @@ const PopupFormCommunity = () => {
         DONAR
       </p>
       <div className="support-cont">
-        <div>
+        <div style={{ marginLeft: "30px" }}>
           <h3 className="support-h3">Apoya el proyecto</h3>
           <p className="support-p">
             Con tu aporte ayudas a que Morgenstern siga creciendo.

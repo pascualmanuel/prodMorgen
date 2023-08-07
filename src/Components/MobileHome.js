@@ -177,31 +177,26 @@ const MobileHome = () => {
             </div>
           ))} */}
           <div className="mob-links-cont">
-            <Link to={"/comunidad"}>
+            <Link to={"/yomorgenstern"}>
               <h2 className="mob-links-home">Yo, Morgenstern</h2>
+            </Link>
+            <Link to={"/obras"}>
+              <h2 className="mob-links-home">Obras</h2>
+            </Link>
+            <Link to={"/"}>
+              <h2 className="mob-links-home">La Revista </h2>
+            </Link>
+            <Link to={"/interactivo"}>
+              <h2 className="mob-links-home">Interactivo </h2>
+            </Link>
+            <Link to={"/"}>
+              <h2 className="mob-links-home">Morgen Merch</h2>
             </Link>
             <Link to={"/comunidad"}>
               <h2 className="mob-links-home">Comunidad</h2>
             </Link>
             <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">Obras </h2>
-            </Link>
-            <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">La Revista </h2>
-            </Link>
-            <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">Interactivo </h2>
-            </Link>
-            <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">
-                `${viewportWidth} + `${viewportHeight} `
-              </h2>
-            </Link>
-            <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">Comunidad </h2>
-            </Link>
-            <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">Agenda</h2>
+              <h2 className="mob-links-home">Agenda </h2>
             </Link>
           </div>
         </div>
