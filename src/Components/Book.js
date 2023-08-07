@@ -69,6 +69,7 @@ const Book = () => {
   let bookWidth = 450;
   let bookHeight = 630;
   let Out = "";
+  let In = "none";
 
   let onePage = false;
 
@@ -81,12 +82,14 @@ const Book = () => {
     bookHeight -= (bookHeight * 15) / 100;
     bookWidth -= (bookWidth * 15) / 100;
     Out = "none";
+    In = "inherit";
   }
 
   if (window.innerWidth < 1145) {
     bookHeight -= (bookHeight * 20) / 100;
     bookWidth -= (bookWidth * 20) / 100;
     Out = "none";
+    In = "inherit";
   }
 
   if (window.innerWidth < 720) {
@@ -94,6 +97,7 @@ const Book = () => {
     bookWidth -= (bookWidth * 0.1) / 100;
     Out = "none";
     onePage = true;
+    In = "inherit";
   }
 
   // if (window.innerHeight < 760) {
@@ -130,6 +134,20 @@ const Book = () => {
           onClick={handleNextPage}
           style={{ display: Out }}
         />
+
+        <div
+          className="controls-style"
+          style={{ marginBottom: "30px", display: In, zIndex: "1000" }}
+        >
+          <img
+            width={30}
+            src={PrevIcon}
+            onClick={handlePreviousPage}
+            style={{ marginRight: 30 }}
+          />
+
+          <img width={30} src={NextIcon} onClick={handleNextPage} style={{}} />
+        </div>
       </div>
     </>
   );
