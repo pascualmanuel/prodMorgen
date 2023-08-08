@@ -1,14 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import Matter from "matter-js";
 import MorAzul from "../Assets/interactivo/particles/particles-1.webp";
-import MorLila from "../Assets/interactivo/particles/particles-1.webp";
-import MorMaiz from "../Assets/interactivo/particles/particles-1.webp";
-import MorRojo from "../Assets/interactivo/particles/particles-1.webp";
+import MorLila from "../Assets/interactivo/particles/particles-2.webp";
+import MorMaiz from "../Assets/interactivo/particles/particles-3.webp";
+import MorRojo from "../Assets/interactivo/particles/particles-4.webp";
+import Prueba from "../Assets/interactivo/particles/untitled folder/mor-azul.png";
+import Prueba2 from "../Assets/interactivo/particles/untitled folder/mor-lila.png";
+import Prueba3 from "../Assets/interactivo/particles/untitled folder/mor-maiz2.png";
 
 const MatterJSDemo = () => {
   const canvasRef = useRef(null);
   const engineRef = useRef(null);
-  const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
+  // const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
+  const textures = [Prueba, Prueba2, Prueba, Prueba3];
+
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   useEffect(() => {
