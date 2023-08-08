@@ -10,8 +10,7 @@ import { useLanguage } from "../Hooks/LanguageContext";
 function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [iconRotation, setIconRotation] = useState(0);
-  // const [isEnSelected, setIsEnSelected] = useState(false);
-  // const [isEsSelected, setIsEsSelected] = useState(true);
+
   const [isHome, setIsHome] = useState(false); // Use useState to track if it's the home page
   const location = useLocation();
 

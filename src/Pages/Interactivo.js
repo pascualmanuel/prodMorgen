@@ -5,7 +5,6 @@ import MorgenGirando from "../Components/MorgenGirando";
 import PushMorgen from "../Components/PushMorgen";
 import Atendeme from "../Components/Atendeme";
 import Bueno from "../Components/Bueno";
-import MorgensFalling from "../Components/MorgensFalling";
 import Malo from "../Components/Malo.js";
 
 function Interactivo() {

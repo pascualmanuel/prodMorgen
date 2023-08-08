@@ -2,12 +2,18 @@
 import "../Styles/App.css";
 import Particles from "react-tsparticles";
 
-import Morgen from "../Assets/MORGEN_NEGRO.png";
 import { loadFull } from "tsparticles";
-import MorAzul from "../Assets/interactivo/particles/mor-azul2.png";
-import MorLila from "../Assets/interactivo/particles/mor-lila2.png";
-import MorMaiz from "../Assets/interactivo/particles/mor-maiz2.png";
-import MorRojo from "../Assets/interactivo/particles/mor-rojo2.png";
+import Particle1 from "../Assets/interactivo/particles/particles-1.webp";
+import Particle2 from "../Assets/interactivo/particles/particles-2.webp";
+import Particle3 from "../Assets/interactivo/particles/particles-3.webp";
+import Particle4 from "../Assets/interactivo/particles/particles-4.webp";
+import Particle5 from "../Assets/interactivo/particles/particles-5.webp";
+import Particle6 from "../Assets/interactivo/particles/particles-6.webp";
+import Particle7 from "../Assets/interactivo/particles/particles-7.webp";
+import Particle8 from "../Assets/interactivo/particles/particles-8.webp";
+import Particle9 from "../Assets/interactivo/particles/particles-9.webp";
+import Particle10 from "../Assets/interactivo/particles/particles-10.webp";
+
 import { useEffect } from "react";
 function Bueno() {
   const particlesInit = async (main) => {
@@ -25,10 +31,16 @@ function Bueno() {
   }, []);
 
   const morgensImage = [
-    { src: MorAzul, height: 33, width: 10 },
-    { src: MorLila, height: 33, width: 10 },
-    { src: MorMaiz, height: 33, width: 10 },
-    { src: MorRojo, height: 33, width: 10 },
+    { src: Particle1, height: 33, width: 10 },
+    { src: Particle2, height: 33, width: 10 },
+    { src: Particle3, height: 33, width: 10 },
+    { src: Particle4, height: 33, width: 10 },
+    { src: Particle5, height: 33, width: 10 },
+    { src: Particle6, height: 33, width: 10 },
+    { src: Particle7, height: 33, width: 10 },
+    { src: Particle8, height: 33, width: 10 },
+    { src: Particle9, height: 33, width: 10 },
+    { src: Particle10, height: 33, width: 10 },
   ];
 
   return (
