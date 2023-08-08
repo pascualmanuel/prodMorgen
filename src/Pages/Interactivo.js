@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import MorgenGirando from "../Components/MorgenGirando";
 import PushMorgen from "../Components/PushMorgen";
-import Atendeme from "../Components/Atendeme";
 import Bueno from "../Components/Bueno";
 import Malo from "../Components/Malo.js";
 
