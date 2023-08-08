@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import FirstImage1 from "../Assets/obras/conexion/conexion-1.png";
-import FirstImage2 from "../Assets/obras/conexion/conexion-2.png";
-import FirstImage3 from "../Assets/obras/conexion/conexion-3.png";
-import FirstImage4 from "../Assets/obras/conexion/conexion-4.png";
-import FirstImage5 from "../Assets/obras/conexion/conexion-5.png";
-import FirstImage6 from "../Assets/obras/conexion/conexion-6.png";
+import FirstImage1 from "../Assets/obras/desnudos/a1.png";
+import FirstImage2 from "../Assets/obras/desnudos/a2.png";
+import FirstImage3 from "../Assets/obras/desnudos/a3.png";
+import FirstImage4 from "../Assets/obras/desnudos/b1.png";
+import FirstImage5 from "../Assets/obras/desnudos/b2.png";
+import FirstImage6 from "../Assets/obras/desnudos/b3.png";
+import FirstImage7 from "../Assets/obras/desnudos/c1.png";
+import FirstImage8 from "../Assets/obras/desnudos/c2.png";
+import FirstImage9 from "../Assets/obras/desnudos/c3.png";
 import IconTag from "../Assets/svg/icon-tag.svg";
 import StarPrueba from "../Assets/svg/star-apoyar.svg";
 import PopupObras from "./PopupObras";
@@ -26,38 +29,16 @@ const Desnudos = () => {
     setShowPopup(false);
   };
 
-  const imagesFirstRow = [
-    FirstImage4,
-    FirstImage3,
-    FirstImage5,
-    FirstImage2,
-    FirstImage6,
-    FirstImage1,
-  ];
+  const imagesFirstRow = [FirstImage1, FirstImage2, FirstImage3];
 
-  const imagesSecondRow = [
-    FirstImage1,
-    FirstImage4,
-    FirstImage3,
-    FirstImage6,
-    FirstImage2,
-    FirstImage5,
-  ];
+  const imagesSecondRow = [FirstImage4, FirstImage5, FirstImage6];
 
-  const imagesThirdRow = [
-    FirstImage4,
-    FirstImage6,
-    FirstImage2,
-    FirstImage5,
-    FirstImage1,
-    FirstImage3,
-  ];
+  const imagesThirdRow = [FirstImage7, FirstImage8, FirstImage9];
 
   let outThird = "block";
 
   if (window.innerWidth < 720) {
     outThird = "none";
-    
   }
 
   return (
