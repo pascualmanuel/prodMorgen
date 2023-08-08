@@ -5,7 +5,7 @@ body {
 }
 
 .cursor-morgen {
-  cursor: url("../Assets//svg/pointer-morgen-2.svg"), auto;
+  cursor: url("../Assets//svg/pointer-morgen.svg"), auto;
 }
 
 .full-h {
@@ -43,7 +43,7 @@ a {
 }
 
 .cursor-balde {
-  cursor: url("../Assets/svg/balde.png"), auto;
+  cursor: url("../Assets/svg/pointer-balde-2.svg"), auto;
 }
 
 h2 {
@@ -1893,5 +1893,25 @@ left: 180px; */
 @media (max-height: 530px) {
   .contact-me {
     display: none;
+  }
+}
+
+.larevista-cont {
+  height: 100vh;
+  background-image: url("../Assets/la-revista2.png");
+  background-color: #e3cc00;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 720px) {
+  .larevista-cont {
+    height: 100vh;
+    background-image: url("../Assets/la-revista-mob.png");
+    background-color: #e3cc00;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }

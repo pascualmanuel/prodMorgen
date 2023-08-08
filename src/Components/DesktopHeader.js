@@ -51,7 +51,8 @@ function HeaderDesktop() {
     location.pathname === "/gallery" ||
     location.pathname === "/obras" ||
     location.pathname === "/comunidad" ||
-    location.pathname === "/interactivo"
+    location.pathname === "/interactivo" ||
+    location.pathname === "/revista"
   ) {
     colorStroke = "black";
   }
@@ -134,7 +135,9 @@ function HeaderDesktop() {
                   style={{ marginRight: "15px" }}
                   alt="React Logo"
                 />
-                holamorgenstern@gmail.com
+                <a href="mailto:holamorgenstern@gmail.com">
+                  holamorgenstern@gmail.com
+                </a>
               </h4>
               <h4 style={{ display: "flex", alignItems: "center" }}>
                 <img
@@ -152,7 +155,12 @@ function HeaderDesktop() {
                   style={{ marginRight: "15px" }}
                   alt="React Logo"
                 />
-                @holamorgenstern
+                <a
+                  href="https://www.instagram.com/holamorgenstern/"
+                  target="_blank"
+                >
+                  @holamorgenstern
+                </a>
               </h4>
             </div>
             <div className="contact-me">
@@ -192,7 +200,7 @@ function HeaderDesktop() {
                 {translateText("Community", "Comunidad")}
               </h2>
             </Link>
-            <Link to={"/larevista"}>
+            <Link to={"/revista"}>
               <h2 onClick={closeMenu} className="navbar-title revista">
                 {translateText("The magazine", "La revista")}
               </h2>
@@ -241,7 +249,7 @@ function HeaderDesktop() {
               onClick={toggleLanguage}
               className="pointer"
             >
-              {userLanguage === "EN" ? "EN" : "ESP"}
+              {userLanguage === "EN" ? "ESP" : "EN"}
             </p>
           )}
 

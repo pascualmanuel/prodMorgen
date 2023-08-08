@@ -15,6 +15,7 @@ const MiSeccion = () => {
   const closePopup = () => {
     setShowPopup(false);
   };
+
   const scrollIntervals = useRef([]);
 
   const handleAutoScroll = (column, scrollDistance, direction) => {

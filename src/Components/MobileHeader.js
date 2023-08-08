@@ -44,7 +44,8 @@ function MobileHeader() {
     location.pathname === "/gallery" ||
     location.pathname === "/obras" ||
     location.pathname === "/comunidad" ||
-    location.pathname === "/interactivo"
+    location.pathname === "/interactivo" ||
+    location.pathname === "/revista"
   ) {
     colorStroke = "black";
   }
@@ -117,15 +118,19 @@ function MobileHeader() {
           <section className="navbar-left-section">
             <div className="contact">
               <h4 style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={MailSVG}
-                  width="15px"
-                  className="contact-icons"
-                  style={{ marginRight: "15px" }}
-                  alt="React Logo"
-                />
+                <a href="mailto:holamorgenstern@gmail.com">
+                  <img
+                    src={MailSVG}
+                    width="15px"
+                    className="contact-icons"
+                    style={{ marginRight: "15px" }}
+                    alt="React Logo"
+                  />
+                </a>
                 <span className="contact-icons-text">
-                  holamorgenstern@gmail.com
+                  <a href="mailto:holamorgenstern@gmail.com">
+                    holamorgenstern@gmail.com
+                  </a>
                 </span>
               </h4>
               <h4 style={{ display: "flex", alignItems: "center" }}>
@@ -139,13 +144,18 @@ function MobileHeader() {
                 <span className="contact-icons-text"> Morgenstern</span>
               </h4>
               <h4 style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={IgLogo}
-                  width="15px"
-                  className="contact-icons"
-                  style={{ marginRight: "15px" }}
-                  alt="React Logo"
-                />
+                <a
+                  href="https://www.instagram.com/holamorgenstern/"
+                  target="_blank"
+                >
+                  <img
+                    src={IgLogo}
+                    width="15px"
+                    className="contact-icons"
+                    style={{ marginRight: "15px" }}
+                    alt="React Logo"
+                  />
+                </a>
                 <span className="contact-icons-text"> @holamorgenstern</span>
               </h4>
             </div>
@@ -185,7 +195,7 @@ function MobileHeader() {
                 {translateText("Community", "Comunidad")}
               </h2>
             </Link>
-            <Link to={"/larevista"}>
+            <Link to={"/revista"}>
               <h2 onClick={closeMenu} className="navbar-title-mob revista">
                 {translateText("The magazine", "La revista")}
               </h2>

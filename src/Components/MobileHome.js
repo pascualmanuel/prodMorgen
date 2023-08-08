@@ -24,7 +24,7 @@ const MobileHome = () => {
       const timer = setTimeout(() => {
         setPopup(true);
         localStorage.setItem("popupShown", "true"); // Marcar que el pop-up se ha mostrado
-      }, 3000);
+      }, 4000);
 
       return () => clearTimeout(timer);
     }
@@ -94,7 +94,7 @@ const MobileHome = () => {
       firstColor: "#AE79EF",
       secondColor: "#005DA2",
       thirdColor: "#4590E6",
-      //   link: "/",
+      link: "/revista",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -183,19 +183,19 @@ const MobileHome = () => {
             <Link to={"/obras"}>
               <h2 className="mob-links-home">Obras</h2>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/revista"}>
               <h2 className="mob-links-home">La Revista </h2>
             </Link>
             <Link to={"/interactivo"}>
               <h2 className="mob-links-home">Interactivo </h2>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/https://morgenstern.flashcookie.com/"}>
               <h2 className="mob-links-home">Morgen Merch</h2>
             </Link>
             <Link to={"/comunidad"}>
               <h2 className="mob-links-home">Comunidad</h2>
             </Link>
-            <Link to={"/comunidad"}>
+            <Link to={"/agenda"}>
               <h2 className="mob-links-home">Agenda </h2>
             </Link>
           </div>

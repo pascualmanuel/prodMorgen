@@ -19,6 +19,9 @@ import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
 import Prueba from "./Components/Prueba";
 import Inadvertido from "./Components/Inadvertido";
+import LaRevista from "./Pages/LaRevista";
+
+
 import { LanguageProvider } from "./Hooks/LanguageContext";
 
 function ScrollToTop() {
@@ -48,6 +51,8 @@ function App() {
             <Route path="/agenda" element={<Agenda />} />
             <Route path="/obras" element={<Obras />} />
             <Route path="/prueba" element={<Prueba />} />
+            <Route path="/revista" element={<LaRevista />} />
+
           </Routes>
         </BrowserRouter>
       </LanguageProvider>
