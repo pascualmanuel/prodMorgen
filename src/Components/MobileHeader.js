@@ -44,7 +44,8 @@ function MobileHeader() {
     location.pathname === "/gallery" ||
     location.pathname === "/obras" ||
     location.pathname === "/comunidad" ||
-    location.pathname === "/interactivo"
+    location.pathname === "/interactivo" ||
+    location.pathname === "/revista"
   ) {
     colorStroke = "black";
   }
@@ -117,15 +118,19 @@ function MobileHeader() {
           <section className="navbar-left-section">
             <div className="contact">
               <h4 style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={MailSVG}
-                  width="15px"
-                  className="contact-icons"
-                  style={{ marginRight: "15px" }}
-                  alt="React Logo"
-                />
+                <a href="mailto:holamorgenstern@gmail.com">
+                  <img
+                    src={MailSVG}
+                    width="15px"
+                    className="contact-icons"
+                    style={{ marginRight: "15px" }}
+                    alt="React Logo"
+                  />
+                </a>
                 <span className="contact-icons-text">
-                  holamorgenstern@gmail.com
+                  <a href="mailto:holamorgenstern@gmail.com">
+                    holamorgenstern@gmail.com
+                  </a>
                 </span>
               </h4>
               <h4 style={{ display: "flex", alignItems: "center" }}>
@@ -139,13 +144,18 @@ function MobileHeader() {
                 <span className="contact-icons-text"> Morgenstern</span>
               </h4>
               <h4 style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={IgLogo}
-                  width="15px"
-                  className="contact-icons"
-                  style={{ marginRight: "15px" }}
-                  alt="React Logo"
-                />
+                <a
+                  href="https://www.instagram.com/holamorgenstern/"
+                  target="_blank"
+                >
+                  <img
+                    src={IgLogo}
+                    width="15px"
+                    className="contact-icons"
+                    style={{ marginRight: "15px" }}
+                    alt="React Logo"
+                  />
+                </a>
                 <span className="contact-icons-text"> @holamorgenstern</span>
               </h4>
             </div>
@@ -171,37 +181,37 @@ function MobileHeader() {
           </section>
           <section className="navbar-right-section">
             <Link to={"/yomorgenstern"}>
-              <h2 onClick={closeMenu} className="navbar-title yoMor">
+              <h2 onClick={closeMenu} className="navbar-title-mob yoMor">
                 {translateText("I, Morgenstern", "Yo, Morgenstern")}
               </h2>
             </Link>
             <Link to={"/obras"}>
-              <h2 onClick={closeMenu} className="navbar-title obras">
+              <h2 onClick={closeMenu} className="navbar-title-mob obras">
                 {translateText("Works", "Obras")}
               </h2>
             </Link>
             <Link to={"/comunidad"}>
-              <h2 onClick={closeMenu} className="navbar-title comunidad">
+              <h2 onClick={closeMenu} className="navbar-title-mob comunidad">
                 {translateText("Community", "Comunidad")}
               </h2>
             </Link>
-            <Link to={"/larevista"}>
-              <h2 onClick={closeMenu} className="navbar-title revista">
+            <Link to={"/revista"}>
+              <h2 onClick={closeMenu} className="navbar-title-mob revista">
                 {translateText("The magazine", "La revista")}
               </h2>
             </Link>
             <Link to={"/interactivo"}>
-              <h2 onClick={closeMenu} className="navbar-title interactivo">
+              <h2 onClick={closeMenu} className="navbar-title-mob interactivo">
                 {translateText("Interactive", "Interactivo")}
               </h2>
             </Link>
             <Link>
-              <h2 onClick={closeMenu} className="navbar-title merch">
+              <h2 onClick={closeMenu} className="navbar-title-mob merch">
                 Morgenmerch
               </h2>
             </Link>
             <Link to={"/agenda"}>
-              <h2 onClick={closeMenu} className="navbar-title agenda">
+              <h2 onClick={closeMenu} className="navbar-title-mob agenda">
                 {translateText("Calendar", "Agenda")}
               </h2>
             </Link>

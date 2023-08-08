@@ -5,7 +5,7 @@ body {
 }
 
 .cursor-morgen {
-  cursor: url("../Assets//svg/pointer-morgen-2.svg"), auto;
+  cursor: url("../Assets//svg/pointer-morgen.svg"), auto;
 }
 
 .full-h {
@@ -43,7 +43,7 @@ a {
 }
 
 .cursor-balde {
-  cursor: url("../Assets/svg/balde.png"), auto;
+  cursor: url("../Assets/svg/pointer-balde-2.svg"), auto;
 }
 
 h2 {
@@ -250,20 +250,38 @@ h4 {
   align-items: flex-start;
   flex-direction: column;
 }
+.navbar-right-section-desk {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
 .navbar-title {
+  font-size: 55px;
+  line-height: 0;
+  color: black;
+}
+.navbar-title-mob {
   font-size: 55px;
   line-height: 0;
   color: black;
 }
 
 @media (max-height: 680px) {
-  .navbar-title {
+  /* .navbar-title {
+    font-size: 45px;
+  } */
+  .navbar-title-mob {
     font-size: 45px;
   }
 }
 
 @media (max-width: 1180px) {
-  .navbar-title {
+  /* .navbar-title {
+    font-size: 45px;
+  } */
+  .navbar-title-mob {
     font-size: 45px;
   }
 }
@@ -350,6 +368,7 @@ h4 {
   padding-left: 10px;
   padding-right: 45px;
   font-family: Medium;
+  border-radius: 0;
 }
 .email-input::placeholder {
   color: black;
@@ -1279,6 +1298,17 @@ left: 180px; */
 
 /* MOBILE */
 
+.mob-links-cont {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mob-links-home {
+  color: white;
+  margin-bottom: 10px;
+}
+
 .mob-home-container {
   display: flex;
   flex-direction: column;
@@ -1292,8 +1322,10 @@ left: 180px; */
 }
 
 @media (max-height: 600px) {
-  .mob-home-container {
-    justify-content: flex-start;
+  .mob-links-home {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
   }
 }
 
@@ -1343,13 +1375,157 @@ left: 180px; */
   border: solid 1px black;
   color: white;
 }
+
+@media (max-width: 1200px), (max-height: 700px) {
+  .navbar-title {
+    font-size: 45px;
+  }
+  .navbar-container {
+    display: flex;
+    height: 92vh;
+  }
+
+  .submit-button {
+    position: absolute;
+    right: 0px;
+    top: 1px;
+    width: 28%;
+    height: calc(109% - -1px);
+    background: #dccb00;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Medium;
+    border-left: 1px solid black;
+  }
+  .accordion-subtitle {
+    margin-top: 35vh;
+  }
+  .obras-spike-button {
+    bottom: 180px;
+    left: 165px;
+  }
+  .obras-title {
+    margin-bottom: 300px;
+  }
+  .special-form input[type="text"] {
+    width: 140px;
+  }
+  .special-form input[type="number"] {
+    width: 69px;
+  }
+}
+
+@media (max-width: 1000px), (max-height: 570px) {
+  .navbar-title {
+    font-size: 35px;
+  }
+}
+/* .mob-home-container */
+@media (max-width: 1320px) {
+  .book-container {
+    flex-direction: column;
+  }
+  .controls-style {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  /* .navbar-title {
+    font-size: 33px;
+  } */
+  .navbar-title-mob {
+    font-size: 33px;
+  }
+  .navbar-right-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 40px;
+  }
+  .navbar-left-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+  .contact-me {
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  .contact {
+    margin-left: 0px;
+    color: black;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  .contact-icons-text {
+    display: none;
+  }
+  .contact-icons {
+    width: 20px;
+  }
+  .email-input {
+    border-radius: 0px;
+  }
+
+  .submit-button {
+    height: 112% !important;
+    top: 1px;
+    /* max-height: 50.5px !important; */
+  }
+  .nav-bar {
+    margin-left: 0px;
+    top: 0px;
+    right: 0px;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toggle-button {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  .plus-icon {
+    margin-top: 25px;
+    margin-right: 30px;
+  }
+  .support-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 0px;
+    overflow: auto;
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 720px) {
   .navbar-container {
     display: flex;
     flex-direction: column-reverse;
     height: auto;
   }
-  .navbar-title {
+  /* .navbar-title {
+    font-size: 33px;
+  } */
+  .navbar-title-mob {
     font-size: 33px;
   }
   .navbar-right-section {
@@ -1442,6 +1618,9 @@ left: 180px; */
   }
   .book-container {
     height: 70vh;
+    flex-direction: column;
+    min-height: 500px;
+    margin-top: 40px;
     /* background-color: #ae79ef; */
   }
   .horizontal-futuro-gallery {
@@ -1630,7 +1809,10 @@ left: 180px; */
     /* margin-top: -0px; */
   }
 
-  .navbar-title {
+  /* .navbar-title {
+    font-size: 29px;
+  } */
+  .navbar-title-mob {
     font-size: 29px;
   }
   .contact-me {
@@ -1641,6 +1823,7 @@ left: 180px; */
   }
 }
 
+/* !!!!!! */
 @media (max-height: 610px) {
   .navbar-right-section {
     margin-top: 60px;
@@ -1649,7 +1832,7 @@ left: 180px; */
     margin-top: -15px;
   }
 
-  .navbar-title {
+  .navbar-title-mob {
     font-size: 29px;
   }
   .contact-me {
@@ -1674,7 +1857,11 @@ left: 180px; */
     margin-top: -15px;
   }
 
-  .navbar-title {
+  /* .navbar-title {
+    font-size: 27px;
+  } */
+
+  .navbar-title-mob {
     font-size: 27px;
   }
   .contact-me {
@@ -1706,5 +1893,25 @@ left: 180px; */
 @media (max-height: 530px) {
   .contact-me {
     display: none;
+  }
+}
+
+.larevista-cont {
+  height: 100vh;
+  background-image: url("../Assets/la-revista2.png");
+  background-color: #e3cc00;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 720px) {
+  .larevista-cont {
+    height: 100vh;
+    background-image: url("../Assets/la-revista-mob.png");
+    background-color: #e3cc00;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
