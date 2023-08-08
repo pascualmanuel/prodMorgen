@@ -30,10 +30,8 @@ import Sticker27 from "../Assets/interactivo/morgenPush/untitled/sf27.png";
 import Sticker28 from "../Assets/interactivo/morgenPush/untitled/sf28.png";
 import Sticker29 from "../Assets/interactivo/morgenPush/untitled/sf29.png";
 import Sticker30 from "../Assets/interactivo/morgenPush/untitled/sf30.png";
-
 import CircleScreenshot from "../Assets/screenshot-circle.png";
 import ShareCircle from "../Assets/svg/share-button.svg";
-
 import Sound1 from "../Assets/sounds/Sound1.mp3";
 import Sound2 from "../Assets/sounds/Sound2.mp3";
 import Sound3 from "../Assets/sounds/Sound3.mp3";
