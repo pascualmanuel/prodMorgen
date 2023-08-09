@@ -20,7 +20,7 @@ import Obras from "./Pages/Obras";
 import Prueba from "./Components/Prueba";
 import Inadvertido from "./Components/Inadvertido";
 import LaRevista from "./Pages/LaRevista";
-
+import AgendaComming from "./Pages/AgendaComming";
 
 import { LanguageProvider } from "./Hooks/LanguageContext";
 
@@ -48,11 +48,11 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/malo" element={<Malo />} />
             <Route path="/comunidad" element={<Comunidad />} />
-            <Route path="/agenda" element={<Agenda />} />
+            {/* <Route path="/agenda" element={<Agenda />} /> */}
             <Route path="/obras" element={<Obras />} />
             <Route path="/prueba" element={<Prueba />} />
             <Route path="/revista" element={<LaRevista />} />
-
+            <Route path="/agenda" element={<AgendaComming />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

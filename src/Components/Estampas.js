@@ -17,6 +17,10 @@ import FirstImage15 from "../Assets/obras/sellos/sellos-15.png";
 import FirstImage16 from "../Assets/obras/sellos/sellos-16.png";
 import FirstImage17 from "../Assets/obras/sellos/sellos-17.png";
 import FirstImage18 from "../Assets/obras/sellos/sellos-18.png";
+import FirstImage19 from "../Assets/obras/sellos/sellos-19.png";
+import FirstImage20 from "../Assets/obras/sellos/sellos-20.png";
+import FirstImage21 from "../Assets/obras/sellos/sellos-21.png";
+
 import IconTag from "../Assets/svg/icon-tag.svg";
 import StarPrueba from "../Assets/svg/star-apoyar.svg";
 import PopupObras from "./PopupObras";
@@ -56,18 +60,21 @@ const Estampas = () => {
     FirstImage16,
     FirstImage17,
     FirstImage18,
+    FirstImage19,
+    FirstImage20,
+    FirstImage21,
   ];
 
-  let imagesFirstRow = allImages.slice(0, 6);
-  let imagesSecondRow = allImages.slice(6, 12);
-  let imagesThirdRow = allImages.slice(12, 18);
+  let imagesFirstRow = allImages.slice(0, 7);
+  let imagesSecondRow = allImages.slice(7, 14);
+  let imagesThirdRow = allImages.slice(14, 21);
 
   let outThird = "block";
 
   if (window.innerWidth < 720) {
     outThird = "none";
-    imagesFirstRow = allImages.slice(0, 9);
-    imagesSecondRow = allImages.slice(9, 18);
+    imagesFirstRow = allImages.slice(0, 10);
+    imagesSecondRow = allImages.slice(10, 20);
   }
 
   return (
