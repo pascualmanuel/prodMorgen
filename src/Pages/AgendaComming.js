@@ -5,7 +5,7 @@ import "../Styles/App.css";
 function AgendaComming() {
   return (
     <>
-      <div className="larevista-cont" style={{ backgroundColor: "white" }}>
+      <div className="agenda-cs-cont" style={{ backgroundColor: "white" }}>
         {" "}
       </div>
     </>
