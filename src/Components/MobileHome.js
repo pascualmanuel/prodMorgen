@@ -112,7 +112,7 @@ const MobileHome = () => {
       fontSize: "26px",
     },
     {
-      buttonText: `${viewportWidth} ` + viewportHeight,
+      buttonText: "MorgenMerch",
       firstColor: "#DFB000",
       secondColor: "#DC3349",
       thirdColor: "#AE79EF",

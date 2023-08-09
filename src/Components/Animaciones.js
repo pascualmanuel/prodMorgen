@@ -11,19 +11,33 @@ import FirstImage9 from "../Assets/obras/sellos/sellos-9.png";
 import FirstImage10 from "../Assets/obras/sellos/sellos-10.png";
 import FirstImage13 from "../Assets/obras/sellos/sellos-14.png";
 
-import FirstImage14 from "../Assets/obras/sellos/sellos-14.png";
-import FirstImage15 from "../Assets/obras/sellos/sellos-15.png";
-import FirstImage16 from "../Assets/obras/sellos/sellos-16.png";
+import Animacion1 from "../Assets/obras/animaciones/gif-1.gif";
+import Animacion2 from "../Assets/obras/animaciones/gif-2.gif";
+import Animacion3 from "../Assets/obras/animaciones/gif-3.gif";
+import Animacion4 from "../Assets/obras/animaciones/gif-4.gif";
+import Animacion5 from "../Assets/obras/animaciones/gif-5.GIF";
+import Animacion6 from "../Assets/obras/animaciones/gif-6.GIF";
 
-import Gif1 from "../Assets/obras/animaciones/animaciones-1.gif";
-import Gif2 from "../Assets/obras/animaciones/animaciones-2.gif";
-import Gif3 from "../Assets/obras/animaciones/animaciones-3.gif";
+// import Gif1 from "../Assets/obras/animaciones/animaciones-1.gif";
+// import Gif2 from "../Assets/obras/animaciones/animaciones-2.gif";
+// import Gif3 from "../Assets/obras/animaciones/animaciones-3.gif";
 
 const Animaciones = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
-  const allGifs = [Gif1, Gif2, Gif3, Gif1, Gif2, Gif3, Gif2, Gif3, Gif1];
+  const allGifs = [
+    Animacion1,
+    Animacion2,
+    Animacion3,
+    Animacion4,
+    Animacion5,
+    Animacion6,
+    Animacion1,
+    Animacion2,
+    Animacion3,
+
+  ];
 
   let outThird = "block";
 

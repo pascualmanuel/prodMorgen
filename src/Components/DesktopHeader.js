@@ -212,7 +212,7 @@ function HeaderDesktop() {
             </Link>
             <Link>
               <h2 onClick={closeMenu} className="navbar-title merch">
-                Morgenmerch
+                MorgenMerch
               </h2>
             </Link>
             <Link to={"/agenda"}>

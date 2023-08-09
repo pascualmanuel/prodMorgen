@@ -1898,7 +1898,7 @@ left: 180px; */
 
 .larevista-cont {
   height: 100vh;
-  background-image: url("../Assets/la-revista2.png");
+  background-image: url("../Assets/la-revista-cs.png");
   background-color: #e3cc00;
   background-position: center;
   background-repeat: no-repeat;
@@ -1910,6 +1910,26 @@ left: 180px; */
     height: 100vh;
     background-image: url("../Assets/la-revista-mob.png");
     background-color: #e3cc00;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.larevista-cont {
+  height: 100vh;
+  background-image: url("../Assets/agenda-cs.png");
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 720px) {
+  .larevista-cont {
+    height: 100vh;
+    background-image: url("../Assets/agenda-mob-cs.png");
+    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
