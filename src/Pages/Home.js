@@ -29,7 +29,6 @@ function Home() {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -68,8 +67,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 80, // Ajusta el desplazamiento vertical del botón
+        offsetX: 100,
+        offsetY: 80,
       },
     },
     {
@@ -82,8 +81,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: comunidadOffsetY, // Ajusta el desplazamiento vertical del botón
+        offsetX: 100,
+        offsetY: comunidadOffsetY,
       },
     },
     {
@@ -96,8 +95,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 100, // Ajusta el desplazamiento vertical del botón
+        offsetX: 100,
+        offsetY: 100,
       },
       display: "none",
     },
@@ -111,8 +110,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: 100, // Ajusta el desplazamiento horizontal del botón
-        offsetY: agendaOffsetY, // Ajusta el desplazamiento vertical del botón
+        offsetX: 100,
+        offsetY: agendaOffsetY,
       },
     },
     {
@@ -125,8 +124,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: 40, // Ajusta el desplazamiento horizontal del botón
-        offsetY: morgenmerchOffsetY, // Ajusta el desplazamiento vertical del botón
+        offsetX: 40,
+        offsetY: morgenmerchOffsetY,
       },
     },
     {
@@ -139,8 +138,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: -40, // Ajusta el desplazamiento horizontal del botón
-        offsetY: interactivoOffsetY, // Ajusta el desplazamiento vertical del botón
+        offsetX: -40,
+        offsetY: interactivoOffsetY,
       },
     },
     {
@@ -167,8 +166,8 @@ function Home() {
       width: homeButtonWidth,
       height: homeButtonHeight,
       position: {
-        offsetX: 130, // Ajusta el desplazamiento horizontal del botón
-        offsetY: 80, // Ajusta el desplazamiento vertical del botón
+        offsetX: 130,
+        offsetY: 80,
       },
     },
   ];
