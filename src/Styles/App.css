@@ -1793,6 +1793,13 @@ left: 180px; */
     height: 112% !important;
     top: 1px;
   }
+  .support-h3 {
+    font-size: 20px;
+  }
+  .support-p{
+    font-size: 10px;
+
+  }
 }
 
 /* @media (max-height: 690px) {

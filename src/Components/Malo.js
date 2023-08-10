@@ -7,12 +7,14 @@ import MorRojo from "../Assets/interactivo/particles/particles-4.webp";
 import Prueba from "../Assets/interactivo/particles/untitled folder/mor-azul.png";
 import Prueba2 from "../Assets/interactivo/particles/untitled folder/mor-lila.png";
 import Prueba3 from "../Assets/interactivo/particles/untitled folder/mor-maiz2.png";
+import Prueba4 from "../Assets/interactivo/particles/untitled folder/mor-rojo.png";
+import Prueba5 from "../Assets/interactivo/particles/untitled folder/mor-verde.png";
 
 const MatterJSDemo = () => {
   const canvasRef = useRef(null);
   const engineRef = useRef(null);
   // const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
-  const textures = [Prueba, Prueba2, Prueba, Prueba3];
+  const textures = [Prueba, Prueba2, Prueba, Prueba3, Prueba4, Prueba5];
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 

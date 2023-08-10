@@ -59,9 +59,6 @@ const PopupFormCommunity = () => {
 
   return (
     <>
-      <p className="participar-popup" style={{ color: "Black" }}>
-        DONAR
-      </p>
       <div className="support-cont">
         <div style={{ marginLeft: "30px" }}>
           <h3 className="support-h3">Apoya el proyecto</h3>
@@ -106,18 +103,18 @@ const PopupFormCommunity = () => {
             </div>
             {checked ? (
               <>
-                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                <Link to={"http://mpago.la/19Akn3M"} target="_blank">
                   <div className="support-button" style={{ marginTop: "50px" }}>
                     Aportar $ 1000 ARS
                   </div>
                 </Link>
-                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                <Link to={"http://mpago.la/132RpZw"} target="_blank">
                   <div className="support-button">Aportar $ 2000 ARS </div>{" "}
                 </Link>
-                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                <Link to={"http://mpago.la/31zjr6T"} target="_blank">
                   <div className="support-button" style={{ marginBottom: 0 }}>
                     {" "}
-                    Aportar $ 5000 ARS{" "}
+                    Aportá lo que vos quieras
                   </div>
                 </Link>
               </>

@@ -65,7 +65,6 @@ const PopupForm = () => {
     <>
       <div className="popup-form-cont">
         <form className="special-form">
-          <p className="participar-popup">PARTICIPAR</p>
           {pathname !== "/gallery" && (
             <div className="form-row form-row-cont-mob">
               <div className="form-row-mob">
