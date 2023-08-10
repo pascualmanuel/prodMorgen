@@ -62,6 +62,11 @@ const Book = () => {
     InaImg16,
     InaImg17,
     InaImg18,
+
+
+
+
+
   ];
 
   const flipBookRef = useRef(null);

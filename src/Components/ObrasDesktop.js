@@ -76,7 +76,12 @@ const ObrasDesktop = () => {
     {
       title: " Estampas",
 
-      // subtitle: "Lorem ipsum",
+      subtitle: (
+        <>
+          {" "}
+          <span style={{ color: "transparent" }}>.</span>
+        </>
+      ),
 
       content: (
         <>
@@ -87,7 +92,12 @@ const ObrasDesktop = () => {
     },
     {
       title: " animaciones",
-      // subtitle: "Lorem ipsum",
+      subtitle: (
+        <>
+          {" "}
+          <span style={{ color: "transparent" }}>.</span>
+        </>
+      ),
       content: (
         <>
           {" "}
@@ -114,7 +124,9 @@ const ObrasDesktop = () => {
     <>
       <div className="obras-container">
         <div className="obras-left">
-          <h2 className="obras-title" style={{ fontSize: 70 }}>Obras</h2>
+          <h2 className="obras-title" style={{ fontSize: 70 }}>
+            Obras
+          </h2>
           <div onClick={openPopup} className="obras-spike-button">
             <SpikeButtonThree />
           </div>

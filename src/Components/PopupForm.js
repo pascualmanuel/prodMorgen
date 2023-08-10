@@ -65,7 +65,6 @@ const PopupForm = () => {
     <>
       <div className="popup-form-cont">
         <form className="special-form">
-          <p className="participar-popup">PARTICIPAR</p>
           {pathname !== "/gallery" && (
             <div className="form-row form-row-cont-mob">
               <div className="form-row-mob">
@@ -81,7 +80,7 @@ const PopupForm = () => {
           )}
 
           <div className="form-row">
-            <textarea placeholder={textPlaceHolder}></textarea>
+            <textarea maxLength={600} placeholder={textPlaceHolder}></textarea>
           </div>
           <div className="form-row footer-mob-popup">
             <p className="p-popupform" style={{ color: textColor }}>
