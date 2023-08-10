@@ -80,7 +80,7 @@ const PopupForm = () => {
           )}
 
           <div className="form-row">
-            <textarea placeholder={textPlaceHolder}></textarea>
+            <textarea maxLength={600} placeholder={textPlaceHolder}></textarea>
           </div>
           <div className="form-row footer-mob-popup">
             <p className="p-popupform" style={{ color: textColor }}>
