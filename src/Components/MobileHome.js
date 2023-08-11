@@ -189,9 +189,13 @@ const MobileHome = () => {
             <Link to={"/interactivo"}>
               <h2 className="mob-links-home">Interactivo </h2>
             </Link>
-            <Link to={"/https://morgenstern.flashcookie.com/"}>
+            <a
+              href="https://morgenstern.flashcookie.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h2 className="mob-links-home">Morgen Merch</h2>
-            </Link>
+            </a>
             <Link to={"/comunidad"}>
               <h2 className="mob-links-home">Comunidad</h2>
             </Link>

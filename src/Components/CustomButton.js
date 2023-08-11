@@ -31,7 +31,13 @@ function CustomButton({
   };
 
   return (
-    <Link to={link} onClick={onClick}>
+    <Link
+      to={link}
+      target={buttonText === "MorgenMerch" ? "_blank" : ""}
+      rel={buttonText === "MorgenMerch" ? "noopener noreferrer" : ""}
+      onClick={onClick}
+      style={{ textDecoration: "none" }}
+    >
       <div
         className="custom-btn custom-btn--small crack"
         style={{
