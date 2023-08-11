@@ -1,17 +1,24 @@
 import React from "react";
 import "../Styles/Atendeme.css";
 import Img1 from "../Assets/svg/Star2-1.svg";
+import Img1En from "../Assets/svg/Star2-1-en.svg";
 import Img2 from "../Assets/svg/Star2-2.svg";
 import Img3 from "../Assets/svg/Star2-3.svg";
 import { Link } from "react-router-dom";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 function SpikeButtonTwo() {
+  const { userLanguage, translateText } = useLanguage();
+  let starImg = Img1;
+
+  if (userLanguage === "EN") {
+    starImg = Img1En;
+  }
   return (
     <>
       <Link to="/obras">
         <div className="cont-svgs-obras">
           <img
-            src={Img1}
+            src={starImg}
             alt="Obras"
             className="spike-b2-cls-2"
             style={{

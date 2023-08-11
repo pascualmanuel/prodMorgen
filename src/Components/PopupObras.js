@@ -42,17 +42,39 @@ const PopupObras = ({ selectedImage, closePopup }) => {
     };
   }, [closePopup]);
 
+  console.log(selectedImage);
   return (
     <div className="popup-conexion">
       <div style={{ display: outImg }}>
-        <img src={selectedImage} alt="Popup Image" />
+        <img src={selectedImage.img} alt="Popup Image" />
       </div>
       <div className="popup-conexion-right">
         <h3 className="popup-conexion-title">Si querés comprar esta obra...</h3>
-        <img style={{ display: inImg }} src={selectedImage} alt="Popup Image" />
+        <img
+          style={{ display: inImg }}
+          src={selectedImage.img}
+          alt="Popup Image"
+        />
         <p className="popup-conexion-subtitle">
           Dejá tu mail y recibí la información de compra.
         </p>
+
+        <p className="popup-conexion-caracteristicas">
+          Dimensiones:&nbsp;
+          <span style={{ fontFamily: "Light", textTransform: "capitalize" }}>
+            {selectedImage.dimension}
+          </span>
+        </p>
+        <p
+          className="popup-conexion-caracteristicas"
+          style={{ marginBottom: 50 }}
+        >
+          Caracteristicas:&nbsp;
+          <span style={{ fontFamily: "Light", textTransform: "capitalize" }}>
+            {selectedImage.details}
+          </span>
+        </p>
+
         <div className="contact-me-obras" style={{ marginLeft: 0 }}>
           <div className="email-container">
             <input

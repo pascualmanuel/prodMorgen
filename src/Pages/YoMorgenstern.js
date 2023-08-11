@@ -14,11 +14,11 @@ import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
 import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
 import { deviceDetect, isMobile } from "react-device-detect";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 function YoMorgen() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
+  const { userLanguage, translateText } = useLanguage();
   const { pathname } = window.location;
 
   useEffect(() => {
@@ -139,33 +139,66 @@ function YoMorgen() {
         <div style={YoMorStyleDos}>
           <div className="yoMor-text-grande">
             <p className="yoMor-text">
-              Morgenstern es un ensayo artístico acerca de los modos en que nos
-              vinculamos con lxs otrxs, el mundo y la información circulante.
-              Parte de un único dibujo, un único modelo, no hay lugar para un
-              Otro. Es uno y a la vez una reiteración de hombres inalterables,
-              inexpresivos, inalámbricos. Es personaje y al mismo tiempo
-              escenario.
+              {translateText(
+                "Morgenstern is an artistic essay concerning the ways in which we connect with others, the world, and information that circulates. Beginning from a single drawing, a single model, where there’s no place for an Other. He is one and at the same time a reiteration of unalterable, inexpressive, wireless men. He is a character and he is the stage.I, Morgenstern",
+                "Morgenstern es un ensayo artístico acerca de los modos en que nos vinculamos con lxs otrxs, el mundo y la información circulante. Parte de un único dibujo, un único modelo, no hay lugar para un Otro. Es uno y a la vez una reiteración de hombres inalterables, inexpresivos, inalámbricos. Es personaje y al mismo tiempo escenario."
+              )}
             </p>
+
             {showAdditionalText ? (
               <div style={additionalTextStyle}>
                 <p className="yoMor-text touch">
-                  Desde esta premisa y con ironía, se abordan problemáticas del
-                  mundo contemporáneo como el individualismo, la comunicación,
-                  la crisis ambiental, la alienación, el narcisismo, las
-                  desigualdades de género. <br />
+                  {translateText(
+                    <>
+                      From this premise, and with irony, problems of the
+                      contemporary world such as individualism, communication,
+                      the environmental crisis, alienation, narcissism, gender
+                      inequalities are addressed.
+                    </>,
+                    <>
+                      Desde esta premisa y con ironía, se abordan problemáticas
+                      del mundo contemporáneo como el individualismo, la
+                      comunicación, la crisis ambiental, la alienación, el
+                      narcisismo, las desigualdades de género.
+                    </>
+                  )}
                   <br />
-                  Este proyecto transmedia pone en práctica una serie de
-                  investigaciones y experimentaciones artísticas con
-                  composiciones digitales, fotomontajes, textos, pintura,
-                  animaciones, juegos, arte urbano, performances, instalaciones,
-                  entre otros.
+                  <br />
+                  {translateText(
+                    <>
+                      This transmedia project puts into practice a series of
+                      artistic investigations and experiments with digital
+                      compositions, photomontages, texts, painting, animations,
+                      games, urban art, performances, installations, among
+                      others.
+                    </>,
+                    <>
+                      Este proyecto transmedia pone en práctica una serie de
+                      investigaciones y experimentaciones artísticas con
+                      composiciones digitales, fotomontajes, textos, pintura,
+                      animaciones, juegos, arte urbano, performances,
+                      instalaciones, entre otros.
+                    </>
+                  )}
                   <br /> <br />
-                  Buscamos salir de la creación estática e individual, y así ser
-                  puntapié para generar nuevas ideas, acciones, creaciones
-                  artísticas, que expandan el universo Morgenstern, a partir de
-                  la interacción con el público y el trabajo colaborativo.
-                  Apunta a generar una comunidad participativa, crítica y
-                  reflexiva.
+                  {translateText(
+                    <>
+                      We seek to go beyond the static, individual creation, and
+                      thus become a starting point to generate new ideas and
+                      actions that expand the Morgenstern universe through
+                      interaction with the public and collaborative work. The
+                      objective: to generate a participatory, critical and
+                      reflective community.
+                    </>,
+                    <>
+                      Buscamos salir de la creación estática e individual, y así
+                      ser puntapié para generar nuevas ideas, acciones,
+                      creaciones artísticas, que expandan el universo
+                      Morgenstern, a partir de la interacción con el público y
+                      el trabajo colaborativo. Apunta a generar una comunidad
+                      participativa, crítica y reflexiva.
+                    </>
+                  )}
                 </p>
               </div>
             ) : (
@@ -186,7 +219,8 @@ function YoMorgen() {
                       strokeWidth="3"
                     />
                   </svg>
-                  Seguir Leyendo
+
+                  {translateText("See more", "Seguir Leyendo")}
                 </p>
                 <div onClick={handleClick} style={continueReadingStyle}></div>
               </>
@@ -195,7 +229,9 @@ function YoMorgen() {
         </div>
         <div className="spikes" style={{ zIndex: "110" }}>
           <div>
-            <h2 className="spikes-title">Idea y desarrollo:</h2>
+            <h2 className="spikes-title">
+              {translateText("Idea and development:", "Idea y desarrollo:")}
+            </h2>
 
             <h4
               style={{
@@ -222,7 +258,12 @@ function YoMorgen() {
       </div>
 
       <div className="footer-yomor">
-        <h4 className="apoyo-yomor">Agradecemos el apoyo dado por</h4>
+        <h4 className="apoyo-yomor">
+          {translateText(
+            "We thank the support given by",
+            "IAgradecemos el apoyo dado por:"
+          )}
+        </h4>
 
         <div>
           <img src={Caba} className="sponsor-caba" />
