@@ -29,11 +29,57 @@ const Desnudos = () => {
     setShowPopup(false);
   };
 
-  const imagesFirstRow = [FirstImage1, FirstImage2, FirstImage3];
+  const allImages = [
+    {
+      img: FirstImage1,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage2,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage3,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage4,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage5,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage6,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage7,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage8,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+    {
+      img: FirstImage9,
+      dimension: "43cm x 47cm",
+      details: "tela tensada",
+    },
+  ];
 
-  const imagesSecondRow = [FirstImage4, FirstImage5, FirstImage6];
-
-  const imagesThirdRow = [FirstImage7, FirstImage8, FirstImage9];
+  let imagesFirstRow = allImages.slice(0, 3);
+  let imagesSecondRow = allImages.slice(3, 6);
+  let imagesThirdRow = allImages.slice(6, 9);
 
   let outThird = "block";
 
@@ -47,7 +93,7 @@ const Desnudos = () => {
         {imagesFirstRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
-              src={image}
+              src={image.img}
               alt={`Image ${index + 1}`}
               className="conexion-images"
               onClick={() => openPopup(image)}
@@ -66,7 +112,7 @@ const Desnudos = () => {
         {imagesSecondRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
-              src={image}
+              src={image.img}
               alt={`Image ${index + 1}`}
               className="conexion-images"
               onClick={() => openPopup(image)}
@@ -85,7 +131,7 @@ const Desnudos = () => {
         {imagesThirdRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
-              src={image}
+              src={image.img}
               alt={`Image ${index + 1}`}
               className="conexion-images"
               onClick={() => openPopup(image)}

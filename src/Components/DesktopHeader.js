@@ -210,7 +210,7 @@ function HeaderDesktop() {
                 {translateText("Interactive", "Interactivo")}
               </h2>
             </Link>
-            <Link>
+            <Link to="https://morgenstern.flashcookie.com/" target="_blank">
               <h2 onClick={closeMenu} className="navbar-title merch">
                 MorgenMerch
               </h2>
