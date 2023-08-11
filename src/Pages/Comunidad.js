@@ -9,11 +9,13 @@ import CustomButton from "../Components/CustomButton";
 import SpikeButton from "../Components/SpikeButton";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
 import { isIOS } from "react-device-detect";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 function Comunidad() {
   const [showPopup, setShowPopup] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const { userLanguage, translateText } = useLanguage();
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
@@ -76,14 +78,16 @@ function Comunidad() {
       <div className="comunidad-cont">
         <div className="comunidad-left" style={comStyle}>
           <div className="comunidad-left-content">
-            <h2 className="comunidad-title">Comunidad</h2>
+            <h2 className="comunidad-title">
+              {translateText("Community", "Comunidad")}
+            </h2>
+
             <p className="comunidad-p">
-              No queremos ser Morgensterns, queremos generar espacios de
-              encuentro, construir comunidad para dar lugar a la creatividad, la
-              reflexión, la risa. Para eso, proponemos diferentes formas de
-              interacción, como colaboraciones, creación de obras colectivas,
-              eventos y más. Te invitamos a seguir pensando y creando en
-              conjunto como más te guste.
+              {translateText(
+                "We don’t want to be Morgensterns, we want to create meeting spaces, build community, share ideas, concerns, promote creativity, reflection and laughter. Towards that, we propose different forms of interaction, such as collaborations, creation of collective works, events and more. We invite you to continue thinking and creating together!",
+
+                "No queremos ser Morgensterns, queremos generar espacios de encuentro, construir comunidad para dar lugar a la creatividad, la reflexión, la risa. Para eso, proponemos diferentes formas de interacción, como colaboraciones, creación de obras colectivas, eventos y más. Te invitamos a seguir pensando y creando en conjunto como más te guste."
+              )}
             </p>
             <div onClick={openPopup} className="comunidad-spike">
               <SpikeButtonThree />
@@ -94,7 +98,9 @@ function Comunidad() {
         <div className="comunidad-right">
           <div className="comu-right-top">
             <div className="button-text-comu">
-              <h2 className="comu-gallery-atendeme">Galería</h2>
+              <h2 className="comu-gallery-atendeme">
+                {translateText("Gallery", "Galería")}
+              </h2>
               <div className="comu-buttons">
                 <CustomButton
                   buttonText={buttonTextColab}
@@ -114,7 +120,9 @@ function Comunidad() {
           </div>
           <div className="comu-right-bottom">
             <div className="button-text-comu">
-              <h2 className="comu-gallery-atendeme">Atendeme</h2>
+              <h2 className="comu-gallery-atendeme">
+                {translateText("Hear me out", "Atendeme")}
+              </h2>
 
               <div className="comu-buttons">
                 <CustomButton

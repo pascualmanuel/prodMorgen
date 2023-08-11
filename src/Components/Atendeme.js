@@ -4,10 +4,10 @@ import "../Styles/Atendeme.css";
 import "../Styles/App.css";
 import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 const MiSeccion = () => {
   const [showPopup, setShowPopup] = useState(false);
-
+  const { userLanguage, translateText } = useLanguage();
   const openPopup = () => {
     setShowPopup(true);
   };
@@ -332,7 +332,10 @@ const MiSeccion = () => {
       </div>
 
       {/* <div className="atendeme-cont-title-mob"> */}
-      <h2 className="atendeme-title">Atendeme</h2>
+      <h2 className="atendeme-title">
+
+        {translateText("Hear me out", "Atendeme")}
+      </h2>
       {/* </div> */}
       <div className="second-cont-atendeme">
         <div className="atendeme-cont-button-mob">

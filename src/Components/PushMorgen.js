@@ -32,6 +32,7 @@ import Sticker29 from "../Assets/interactivo/morgenPush/untitled/sf29.png";
 import Sticker30 from "../Assets/interactivo/morgenPush/untitled/sf30.png";
 import CircleScreenshot from "../Assets/screenshot-circle.png";
 import ShareCircle from "../Assets/svg/share-button.svg";
+import ShareCircleEn from "../Assets/svg/share-button-en.svg";
 import Sound1 from "../Assets/sounds/Sound1.mp3";
 import Sound2 from "../Assets/sounds/Sound2.mp3";
 import Sound3 from "../Assets/sounds/Sound3.mp3";
@@ -39,16 +40,24 @@ import Sound4 from "../Assets/sounds/Sound4.mp3";
 import Sound5 from "../Assets/sounds/Sound5.mp3";
 import Sound6 from "../Assets/sounds/Sound6.mp3";
 import html2canvas from "html2canvas";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 const PushMorgen = () => {
   const [stickers, setStickers] = useState([]);
   const [playCount, setPlayCount] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [imageCircle, setImageCircle] = useState(CircleScreenshot);
+  const { userLanguage, translateText } = useLanguage();
+
+  let shareButton = ShareCircle;
+
+  if (userLanguage === "EN") {
+    shareButton = ShareCircleEn;
+  }
+  // translateText("Animations", "Animaciones");
 
   const changeImage = () => {
     // Change the image source based on the current state
-    setImageCircle(ShareCircle);
+    setImageCircle(shareButton);
   };
 
   const revertImage = () => {
@@ -242,7 +251,10 @@ const PushMorgen = () => {
           />
         ))}
         <div style={{ position: "absolute", zIndex: "5" }}>
-          <p style={tuClickLlena}>tu click me llena</p>
+          <p style={tuClickLlena}>
+            {" "}
+            {translateText("Your click fills me up", "tu click me llena")}
+          </p>
         </div>
         <img
           src={imageCircle}

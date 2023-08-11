@@ -27,13 +27,13 @@ import Gallery19 from "../Assets/gallery-imgs/Gallery-19.png";
 import Gallery20 from "../Assets/gallery-imgs/Gallery-20.png";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
 import PrevIcon from "../Assets/svg/white-prev-icon.svg";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 const ImageSection = () => {
   const [transformStyle, setTransformStyle] = useState();
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
+  const { userLanguage, translateText } = useLanguage();
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
@@ -370,7 +370,7 @@ const ImageSection = () => {
                 className="atendeme-title"
                 style={{ color: "#DC3349", pointerEvents: "none" }}
               >
-                Galería
+                {translateText("Gallery", "Galería")}
               </h2>
               <div className="atendeme-button">
                 <CustomButton

@@ -9,13 +9,13 @@ import Prueba2 from "../Assets/interactivo/particles/untitled folder/mor-lila.pn
 import Prueba3 from "../Assets/interactivo/particles/untitled folder/mor-maiz2.png";
 import Prueba4 from "../Assets/interactivo/particles/untitled folder/mor-rojo.png";
 import Prueba5 from "../Assets/interactivo/particles/untitled folder/mor-verde.png";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 const MatterJSDemo = () => {
   const canvasRef = useRef(null);
   const engineRef = useRef(null);
   // const textures = [MorAzul, MorLila, MorMaiz, MorRojo];
   const textures = [Prueba, Prueba2, Prueba, Prueba3, Prueba4, Prueba5];
-
+  const { userLanguage, translateText } = useLanguage();
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -196,14 +196,38 @@ const MatterJSDemo = () => {
   return (
     <div className="falling-cont">
       <div className="falling-text-cont">
-        <h4 style={{ userSelect: "none" }} className="title-falling">
-          <span style={{ textDecoration: "line-through" }}>No</span> hay lugar
-          <br className="out" />
-          para un otro
-        </h4>
-        <h3 onClick={addButtonClickHandler} className="falling-button pointer">
-          Sumar otro
-        </h3>
+        {userLanguage === "EN" ? (
+          <>
+            <h4 style={{ userSelect: "none" }} className="title-falling">
+              There is &nbsp;
+              <span style={{ textDecoration: "line-through" }}>no</span> place
+              &nbsp;
+              <br className="out" />
+              for another
+            </h4>
+            <h3
+              onClick={addButtonClickHandler}
+              className="falling-button pointer"
+            >
+              Add another
+            </h3>
+          </>
+        ) : (
+          <>
+            <h4 style={{ userSelect: "none" }} className="title-falling">
+              <span style={{ textDecoration: "line-through" }}>No</span> hay
+              lugar &nbsp;
+              <br className="out" />
+              para un otro
+            </h4>
+            <h3
+              onClick={addButtonClickHandler}
+              className="falling-button pointer"
+            >
+              Sumar otro
+            </h3>
+          </>
+        )}
       </div>
       <canvas ref={canvasRef} className="canvas-class" id="canvas-target" />
     </div>
