@@ -62,11 +62,6 @@ const Book = () => {
     InaImg16,
     InaImg17,
     InaImg18,
-
-
-
-
-
   ];
 
   const flipBookRef = useRef(null);
@@ -122,7 +117,7 @@ const Book = () => {
   // }
   return (
     <>
-      <div className="book-container">
+      <div className="book-container pointer">
         <img
           width={30}
           src={PrevIcon}

@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from "react";
-import InaImg1 from "../Assets/obras/inadvertido/inad-1.jpg";
-import InaImg2 from "../Assets/obras/inadvertido/inad-2.jpg";
-import InaImg3 from "../Assets/obras/inadvertido/inad-3.jpg";
-import InaImg4 from "../Assets/obras/inadvertido/inad-4.jpg";
-import InaImg5 from "../Assets/obras/inadvertido/inad-5.jpg";
-import InaImg6 from "../Assets/obras/inadvertido/inad-6.jpg";
-import InaImg7 from "../Assets/obras/inadvertido/inad-7.jpg";
-import InaImg8 from "../Assets/obras/inadvertido/inad-8.jpg";
-import InaImg9 from "../Assets/obras/inadvertido/inad-9.jpg";
-import InaImg10 from "../Assets/obras/inadvertido/inad-10.jpg";
-import InaImg11 from "../Assets/obras/inadvertido/inad-11.jpg";
-import InaImg12 from "../Assets/obras/inadvertido/inad-12.jpg";
-import InaImg13 from "../Assets/obras/inadvertido/inad-13.jpg";
-import InaImg14 from "../Assets/obras/inadvertido/inad-14.jpg";
-import InaImg15 from "../Assets/obras/inadvertido/inad-15.jpg";
-import InaImg16 from "../Assets/obras/inadvertido/inad-16.jpg";
-import InaImg17 from "../Assets/obras/inadvertido/inad-17.jpg";
-import InaImg18 from "../Assets/obras/inadvertido/inad-18.jpg";
-import InaImg19 from "../Assets/obras/inadvertido/inad-19.jpg";
-import InaImg20 from "../Assets/obras/inadvertido/inad-20.jpg";
-import InaImg21 from "../Assets/obras/inadvertido/inad-21.jpg";
+import InaImg1 from "../Assets/obras/inadvertido/inad-1.png";
+import InaImg2 from "../Assets/obras/inadvertido/inad-2.webp";
+import InaImg3 from "../Assets/obras/inadvertido/inad-3.webp";
+import InaImg4 from "../Assets/obras/inadvertido/inad-4.webp";
+import InaImg5 from "../Assets/obras/inadvertido/inad-5.webp";
+import InaImg6 from "../Assets/obras/inadvertido/inad-6.webp";
+import InaImg7 from "../Assets/obras/inadvertido/inad-7.webp";
+import InaImg8 from "../Assets/obras/inadvertido/inad-8.webp";
+import InaImg9 from "../Assets/obras/inadvertido/inad-9.webp";
+import InaImg10 from "../Assets/obras/inadvertido/inad-10.webp";
+import InaImg11 from "../Assets/obras/inadvertido/inad-11.webp";
+import InaImg12 from "../Assets/obras/inadvertido/inad-12.webp";
+import InaImg13 from "../Assets/obras/inadvertido/inad-13.webp";
+import InaImg14 from "../Assets/obras/inadvertido/inad-14.webp";
+import InaImg15 from "../Assets/obras/inadvertido/inad-15.webp";
 
 // import Prueba from "../Assets/frenchfood3.jpg";
 import IconTag from "../Assets/svg/icon-tag.svg";
@@ -41,12 +35,6 @@ const Inadvertido = () => {
     InaImg13,
     InaImg14,
     InaImg15,
-    InaImg16,
-    InaImg17,
-    InaImg18,
-    InaImg19,
-    InaImg20,
-    InaImg21,
   ];
 
   useEffect(() => {

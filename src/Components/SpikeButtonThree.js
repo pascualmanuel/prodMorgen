@@ -1,5 +1,7 @@
 import React from "react";
 import "../Styles/Atendeme.css";
+import "../Styles/App.css";
+
 import Img1 from "../Assets/svg/star-apoyar.svg";
 import Img1En from "../Assets/svg/star-apoyar-en.svg";
 import Img2 from "../Assets/svg/star-apoyar2.svg";

@@ -78,23 +78,23 @@ const Estampas = () => {
   }
 
   return (
-    <div className="image-gallery-conexion">
+    <div className="image-gallery-conexion pointer">
       <div className="conextion-row">
         {imagesFirstRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
-            <img
+            {/* <img
               src={IconTag}
               width={60}
               alt="Popup Trigger Icon"
               className="popup-trigger-conexion"
               onClick={() => openPopup(image)}
-            />
+            /> */}
           </div>
         ))}
       </div>
@@ -104,16 +104,16 @@ const Estampas = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
-            <img
+            {/* <img
               src={IconTag}
               width={60}
               alt="Popup Trigger Icon"
               className="popup-trigger-conexion"
               onClick={() => openPopup(image)}
-            />
+            /> */}
           </div>
         ))}
       </div>
@@ -123,16 +123,16 @@ const Estampas = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
-            <img
+            {/* <img
               src={IconTag}
               width={60}
               alt="Popup Trigger Icon"
               className="popup-trigger-conexion"
               onClick={() => openPopup(image)}
-            />
+            /> */}
           </div>
         ))}
       </div>

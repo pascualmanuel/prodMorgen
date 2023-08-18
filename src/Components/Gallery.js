@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
 import Img from "../Assets/gallery-imgs/Gallery-1.png";
-import Gallery1 from "../Assets/gallery-imgs/Gallery-1.png";
-import Gallery2 from "../Assets/gallery-imgs/Gallery-2.png";
-import Gallery3 from "../Assets/gallery-imgs/Gallery-3.png";
-import Gallery4 from "../Assets/gallery-imgs/Gallery-4.png";
+import Gallery1 from "../Assets/gallery-imgs/gallery-1.webp";
+import Gallery2 from "../Assets/gallery-imgs/gallery-2.webp";
+import Gallery3 from "../Assets/gallery-imgs/gallery-3.png";
+import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
 import Gallery5 from "../Assets/gallery-imgs/Gallery-5.png";
 import Gallery6 from "../Assets/gallery-imgs/Gallery-6.png";
 import Gallery7 from "../Assets/gallery-imgs/Gallery-7.png";
@@ -130,7 +130,7 @@ const ImageSection = () => {
   //   const fetchImages = async () => {
   //     try {
   //       const response = await axios.get(
-  //         "https://jsonplaceholder.typicode.com/photos"
+  //         "https://jsonplaceholder.typicode.com/medias"
   //       );
   //       setImages(response.data.slice(0, 20)); // Limit to the first 20 images
   //     } catch (error) {
@@ -143,140 +143,160 @@ const ImageSection = () => {
 
   const galleryContent = [
     {
-      photo: Gallery1,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery1,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery3,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "15/10/20",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery4,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "10/09/23",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery5,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery7,
+      media: "video",
+      source: "https://www.w3schools.com/html/mov_bbb.mp4",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery9,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery8,
+      media: "image",
+      source: Gallery1,
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery2, // Provide the correct image URL here
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery3, // Provide the correct image URL here
+      category: "Historieta",
+      date: "15/10/20",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery4, // Provide the correct image URL here
+      category: "Historieta",
+      date: "10/09/23",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery5, // Provide the correct image URL here
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "video",
+      source: "https://www.w3schools.com/html/mov_bbb.mp4",
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery7, // Provide the correct image URL here
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery6,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery10,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery11,
+      media: "video",
+      source: "https://www.youtube.com/embed/9ROuLgFQWpY?autoplay=1",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery12,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery13,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery14,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery15,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery16,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery17,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery18,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery19,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery20,
+      media: "image",
+      source: Gallery2,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -346,21 +366,39 @@ const ImageSection = () => {
                 {galleryContent.map((item, index) => (
                   <div
                     key={index}
-                    className="box pointer"
-                    style={{ backgroundImage: `url(${item.photo})` }}
+                    className={`box pointer ${
+                      item.media === "video" ? "video-box" : ""
+                    }`}
                     onClick={() => handleImageClick(index)}
                   >
-                    <div className="image-text">
-                      <div className="hover-g-top">
-                        <div style={{ marginBottom: 20, marginLeft: 20 }}>
-                          {item.title}
+                    {item.media === "image" && (
+                      <div
+                        key={index}
+                        className=" box pointer"
+                        style={{ backgroundImage: `url(${item.source})` }}
+                        onClick={() => handleImageClick(index)}
+                      >
+                        as
+                        <div className="image-text">
+                          <div className="hover-g-top">
+                            <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                              {item.title}
+                            </div>
+                          </div>
+                          <div className="hover-g-bottom"> </div>
                         </div>
                       </div>
-                      <div className="hover-g-bottom">
-                        {/* <div>{item.date}</div> */}
-                        {/* <div>{item.author}</div> */}
+                    )}
+                    {item.media === "video" && (
+                      <div className="video">
+                        <iframe
+                          src={item.source}
+                          title={`Video ${index + 1}`}
+                          frameBorder="0"
+                          allowFullScreen
+                        ></iframe>
                       </div>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -397,7 +435,7 @@ const ImageSection = () => {
                   <div className="modal">
                     <img
                       className="modal-image"
-                      src={selectedImageData.photo}
+                      src={selectedImageData.media}
                       alt="Selected Image"
                     />
                     <div className="submodal">
@@ -432,7 +470,7 @@ const ImageSection = () => {
             <div
               key={index}
               className="gallery-box-mob"
-              style={{ backgroundImage: `url(${item.photo})` }}
+              style={{ backgroundImage: `url(${item.media})` }}
               onClick={() => handleImageClick(index)}
             >
               <div className="image-text">

@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Atendeme.css";
+import "../Styles/App.css";
 import Img1 from "../Assets/svg/Star.svg";
 import Img1En from "../Assets/svg/Star-en.svg";
 import Img2 from "../Assets/svg/Star2.svg";
@@ -17,7 +18,7 @@ function SpikeButton() {
   return (
     <>
       <Link to="/comunidad">
-        <div className="cont-svgs-comunidad">
+        <div className="cont-svgs-comunidad pointer">
           <img
             src={starImg}
             alt="SpikeButton"

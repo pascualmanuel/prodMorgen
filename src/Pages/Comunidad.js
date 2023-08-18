@@ -89,7 +89,7 @@ function Comunidad() {
                 "No queremos ser Morgensterns, queremos generar espacios de encuentro, construir comunidad para dar lugar a la creatividad, la reflexión, la risa. Para eso, proponemos diferentes formas de interacción, como colaboraciones, creación de obras colectivas, eventos y más. Te invitamos a seguir pensando y creando en conjunto como más te guste."
               )}
             </p>
-            <div onClick={openPopup} className="comunidad-spike">
+            <div onClick={openPopup} className="comunidad-spike pointer">
               <SpikeButtonThree />
             </div>
           </div>

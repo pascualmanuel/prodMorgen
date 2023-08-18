@@ -261,7 +261,7 @@ function YoMorgen() {
         <h4 className="apoyo-yomor">
           {translateText(
             "We thank the support given by",
-            "IAgradecemos el apoyo dado por:"
+            "Agradecemos el apoyo dado por:"
           )}
         </h4>
 

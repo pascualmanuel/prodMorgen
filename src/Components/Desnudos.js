@@ -88,14 +88,14 @@ const Desnudos = () => {
   }
 
   return (
-    <div className="image-gallery-conexion">
+    <div className="image-gallery-conexion pointer">
       <div className="conextion-row cr-1">
         {imagesFirstRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
               src={image.img}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
             <img
@@ -114,7 +114,7 @@ const Desnudos = () => {
             <img
               src={image.img}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
             <img
@@ -133,7 +133,7 @@ const Desnudos = () => {
             <img
               src={image.img}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
             <img
