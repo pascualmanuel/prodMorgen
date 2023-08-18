@@ -1,23 +1,23 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 
-// const DisableRightClickWrapper = (WrappedComponent) => {
-//   return class extends Component {
-//     handleContextMenu = (e) => {
-//       e.preventDefault();
-//     };
+const DisableRightClickWrapper = (WrappedComponent) => {
+  return class extends Component {
+    handleContextMenu = (e) => {
+      e.preventDefault();
+    };
 
-//     componentDidMount() {
-//       window.addEventListener("contextmenu", this.handleContextMenu);
-//     }
+    componentDidMount() {
+      window.addEventListener("contextmenu", this.handleContextMenu);
+    }
 
-//     componentWillUnmount() {
-//       window.removeEventListener("contextmenu", this.handleContextMenu);
-//     }
+    componentWillUnmount() {
+      window.removeEventListener("contextmenu", this.handleContextMenu);
+    }
 
-//     render() {
-//       return <WrappedComponent {...this.props} />;
-//     }
-//   };
-// };
+    render() {
+      return <WrappedComponent {...this.props} />;
+    }
+  };
+};
 
-// export default DisableRightClickWrapper;
+export default DisableRightClickWrapper;
