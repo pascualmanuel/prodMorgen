@@ -7,14 +7,13 @@ import Popup from "./PopUp";
 import Img from "../Assets/gallery-imgs/Gallery-1.png";
 import Gallery1 from "../Assets/gallery-imgs/gallery-1.webp";
 import Gallery2 from "../Assets/gallery-imgs/gallery-2.webp";
-import Gallery3 from "../Assets/gallery-imgs/gallery-3.png";
+import Gallery10 from "../Assets/gallery-imgs/gallery-10.png";
 import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
 import Gallery5 from "../Assets/gallery-imgs/Gallery-5.png";
 import Gallery6 from "../Assets/gallery-imgs/Gallery-6.png";
 import Gallery7 from "../Assets/gallery-imgs/Gallery-7.png";
 import Gallery8 from "../Assets/gallery-imgs/gif-4.gif";
 import Gallery9 from "../Assets/gallery-imgs/Gallery-9.png";
-import Gallery10 from "../Assets/gallery-imgs/Gallery-10.png";
 import Gallery11 from "../Assets/gallery-imgs/Gallery-11.png";
 import Gallery12 from "../Assets/gallery-imgs/Gallery-12.png";
 import Gallery13 from "../Assets/gallery-imgs/Gallery-13.png";
@@ -240,7 +239,7 @@ const ImageSection = () => {
     },
     {
       media: "image",
-      source: Gallery3,
+      source: Gallery10,
       category: "Historieta",
       date: "25/09/19",
       title: "Caras Morgenstern",
