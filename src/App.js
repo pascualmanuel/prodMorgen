@@ -23,6 +23,7 @@ import LaRevista from "./Pages/LaRevista";
 import AgendaComming from "./Pages/AgendaComming";
 
 import { LanguageProvider } from "./Hooks/LanguageContext";
+import DisableRightClickWrapper from "./Hooks/DisableRightClickWrapper";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -60,4 +61,5 @@ function App() {
   );
 }
 
-export default App;
+export default DisableRightClickWrapper(App); // Wrap the App component with the HOC
+ 

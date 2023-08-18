@@ -12,7 +12,7 @@ import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
 import Gallery5 from "../Assets/gallery-imgs/Gallery-5.png";
 import Gallery6 from "../Assets/gallery-imgs/Gallery-6.png";
 import Gallery7 from "../Assets/gallery-imgs/Gallery-7.png";
-import Gallery8 from "../Assets/gallery-imgs/Gallery-8.png";
+import Gallery8 from "../Assets/gallery-imgs/gif-4.gif";
 import Gallery9 from "../Assets/gallery-imgs/Gallery-9.png";
 import Gallery10 from "../Assets/gallery-imgs/Gallery-10.png";
 import Gallery11 from "../Assets/gallery-imgs/Gallery-11.png";
@@ -143,8 +143,8 @@ const ImageSection = () => {
 
   const galleryContent = [
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#4590E6",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -159,48 +159,48 @@ const ImageSection = () => {
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#DFB000",
       category: "Historieta ",
       date: "15/10/20",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#FE6970",
       category: "Historieta ",
       date: "10/09/23",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#FF3910",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "video",
-      source: "https://www.w3schools.com/html/mov_bbb.mp4",
+      media: "color",
+      source: "#AE79EF",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#005DA2",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#7D9F00",
       category: "Historieta",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -215,32 +215,24 @@ const ImageSection = () => {
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery3, // Provide the correct image URL here
+      media: "color",
+      source: "#DC3349", // Provide the correct image URL here
       category: "Historieta",
       date: "15/10/20",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery4, // Provide the correct image URL here
+      media: "color",
+      source: "#DCCB00", // Provide the correct image URL here
       category: "Historieta",
       date: "10/09/23",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery5, // Provide the correct image URL here
-      category: "Historieta",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "video",
-      source: "https://www.w3schools.com/html/mov_bbb.mp4",
+      media: "color",
+      source: "#DC3349", // Provide the correct image URL here
       category: "Historieta",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -248,15 +240,55 @@ const ImageSection = () => {
     },
     {
       media: "image",
-      source: Gallery7, // Provide the correct image URL here
+      source: Gallery3,
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    // {
+    //   media: "video",
+    //   source: "https://www.w3schools.com/html/mov_bbb.mp4",
+    //   category: "Historieta",
+    //   date: "25/09/19",
+    //   title: "Caras Morgenstern",
+    //   author: "Ailin Kirjner",
+    // },
+    {
+      media: "color",
+      source: "#DFB000", // Provide the correct image URL here
       category: "Historieta",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
+      media: "color",
+      source: "#FE6970",
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#FF3910",
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#AE79EF",
+      category: "Historieta ",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#005DA2",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -264,39 +296,15 @@ const ImageSection = () => {
     },
     {
       media: "image",
-      source: Gallery1,
+      source: Gallery4,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      media: "image",
-      source: Gallery1,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "video",
-      source: "https://www.youtube.com/embed/9ROuLgFQWpY?autoplay=1",
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "image",
-      source: Gallery1,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "image",
-      source: Gallery2,
+      media: "color",
+      source: "#7D9F00",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -316,17 +324,25 @@ const ImageSection = () => {
       }
     });
   };
-
+  console.log(galleryContent);
   const handleNextImage = () => {
     setSelectedImageIndex((prevIndex) => {
-      if (prevIndex === galleryContent.length - 1) {
-        return 0;
-      } else {
-        return prevIndex + 1;
+      let nextIndex = prevIndex + 1;
+      const lastIndex = galleryContent.length - 1;
+
+      while (nextIndex !== prevIndex) {
+        if (nextIndex > lastIndex) {
+          nextIndex = 0;
+        }
+        if (galleryContent[nextIndex].media === "image") {
+          return nextIndex;
+        }
+        nextIndex++;
       }
+
+      return prevIndex; // Fallback to the current index if no image is found
     });
   };
-
   const handleKeyboardNavigation = (event) => {
     if (event.keyCode === 37) {
       // Left arrow key
@@ -366,10 +382,11 @@ const ImageSection = () => {
                 {galleryContent.map((item, index) => (
                   <div
                     key={index}
-                    className={`box pointer ${
+                    className={`box  ${
                       item.media === "video" ? "video-box" : ""
                     }`}
-                    onClick={() => handleImageClick(index)}
+                    // onClick={() => handleImageClick(index)}
+                    style={{ backgroundColor: item.source }}
                   >
                     {item.media === "image" && (
                       <div
@@ -378,7 +395,6 @@ const ImageSection = () => {
                         style={{ backgroundImage: `url(${item.source})` }}
                         onClick={() => handleImageClick(index)}
                       >
-                        as
                         <div className="image-text">
                           <div className="hover-g-top">
                             <div style={{ marginBottom: 20, marginLeft: 20 }}>
@@ -390,14 +406,17 @@ const ImageSection = () => {
                       </div>
                     )}
                     {item.media === "video" && (
-                      <div className="video">
-                        <iframe
-                          src={item.source}
-                          title={`Video ${index + 1}`}
-                          frameBorder="0"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
+                      <video
+                        className="video"
+                        controlsList="nodownload"
+                        autoPlay
+                        muted
+                        playsInline
+                        loop
+                      >
+                        <source src={item.source} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
                     )}
                   </div>
                 ))}
@@ -429,14 +448,14 @@ const ImageSection = () => {
                   <span className="close" onClick={handleModalClose}>
                     &times;
                   </span>
-                  <span className="gallery-prev-button">
+                  <span className="gallery-prev-button pointer">
                     <img width={35} src={PrevIcon} onClick={handlePrevImage} />
                   </span>
                   <div className="modal">
                     <img
                       className="modal-image"
-                      src={selectedImageData.media}
-                      alt="Selected Image"
+                      src={selectedImageData.source}
+                      alt="Selected Image!"
                     />
                     <div className="submodal">
                       <div className="submodal-top">
@@ -453,7 +472,7 @@ const ImageSection = () => {
                       </div>
                     </div>
                   </div>
-                  <span className="gallery-next-button">
+                  <span className="gallery-next-button pointer">
                     <img width={35} src={NextIcon} onClick={handleNextImage} />
                   </span>
                 </div>
@@ -463,27 +482,44 @@ const ImageSection = () => {
         </>
       ) : (
         <div className="gallery-mob">
-          {/* <div> */}
           <h2 className="gallery-title-mob">Galería</h2>
-          {/* </div> */}
+
           {galleryContent.map((item, index) => (
             <div
               key={index}
-              className="gallery-box-mob"
-              style={{ backgroundImage: `url(${item.media})` }}
+              className={`gallery-box-mob ${
+                item.media === "video" ? "video-box" : ""
+              }`}
               onClick={() => handleImageClick(index)}
             >
-              <div className="image-text">
-                <div className="hover-g-top">
-                  <div style={{ marginBottom: 20, marginLeft: 20 }}>
-                    {item.title}
+              {item.media === "image" && (
+                <div
+                  className={`gallery-box-mob box pointer`}
+                  style={{ backgroundImage: `url(${item.source})` }}
+                >
+                  <div className="image-text">
+                    <div className="hover-g-top">
+                      <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                        {item.title}
+                      </div>
+                    </div>
+                    <div className="hover-g-bottom"></div>
                   </div>
                 </div>
-                <div className="hover-g-bottom">
-                  {/* <div>{item.date}</div> */}
-                  {/* <div>{item.author}</div> */}
-                </div>
-              </div>
+              )}
+              {item.media === "video" && (
+                <video
+                  className="video"
+                  controlsList="nodownload"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                >
+                  <source src={item.source} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           ))}
           <div style={{ position: "fixed", top: "75vh" }}>
