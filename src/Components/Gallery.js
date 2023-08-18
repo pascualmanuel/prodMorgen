@@ -6,7 +6,7 @@ import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
 import Gallery1 from "../Assets/gallery-imgs/gallery-1.webp";
 import Gallery2 from "../Assets/gallery-imgs/gallery-2.webp";
-import Gallery10 from "../Assets/gallery-imgs/gallery-10.png";
+import Gallery10 from "../Assets/gallery-imgs/Gallery-10.png";
 import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
 import PrevIcon from "../Assets/svg/white-prev-icon.svg";
