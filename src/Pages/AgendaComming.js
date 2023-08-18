@@ -5,9 +5,10 @@ import "../Styles/App.css";
 function AgendaComming() {
   return (
     <>
-      <div className="agenda-cs-cont" style={{ backgroundColor: "white" }}>
-        {" "}
-      </div>
+      <div
+        className="agenda-cs-cont"
+        style={{ backgroundColor: "white" }}
+      ></div>
     </>
   );
 }

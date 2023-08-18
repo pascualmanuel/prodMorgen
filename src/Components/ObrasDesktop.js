@@ -133,7 +133,7 @@ const ObrasDesktop = () => {
           <h2 className="obras-title" style={{ fontSize: 70 }}>
             {translateText("Works", "Obras")}
           </h2>
-          <div onClick={openPopup} className="obras-spike-button">
+          <div onClick={openPopup} className="obras-spike-button pointer">
             <SpikeButtonThree />
           </div>
         </div>

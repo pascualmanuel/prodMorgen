@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
 import Img from "../Assets/gallery-imgs/Gallery-1.png";
-import Gallery1 from "../Assets/gallery-imgs/Gallery-1.png";
-import Gallery2 from "../Assets/gallery-imgs/Gallery-2.png";
-import Gallery3 from "../Assets/gallery-imgs/Gallery-3.png";
-import Gallery4 from "../Assets/gallery-imgs/Gallery-4.png";
+import Gallery1 from "../Assets/gallery-imgs/gallery-1.webp";
+import Gallery2 from "../Assets/gallery-imgs/gallery-2.webp";
+import Gallery3 from "../Assets/gallery-imgs/gallery-3.png";
+import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
 import Gallery5 from "../Assets/gallery-imgs/Gallery-5.png";
 import Gallery6 from "../Assets/gallery-imgs/Gallery-6.png";
 import Gallery7 from "../Assets/gallery-imgs/Gallery-7.png";
-import Gallery8 from "../Assets/gallery-imgs/Gallery-8.png";
+import Gallery8 from "../Assets/gallery-imgs/gif-4.gif";
 import Gallery9 from "../Assets/gallery-imgs/Gallery-9.png";
 import Gallery10 from "../Assets/gallery-imgs/Gallery-10.png";
 import Gallery11 from "../Assets/gallery-imgs/Gallery-11.png";
@@ -130,7 +130,7 @@ const ImageSection = () => {
   //   const fetchImages = async () => {
   //     try {
   //       const response = await axios.get(
-  //         "https://jsonplaceholder.typicode.com/photos"
+  //         "https://jsonplaceholder.typicode.com/medias"
   //       );
   //       setImages(response.data.slice(0, 20)); // Limit to the first 20 images
   //     } catch (error) {
@@ -143,140 +143,168 @@ const ImageSection = () => {
 
   const galleryContent = [
     {
-      photo: Gallery1,
+      media: "color",
+      source: "#4590E6",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery1,
+      media: "image",
+      source: Gallery1,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery3,
+      media: "color",
+      source: "#DFB000",
       category: "Historieta ",
       date: "15/10/20",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery4,
+      media: "color",
+      source: "#FE6970",
       category: "Historieta ",
       date: "10/09/23",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery5,
+      media: "color",
+      source: "#FF3910",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery7,
+      media: "color",
+      source: "#AE79EF",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery9,
+      media: "color",
+      source: "#005DA2",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery8,
+      media: "color",
+      source: "#7D9F00",
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery2, // Provide the correct image URL here
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#DC3349", // Provide the correct image URL here
+      category: "Historieta",
+      date: "15/10/20",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#DCCB00", // Provide the correct image URL here
+      category: "Historieta",
+      date: "10/09/23",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#DC3349", // Provide the correct image URL here
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "image",
+      source: Gallery3,
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    // {
+    //   media: "video",
+    //   source: "https://www.w3schools.com/html/mov_bbb.mp4",
+    //   category: "Historieta",
+    //   date: "25/09/19",
+    //   title: "Caras Morgenstern",
+    //   author: "Ailin Kirjner",
+    // },
+    {
+      media: "color",
+      source: "#DFB000", // Provide the correct image URL here
+      category: "Historieta",
+      date: "25/09/19",
+      title: "Caras Morgenstern",
+      author: "Ailin Kirjner",
+    },
+    {
+      media: "color",
+      source: "#FE6970",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery6,
+      media: "color",
+      source: "#FF3910",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery10,
+      media: "color",
+      source: "#AE79EF",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery11,
+      media: "color",
+      source: "#005DA2",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery12,
+      media: "image",
+      source: Gallery4,
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
       author: "Ailin Kirjner",
     },
     {
-      photo: Gallery13,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery14,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery15,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery16,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery17,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery18,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery19,
-      category: "Historieta ",
-      date: "25/09/19",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      photo: Gallery20,
+      media: "color",
+      source: "#7D9F00",
       category: "Historieta ",
       date: "25/09/19",
       title: "Caras Morgenstern",
@@ -296,17 +324,25 @@ const ImageSection = () => {
       }
     });
   };
-
+  console.log(galleryContent);
   const handleNextImage = () => {
     setSelectedImageIndex((prevIndex) => {
-      if (prevIndex === galleryContent.length - 1) {
-        return 0;
-      } else {
-        return prevIndex + 1;
+      let nextIndex = prevIndex + 1;
+      const lastIndex = galleryContent.length - 1;
+
+      while (nextIndex !== prevIndex) {
+        if (nextIndex > lastIndex) {
+          nextIndex = 0;
+        }
+        if (galleryContent[nextIndex].media === "image") {
+          return nextIndex;
+        }
+        nextIndex++;
       }
+
+      return prevIndex; // Fallback to the current index if no image is found
     });
   };
-
   const handleKeyboardNavigation = (event) => {
     if (event.keyCode === 37) {
       // Left arrow key
@@ -346,21 +382,42 @@ const ImageSection = () => {
                 {galleryContent.map((item, index) => (
                   <div
                     key={index}
-                    className="box pointer"
-                    style={{ backgroundImage: `url(${item.photo})` }}
-                    onClick={() => handleImageClick(index)}
+                    className={`box  ${
+                      item.media === "video" ? "video-box" : ""
+                    }`}
+                    // onClick={() => handleImageClick(index)}
+                    style={{ backgroundColor: item.source }}
                   >
-                    <div className="image-text">
-                      <div className="hover-g-top">
-                        <div style={{ marginBottom: 20, marginLeft: 20 }}>
-                          {item.title}
+                    {item.media === "image" && (
+                      <div
+                        key={index}
+                        className=" box pointer"
+                        style={{ backgroundImage: `url(${item.source})` }}
+                        onClick={() => handleImageClick(index)}
+                      >
+                        <div className="image-text">
+                          <div className="hover-g-top">
+                            <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                              {item.title}
+                            </div>
+                          </div>
+                          <div className="hover-g-bottom"> </div>
                         </div>
                       </div>
-                      <div className="hover-g-bottom">
-                        {/* <div>{item.date}</div> */}
-                        {/* <div>{item.author}</div> */}
-                      </div>
-                    </div>
+                    )}
+                    {item.media === "video" && (
+                      <video
+                        className="video"
+                        controlsList="nodownload"
+                        autoPlay
+                        muted
+                        playsInline
+                        loop
+                      >
+                        <source src={item.source} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
                   </div>
                 ))}
               </div>
@@ -391,14 +448,14 @@ const ImageSection = () => {
                   <span className="close" onClick={handleModalClose}>
                     &times;
                   </span>
-                  <span className="gallery-prev-button">
+                  <span className="gallery-prev-button pointer">
                     <img width={35} src={PrevIcon} onClick={handlePrevImage} />
                   </span>
                   <div className="modal">
                     <img
                       className="modal-image"
-                      src={selectedImageData.photo}
-                      alt="Selected Image"
+                      src={selectedImageData.source}
+                      alt="Selected Image!"
                     />
                     <div className="submodal">
                       <div className="submodal-top">
@@ -415,7 +472,7 @@ const ImageSection = () => {
                       </div>
                     </div>
                   </div>
-                  <span className="gallery-next-button">
+                  <span className="gallery-next-button pointer">
                     <img width={35} src={NextIcon} onClick={handleNextImage} />
                   </span>
                 </div>
@@ -425,27 +482,44 @@ const ImageSection = () => {
         </>
       ) : (
         <div className="gallery-mob">
-          {/* <div> */}
           <h2 className="gallery-title-mob">Galería</h2>
-          {/* </div> */}
+
           {galleryContent.map((item, index) => (
             <div
               key={index}
-              className="gallery-box-mob"
-              style={{ backgroundImage: `url(${item.photo})` }}
+              className={`gallery-box-mob ${
+                item.media === "video" ? "video-box" : ""
+              }`}
               onClick={() => handleImageClick(index)}
             >
-              <div className="image-text">
-                <div className="hover-g-top">
-                  <div style={{ marginBottom: 20, marginLeft: 20 }}>
-                    {item.title}
+              {item.media === "image" && (
+                <div
+                  className={`gallery-box-mob box pointer`}
+                  style={{ backgroundImage: `url(${item.source})` }}
+                >
+                  <div className="image-text">
+                    <div className="hover-g-top">
+                      <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                        {item.title}
+                      </div>
+                    </div>
+                    <div className="hover-g-bottom"></div>
                   </div>
                 </div>
-                <div className="hover-g-bottom">
-                  {/* <div>{item.date}</div> */}
-                  {/* <div>{item.author}</div> */}
-                </div>
-              </div>
+              )}
+              {item.media === "video" && (
+                <video
+                  className="video"
+                  controlsList="nodownload"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                >
+                  <source src={item.source} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
           ))}
           <div style={{ position: "fixed", top: "75vh" }}>

@@ -1,5 +1,7 @@
 import React from "react";
 import "../Styles/Atendeme.css";
+import "../Styles/App.css";
+
 import Img1 from "../Assets/svg/Star2-1.svg";
 import Img1En from "../Assets/svg/Star2-1-en.svg";
 import Img2 from "../Assets/svg/Star2-2.svg";
@@ -16,7 +18,7 @@ function SpikeButtonTwo() {
   return (
     <>
       <Link to="/obras">
-        <div className="cont-svgs-obras">
+        <div className="cont-svgs-obras pointer">
           <img
             src={starImg}
             alt="Obras"

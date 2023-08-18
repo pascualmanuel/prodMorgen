@@ -362,7 +362,7 @@ const ConexionInestable = () => {
             <img
               src={image.img}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
             <img
@@ -381,7 +381,7 @@ const ConexionInestable = () => {
             <img
               src={image.img}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
             <img
@@ -400,7 +400,7 @@ const ConexionInestable = () => {
             <img
               src={image.img}
               alt={`Image ${index + 1}`}
-              className="conexion-images"
+              className="conexion-images pointer"
               onClick={() => openPopup(image)}
             />
             <img

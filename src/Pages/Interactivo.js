@@ -123,8 +123,6 @@ function Interactivo() {
       width: "100%",
     };
     squareStyle = {
-      // flex: `1 0 ${100 / colors.length}%`, // Distribute equally, regardless of the number of colors
-      // aspectRatio: "1 / 1", // Set aspect ratio to maintain square shape
       width: squareWidth,
       height: squareHeight,
     };

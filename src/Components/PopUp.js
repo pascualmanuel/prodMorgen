@@ -148,7 +148,7 @@ const Popup = ({ isOpen, onClose }) => {
         className={`popup-container ${isOpen ? "open" : ""}`}
         style={mobileSuppPopUp}
       >
-        <span className="close-button" onClick={onClose}>
+        <span className="close-button pointer" onClick={onClose}>
           <svg
             width="45"
             height="45"

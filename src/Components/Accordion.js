@@ -16,7 +16,7 @@ const Accordion = ({ items }) => {
       return (
         <React.Fragment key={index}>
           <div
-            className={`accordion-tab ${isActive}`}
+            className={`accordion-tab ${isActive} pointer`}
             onClick={() => {
               handleClick(index);
             }}

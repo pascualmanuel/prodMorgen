@@ -54,7 +54,6 @@ function Home() {
     interactivoOffsetY = 170;
     comunidadOffsetY = 10;
   }
-  //    {translateText("I, Morgenstern", "Yo, Morgenstern")}
   const buttons = [
     {
       buttonText: translateText("Works", "Obras"),
@@ -228,7 +227,7 @@ function Home() {
   };
 
   const isMobileView = () => {
-    return viewportWidth <= 768; // You can adjust the width threshold based on your requirements
+    return viewportWidth <= 768;
   };
 
   return (
