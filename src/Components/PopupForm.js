@@ -2,11 +2,11 @@ import React from "react";
 import CustomButton from "./CustomButton";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 const PopupForm = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-
+  const { userLanguage, translateText } = useLanguage();
   const location = useLocation();
   const { pathname } = window.location;
 
@@ -58,7 +58,9 @@ const PopupForm = () => {
       : "";
 
   const prueba = (
-    <span style={{ fontSize: "20px", fontFamily: "Light" }}>Enviar</span>
+    <span style={{ fontSize: "20px", fontFamily: "Light" }}>
+      {translateText("Send", "Enviar")}
+    </span>
   );
 
   return (

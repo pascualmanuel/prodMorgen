@@ -18,15 +18,30 @@ import InaImg15 from "../Assets/obras/hablamorgen/habla-mor-15.png";
 import InaImg16 from "../Assets/obras/hablamorgen/habla-mor-16.png";
 import InaImg17 from "../Assets/obras/hablamorgen/habla-mor-17.png";
 import InaImg18 from "../Assets/obras/hablamorgen/habla-mor-18.png";
+import InaImg1En from "../Assets/obras/hablamorgen/en/habla-en-1.png";
+import InaImg2En from "../Assets/obras/hablamorgen/en/habla-en-2.png";
+import InaImg3En from "../Assets/obras/hablamorgen/en/habla-en-3.png";
+import InaImg4En from "../Assets/obras/hablamorgen/en/habla-en-4.png";
+import InaImg5En from "../Assets/obras/hablamorgen/en/habla-en-5.png";
+import InaImg6En from "../Assets/obras/hablamorgen/en/habla-en-6.png";
+import InaImg7En from "../Assets/obras/hablamorgen/en/habla-en-7.png";
+import InaImg8En from "../Assets/obras/hablamorgen/en/habla-en-8.png";
+import InaImg9En from "../Assets/obras/hablamorgen/en/habla-en-9.png";
+import InaImg10En from "../Assets/obras/hablamorgen/en/habla-en-10.png";
+import InaImg11En from "../Assets/obras/hablamorgen/en/habla-en-11.png";
+import InaImg12En from "../Assets/obras/hablamorgen/en/habla-en-12.png";
+import InaImg13En from "../Assets/obras/hablamorgen/en/habla-en-13.png";
+import InaImg14En from "../Assets/obras/hablamorgen/en/habla-en-14.png";
+
 import NextIcon from "../Assets/obras/hablamorgen/next-icon.svg";
 import PrevIcon from "../Assets/obras/hablamorgen/prev-icon.svg";
 import "../Styles/App.css";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 import HTMLFlipBook from "react-pageflip";
 
 const Book = () => {
+  const { userLanguage, translateText } = useLanguage();
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
   const location = useLocation();
   const { pathname } = window.location;
 
@@ -62,6 +77,23 @@ const Book = () => {
     InaImg16,
     InaImg17,
     InaImg18,
+  ];
+
+  const imagesEn = [
+    InaImg1En,
+    InaImg2En,
+    InaImg3En,
+    InaImg4En,
+    InaImg5En,
+    InaImg6En,
+    InaImg7En,
+    InaImg8En,
+    InaImg9En,
+    InaImg10En,
+    InaImg11En,
+    InaImg12En,
+    InaImg13En,
+    InaImg14En,
   ];
 
   const flipBookRef = useRef(null);
@@ -134,11 +166,17 @@ const Book = () => {
           ref={flipBookRef}
           renderOnlyPageLengthChange={true}
         >
-          {images.map((image, index) => (
-            <div className={`demoPage${index}`} key={index}>
-              <img src={image} width={bookWidth - 10} height={bookHeight} />
-            </div>
-          ))}
+          {userLanguage === "ES"
+            ? images.map((image, index) => (
+                <div className={`demoPage${index}`} key={index}>
+                  <img src={image} width={bookWidth - 10} height={bookHeight} />
+                </div>
+              ))
+            : imagesEn.map((image, index) => (
+                <div className={`demoPage${index}`} key={index}>
+                  <img src={image} width={bookWidth - 10} height={bookHeight} />
+                </div>
+              ))}
         </HTMLFlipBook>
         <img
           width={30}

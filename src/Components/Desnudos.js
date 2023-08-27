@@ -146,11 +146,11 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      {showPopup && (
+      {/* {showPopup && (
         <div className="modal-overlay">
           <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };

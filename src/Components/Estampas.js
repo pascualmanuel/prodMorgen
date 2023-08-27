@@ -21,10 +21,6 @@ import FirstImage19 from "../Assets/obras/sellos/sellos-19.png";
 import FirstImage20 from "../Assets/obras/sellos/sellos-20.png";
 import FirstImage21 from "../Assets/obras/sellos/sellos-21.png";
 
-import IconTag from "../Assets/svg/icon-tag.svg";
-import StarPrueba from "../Assets/svg/star-apoyar.svg";
-import PopupObras from "./PopupObras";
-
 const Estampas = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -78,14 +74,14 @@ const Estampas = () => {
   }
 
   return (
-    <div className="image-gallery-conexion pointer">
+    <div className="image-gallery-conexion">
       <div className="conextion-row">
         {imagesFirstRow.map((image, index) => (
           <div className="image-container-conexion" key={index}>
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="conexion-images pointer"
+              className="conexion-images"
               onClick={() => openPopup(image)}
             />
             {/* <img
@@ -104,7 +100,7 @@ const Estampas = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="conexion-images pointer"
+              className="conexion-images"
               onClick={() => openPopup(image)}
             />
             {/* <img
@@ -123,7 +119,7 @@ const Estampas = () => {
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="conexion-images pointer"
+              className="conexion-images"
               onClick={() => openPopup(image)}
             />
             {/* <img
@@ -136,11 +132,11 @@ const Estampas = () => {
           </div>
         ))}
       </div>
-      {showPopup && (
+      {/* {showPopup && (
         <div className="modal-overlay">
           <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
