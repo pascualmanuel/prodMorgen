@@ -17,10 +17,10 @@ const PopupObras = ({ selectedImage, closePopup }) => {
 
     emailjs
       .sendForm(
-        process.env.EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
         "template_z4jrond",
         form.current,
-        process.env.EMAILJS_PUBLIC_KEY
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
