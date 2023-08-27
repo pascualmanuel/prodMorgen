@@ -289,7 +289,10 @@ function Home() {
               <div className="email-container">
                 <input
                   type="email"
-                  placeholder="Dirección de e-mail"
+                  placeholder={translateText(
+                    "e-mail address",
+                    "Dirección de e-mail"
+                  )}
                   className="email-input"
                 />
                 <button
@@ -297,7 +300,7 @@ function Home() {
                   className="submit-button"
                   style={{ background: "#AE79EF" }}
                 >
-                  Enviar
+                  {translateText("Send", "Enviar")}
                 </button>
               </div>
             </div>

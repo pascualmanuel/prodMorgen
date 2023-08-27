@@ -49,6 +49,14 @@ function Comunidad() {
   let buttonTextColab = "Ver trabajos colaborativos";
   let buttonTextVoces = "Leer las voces de la comunidad";
 
+  if (userLanguage === "ES") {
+    buttonTextColab = "Ver trabajos colaborativos";
+    buttonTextVoces = "Leer las voces de la comunidad";
+  } else {
+    buttonTextColab = "Collaborative works";
+    buttonTextVoces = "Community voices";
+  }
+
   let commButtonWidth = "300px";
 
   if (window.innerWidth < 1320) {

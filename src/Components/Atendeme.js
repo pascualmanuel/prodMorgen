@@ -333,7 +333,6 @@ const MiSeccion = () => {
 
       {/* <div className="atendeme-cont-title-mob"> */}
       <h2 className="atendeme-title">
-
         {translateText("Hear me out", "Atendeme")}
       </h2>
       {/* </div> */}
@@ -341,7 +340,7 @@ const MiSeccion = () => {
         <div className="atendeme-cont-button-mob">
           <div className="atendeme-button">
             <CustomButton
-              buttonText={"Participar"}
+              buttonText={translateText("Participate", "Participar")}
               firstColor={"#FE6970"}
               secondColor={"#005DA2"}
               thirdColor={"#4590E6"}

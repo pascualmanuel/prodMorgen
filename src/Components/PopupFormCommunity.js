@@ -4,12 +4,12 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { isIOS, isSafari } from "react-device-detect";
-
+import { useLanguage } from "../Hooks/LanguageContext";
 const PopupFormCommunity = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [checked, setChecked] = useState(true);
-
+  const { userLanguage, translateText } = useLanguage();
   const [isIpad, setIsIpad] = useState(false);
 
   useEffect(() => {
@@ -61,9 +61,15 @@ const PopupFormCommunity = () => {
     <>
       <div className="support-cont">
         <div style={{ marginLeft: "30px" }}>
-          <h3 className="support-h3">Apoya el proyecto</h3>
+          <h3 className="support-h3">
+            {" "}
+            {translateText("Support the project", "Apoya el proyecto")}
+          </h3>
           <p className="support-p">
-            Con tu aporte ayudas a que Morgenstern siga creciendo.
+            {translateText(
+              "With your contribution you help Morgenstern continue to grow.",
+              "Con tu aporte ayudas a que Morgenstern siga creciendo."
+            )}
           </p>
         </div>
         <div className="right-cont-pop-community">
@@ -103,37 +109,54 @@ const PopupFormCommunity = () => {
             </div>
             {checked ? (
               <>
-                <Link to={"http://mpago.la/19Akn3M"} target="_blank">
+                <Link to={"http://mpago.la/132RpZw"} target="_blank">
                   <div className="support-button" style={{ marginTop: "50px" }}>
-                    Aportar $ 1000 ARS
+                    {translateText(
+                      "Contribute $ 2000 ARS",
+                      " Aportar $ 2000 ARS"
+                    )}
                   </div>
                 </Link>
-                <Link to={"http://mpago.la/132RpZw"} target="_blank">
-                  <div className="support-button">Aportar $ 2000 ARS </div>{" "}
-                </Link>
                 <Link to={"http://mpago.la/31zjr6T"} target="_blank">
+                  <div className="support-button">
+                    {translateText(
+                      "Contribute $ 5000 ARS",
+                      "Aportar $ 5000 ARS"
+                    )}
+                  </div>
+                </Link>
+                <Link
+                  to={"https://link.mercadopago.com.ar/holamorgenstern"}
+                  target="_blank"
+                >
                   <div className="support-button" style={{ marginBottom: 0 }}>
-                    {" "}
-                    Aportá lo que vos quieras
+                    {translateText(
+                      "Contribute what you want",
+                      "Aportá lo que vos quieras"
+                    )}
                   </div>
                 </Link>
               </>
             ) : (
               <>
-                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                <Link to={"http://mpago.la/132RpZw"} target="_blank">
                   <div className="support-button" style={{ marginTop: "50px" }}>
-                    Aportar 10USD
+                    {translateText("Contribute 10 USD", "Aporta 10 USD")}
                   </div>
                 </Link>
 
-                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
-                  <div className="support-button"> Aportar 20USD </div>
+                <Link to={"http://mpago.la/31zjr6T"} target="_blank">
+                  <div className="support-button">
+                    {translateText("Contribute 20 USD", "Aporta 20 USD")}
+                  </div>
                 </Link>
 
-                <Link to={"http://mpago.la/1FftDuU"} target="_blank">
+                <Link
+                  to={"https://link.mercadopago.com.ar/holamorgenstern"}
+                  target="_blank"
+                >
                   <div className="support-button" style={{ marginBottom: 0 }}>
-                    {" "}
-                    Aportar 50USD
+                    {translateText("Contribute 50 USD", "Aporta 50 USD")}
                   </div>
                 </Link>
               </>

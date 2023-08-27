@@ -414,7 +414,7 @@ const ImageSection = () => {
               </h2>
               <div className="atendeme-button">
                 <CustomButton
-                  buttonText={"Participar"}
+                  buttonText={translateText("Participate", "Participar")}
                   firstColor={"#DC3349"}
                   secondColor={"#005DA2"}
                   thirdColor={"#4590E6"}
@@ -507,7 +507,7 @@ const ImageSection = () => {
           ))}
           <div style={{ position: "fixed", top: "75vh" }}>
             <CustomButton
-              buttonText={"Participar"}
+              buttonText={translateText("Participate", "Participar")}
               firstColor={"#DC3349"}
               secondColor={"#005DA2"}
               thirdColor={"#4590E6"}

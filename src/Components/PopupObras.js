@@ -1,7 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 const PopupObras = ({ selectedImage, closePopup }) => {
+  const { userLanguage, translateText } = useLanguage();
+
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
@@ -79,7 +82,10 @@ const PopupObras = ({ selectedImage, closePopup }) => {
           <div className="email-container">
             <input
               type="email"
-              placeholder="Dirección de e-mail"
+              placeholder={translateText(
+                "e-mail address",
+                "Dirección de e-mail"
+              )}
               className="email-input"
             />
             <button
@@ -87,7 +93,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
               className="submit-button"
               style={{ background: "#FE6970" }}
             >
-              Enviar
+              {translateText("Send", "Enviar")}
             </button>
           </div>
         </div>

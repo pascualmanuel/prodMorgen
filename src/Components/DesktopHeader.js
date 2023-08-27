@@ -187,7 +187,7 @@ function HeaderDesktop() {
           <section className="navbar-right-section-desk">
             <Link to={"/yomorgenstern"}>
               <h2 onClick={closeMenu} className="navbar-title yoMor">
-                {translateText("Me, Morgenstern", "Yo, Morgenstern")}
+                {translateText("I, Morgenstern", "Yo, Morgenstern")}
               </h2>
             </Link>
             <Link to={"/obras"}>
