@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import FirstImage1 from "../Assets/obras/conexion/conexioni-1.png";
 import FirstImage2 from "../Assets/obras/conexion/conexioni-2.png";
 import FirstImage3 from "../Assets/obras/conexion/conexioni-3.png";
@@ -61,7 +61,6 @@ import FirstImage55 from "../Assets/obras/conexion/conexioni-55.png";
 import IconTag from "../Assets/svg/icon-tag.svg";
 import StarPrueba from "../Assets/svg/star-apoyar.svg";
 import PopupObras from "./PopupObras";
-
 const ConexionInestable = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -83,262 +82,314 @@ const ConexionInestable = () => {
       img: FirstImage1,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage1 ",
     },
     {
       img: FirstImage2,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage2 ",
     },
     {
       img: FirstImage3,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage3 ",
     },
     {
       img: FirstImage4,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage4 ",
     },
     {
       img: FirstImage5,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage5 ",
     },
     {
       img: FirstImage6,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage6 ",
     },
     {
       img: FirstImage7,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage7 ",
     },
     {
       img: FirstImage8,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage8 ",
     },
     {
       img: FirstImage9,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage9 ",
     },
 
     {
       img: FirstImage10,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage10",
     },
     {
       img: FirstImage11,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage11",
     },
     {
       img: FirstImage12,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage12",
     },
     {
       img: FirstImage13,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage13",
     },
     {
       img: FirstImage14,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage14",
     },
     {
       img: FirstImage15,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage15",
     },
     {
       img: FirstImage16,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage16",
     },
     {
       img: FirstImage17,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage17",
     },
     {
       img: FirstImage18,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage18",
     },
     {
       img: FirstImage19,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage19",
     },
     {
       img: FirstImage20,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage20",
     },
     {
       img: FirstImage21,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage21",
     },
     {
       img: FirstImage22,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage22",
     },
     {
       img: FirstImage23,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage23",
     },
     {
       img: FirstImage24,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage24",
     },
     {
       img: FirstImage25,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: " FirstImage25",
     },
     {
       img: FirstImage26,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage27,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage28,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage29,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage30,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage31,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage32,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage33,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage34,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage35,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage36,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage37,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage38,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage39,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage40,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage41,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage42,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage43,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage44,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage45,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage46,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage47,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage48,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage49,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage50,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage51,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
     {
       img: FirstImage52,
       dimension: "43cm x 47cm",
       details: "tela tensada",
+      imgName: "",
     },
   ];
 

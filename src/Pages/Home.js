@@ -1,13 +1,14 @@
 import "../Styles/App.css";
 import MorgenGirando from "../Components/MorgenGirando";
 import CustomButton from "../Components/CustomButton";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MobileView } from "react-device-detect";
 import MobileHome from "../Components/MobileHome";
 
 import "./Prueba.css";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../Hooks/LanguageContext";
+import emailjs from "@emailjs/browser";
 
 function Home() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -33,6 +34,28 @@ function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.EMAILJS_SERVICE_ID,
+        "template_z4jrond",
+        form.current,
+        process.env.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
@@ -287,21 +310,28 @@ function Home() {
             </div>
             <div className="contact-me" style={{ marginLeft: 60 }}>
               <div className="email-container">
-                <input
-                  type="email"
-                  placeholder={translateText(
-                    "e-mail address",
-                    "Dirección de e-mail"
-                  )}
-                  className="email-input"
-                />
-                <button
-                  type="submit"
-                  className="submit-button"
-                  style={{ background: "#AE79EF" }}
+                <form
+                  style={{ display: "contents" }}
+                  ref={form}
+                  onSubmit={sendEmail}
                 >
-                  {translateText("Send", "Enviar")}
-                </button>
+                  <input
+                    type="email"
+                    name="user_email"
+                    placeholder={translateText(
+                      "e-mail address",
+                      "Dirección de e-mail"
+                    )}
+                    className="email-input"
+                  />
+                  <button
+                    type="submit"
+                    className="submit-button"
+                    style={{ background: "#AE79EF" }}
+                  >
+                    {translateText("Send", "Enviar")}
+                  </button>
+                </form>
               </div>
             </div>
           </div>

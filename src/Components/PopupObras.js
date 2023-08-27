@@ -1,12 +1,37 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
+import { useLocation } from "react-router-dom";
 
+import emailjs from "@emailjs/browser";
 const PopupObras = ({ selectedImage, closePopup }) => {
   const { userLanguage, translateText } = useLanguage();
 
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.EMAILJS_SERVICE_ID,
+        "template_z4jrond",
+        form.current,
+        process.env.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
   useEffect(() => {
     document.body.classList.add("no-scroll");
@@ -80,21 +105,43 @@ const PopupObras = ({ selectedImage, closePopup }) => {
 
         <div className="contact-me-obras" style={{ marginLeft: 0 }}>
           <div className="email-container">
-            <input
-              type="email"
-              placeholder={translateText(
-                "e-mail address",
-                "Dirección de e-mail"
-              )}
-              className="email-input"
-            />
-            <button
-              type="submit"
-              className="submit-button"
-              style={{ background: "#FE6970" }}
+            <form
+              onSubmit={sendEmail}
+              ref={form}
+              style={{ display: "contents" }}
             >
-              {translateText("Send", "Enviar")}
-            </button>
+              <input
+                type="email"
+                name="user_email"
+                placeholder={translateText(
+                  "e-mail address",
+                  "Dirección de e-mail"
+                )}
+                className="email-input"
+              />
+              <input
+                type="hidden"
+                name="image_dimension"
+                value={selectedImage.dimension}
+              />
+              <input
+                type="hidden"
+                name="image_name"
+                value={selectedImage.imgName}
+              />
+              <input
+                type="hidden"
+                name="image_details"
+                value={selectedImage.details}
+              />
+              <button
+                type="submit"
+                className="submit-button"
+                style={{ background: "#FE6970" }}
+              >
+                {translateText("Send", "Enviar")}
+              </button>
+            </form>
           </div>
         </div>
       </div>
