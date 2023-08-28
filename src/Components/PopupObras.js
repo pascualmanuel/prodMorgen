@@ -77,14 +77,22 @@ const PopupObras = ({ selectedImage, closePopup }) => {
         <img src={selectedImage.img} alt="Popup Image" />
       </div>
       <div className="popup-conexion-right">
-        <h3 className="popup-conexion-title">Si querés comprar esta obra...</h3>
+        <h3 className="popup-conexion-title">
+          {translateText(
+            "If you want to buy this work...",
+            "Si querés comprar esta obra..."
+          )}
+        </h3>
         <img
           style={{ display: inImg }}
           src={selectedImage.img}
           alt="Popup Image"
         />
         <p className="popup-conexion-subtitle">
-          Dejá tu mail y recibí la información de compra.
+          {translateText(
+            "Leave your email to receive more information",
+            "Dejá tu mail y recibí la información de compra."
+          )}
         </p>
 
         <p className="popup-conexion-caracteristicas">
