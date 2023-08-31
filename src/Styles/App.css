@@ -209,6 +209,7 @@ h4 {
 
 .plus-icon {
   display: flex;
+  -webkit-tap-highlight-color: transparent;
 }
 .menu {
   position: fixed;
