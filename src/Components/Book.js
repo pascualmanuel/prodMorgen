@@ -42,17 +42,20 @@ import HTMLFlipBook from "react-pageflip";
 const Book = () => {
   const { userLanguage, translateText } = useLanguage();
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   const location = useLocation();
   const { pathname } = window.location;
 
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
+      setViewportHeight(window.innerHeight);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };

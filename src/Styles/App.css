@@ -208,8 +208,6 @@ h4 {
 }
 
 .plus-icon {
-  /* cursor: url("../Assets/svg/cursor-final.svg"), auto !important; */
-  /* cursor: pointer; */
   display: flex;
 }
 .menu {
