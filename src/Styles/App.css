@@ -4,6 +4,11 @@ body {
   margin: 0 auto !important;
 }
 
+.disableSave {
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
 .cursor-morgen {
   cursor: url("../Assets//svg/pointer-morgen.svg"), auto;
 }
@@ -208,9 +213,8 @@ h4 {
 }
 
 .plus-icon {
-  /* cursor: url("../Assets/svg/cursor-final.svg"), auto !important; */
-  /* cursor: pointer; */
   display: flex;
+  -webkit-tap-highlight-color: transparent;
 }
 .menu {
   position: fixed;
@@ -369,6 +373,7 @@ h4 {
   padding-right: 45px;
   font-family: Medium;
   border-radius: 0;
+  touch-action: manipulation !important; /* Prevent double-tap zooming on touch devices */
 }
 .email-input::placeholder {
   color: black;

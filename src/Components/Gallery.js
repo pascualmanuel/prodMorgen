@@ -357,9 +357,9 @@ const ImageSection = () => {
       {window.innerWidth > 720 ? (
         <>
           <div onMouseMove={handleMouseMove}>
-            <div className="image-section">
+            <div className="image-section ">
               <div
-                className="grid-container"
+                className="grid-container "
                 style={{ transform: transformStyle }}
               >
                 {galleryContent.map((item, index) => (
@@ -374,7 +374,7 @@ const ImageSection = () => {
                     {item.media === "image" && (
                       <div
                         key={index}
-                        className=" box pointer"
+                        className=" box pointer disableSave"
                         style={{ backgroundImage: `url(${item.source})` }}
                         onClick={() => handleImageClick(index)}
                       >
@@ -474,10 +474,11 @@ const ImageSection = () => {
                 item.media === "video" ? "video-box" : ""
               }`}
               onClick={() => handleImageClick(index)}
+              style={{ backgroundColor: item.source }}
             >
               {item.media === "image" && (
                 <div
-                  className={`gallery-box-mob box pointer`}
+                  className={`gallery-box-mob box pointer disableSave`}
                   style={{ backgroundImage: `url(${item.source})` }}
                 >
                   <div className="image-text">

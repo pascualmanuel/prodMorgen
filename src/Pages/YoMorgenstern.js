@@ -131,12 +131,17 @@ function YoMorgen() {
             <h2 className="yomor-mob-title">
               Yo, <br /> Morgenstern
             </h2>
-            <img src={MorgenImgSvg} alt="Morgen" width={100} />
+            <img
+              src={MorgenImgSvg}
+              alt="Morgen"
+              className="disableSave"
+              width={100}
+            />
           </div>
         )}
 
-        <div style={YoMorStyle}></div>
-        <div style={YoMorStyleDos}>
+        <div className="disableSave" style={YoMorStyle}></div>
+        <div className="disableSave" style={YoMorStyleDos}>
           <div className="yoMor-text-grande">
             <p className="yoMor-text">
               {translateText(

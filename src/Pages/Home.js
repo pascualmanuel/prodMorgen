@@ -4,6 +4,8 @@ import CustomButton from "../Components/CustomButton";
 import React, { useEffect, useState, useRef } from "react";
 import { MobileView } from "react-device-detect";
 import MobileHome from "../Components/MobileHome";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./Prueba.css";
 import { useLocation } from "react-router-dom";
@@ -55,6 +57,15 @@ function Home() {
         }
       );
     e.target.reset();
+    let successMessage = translateText(
+      "Email sent successfully",
+      "Email enviado correctamente"
+    );
+
+    toast.success(successMessage, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+
   };
 
   var homeButtonWidth = "210px";

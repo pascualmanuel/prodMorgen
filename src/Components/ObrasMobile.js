@@ -116,7 +116,10 @@ const ObrasMobile = () => {
 
   return (
     <>
-      <div className="tab-mob-container" style={{ paddingTop: 100 }}>
+      <div
+        className="tab-mob-container disableSave"
+        style={{ paddingTop: 100 }}
+      >
         <div className="obras-welcome">
           <h2 style={{ fontSize: "50px" }}> Obras</h2>
           <span onClick={openPopup}>

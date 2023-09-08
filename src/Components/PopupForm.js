@@ -49,12 +49,21 @@ const PopupForm = () => {
 
   const textPlaceHolder =
     location.pathname === "/atendeme"
-      ? "Escribí acá tu comentario. Puede ser una idea, observación, o algo que te interese mencionar sobre nuestro mundo contemporáneo."
-      : "Presentate brevemente, y contanos de qué forma te gustaría participar";
+      ? translateText(
+          "Write your comment here. It can be an idea, observation, or something that you are interested in mentioning about our contemporary world.",
+          "Escribí acá tu comentario. Puede ser una idea, observación, o algo que te interese mencionar sobre nuestro mundo contemporáneo."
+        )
+      : translateText(
+          "Introduce yourself briefly, and tell us how you would like to participate",
+          "Presentate brevemente, y contanos de qué forma te gustaría participar"
+        );
 
   const textOdio =
     location.pathname === "/atendeme"
-      ? "Morgenstern busca fomentar un espacio inclusivo y respetuoso de intercambio. No toleramos ni apoyamos ningún tipo de discurso que promueva el odio, la discriminación, el racismo ni ninguna forma de violencia."
+      ? translateText(
+          "Morgenstern seeks to foster an inclusive and respectful space for exchange. We do not tolerate or support any type of speech that promotes hate, discrimination, racism or any form of violence.",
+          "Morgenstern busca fomentar un espacio inclusivo y respetuoso de intercambio. No toleramos ni apoyamos ningún tipo de discurso que promueva el odio, la discriminación, el racismo ni ninguna forma de violencia"
+        )
       : "";
 
   const prueba = (
@@ -70,13 +79,16 @@ const PopupForm = () => {
           {pathname !== "/gallery" && (
             <div className="form-row form-row-cont-mob">
               <div className="form-row-mob">
-                <h3>Me llamo</h3>
-                <input type="text" placeholder="Nombre" />
+                <h3>{translateText("My name is", "Me llamo")}</h3>
+                <input
+                  type="text"
+                  placeholder={translateText("Name", "Nombre")}
+                />
               </div>
               <div className="form-row-mob">
-                <h3>y tengo</h3>
+                <h3>{translateText("and I'm", "y tengo")}</h3>
                 <input type="number" placeholder="300" />
-                <h3>Años.</h3>
+                <h3>{translateText("years old.", "y años.")}</h3>
               </div>
             </div>
           )}
