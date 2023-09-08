@@ -1,12 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import FbLogo from "../Assets/svg/fb-svg.svg";
 import IgLogo from "../Assets/svg/ig-svg.svg";
 import MailSVG from "../Assets/svg/mail-svg.svg";
 import CircleNav from "../Assets/svg/circle-nav-svg.svg";
 import CircleWhiteNav from "../Assets/svg/circle-nav-white-svg.svg";
 import { useLanguage } from "../Hooks/LanguageContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
+
 function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [iconRotation, setIconRotation] = useState(0);
@@ -17,6 +20,36 @@ function MobileHeader() {
   const { userLanguage, toggleLanguage } = useLanguage();
   const isEnSelected = userLanguage === "EN";
   const isEsSelected = userLanguage === "ES";
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        "template_z4jrond",
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    let successMessage = translateText(
+      "Recibido",
+      "Email enviado correctamente"
+    );
+
+    toast.success(successMessage, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
 
   const handleEsClick = () => {
     toggleLanguage(); // Cambiar a EN
@@ -164,17 +197,26 @@ function MobileHeader() {
                 {" "}
                 {translateText("Stay tuned", "Recibí novedades")}
               </p>
-              {/* <input type="email" placeholder="Enter your email" /> */}
-              {/* <input /> */}
+
               <div className="email-container">
-                <input
-                  type="email"
-                  placeholder={translateText("e-mail address", "e-mail")}
-                  className="email-input"
-                />
-                <button type="submit" className="submit-button">
-                  {translateText("Send", "Enviar")}
-                </button>
+                <form
+                  style={{ display: "contents" }}
+                  ref={form}
+                  onSubmit={sendEmail}
+                >
+                  <input
+                    type="email"
+                    name="user_email"
+                    placeholder={translateText(
+                      "e-mail address",
+                      "Dirección de e-mail"
+                    )}
+                    className="email-input" 
+                  />
+                  <button type="submit" className="submit-button">
+                    {translateText("Send", "Enviar")}
+                  </button>
+                </form>
               </div>
             </div>
           </section>

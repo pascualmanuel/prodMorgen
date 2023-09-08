@@ -9,7 +9,6 @@ body {
   -webkit-touch-callout: none !important;
 }
 
-
 .cursor-morgen {
   cursor: url("../Assets//svg/pointer-morgen.svg"), auto;
 }
@@ -374,6 +373,7 @@ h4 {
   padding-right: 45px;
   font-family: Medium;
   border-radius: 0;
+  touch-action: manipulation !important; /* Prevent double-tap zooming on touch devices */
 }
 .email-input::placeholder {
   color: black;

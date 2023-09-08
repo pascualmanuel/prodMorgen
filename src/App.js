@@ -21,6 +21,7 @@ import Prueba from "./Components/Prueba";
 import Inadvertido from "./Components/Inadvertido";
 import LaRevista from "./Pages/LaRevista";
 import AgendaComming from "./Pages/AgendaComming";
+import { ToastContainer } from "react-toastify";
 
 import { LanguageProvider } from "./Hooks/LanguageContext";
 import DisableRightClickWrapper from "./Hooks/DisableRightClickWrapper";
@@ -40,6 +41,8 @@ function App() {
       <LanguageProvider>
         <BrowserRouter>
           <ScrollToTop />
+          <ToastContainer />
+
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
