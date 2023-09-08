@@ -4,6 +4,12 @@ body {
   margin: 0 auto !important;
 }
 
+.disableSave {
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+
 .cursor-morgen {
   cursor: url("../Assets//svg/pointer-morgen.svg"), auto;
 }

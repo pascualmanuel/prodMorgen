@@ -84,7 +84,7 @@ function Comunidad() {
   return (
     <>
       <div className="comunidad-cont">
-        <div className="comunidad-left" style={comStyle}>
+        <div className="comunidad-left disableSave" style={comStyle}>
           <div className="comunidad-left-content">
             <h2 className="comunidad-title">
               {translateText("Community", "Comunidad")}

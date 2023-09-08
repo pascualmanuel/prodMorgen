@@ -227,6 +227,7 @@ const PushMorgen = () => {
             width={morgenPushWidth}
             alt="Black Morgen"
             useMap="#imageMap"
+            className="disableSave"
             style={{ userSelect: "none" }}
           />
         </div>
