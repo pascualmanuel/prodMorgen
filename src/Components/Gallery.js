@@ -439,7 +439,6 @@ const ImageSection = () => {
                       className="modal-image"
                       src={selectedImageData.source}
                       alt="Selected Image!"
-                      style={{ backgroundColor: item.source }}
                     />
                     <div className="submodal">
                       <div className="submodal-top">
@@ -475,6 +474,7 @@ const ImageSection = () => {
                 item.media === "video" ? "video-box" : ""
               }`}
               onClick={() => handleImageClick(index)}
+              style={{ backgroundColor: item.source }}
             >
               {item.media === "image" && (
                 <div
