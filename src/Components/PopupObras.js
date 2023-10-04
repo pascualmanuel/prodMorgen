@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
-import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
