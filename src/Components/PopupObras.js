@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "../Hooks/LanguageContext";
-import { useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import emailjs from "@emailjs/browser";
 const PopupObras = ({ selectedImage, closePopup }) => {
@@ -31,8 +32,15 @@ const PopupObras = ({ selectedImage, closePopup }) => {
         }
       );
     e.target.reset();
-  };
+    let successMessage = translateText(
+      "Sent! Morgenstern will contact you soon :)",
+      "Enviado! Morgenstern pronto se pondrá en contacto con vos:)"
+    );
 
+    toast.success(successMessage, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
   useEffect(() => {
     document.body.classList.add("no-scroll");
 
@@ -70,7 +78,8 @@ const PopupObras = ({ selectedImage, closePopup }) => {
     };
   }, [closePopup]);
 
-  console.log(selectedImage);
+  console.log(selectedImage.details);
+
   return (
     <div className="popup-conexion">
       <div style={{ display: outImg }}>
@@ -97,9 +106,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
 
         <p className="popup-conexion-caracteristicas">
           Dimensiones:&nbsp;
-          <span style={{ fontFamily: "Light", textTransform: "capitalize" }}>
-            {selectedImage.dimension}
-          </span>
+          <span style={{ fontFamily: "Light" }}>{selectedImage.dimension}</span>
         </p>
         <p
           className="popup-conexion-caracteristicas"
@@ -121,6 +128,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
               <input
                 type="email"
                 name="user_email"
+                required
                 placeholder={translateText(
                   "e-mail address",
                   "Dirección de e-mail"
@@ -132,11 +140,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
                 name="image_dimension"
                 value={selectedImage.dimension}
               />
-              <input
-                type="hidden"
-                name="image_name"
-                value={selectedImage.imgName}
-              />
+              <input type="hidden" name="image_url" value={selectedImage.img} />
               <input
                 type="hidden"
                 name="image_details"
@@ -144,7 +148,7 @@ const PopupObras = ({ selectedImage, closePopup }) => {
               />
               <button
                 type="submit"
-                className="submit-button"
+                className="submit-button pointer"
                 style={{ background: "#FE6970" }}
               >
                 {translateText("Send", "Enviar")}

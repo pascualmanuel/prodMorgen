@@ -58,14 +58,13 @@ function Home() {
       );
     e.target.reset();
     let successMessage = translateText(
-      "Email sent successfully",
-      "Email enviado correctamente"
+      "Welcome! You are now part of the Morgensterns Community",
+      "Recibido! Ya sos parte de la comunidad de Morgensterns"
     );
 
     toast.success(successMessage, {
       position: toast.POSITION.TOP_RIGHT,
     });
-
   };
 
   var homeButtonWidth = "210px";
@@ -329,6 +328,7 @@ function Home() {
                   <input
                     type="email"
                     name="user_email"
+                    required
                     placeholder={translateText(
                       "e-mail address",
                       "Dirección de e-mail"

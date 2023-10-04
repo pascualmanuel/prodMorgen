@@ -32,48 +32,48 @@ const Desnudos = () => {
   const allImages = [
     {
       img: FirstImage1,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage2,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage3,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage4,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage5,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage6,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage7,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage8,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
     {
       img: FirstImage9,
-      dimension: "43cm x 47cm",
-      details: "tela tensada",
+      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
+      details: "Papel telado 250gr",
     },
   ];
 
@@ -146,11 +146,11 @@ const Desnudos = () => {
           </div>
         ))}
       </div>
-      {/* {showPopup && (
+      {showPopup && (
         <div className="modal-overlay">
           <PopupObras selectedImage={selectedImage} closePopup={closePopup} />
         </div>
-      )} */}
+      )}
     </div>
   );
 };

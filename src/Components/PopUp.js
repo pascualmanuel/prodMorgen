@@ -52,12 +52,6 @@ const Popup = ({ isOpen, onClose }) => {
 
   let strokeColor = "white";
 
-  // if (locPath === "/obras" || "/agenda" || "/comunidad") {
-  //   strokeColor = "black";
-  // } else {
-  //   strokeColor = "red";
-  // }
-
   if (
     location.pathname === "/obras" ||
     location.pathname === "/agenda" ||
@@ -165,7 +159,6 @@ const Popup = ({ isOpen, onClose }) => {
             />
           </svg>
         </span>
-        {/* </div> */}
         {showCommunity && <PopupFormCommunity />}
         {showAtendeme && <PopupForm />}
       </div>
