@@ -42,8 +42,8 @@ function MobileHeader() {
       );
     e.target.reset();
     let successMessage = translateText(
-      "Recibido",
-      "Email enviado correctamente"
+      "Welcome! You are now part of the Morgensterns Community",
+      "Recibido! Ya sos parte de la comunidad de Morgensterns"
     );
 
     toast.success(successMessage, {
@@ -207,11 +207,12 @@ function MobileHeader() {
                   <input
                     type="email"
                     name="user_email"
+                    required
                     placeholder={translateText(
                       "e-mail address",
                       "Dirección de e-mail"
                     )}
-                    className="email-input" 
+                    className="email-input"
                   />
                   <button type="submit" className="submit-button">
                     {translateText("Send", "Enviar")}

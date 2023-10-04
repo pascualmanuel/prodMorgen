@@ -172,6 +172,7 @@ function HeaderDesktop() {
               <div className="email-container">
                 <input
                   type="email"
+                  required
                   placeholder={translateText(
                     "e-mail address",
                     "Dirección de e-mail"
