@@ -28,7 +28,7 @@ const Desnudos = () => {
     setSelectedImage(null);
     setShowPopup(false);
   };
-// #fe6970
+
   const allImages = [
     {
       img: FirstImage1,

@@ -156,22 +156,6 @@ const PushMorgen = () => {
   const polygonPoints =
     "128,6,152,4,172,6,188,10,195,26,200,40,204,62,201,76,211,95,226,119,211,124,206,153,208,178,240,187,264,203,275,216,288,243,292,273,299,306,304,333,301,377,306,392,315,413,323,434,326,466,325,491,325,517,315,549,303,560,298,595,92,596,94,540,90,497,51,488,21,476,3,455,4,430,17,386,7,317,6,287,15,236,61,202,82,184,78,160,77,143,85,106,76,84,77,55,83,33,97,16,111,13,122,13";
 
-  // const handleScreenshot = () => {
-  //   // Capture the screenshot of the entire document
-  //   html2canvas(document.documentElement).then((canvas) => {
-  //     // Convert the canvas to an image
-  //     const screenshotData = canvas.toDataURL();
-
-  //     // Create a link element to download the screenshot
-  //     const link = document.createElement("a");
-  //     link.href = screenshotData;
-  //     link.download = "screenshot.png";
-
-  //     // Trigger the download
-  //     link.click();
-  //   });
-  // };
-
   const handleScreenshot = () => {
     // Capture the screenshot of the entire document
     html2canvas(document.documentElement).then((canvas) => {
