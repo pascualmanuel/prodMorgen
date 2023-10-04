@@ -40,7 +40,6 @@ const PopupObras = ({ selectedImage, closePopup }) => {
 
     toast.success(successMessage, {
       position: toast.POSITION.TOP_RIGHT,
-      autoClose: 50001000,
     });
   };
   useEffect(() => {
