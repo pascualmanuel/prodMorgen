@@ -17,6 +17,7 @@ import Gallery10 from "../Assets/obras/inadvertido/inad-2.webp";
 import Gallery11 from "../Assets/gallery-imgs/Gallery-100.webp";
 import Gallery12 from "../Assets/obras/inadvertido/inad-6.webp";
 import Gallery13 from "../Assets/obras/inadvertido/inad-8.webp";
+import Gallery14 from "../Assets/gallery-imgs/Gallery-101.png";
 
 // import Gallery12 from "../Assets/gallery-imgs/Gallery-101.webp";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
@@ -214,11 +215,11 @@ const ImageSection = () => {
       author: "Santiago Antín",
     },
     {
-      media: "color",
-      source: "#DC3349", // Provide the correct image URL here
-      category: "Fotografía",
+      media: "image",
+      source: Gallery14, // Provide the correct image URL here
+      category: "Máscara",
       title: "Caras Morgenstern",
-      author: "Santiago Antín",
+      author: "Clara Dalmazzo",
     },
     {
       media: "image",
@@ -235,7 +236,7 @@ const ImageSection = () => {
     //   author: "Santiago Antín",
     // },
     {
-      media: "color",
+      media: "video",
       source: "#7D9F00", // Provide the correct image URL here
       category: "Fotografía",
       title: "Caras Morgenstern",
@@ -279,7 +280,7 @@ const ImageSection = () => {
     {
       media: "image",
       source: Gallery11,
-      category: "Fotografía ",
+      category: "VJ ",
       title: "Caras Morgenstern",
       author: "Manuel Fernández",
     },
