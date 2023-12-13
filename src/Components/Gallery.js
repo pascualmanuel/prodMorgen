@@ -6,8 +6,20 @@ import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
 import Gallery1 from "../Assets/gallery-imgs/gallery-1.webp";
 import Gallery2 from "../Assets/gallery-imgs/gallery-2.webp";
-import Gallery10 from "../Assets/gallery-imgs/Gallery-10.png";
+import Gallery3 from "../Assets/gallery-imgs/Gallery-10.jpeg";
 import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
+import Gallery5 from "../Assets/obras/inadvertido/inad-3.webp";
+import Gallery6 from "../Assets/obras/inadvertido/inad-4.webp";
+import Gallery7 from "../Assets/obras/inadvertido/inad-5.webp";
+import Gallery8 from "../Assets/obras/inadvertido/inad-9.webp";
+import Gallery9 from "../Assets/obras/inadvertido/inad-12.webp";
+import Gallery10 from "../Assets/obras/inadvertido/inad-2.webp";
+import Gallery11 from "../Assets/gallery-imgs/Gallery-100.webp";
+import Gallery12 from "../Assets/obras/inadvertido/inad-6.webp";
+import Gallery13 from "../Assets/obras/inadvertido/inad-8.webp";
+import Gallery14 from "../Assets/gallery-imgs/Gallery-101.png";
+
+// import Gallery12 from "../Assets/gallery-imgs/Gallery-101.webp";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
 import PrevIcon from "../Assets/svg/white-prev-icon.svg";
 import { useLanguage } from "../Hooks/LanguageContext";
@@ -128,153 +140,149 @@ const ImageSection = () => {
     {
       media: "color",
       source: "#4590E6",
-      category: "Historieta ",
+      category: "Fotografía",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery1,
-      category: "Historieta ",
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Kiki Ramos Sörvik",
     },
     {
       media: "color",
       source: "#DFB000",
-      category: "Historieta ",
-      date: "15/10/20",
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
-      media: "color",
-      source: "#FE6970",
-      category: "Historieta ",
-      date: "10/09/23",
+      media: "image",
+      source: Gallery5,
+      category: "Fotografía",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
       media: "color",
       source: "#FF3910",
-      category: "Historieta ",
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
+    },
+    {
+      media: "image",
+      source: Gallery6,
+      category: "Fotografía ",
+      title: "Caras Morgenstern",
+      author: "Santiago Antín",
+    },
+    {
+      media: "image",
+      source: Gallery13,
+      category: "Fotografía ",
+      title: "Caras Morgenstern",
+      author: "Kiki Ramos Sörvik",
+    },
+    {
+      media: "image",
+      source: Gallery7,
+      category: "Fotografía",
+      title: "Caras Morgenstern",
+      author: "Santiago Antín",
     },
     {
       media: "color",
-      source: "#AE79EF",
-      category: "Historieta ",
+      source: "#DC3349", // Provide the correct image URL here
+      category: "Fotografía",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "color",
-      source: "#005DA2",
-      category: "Historieta ",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "color",
-      source: "#7D9F00",
-      category: "Historieta",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery2, // Provide the correct image URL here
-      category: "Historieta",
+      category: "Fotografía",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "color",
-      source: "#DC3349", // Provide the correct image URL here
-      category: "Historieta",
-      date: "15/10/20",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "color",
-      source: "#DCCB00", // Provide the correct image URL here
-      category: "Historieta",
-      date: "10/09/23",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
-    },
-    {
-      media: "color",
-      source: "#DC3349", // Provide the correct image URL here
-      category: "Historieta",
-      title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
       media: "image",
-      source: Gallery10,
-      category: "Historieta",
+      source: Gallery8, // Provide the correct image URL here
+      category: "Fotografía",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
+    },
+    {
+      media: "image",
+      source: Gallery14, // Provide the correct image URL here
+      category: "Máscara",
+      title: "Caras Morgenstern",
+      author: "Clara Dalmazzo",
+    },
+    {
+      media: "image",
+      source: Gallery3,
+      category: "Fotografía",
+      title: "Caras Morgenstern",
+      author: "Manuel Fernández",
     },
     // {
     //   media: "video",
     //   source: "https://www.w3schools.com/html/mov_bbb.mp4",
-    //   category: "Historieta",
+    //   category: "Fotografía",
     //   title: "Caras Morgenstern",
-    //   author: "Ailin Kirjner",
+    //   author: "Santiago Antín",
     // },
     {
-      media: "color",
-      source: "#DFB000", // Provide the correct image URL here
-      category: "Historieta",
+      media: "video",
+      source: "#7D9F00", // Provide the correct image URL here
+      category: "Fotografía",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
-      media: "color",
-      source: "#FE6970",
-      category: "Historieta ",
+      media: "image",
+      source: Gallery9,
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
-      media: "color",
-      source: "#FF3910",
-      category: "Historieta ",
+      media: "image",
+      source: Gallery12,
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Daniela Novak",
     },
     {
-      media: "color",
-      source: "#AE79EF",
-      category: "Historieta ",
+      media: "image",
+      source: Gallery10,
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
       media: "color",
       source: "#005DA2",
-      category: "Historieta ",
+      category: "Fotografía ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery4,
-      category: "Historieta ",
+      category: "DIBUJO ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Júlia Barata",
     },
     {
-      media: "color",
-      source: "#7D9F00",
-      category: "Historieta ",
+      media: "image",
+      source: Gallery11,
+      category: "VJ ",
       title: "Caras Morgenstern",
-      author: "Ailin Kirjner",
+      author: "Manuel Fernández",
     },
   ];
 
