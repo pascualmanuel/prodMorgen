@@ -16,6 +16,19 @@ function Comunidad() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const { userLanguage, translateText } = useLanguage();
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set a timeout to make the button visible after 4 seconds
+    const timeoutId = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
+
+    // Clear the timeout if the component unmounts or if you have some cleanup logic
+    return () => clearTimeout(timeoutId);
+  }, []); // E
+
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
@@ -34,6 +47,7 @@ function Comunidad() {
     backgroundRepeat: " no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "bottom",
+    minHeight: "650px",
   };
 
   console.log(showPopup);
@@ -80,10 +94,19 @@ function Comunidad() {
     buttonTextVoces = "Voces de la comunidad";
   }
 
+  // if (window.innerHeight < 650) {
+  //   comStyle = {
+  //     backgroundImage: `url(${ComuBackDos})`,
+  //     backgroundRepeat: "no-repeat",
+  //     backgroundSize: "contain",
+  //     backgroundPosition: "0px 335px",
+  //   };
+  // }
+
   // console.log(commButtonWidth);
   return (
     <>
-      <div className="comunidad-cont">
+      <div className="comunidad-cont" style={{ overflow: "hidden" }}>
         <div className="comunidad-left disableSave" style={comStyle}>
           <div className="comunidad-left-content">
             <h2 className="comunidad-title">
@@ -97,8 +120,15 @@ function Comunidad() {
                 "No queremos ser Morgensterns, queremos generar espacios de encuentro, construir comunidad para dar lugar a la creatividad, la reflexión, la risa. Para eso, proponemos diferentes formas de interacción, como colaboraciones, creación de obras colectivas, eventos y más. Te invitamos a seguir pensando y creando en conjunto como más te guste."
               )}
             </p>
-            <div onClick={openPopup} className="comunidad-spike pointer">
-              <SpikeButtonThree />
+
+            <div
+              className={`obras-spike-button-container ${
+                isVisible ? "visible" : ""
+              }`}
+            >
+              <div onClick={openPopup} className="comunidad-spike pointer">
+                <SpikeButtonThree />
+              </div>
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ const PopupForm = () => {
     };
   }
 
-  if (viewportHeight <= 660) {
+  if (viewportHeight <= 660 && viewportWidth <= 720) {
     buttonWidth = "200px";
     buttonHeight = "5px";
   }
@@ -86,9 +86,9 @@ const PopupForm = () => {
                 />
               </div>
               <div className="form-row-mob">
-                <h3>{translateText("and I'm", "y tengo")}</h3>
+                <h3>{translateText(", and I'm", ", tengo")}</h3>
                 <input type="number" placeholder="300" />
-                <h3>{translateText("years old.", "y años.")}</h3>
+                <h3>{translateText("years old.", "años.")}</h3>
               </div>
             </div>
           )}

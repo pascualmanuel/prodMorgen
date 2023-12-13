@@ -42,7 +42,6 @@ function App() {
         <BrowserRouter>
           <ScrollToTop />
           <ToastContainer />
-
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

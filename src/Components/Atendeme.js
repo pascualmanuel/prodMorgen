@@ -115,6 +115,22 @@ const MiSeccion = () => {
     buttonHeight = "25px";
   }
 
+  const dataCol1 = [
+    // ... your data for col-sc-1
+  ];
+
+  const dataCol2 = [
+    // ... your data for col-sc-2
+  ];
+
+  const dataCol3 = [
+    // ... your data for col-sc-3
+  ];
+
+  const dataCol4 = [
+    // ... your data for col-sc-4
+  ];
+
   return (
     <>
       <div className="seccion-flexbox">
@@ -331,11 +347,10 @@ const MiSeccion = () => {
         </div>
       </div>
 
-      {/* <div className="atendeme-cont-title-mob"> */}
       <h2 className="atendeme-title">
         {translateText("Hear me out", "Atendeme")}
       </h2>
-      {/* </div> */}
+
       <div className="second-cont-atendeme">
         <div className="atendeme-cont-button-mob">
           <div className="atendeme-button">
