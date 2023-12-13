@@ -32,6 +32,17 @@ const ObrasDesktop = () => {
     setShowPopup(false);
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set a timeout to make the button visible after 4 seconds
+    const timeoutId = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
+
+    // Clear the timeout if the component unmounts or if you have some cleanup logic
+    return () => clearTimeout(timeoutId);
+  }, []); // E
   const accordionItems = [
     {
       title: translateText("Unstable connection", "Conexión intestable"),
@@ -133,8 +144,14 @@ const ObrasDesktop = () => {
           <h2 className="obras-title" style={{ fontSize: 70 }}>
             {translateText("Works", "Obras")}
           </h2>
-          <div onClick={openPopup} className="obras-spike-button pointer">
-            <SpikeButtonThree />
+          <div
+            className={`obras-spike-button-container ${
+              isVisible ? "visible" : ""
+            }`}
+          >
+            <div onClick={openPopup} className="obras-spike-button pointer">
+              <SpikeButtonThree />
+            </div>
           </div>
         </div>
         <Accordion items={accordionItems} />

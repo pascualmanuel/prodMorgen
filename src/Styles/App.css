@@ -597,7 +597,7 @@ h4 {
 }
 
 .p-popupform {
-  font-size: 15px;
+  font-size: 18px;
   margin-right: 20px;
   width: 750px;
 }
@@ -627,7 +627,7 @@ h4 {
     font-size: 25px;
   }
   .p-popupform {
-    font-size: 13px;
+    font-size: 17px;
   }
   .form-row {
     margin-bottom: 0px;
@@ -1727,7 +1727,7 @@ left: 180px; */
   }
 }
 
-@media (max-height: 650px) {
+@media (max-height: 650px) and (max-width: 720px) {
   .special-form h3 {
     font-size: 16px;
   }
@@ -1958,4 +1958,13 @@ left: 180px; */
   .special-form textarea::placeholder {
     font-size: 24px;
   }
+}
+
+.obras-spike-button-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.obras-spike-button-container.visible {
+  opacity: 1;
 }
