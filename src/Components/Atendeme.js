@@ -5,6 +5,7 @@ import "../Styles/App.css";
 import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
 import { useLanguage } from "../Hooks/LanguageContext";
+
 const MiSeccion = () => {
   const [showPopup, setShowPopup] = useState(false);
   const { userLanguage, translateText } = useLanguage();
@@ -116,24 +117,151 @@ const MiSeccion = () => {
   }
 
   const dataCol1 = [
-    // ... your data for col-sc-1
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"Ay no hablamos nunca pero se que estas bien porque te veo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"Estas a full te veo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
   ];
 
   const dataCol2 = [
-    // ... your data for col-sc-2
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
   ];
-
   const dataCol3 = [
-    // ... your data for col-sc-3
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
   ];
 
   const dataCol4 = [
-    // ... your data for col-sc-4
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
+    {
+      quote: `"No nos vemos pero te sigo en redes"`,
+      name: "Cynthia - 30 años",
+    },
   ];
+
+  const renderColumn = (data) => {
+    return data.map((item, index) => (
+      <div key={index} className="qt-cont">
+        <p className="p-qt">
+          {item.quote}
+          {/* {item.name && <span className="name-qt">{item.name}</span>} */}
+          <span className="name-qt">{item.name}</span>
+        </p>
+      </div>
+    ));
+  };
 
   return (
     <>
       <div className="seccion-flexbox">
+        <div className="columna-scrollable col-sc-1">
+          {renderColumn(dataCol1)}
+        </div>
+        <div
+          className="columna-scrollable col-sc-2"
+          style={{ marginLeft: "20px" }}
+        >
+          {renderColumn(dataCol2)}
+        </div>
+        <div
+          className="columna-scrollable col-sc-3"
+          style={{ marginLeft: "20px" }}
+        >
+          {renderColumn(dataCol3)}
+        </div>
+        <div
+          className="columna-scrollable col-sc-4"
+          style={{ marginLeft: "20px" }}
+        >
+          {renderColumn(dataCol4)}
+        </div>
+      </div>
+
+      {/* <div className="seccion-flexbox">
         <div className="columna-scrollable col-sc-1">
           <div className="qt-cont">
             <p className="p-qt">No nos vemos pero te sigo en redes</p>
@@ -345,7 +473,7 @@ const MiSeccion = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <h2 className="atendeme-title">
         {translateText("Hear me out", "Atendeme")}
