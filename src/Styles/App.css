@@ -551,14 +551,10 @@ h4 {
 }
 
 .popup-form-cont {
-  /* padding-top: 100px;
-  padding-left: 150px; */
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 110%;
+  height: 100%;
 }
 
 @media (max-width: 720px) {
