@@ -291,14 +291,26 @@ const ImageSection = () => {
 
   const handlePrevImage = () => {
     setSelectedImageIndex((prevIndex) => {
-      if (prevIndex === 0) {
-        return galleryContent.length - 1;
-      } else {
-        return prevIndex - 1;
+      let newIndex = prevIndex - 1;
+      const lastIndex = galleryContent.length - 1;
+
+      // Loop until we find an image or reach the beginning
+      while (newIndex !== prevIndex) {
+        if (newIndex < 0) {
+          newIndex = lastIndex;
+        }
+
+        if (galleryContent[newIndex].media === "image") {
+          return newIndex;
+        }
+
+        newIndex--;
       }
+
+      return prevIndex; // Fallback to the current index if no image is found
     });
   };
-  console.log(galleryContent);
+
   const handleNextImage = () => {
     setSelectedImageIndex((prevIndex) => {
       let nextIndex = prevIndex + 1;
@@ -372,7 +384,7 @@ const ImageSection = () => {
                         <div className="image-text">
                           <div className="hover-g-top">
                             <div style={{ marginBottom: 20, marginLeft: 20 }}>
-                              {item.title}
+                              {item.author}
                             </div>
                           </div>
                           <div className="hover-g-bottom"> </div>
