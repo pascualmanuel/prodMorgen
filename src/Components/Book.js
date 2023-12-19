@@ -55,14 +55,13 @@ const Book = () => {
 
     window.addEventListener("resize", handleResize);
 
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const images = [
-    InaImg1,
+    // InaImg1,
     InaImg2,
     InaImg3,
     InaImg4,
@@ -80,6 +79,7 @@ const Book = () => {
     InaImg16,
     InaImg17,
     InaImg18,
+    InaImg1,  
   ];
 
   const imagesEn = [
