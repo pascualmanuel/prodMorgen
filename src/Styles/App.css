@@ -373,16 +373,16 @@ h4 {
   padding-right: 45px;
   font-family: Medium;
   border-radius: 0;
-  touch-action: manipulation !important; /* Prevent double-tap zooming on touch devices */
+  touch-action: manipulation !important;
 }
 .email-input::placeholder {
   color: black;
 }
 
 .email-input:focus {
-  outline: black; /* Remove the focus outline */
+  outline: black;
 }
-
+/* 
 .submit-button {
   position: absolute;
   right: 0px;
@@ -396,6 +396,26 @@ h4 {
   cursor: pointer;
   font-family: Medium;
   border-left: 1px solid black;
+} */
+
+.email-input,
+.submit-button {
+  box-sizing: border-box;
+}
+
+.submit-button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 28%;
+  height: 100%; /* Adjust the percentage as needed */
+  background: #dccb00;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Medium;
+  border: 1px solid black;
 }
 
 .yoMor:hover {
@@ -1368,21 +1388,19 @@ left: 180px; */
     height: 92vh;
   }
 
-  .submit-button {
+  /* .submit-button {
     position: absolute;
     right: 0px;
     top: 1px;
     width: 28%;
-    /* height: calc(109% - -1px); */
     height: calc(109% - 2px);
     background: #dccb00;
     border: none;
     color: black;
     font-size: 16px;
-    /* cursor: pointer; */
     font-family: Medium;
     border-left: 1px solid black;
-  }
+  } */
   .accordion-subtitle {
     margin-top: 35vh;
   }
@@ -1466,11 +1484,10 @@ left: 180px; */
     border-radius: 0px;
   }
 
-  .submit-button {
+  /* .submit-button {
     height: 112% !important;
     top: 1px;
-    /* max-height: 50.5px !important; */
-  }
+  } */
   .nav-bar {
     margin-left: 0px;
     top: 0px;
@@ -1551,11 +1568,10 @@ left: 180px; */
     border-radius: 0px;
   }
 
-  .submit-button {
+  /* .submit-button {
     height: 112% !important;
     top: 1px;
-    /* max-height: 50.5px !important; */
-  }
+  } */
   .nav-bar {
     margin-left: 0px;
     top: 0px;
@@ -1780,13 +1796,13 @@ left: 180px; */
     height: 45px;
     position: relative;
   }
-  .submit-button {
+  /* .submit-button {
     position: absolute;
     right: -13px;
     width: 32%;
     height: 112% !important;
     top: 1px;
-  }
+  } */
   .support-h3 {
     font-size: 20px;
   }
@@ -1875,13 +1891,13 @@ left: 180px; */
     height: 35px;
     position: relative;
   }
-  .submit-button {
+  /* .submit-button {
     position: absolute;
     right: -13.6px;
     width: 32%;
     height: 116% !important;
     top: 1px;
-  }
+  } */
 }
 
 @media (max-height: 650px) {
@@ -1944,9 +1960,9 @@ left: 180px; */
   .comunidad-spike {
     bottom: 30px;
   }
-  .submit-button {
+  /* .submit-button {
     height: calc(109% - 2px);
-  }
+  } */
   .obras-spike-button {
     bottom: 275px;
   }
