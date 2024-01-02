@@ -70,7 +70,6 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
   z-index: 100;
 }
 
@@ -1964,3 +1963,5 @@ left: 180px; */
 .obras-spike-button-container.visible {
   opacity: 1;
 }
+
+

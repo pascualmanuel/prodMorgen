@@ -25,6 +25,8 @@ import { ToastContainer } from "react-toastify";
 
 import { LanguageProvider } from "./Hooks/LanguageContext";
 import DisableRightClickWrapper from "./Hooks/DisableRightClickWrapper";
+import YoMorgenstern from "./Pages/YoMorgenstern";
+import MorgenYo from "./Pages/MorgenYo";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -45,7 +47,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/yomorgenstern" element={<YoMorgen />} />
+            <Route path="/yomorgenstern" element={<YoMorgenstern />} />
             <Route path="/atendeme" element={<Atendeme />} />
             <Route path="/interactivo" element={<Interactivo />} />
             <Route path="/gallery" element={<Gallery />} />
@@ -55,6 +57,7 @@ function App() {
             <Route path="/prueba" element={<Prueba />} />
             <Route path="/revista" element={<LaRevista />} />
             <Route path="/agenda" element={<AgendaComming />} />
+            <Route path="/morgenyo" element={<MorgenYo />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>

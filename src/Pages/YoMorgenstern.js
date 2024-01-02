@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
 import YoMorBack from "../Assets/yomor/yomor1-1.png";
+import YoMorBack2 from "../Assets/yomor/yomor-prueba.png";
 import YoMorBackDos from "../Assets/yomor/yomor1-2.png";
 import YoMorBack4 from "../Assets/yomor/yomor1-3.png";
 import SpikeButton from "../Components/SpikeButton";
@@ -15,7 +16,8 @@ import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
 import { deviceDetect, isMobile } from "react-device-detect";
 import { useLanguage } from "../Hooks/LanguageContext";
-function YoMorgen() {
+
+function YoMorgenstern() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const { userLanguage, translateText } = useLanguage();
@@ -88,7 +90,7 @@ function YoMorgen() {
     };
   }
 
-  if (window.innerWidth < 720 || isMobile) {
+  if (window.innerWidth < 700 || isMobile) {
     YoMorStyle = {
       height: "500px",
       backgroundImage: `url(${YoMorBack})`,
@@ -278,4 +280,4 @@ function YoMorgen() {
     </>
   );
 }
-export default YoMorgen;
+export default YoMorgenstern;
