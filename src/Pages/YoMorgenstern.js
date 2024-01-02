@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import {useState, useEffect} from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
 import YoMorBack from "../Assets/yomor/yomor1-1.png";
@@ -16,12 +16,11 @@ import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
 import { deviceDetect, isMobile } from "react-device-detect";
 import { useLanguage } from "../Hooks/LanguageContext";
-
-function YoMorgenstern() {
+function YoMorgen() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-  const { userLanguage, translateText } = useLanguage();
-  const { pathname } = window.location;
+  const {userLanguage, translateText} = useLanguage();
+  const {pathname} = window.location;
 
   useEffect(() => {
     const handleResize = () => {
@@ -77,7 +76,7 @@ function YoMorgenstern() {
   if (showAdditionalText) {
     YoMorStyleDos.backgroundImage = `url(${yoMorBackSeeMore})`;
     YoMorStyleDos.height = "1700px";
-    heightMobileRead = "1000px";
+    heightMobileRead = "1450px";
   }
 
   if (window.innerWidth < 1000) {
@@ -96,7 +95,7 @@ function YoMorgenstern() {
       backgroundImage: `url(${YoMorBack})`,
       backgroundRepeat: " no-repeat",
       backgroundSize: "contain",
-      backgroundPosition: "right",
+      // backgroundPosition: "right",
     };
     YoMorStyleDos = {
       height: heightMobileRead,
@@ -125,7 +124,7 @@ function YoMorgenstern() {
 
   return (
     <>
-      <div style={{ backgroundColor: "black" }}>
+      <div style={{backgroundColor: "black"}}>
         {window.innerWidth > 720 ? (
           <BackgroundDiv />
         ) : (
@@ -217,7 +216,7 @@ function YoMorgenstern() {
                     viewBox="0 0 45 45"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    style={{ marginRight: "10px" }}
+                    style={{marginRight: "10px"}}
                   >
                     <path d="M5 22L40 22" stroke="white" strokeWidth="3" />
                     <path
@@ -234,7 +233,7 @@ function YoMorgenstern() {
             )}
           </div>
         </div>
-        <div className="spikes" style={{ zIndex: "110" }}>
+        <div className="spikes" style={{zIndex: "110", minHeight: "650px"}}>
           <div>
             <h2 className="spikes-title">
               {translateText("Idea and development:", "Idea y desarrollo:")}

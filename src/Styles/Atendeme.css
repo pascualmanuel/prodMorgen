@@ -516,6 +516,13 @@
   z-index: 100;
 }
 
+@media (max-width: 1200px) {
+  .spikes {
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
+}
+
 @media (max-width: 1110px) {
   .cont-svgs-obras {
     right: 15px;
