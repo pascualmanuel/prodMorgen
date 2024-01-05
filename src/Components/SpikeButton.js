@@ -18,7 +18,7 @@ function SpikeButton() {
   return (
     <>
       <Link to="/comunidad">
-        <div className="cont-svgs-comunidad pointer">
+        <div className="cont-svgs-comunidadnovale pointer spikeWidth">
           <img
             src={starImg}
             alt="SpikeButton"

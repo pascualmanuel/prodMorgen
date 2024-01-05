@@ -23,7 +23,7 @@ const BackgroundDiv = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  let MorgenWidthYoMorgen = 200;
+  let MorgenWidthYoMorgen = 150;
 
   if (window.innerWidth < 1420) {
     MorgenWidthYoMorgen -= (MorgenWidthYoMorgen * 15) / 100;
@@ -113,16 +113,16 @@ const BackgroundDiv = () => {
               top: 0,
               left: 0,
               zIndex: "100",
-              height: "100vh",
-              width: "100vw",
+              height: "1px",
+              width: "1px",
             }}
           />
         )}
-        <div className="wrapper full-h">
-          <div className="inside full-h">
+        <div className="wrapper" style={{ height: "90vh" }}>
+          <div className="inside" style={{ height: "90vh" }}>
             <h2
               style={{
-                fontSize: "100px",
+                fontSize: "90px",
                 color: "white",
                 zIndex: "2",
                 textAlign: "center",

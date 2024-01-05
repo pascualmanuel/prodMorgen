@@ -1,10 +1,13 @@
-import {Link} from "react-router-dom";
-import {useLocation} from "react-router-dom";
-import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 // import NavBar from "./NavBar";
 import BackgroundDiv from "../Components/BackgroundDiv";
 import YoMorBack from "../Assets/yomor/yomor1-1.png";
+
+import YoMorBack2 from "../Assets/yomor/yomor-prueba.png";
 import YoMorBackDos from "../Assets/yomor/yomor1-2.png";
+
 import YoMorBack4 from "../Assets/yomor/yomor1-3.png";
 import SpikeButton from "../Components/SpikeButton";
 import Itau from "../Assets/svg/itau-logo2.png";
@@ -13,13 +16,13 @@ import MorgenImgSvg from "../Assets/morgen-svg.svg";
 import Caba from "../Assets/svg/mecenazgo-logo-crop.png";
 import SpikeButtonTwo from "../Components/SpikeButtonTwo";
 import Book from "../Components/Book";
-import {deviceDetect, isMobile} from "react-device-detect";
-import {useLanguage} from "../Hooks/LanguageContext";
-function YoMorgen() {
+import { deviceDetect, isMobile } from "react-device-detect";
+import { useLanguage } from "../Hooks/LanguageContext";
+function YoMorgenstern() {
   const [showAdditionalText, setShowAdditionalText] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-  const {userLanguage, translateText} = useLanguage();
-  const {pathname} = window.location;
+  const { userLanguage, translateText } = useLanguage();
+  const { pathname } = window.location;
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,7 +47,9 @@ function YoMorgen() {
 
   let YoMorStyle = {
     height: heightFirstYoMor,
-    backgroundImage: `url(${YoMorBack})`,
+    backgroundImage: `url(${YoMorBack2})`,
+    backgroundSize: "cover",
+    backgroundPosition: "right",
     backgroundRepeat: " no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "right",
@@ -70,30 +75,49 @@ function YoMorgen() {
     width: "485px",
     height: "75px",
   };
-  let heightMobileRead = "450px";
+  let heightMobileRead = "550px";
 
   if (showAdditionalText) {
     YoMorStyleDos.backgroundImage = `url(${yoMorBackSeeMore})`;
     YoMorStyleDos.height = "1700px";
-    heightMobileRead = "1450px";
+    heightMobileRead = "1100px";
   }
 
   if (window.innerWidth < 1000) {
     YoMorStyleDos = {
       height: heightMobileRead,
-      backgroundImage: `none`,
+      backgroundImage: `url(${YoMorBackDos})`,
+      backgroundRepeat: " no-repeat",
+      backgroundSize: "contain",
+      backgroundPosition: "bottom right",
+      height: "700px",
     };
     YoMorStyle = {
       backgroundImage: `none`,
     };
   }
 
-  if (window.innerWidth < 720 || isMobile) {
-    YoMorStyle = {
-      height: "500px",
-      backgroundImage: `url(${YoMorBack})`,
+  if (window.innerWidth < 1000 && showAdditionalText) {
+    YoMorStyleDos = {
+      height: heightMobileRead,
+      backgroundImage: `url(${YoMorBackDos})`,
       backgroundRepeat: " no-repeat",
       backgroundSize: "contain",
+      backgroundPosition: "bottom right",
+      height: "1200px",
+    };
+    YoMorStyle = {
+      backgroundImage: `none`,
+    };
+  }
+
+  if (window.innerWidth < 700 || isMobile) {
+    YoMorStyle = {
+      height: "500px",
+      backgroundImage: `url(${YoMorBack2})`,
+      backgroundSize: "cover",
+      backgroundPosition: "right",
+      backgroundRepeat: " no-repeat",
       // backgroundPosition: "right",
     };
     YoMorStyleDos = {
@@ -114,16 +138,17 @@ function YoMorgen() {
   if (window.innerWidth < 575) {
     YoMorStyle = {
       height: "400px",
-      backgroundImage: `url(${YoMorBack})`,
+      backgroundImage: `url(${YoMorBack2})`,
+      backgroundPosition: "right",
       backgroundRepeat: " no-repeat",
-      backgroundSize: "contain",
+      backgroundSize: "cover",
       backgroundPosition: "right",
     };
   }
 
   return (
     <>
-      <div style={{backgroundColor: "black"}}>
+      <div style={{ backgroundColor: "black" }}>
         {window.innerWidth > 720 ? (
           <BackgroundDiv />
         ) : (
@@ -215,7 +240,7 @@ function YoMorgen() {
                     viewBox="0 0 45 45"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    style={{marginRight: "10px"}}
+                    style={{ marginRight: "10px" }}
                   >
                     <path d="M5 22L40 22" stroke="white" strokeWidth="3" />
                     <path
@@ -232,7 +257,7 @@ function YoMorgen() {
             )}
           </div>
         </div>
-        <div className="spikes" style={{zIndex: "110", minHeight: "650px"}}>
+        <div className="spikes" style={{ zIndex: "110" }}>
           <div>
             <h2 className="spikes-title">
               {translateText("Idea and development:", "Idea y desarrollo:")}
@@ -240,7 +265,6 @@ function YoMorgen() {
 
             <h4
               style={{
-                // position: "absolute",
                 fontFamily: "Light",
                 paddingBottom: "50px",
                 borderBottom: "solid 1px",
@@ -250,16 +274,21 @@ function YoMorgen() {
               Ailin Kirjner
             </h4>
           </div>
-          <div>
-            <span className="spike-yomor">
+          <div className="caca">
+            <span
+              className="position-spike-obras"
+              style={{ position: "absolute" }}
+            >
               <SpikeButtonTwo />
             </span>
-            <SpikeButton />
+            <span
+              className="position-spike-comu"
+              style={{ position: "absolute" }}
+            >
+              <SpikeButton />
+            </span>
           </div>
         </div>
-        {/* <div style={{ backgroundColor: "#dccb00", height: 200 }}>
-          <SpikeButton />
-        </div> */}
       </div>
 
       <div className="footer-yomor">
@@ -278,4 +307,4 @@ function YoMorgen() {
     </>
   );
 }
-export default YoMorgen;
+export default YoMorgenstern;
