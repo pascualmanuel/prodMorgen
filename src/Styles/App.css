@@ -1387,19 +1387,6 @@ left: 180px; */
     height: 92vh;
   }
 
-  /* .submit-button {
-    position: absolute;
-    right: 0px;
-    top: 1px;
-    width: 28%;
-    height: calc(109% - 2px);
-    background: #dccb00;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-family: Medium;
-    border-left: 1px solid black;
-  } */
   .accordion-subtitle {
     margin-top: 35vh;
   }
@@ -1483,10 +1470,6 @@ left: 180px; */
     border-radius: 0px;
   }
 
-  /* .submit-button {
-    height: 112% !important;
-    top: 1px;
-  } */
   .nav-bar {
     margin-left: 0px;
     top: 0px;
@@ -1522,9 +1505,7 @@ left: 180px; */
     flex-direction: column-reverse;
     height: auto;
   }
-  /* .navbar-title {
-    font-size: 33px;
-  } */
+
   .navbar-title-mob {
     font-size: 33px;
   }
