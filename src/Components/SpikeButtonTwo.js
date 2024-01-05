@@ -18,7 +18,7 @@ function SpikeButtonTwo() {
   return (
     <>
       <Link to="/obras">
-        <div className="cont-svgs-obras pointer">
+        <div className="cont-svgs-obrasnovale pointer spikeWidth">
           <img
             src={starImg}
             alt="Obras"
