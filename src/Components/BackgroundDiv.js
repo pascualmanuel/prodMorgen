@@ -113,8 +113,8 @@ const BackgroundDiv = () => {
               top: 0,
               left: 0,
               zIndex: "100",
-              height: "1px",
-              width: "1px",
+              height: "100vh",
+              width: "100vw",
             }}
           />
         )}
