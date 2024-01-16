@@ -4,6 +4,10 @@ body {
   margin: 0 auto !important;
 }
 
+.relative {
+  position: relative;
+}
+
 .disableSave {
   -webkit-user-select: none !important;
   -webkit-touch-callout: none !important;
@@ -798,69 +802,80 @@ left: 180px; */
 }
 .left-agenda-cont {
   display: flex;
-  width: 60%;
-  background-image: url("../Assets/perro-morgen.png");
+  width: 50vw;
+  /* background-image: url("../Assets/perro-morgen.png"); */
+  background-image: url("../Assets/fechas/morgen-colores.png");
+
   height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-x: 90px;
+  background-position: bottom;
   align-items: center;
 }
 
 .right-agenda-cont {
-  width: 40%;
-  border-left: 2px solid black;
+  /* width: 40%; */
+  width: 50vw;
+  /* border-left: 2px solid black; */
   height: 100vh;
-  overflow-y: auto;
+  overflow-y: visible;
+}
+
+.fechas-titulo {
+  font-size: 90px;
+  margin-left: 150px;
 }
 
 .agenda-button {
   position: absolute;
-  top: 510px;
-  left: 515px;
+  top: 225px;
+  left: 310px;
 }
 
-@media (max-height: 770px) {
-  .agenda-button {
-    top: 440px;
-    left: 470px;
-  }
+.agenda-fixed-absolute {
+  position: fixed;
 }
 
 /* timeline */
 
 .timeline {
-  /* margin-left: 100px; */
   margin-left: 12px;
   overflow: visible;
+  padding-top: 105px;
+  position: relative;
+  border-left: 2px solid black;
+}
+
+.vw-complete-flex-left {
+  width: 100vw;
+  display: flex;
+  justify-content: end;
 }
 
 .entry {
   margin-left: 20px;
   position: relative;
-  padding-left: 30px;
+  padding-left: 100px;
   /*   border: 2px solid black; */
   /*   border-radius: 5px; */
   min-width: 100px;
   max-width: 150px;
-  height: 100px;
+  height: auto;
   overflow: visible;
-}
-
-.core {
-  width: inherit;
-  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .entry:after {
   content: "";
   position: absolute;
   display: block;
-  width: 35px;
+  width: 65px;
   height: 2px;
   background: black;
   top: 35%;
-  left: -19%;
+  left: -8%;
 }
 
 .entry:before {
@@ -872,6 +887,75 @@ left: 180px; */
   border-radius: 0px;
   /* background: black; */
   left: -19%;
+}
+
+.core {
+  width: 400px;
+  height: inherit;
+}
+
+/* Agenda tabley */
+
+@media (max-width: 1150px) {
+  .agenda-button {
+    top: 225px;
+    left: 210px;
+  }
+  .fechas-titulo {
+    margin-left: 40px;
+  }
+  .right-agenda-cont {
+    width: 54vw;
+  }
+}
+
+/* Agenda mobile */
+
+@media (max-width: 1000px) {
+  .vw-complete-flex-left {
+    justify-content: flex-start;
+    margin-left: 15px;
+  }
+
+  .timeline {
+    padding-top: 225px;
+    z-index: -1;
+    width: calc(100vw - 30px);
+  }
+  .entry {
+    max-width: none;
+    padding-left: 40px;
+    margin-left: 7%;
+  }
+  .core {
+    width: auto;
+  }
+  .left-agenda-cont {
+    height: 100vh;
+    width: auto;
+    background: none;
+    display: block;
+  }
+  .fechas-titulo {
+    font-size: 68px;
+    margin-top: 190px;
+    margin-left: 70px;
+  }
+  .agenda-button {
+    position: fixed;
+  }
+  .agenda-fixed-absolute {
+    position: absolute;
+  }
+  .fecha-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .entry:after {
+    width: 45px;
+  }
 }
 
 /* news popup */
@@ -911,8 +995,6 @@ left: 180px; */
   z-index: 100;
   transition: width 0.2s;
 }
-
-
 
 .accordion-tab:hover {
   width: calc(58px + 20px);
