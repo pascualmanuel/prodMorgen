@@ -47,7 +47,7 @@ function HeaderDesktop() {
     colorStroke = "black";
   } else if (
     location.pathname === "/atendeme" ||
-    location.pathname === "/agenda" ||
+    location.pathname === "/agendanueva" ||
     location.pathname === "/gallery" ||
     location.pathname === "/obras" ||
     location.pathname === "/comunidad" ||
@@ -220,7 +220,7 @@ function HeaderDesktop() {
                 MorgenMerch
               </h2>
             </a>
-            <Link to={"/agenda"}>
+            <Link to={"/agendanueva"}>
               <h2 onClick={closeMenu} className="navbar-title agenda">
                 {translateText("Calendar", "Agenda")}
               </h2>
