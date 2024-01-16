@@ -47,7 +47,7 @@ function HeaderDesktop() {
     colorStroke = "black";
   } else if (
     location.pathname === "/atendeme" ||
-    location.pathname === "/agenda" ||
+    location.pathname === "/agendanueva" ||
     location.pathname === "/gallery" ||
     location.pathname === "/obras" ||
     location.pathname === "/comunidad" ||
