@@ -17,7 +17,7 @@ import Malo from "./Components/Malo";
 import Comunidad from "./Pages/Comunidad";
 import Agenda from "./Pages/Agenda";
 import Obras from "./Pages/Obras";
-import Prueba from "./Components/Prueba";
+import Prueba from "./Pages/Prueba";
 import Inadvertido from "./Components/Inadvertido";
 import LaRevista from "./Pages/LaRevista";
 import AgendaComming from "./Pages/AgendaComming";
@@ -54,9 +54,11 @@ function App() {
             <Route path="/malo" element={<Malo />} />
             <Route path="/comunidad" element={<Comunidad />} />
             <Route path="/obras" element={<Obras />} />
-            <Route path="/prueba" element={<Prueba />} />
             <Route path="/revista" element={<LaRevista />} />
             <Route path="/agenda" element={<AgendaComming />} />
+            <Route path="/agendanueva" element={<Agenda />} />
+            <Route path="/prueba" element={<Prueba />} />
+
             <Route path="/morgenyo" element={<MorgenYo />} />
           </Routes>
         </BrowserRouter>

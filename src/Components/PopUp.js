@@ -92,7 +92,7 @@ const Popup = ({ isOpen, onClose }) => {
 
   const showCommunity =
     location.pathname === "/comunidad" ||
-    location.pathname === "/agenda" ||
+    location.pathname === "/agendanueva" ||
     location.pathname === "/obras";
   const showAtendeme =
     location.pathname === "/atendeme" || location.pathname === "/gallery";

@@ -6,12 +6,17 @@ import Img1 from "../Assets/svg/star-apoyar.svg";
 import Img1En from "../Assets/svg/star-apoyar-en.svg";
 import Img2 from "../Assets/svg/star-apoyar2.svg";
 import Img3 from "../Assets/svg/star-apoyar3.svg";
+import { Link, useLocation } from "react-router-dom";
 
-import { Link } from "react-router-dom";
 import { useLanguage } from "../Hooks/LanguageContext";
 function SpikeButtonThree() {
+  const location = useLocation();
   const { userLanguage, translateText } = useLanguage();
   let starImg = Img1;
+  let spikeScale = "1";
+  if (location.pathname === "/agendanueva") {
+    spikeScale = "0.8";
+  }
 
   if (userLanguage === "EN") {
     starImg = Img1En;
@@ -29,6 +34,7 @@ function SpikeButtonThree() {
             top: 0,
             transition: "transform 0.5s",
             zIndex: 3,
+            scale: spikeScale,
           }}
           onMouseEnter={() => {
             const cls2 = document.querySelector(".cls-2");
@@ -57,6 +63,7 @@ function SpikeButtonThree() {
             top: 0,
             transition: "transform 0.5s",
             zIndex: 2,
+            scale: spikeScale,
           }}
         />
         <img
@@ -69,6 +76,7 @@ function SpikeButtonThree() {
             top: 0,
             transition: "transform 0.5s",
             zIndex: 1,
+            scale: spikeScale,
           }}
           onMouseEnter={() => {
             const cls2 = document.querySelector(".cls-2");
