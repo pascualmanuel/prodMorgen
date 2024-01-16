@@ -144,14 +144,6 @@ function Agenda() {
       color: "#DC3349",
       imagen: Fechas11,
     },
-    {
-      titulo: "MORGEN SE ESTAMPA",
-      fechas: "SEPTIEMBRE 2023",
-      descripcion:
-        "Primeras serigrafías sobre textiles, con la colaboración de Flor Kligman de “AHREmeritas”",
-      color: "#DFB000",
-      imagen: Fechas11,
-    },
   ];
 
   const iFechasAgenda = fechasAgenda.reverse();
