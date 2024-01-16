@@ -199,7 +199,7 @@ const MobileHome = () => {
             <Link to={"/comunidad"}>
               <h2 className="mob-links-home">Comunidad</h2>
             </Link>
-            <Link to={"/agenda"}>
+            <Link to={"/agendanueva"}>
               <h2 className="mob-links-home">Agenda </h2>
             </Link>
           </div>

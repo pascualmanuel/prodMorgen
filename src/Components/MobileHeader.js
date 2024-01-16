@@ -252,7 +252,7 @@ function MobileHeader() {
                 MorgenMerch
               </h2>
             </Link>
-            <Link to={"/agenda"}>
+            <Link to={"/agendanueva"}>
               <h2 onClick={closeMenu} className="navbar-title-mob agenda">
                 {translateText("Calendar", "Agenda")}
               </h2>

@@ -220,7 +220,7 @@ function HeaderDesktop() {
                 MorgenMerch
               </h2>
             </a>
-            <Link to={"/agenda"}>
+            <Link to={"/agendanueva"}>
               <h2 onClick={closeMenu} className="navbar-title agenda">
                 {translateText("Calendar", "Agenda")}
               </h2>
