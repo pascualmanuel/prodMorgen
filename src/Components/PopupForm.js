@@ -84,7 +84,7 @@ const PopupForm = ({ onClose }) => {
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        "template_z4jrond",
+        "template_yloakyb",
         form.current,
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
