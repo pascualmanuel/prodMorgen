@@ -6,7 +6,6 @@ import PerroMorgen from "../Assets/perro-morgen.png";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 import Popup from "../Components/PopUp";
-import Book from "../Components/Book";
 import Fechas1 from "../Assets/fechas/fechas-1.png";
 import Fechas2 from "../Assets/fechas/fechas-2.png";
 import Fechas3 from "../Assets/fechas/fechas-3.png";
