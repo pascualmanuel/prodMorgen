@@ -910,6 +910,7 @@ left: 180px; */
 .core {
   width: 400px;
   height: inherit;
+  margin-left: 55px;
 }
 
 /* Agenda tabley */
