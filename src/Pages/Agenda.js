@@ -6,19 +6,19 @@ import SpikeButtonThree from "../Components/SpikeButtonThree";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 import Popup from "../Components/PopUp";
 // import Fechas1 from "../Assets/fechas/fechas-1.png";
-// import Fechas2 from "../Assets/fechas/fechas-2.png";
-// import Fechas3 from "../Assets/fechas/fechas-3.png";
-// import Fechas4 from "../Assets/fechas/fechas-4.png";
-// import Fechas5 from "../Assets/fechas/fechas-5.png";
-// import Fechas6 from "../Assets/fechas/fechas-6.png";
-// import Fechas7 from "../Assets/fechas/fechas-7.png";
-// import Fechas8 from "../Assets/fechas/fechas-8.png";
-// import Fechas9 from "../Assets/fechas/fechas-9.png";
-// import Fechas10 from "../Assets/fechas/fechas-10.png";
-// import Fechas11 from "../Assets/fechas/fechas-11.png";
-// import Fechas12 from "../Assets/fechas/fechas-12.png";
-// import Fechas13 from "../Assets/fechas/fechas-13.png";
-// import FechasWeb from "../Assets/fechas/fechas-web.png";
+import Fechas2 from "../Assets/fechas/fechas-2.png";
+import Fechas3 from "../Assets/fechas/fechas-3.png";
+import Fechas4 from "../Assets/fechas/fechas-4.png";
+import Fechas5 from "../Assets/fechas/fechas-5.png";
+import Fechas6 from "../Assets/fechas/fechas-6.png";
+import Fechas7 from "../Assets/fechas/fechas-7.png";
+import Fechas8 from "../Assets/fechas/fechas-8.png";
+import Fechas9 from "../Assets/fechas/fechas-9.png";
+import Fechas10 from "../Assets/fechas/fechas-10.png";
+import Fechas11 from "../Assets/fechas/fechas-11.png";
+import Fechas12 from "../Assets/fechas/fechas-12.png";
+import Fechas13 from "../Assets/fechas/fechas-13.png";
+import FechasWeb from "../Assets/fechas/fechas-web.png";
 import "../Styles/App.css";
 
 function Agenda() {
@@ -56,7 +56,7 @@ function Agenda() {
       descripcion:
         "Comienzo de la primera serie: “Conexión inestable”, eje principal del proyecto. Composiciones digitales a partir del dibujo original y primeros textos que definen su universo.",
       color: "#7D9F00",
-      // imagen: Fechas2,
+      imagen: Fechas2,
     },
     {
       titulo: "MORGEN EMPIEZA A RAMIFICARSE",
@@ -64,7 +64,7 @@ function Agenda() {
       descripcion:
         "Morgenstern en nuevos lenguajes y formatos que incluyen fotomontajes, pinturas, estampas, fanzines, entre otros.",
       color: "#4590E6",
-      // imagen: Fechas3,
+      imagen: Fechas3,
     },
     {
       titulo: "MORGEN COBRA MOVIMIENTO",
@@ -72,7 +72,7 @@ function Agenda() {
       descripcion:
         "Creación de las primeras animaciones digitales y juegos interactivos.",
       color: "#DC3349",
-      // imagen: Fechas4,
+      imagen: Fechas4,
     },
     {
       titulo: "MORGEN ENTRE NOSOTRXS",
@@ -80,21 +80,21 @@ function Agenda() {
       descripcion:
         "Amigxs de Morgen comparten sus fotografías donde se inserta, dando origen a la serie “Inadvertido”.",
       color: "#DFB000",
-      // imagen: Fechas5,
+      imagen: Fechas5,
     },
     {
       titulo: "MORGEN SE DESNUDA",
       fechas: "OCTUBRE 2022",
       descripcion: "Serie “Desnudos”, en Acrílico 21x29cm, Papel 200 gr.",
       color: "#AE79EF",
-      // imagen: Fechas6,
+      imagen: Fechas6,
     },
     {
       titulo: "MORGEN ANALÓGICO",
       fechas: "DICIEMBRE 2022",
       descripcion: "Primeras estampas en papel con sellos de goma.",
       color: "#7D9F00",
-      // imagen: Fechas7,
+      imagen: Fechas7,
     },
     {
       titulo: "MORGEN GANA MECENAZGO CULTURAL DEL GOBIERNO DE LA CIUDAD",
@@ -102,7 +102,7 @@ function Agenda() {
       descripcion:
         "El proyecto queda seleccionado por el programa Mecenazgo Cultural del Gobierno de la Ciudad de Buenos Aires y la Fundación Banco Itaú lo elige para ser su mecenas.",
       color: "#4590E6",
-      // imagen: Fechas8,
+      imagen: Fechas8,
     },
     {
       titulo: "MORGENTALLERES",
@@ -110,7 +110,7 @@ function Agenda() {
       descripcion:
         "El proyecto participa en talleres de videojuegos, arte y programación, animación e historieta. ",
       color: "#DC3349",
-      // imagen: Fechas9,
+      imagen: Fechas9,
     },
     {
       titulo: "MORGEN EN CARNE Y HUESO",
@@ -118,7 +118,7 @@ function Agenda() {
       descripcion:
         "Primera máscara de Morgenstern, realizada por Clara Dalmazzo.",
       color: "#DFB000",
-      // imagen: Fechas10,
+      imagen: Fechas10,
     },
     {
       titulo: "MORGENWEB",
@@ -126,7 +126,7 @@ function Agenda() {
       descripcion:
         "Creación del sitio web del proyecto, diseño y programación a cargo de Iñaki Recondo y Manuel Pascual.",
       color: "#AE79EF",
-      // imagen: FechasWeb,
+      imagen: FechasWeb,
     },
     {
       titulo: "MORGEN SONORO",
@@ -134,7 +134,7 @@ function Agenda() {
       descripcion:
         "Composiciones de la mano del artista sonoro y músico Hernán Kerlleñevich.",
       color: "#7D9F00",
-      // imagen: Fechas11,
+      imagen: Fechas11,
     },
     {
       titulo:
@@ -143,7 +143,7 @@ function Agenda() {
       descripcion:
         "La beca otorga un apoyo a la realización de un dispositivo de “Scroll físico” de la serie “Conexión Inestable” a realizar junto al artista plástico Nicolás Castagna.",
       color: "#4590E6",
-      // imagen: Fechas12,
+      imagen: Fechas12,
     },
     {
       titulo: "MORGEN SE ESTAMPA",
@@ -151,7 +151,7 @@ function Agenda() {
       descripcion:
         "Primeras serigrafías sobre textiles, con la colaboración de Flor Kligman de “AHREmeritas”",
       color: "#DC3349",
-      // imagen: Fechas13,
+      imagen: Fechas13,
     },
   ];
 
