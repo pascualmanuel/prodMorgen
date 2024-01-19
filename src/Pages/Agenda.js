@@ -2,11 +2,10 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { useEffect, useState } from "react";
-import PerroMorgen from "../Assets/perro-morgen.png";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 import Popup from "../Components/PopUp";
-import Fechas1 from "../Assets/fechas/fechas-1.png";
+// import Fechas1 from "../Assets/fechas/fechas-1.png";
 import Fechas2 from "../Assets/fechas/fechas-2.png";
 import Fechas3 from "../Assets/fechas/fechas-3.png";
 import Fechas4 from "../Assets/fechas/fechas-4.png";
@@ -20,7 +19,6 @@ import Fechas11 from "../Assets/fechas/fechas-11.png";
 import Fechas12 from "../Assets/fechas/fechas-12.png";
 import Fechas13 from "../Assets/fechas/fechas-13.png";
 import FechasWeb from "../Assets/fechas/fechas-web.png";
-
 import "../Styles/App.css";
 
 function Agenda() {
@@ -50,7 +48,7 @@ function Agenda() {
       descripcion:
         "Primera aparición del dibujo de Morgenstern en un cuaderno.",
       color: "#AE79EF",
-      imagen: Fechas1,
+      // imagen: Fechas1,
     },
     {
       titulo: "MORGEN SE MULTIPLICA",
@@ -166,7 +164,6 @@ function Agenda() {
       <div className="agenda-container">
         <div className="agenda-fixed-absolute">
           <div className="left-agenda-cont">
-            {/* <img src={PerroMorgen} width={450} style={{ marginLeft: 70 }} /> */}
             <div className="relative">
               <h2 className="fechas-titulo">Fechas</h2>
               <div onClick={openPopup} className="agenda-button pointer">
