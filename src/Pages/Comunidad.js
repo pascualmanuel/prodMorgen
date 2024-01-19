@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {useLocation} from "react-router-dom";
-import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Popup from "../Components/PopUp";
 import ComuBackDos from "../Assets/comunidad/frame.webp";
 
@@ -8,14 +8,14 @@ import BackgroundDiv from "../Components/BackgroundDiv";
 import CustomButton from "../Components/CustomButton";
 import SpikeButton from "../Components/SpikeButton";
 import SpikeButtonThree from "../Components/SpikeButtonThree";
-import {isIOS} from "react-device-detect";
-import {useLanguage} from "../Hooks/LanguageContext";
-import {isMobile} from "react-device-detect";
+import { isIOS } from "react-device-detect";
+import { useLanguage } from "../Hooks/LanguageContext";
+import { isMobile } from "react-device-detect";
 function Comunidad() {
   const [showPopup, setShowPopup] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-  const {userLanguage, translateText} = useLanguage();
+  const { userLanguage, translateText } = useLanguage();
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -47,7 +47,7 @@ function Comunidad() {
     backgroundRepeat: " no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "bottom",
-    minHeight: "650px",
+    minHeight: "680px",
   };
 
   let hiddenDesktop = "hidden";
@@ -118,7 +118,7 @@ function Comunidad() {
   // console.log(commButtonWidth);
   return (
     <>
-      <div className="comunidad-cont" style={{overflow: hiddenDesktop}}>
+      <div className="comunidad-cont" style={{ overflow: hiddenDesktop }}>
         <div className="comunidad-left disableSave" style={comStyle}>
           <div className="comunidad-left-content">
             <h2 className="comunidad-title">

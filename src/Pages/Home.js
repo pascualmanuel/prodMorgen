@@ -6,7 +6,7 @@ import { MobileView } from "react-device-detect";
 import MobileHome from "../Components/MobileHome";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+// import ToastBack from "";
 import "./Prueba.css";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../Hooks/LanguageContext";
@@ -57,14 +57,26 @@ function Home() {
         }
       );
     e.target.reset();
-    let successMessage = translateText(
-      "Welcome! You are now part of the Morgensterns Community",
-      "Recibido! Ya sos parte de la comunidad de Morgensterns"
+    const welcomeMessage = translateText("Welcome!", "¡Bienvenidx!");
+
+    const communityMessage = translateText(
+      "You are now part of the Morgensterns Community",
+      "Ya sos parte de la comunidad de Morgensterns"
     );
 
-    toast.success(successMessage, {
-      position: toast.POSITION.TOP_RIGHT,
-    });
+    toast(
+      <div>
+        <div>{welcomeMessage}</div>
+        <div style={{ marginTop: "10px", width: "233px" }}>
+          {communityMessage}
+        </div>
+      </div>,
+      {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 4500,
+        hideProgressBar: true,
+      }
+    );
   };
 
   var homeButtonWidth = "210px";
@@ -133,11 +145,11 @@ function Home() {
       display: "none",
     },
     {
-      buttonText: "Agenda",
+      buttonText: translateText("Magazine", "La Revista"),
       firstColor: "#005DA2",
       secondColor: "#DC3349",
       thirdColor: "#DFB000",
-      link: "/agenda",
+      link: "/revista",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -175,11 +187,11 @@ function Home() {
       },
     },
     {
-      buttonText: translateText("The magazine", "La revista"),
+      buttonText: translateText("Roadmap", "Fechas"),
       firstColor: "#AE79EF",
       secondColor: "#005DA2",
       thirdColor: "#4590E6",
-      link: "/revista",
+      link: "/agendanueva",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,
@@ -262,6 +274,8 @@ function Home() {
   const isMobileView = () => {
     return viewportWidth <= 768;
   };
+
+  console.log(form, "few");
 
   return (
     <>

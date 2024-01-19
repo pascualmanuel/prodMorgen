@@ -124,7 +124,7 @@ const ObrasDesktop = () => {
     },
 
     {
-      title: translateText("Immediate Future", "Futuro inmediato"),
+      title: translateText("Out of focus", "Fuera de foco"),
       subtitle: translateText("Photomontages", "Fotomontajes"),
       content: (
         <>

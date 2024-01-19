@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import FuturoImg1 from "../Assets/obras/futuro-inmediato/futuro-1.jpg";
-import FuturoImg2 from "../Assets/obras/futuro-inmediato/futuro-2.jpg";
-import FuturoImg3 from "../Assets/obras/futuro-inmediato/futuro-3.jpg";
-import FuturoImg4 from "../Assets/obras/futuro-inmediato/futuro-4.jpg";
-import FuturoImg5 from "../Assets/obras/futuro-inmediato/futuro-5.jpg";
-import FuturoImg6 from "../Assets/obras/futuro-inmediato/futuro-6.jpg";
-import FuturoImg7 from "../Assets/obras/futuro-inmediato/futuro-7.png";
+import FuturoImg1 from "../Assets/obras/futuro-inmediato/desenfocado-1.png";
+import FuturoImg2 from "../Assets/obras/futuro-inmediato/desenfocado-2.png";
+import FuturoImg3 from "../Assets/obras/futuro-inmediato/desenfocado-3.png";
+import FuturoImg4 from "../Assets/obras/futuro-inmediato/desenfocado-4.png";
+import FuturoImg5 from "../Assets/obras/futuro-inmediato/desenfocado-5.png";
+import FuturoImg6 from "../Assets/obras/futuro-inmediato/desenfocado-6.png";
 
 import IconTag from "../Assets/svg/icon-tag.svg";
 import PopupObras from "./PopupObras";
