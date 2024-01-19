@@ -139,32 +139,28 @@ const PopupFormCommunity = () => {
               </>
             ) : (
               <>
-                <Link to={"http://mpago.la/132RpZw"} target="_blank">
-                  <div className="support-button" style={{ marginTop: "50px" }}>
-                    {translateText("Contribute 10 USD", "Aporta 10 USD")}
-                  </div>
-                </Link>
-
-                <Link to={"http://mpago.la/31zjr6T"} target="_blank">
-                  <div className="support-button">
-                    {translateText("Contribute 20 USD", "Aporta 20 USD")}
-                  </div>
-                </Link>
-
                 <Link
-                  to={"https://link.mercadopago.com.ar/holamorgenstern"}
+                  to={"https://www.paypal.com/paypalme/holamorgenstern"}
                   target="_blank"
                 >
-                  <div className="support-button" style={{ marginBottom: 0 }}>
-                    {translateText("Contribute 50 USD", "Aporta 50 USD")}
+                  <div className="support-button" style={{ marginTop: "50px" }}>
+                    {translateText("Contribute USD", "Aporta USD")}
                   </div>
                 </Link>
+
+                <div className="support-button-trans">
+                  {translateText("Contribute 20 USD", "Aporta 20 USD")}
+                </div>
+
+                <div
+                  className="support-button-trans"
+                  style={{ marginBottom: 0 }}
+                >
+                  {translateText("Contribute 50 USD", "Aporta 50 USD")}
+                </div>
               </>
             )}
           </div>
-          {/* <Link to="/">Hola</Link>
-          <Link to="/">Hola</Link>
-          <Link to="/">Hola</Link> */}
         </div>
       </div>
     </>

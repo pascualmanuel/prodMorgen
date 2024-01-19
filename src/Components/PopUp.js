@@ -159,8 +159,8 @@ const Popup = ({ isOpen, onClose }) => {
             />
           </svg>
         </span>
-        {showCommunity && <PopupFormCommunity />}
-        {showAtendeme && <PopupForm />}
+        {showCommunity && <PopupFormCommunity onClose={onClose} />}
+        {showAtendeme && <PopupForm onClose={onClose} />}
       </div>
     </div>
   );

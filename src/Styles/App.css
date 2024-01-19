@@ -584,7 +584,7 @@ h4 {
 }
 
 .special-form input[type="text"] {
-  width: 170px;
+  width: 205px;
 }
 
 .special-form textarea {
@@ -629,6 +629,12 @@ h4 {
   }
   .form-row {
     margin-bottom: 0px;
+  }
+  .special-form input[type="text"] {
+    width: 115px;
+  }
+  .special-form input[type="number"] {
+    width: 60px;
   }
 }
 
@@ -767,6 +773,18 @@ left: 180px; */
   background: #dccb00;
 }
 
+.support-button-trans {
+  height: 80px;
+  width: 16rem;
+  border-radius: 100px;
+  border: solid transparent;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Medium;
+  color: transparent;
+}
 @media (max-height: 675px) {
   .popup-container .close-button {
     top: 25px;
@@ -1284,6 +1302,23 @@ left: 180px; */
   width: 100%;
   height: 90%;
   max-height: 580px;
+  object-fit: contain;
+}
+
+@media (max-height: 670px) {
+  .modal-image {
+    width: 100%;
+    height: 90%;
+    max-height: 500px;
+  }
+}
+
+@media (max-height: 620px) {
+  .modal-image {
+    width: 100%;
+    height: 90%;
+    max-height: 400px;
+  }
 }
 
 .submodal {
@@ -1455,12 +1490,12 @@ left: 180px; */
   .obras-title {
     margin-bottom: 300px;
   }
-  .special-form input[type="text"] {
+  /* .special-form input[type="text"] {
     width: 126px;
   }
   .special-form input[type="number"] {
     width: 69px;
-  }
+  } */
 }
 
 @media (max-width: 1000px), (max-height: 570px) {
@@ -1998,16 +2033,13 @@ left: 180px; */
   .comunidad-spike {
     bottom: 30px;
   }
-  /* .submit-button {
-    height: calc(109% - 2px);
-  } */
   .obras-spike-button {
     bottom: 275px;
   }
-  .special-form input::placeholder,
+  /* .special-form input::placeholder,
   .special-form textarea::placeholder {
     font-size: 24px;
-  }
+  } */
 }
 
 .obras-spike-button-container {
@@ -2023,4 +2055,43 @@ left: 180px; */
   background-image: url("../Assets/yomor/yomor-prueba.png");
   background-position: right top;
   background-size: cover;
+}
+
+.Toastify__toast {
+  font-family: "Medium" !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  line-height: 100.5% !important;
+  color: black !important;
+  background-image: url("../Assets/toast/frame-toast.png") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  /* Add more styles as needed */
+}
+.Toastify__toast-body {
+  margin-left: 75px !important;
+}
+
+.Toastify__toast-container--top-right {
+  top: 1em;
+  right: 7em !important;
+}
+
+.Toastify__toast {
+  width: 393px !important;
+  height: 98px !important;
+  max-height: none !important;
+}
+.Toastify__toast .Toastify__toast-theme--light .Toastify__toast--default {
+}
+
+@media (max-width: 720px) {
+  .Toastify__toast-container--top-right {
+    top: 0px;
+  }
+  .Toastify__toast {
+    width: 100vw !important;
+    height: 98px !important;
+    max-height: none !important;
+  }
 }

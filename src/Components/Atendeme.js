@@ -6,7 +6,7 @@ import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
 import { useLanguage } from "../Hooks/LanguageContext";
 
-const MiSeccion = () => {
+const Atendeme = () => {
   const [showPopup, setShowPopup] = useState(false);
   const { userLanguage, translateText } = useLanguage();
   const openPopup = () => {
@@ -842,4 +842,4 @@ const MiSeccion = () => {
   );
 };
 
-export default MiSeccion;
+export default Atendeme;

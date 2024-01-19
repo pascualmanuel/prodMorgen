@@ -41,14 +41,26 @@ function MobileHeader() {
         }
       );
     e.target.reset();
-    let successMessage = translateText(
-      "Welcome! You are now part of the Morgensterns Community",
-      "Recibido! Ya sos parte de la comunidad de Morgensterns"
+    let welcomeMessage = translateText("Welcome!", "¡Bienvenidx!");
+
+    let communityMessage = translateText(
+      "You are now part of the Morgensterns Community",
+      "Ya sos parte de la comunidad de Morgensterns"
     );
 
-    toast.success(successMessage, {
-      position: toast.POSITION.TOP_RIGHT,
-    });
+    toast(
+      <div>
+        <div>{welcomeMessage}</div>
+        <div style={{ marginTop: "10px", width: "233px" }}>
+          {communityMessage}
+        </div>
+      </div>,
+      {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 4500,
+        hideProgressBar: true,
+      }
+    );
   };
 
   const handleEsClick = () => {

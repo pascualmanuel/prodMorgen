@@ -32,14 +32,27 @@ const PopupObras = ({ selectedImage, closePopup }) => {
         }
       );
     e.target.reset();
-    let successMessage = translateText(
-      "Sent! Morgenstern will contact you soon :)",
-      "Enviado! Morgenstern pronto se pondrá en contacto con vos:)"
+
+    let welcomeMessage = translateText("Sent!", "Enviado!");
+
+    let communityMessage = translateText(
+      "Morgenstern will contact you soon :)",
+      "Morgenstern pronto se pondrá en contacto con vos:)"
     );
 
-    toast.success(successMessage, {
-      position: toast.POSITION.TOP_RIGHT,
-    });
+    toast(
+      <div>
+        <div>{welcomeMessage}</div>
+        <div style={{ marginTop: "10px", width: "233px" }}>
+          {communityMessage}
+        </div>
+      </div>,
+      {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 4500,
+        hideProgressBar: true,
+      }
+    );
   };
   useEffect(() => {
     document.body.classList.add("no-scroll");
