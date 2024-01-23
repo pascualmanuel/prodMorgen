@@ -119,98 +119,81 @@ const ImageSection = () => {
     };
   }, []);
 
-  // const [images, setImages] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchImages = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://jsonplaceholder.typicode.com/medias"
-  //       );
-  //       setImages(response.data.slice(0, 20)); // Limit to the first 20 images
-  //     } catch (error) {
-  //       console.error("Error fetching images:", error);
-  //     }
-  //   };
-
-  //   fetchImages();
-  // }, []);
-
   const galleryContent = [
     {
       media: "color",
       source: "#4590E6",
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery1,
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Kiki Ramos Sörvik",
     },
     {
       media: "color",
       source: "#DFB000",
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery5,
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "color",
       source: "#FF3910",
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery6,
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery13,
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Kiki Ramos Sörvik",
     },
     {
       media: "image",
       source: Gallery7,
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "color",
       source: "#DC3349", // Provide the correct image URL here
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery2, // Provide the correct image URL here
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery8, // Provide the correct image URL here
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
@@ -224,63 +207,63 @@ const ImageSection = () => {
     {
       media: "image",
       source: Gallery3,
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Manuel Fernández",
     },
     // {
     //   media: "video",
     //   source: "https://www.w3schools.com/html/mov_bbb.mp4",
-    //   category: "Fotografía",
+    //   category:  "fotogrfía"
     //   title: "",
     //   author: "Santiago Antín",
     // },
     {
       media: "video",
       source: "#7D9F00", // Provide the correct image URL here
-      category: "Fotografía",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery9,
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery12,
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Daniela Novak",
     },
     {
       media: "image",
       source: Gallery10,
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "color",
       source: "#005DA2",
-      category: "Fotografía ",
+      category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
     },
     {
       media: "image",
       source: Gallery4,
-      category: "DIBUJO ",
+      category: "Drawing",
       title: "",
       author: "Júlia Barata",
     },
     {
       media: "image",
       source: Gallery11,
-      category: "VJ ",
+      category: "VJ",
       title: "",
       author: "Manuel Fernández",
     },
@@ -448,13 +431,9 @@ const ImageSection = () => {
                         <div className="submodal-category">
                           {selectedImageData.category}
                         </div>
-                        <div>{selectedImageData.date}</div>
-                      </div>
-
-                      <div className="submodal-bottom">
-                        <div>{selectedImageData.title}</div>
-
-                        <div>{selectedImageData.author}</div>
+                        <div className="submodal-bottom">
+                          {selectedImageData.author}
+                        </div>
                       </div>
                     </div>
                   </div>

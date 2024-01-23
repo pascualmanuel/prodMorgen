@@ -98,10 +98,10 @@ const PopupForm = ({ onClose }) => {
         }
       );
 
-    let welcomeMessage = translateText("Welcome!", "¡Bienvenidx!");
+    let welcomeMessage = translateText("Thanks!", "Gracias!");
     let communityMessage = translateText(
-      "You are now part of the Morgensterns Community",
-      "Ya sos parte de la comunidad de Morgensterns"
+      "Your message will reach Morgen soon:)",
+      "Tu mensaje le llegará pronto a Morgen:)"
     );
 
     toast(

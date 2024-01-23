@@ -191,7 +191,7 @@ function Home() {
       firstColor: "#AE79EF",
       secondColor: "#005DA2",
       thirdColor: "#4590E6",
-      link: "/agendanueva",
+      link: "/agenda",
       backColor: "",
       width: homeButtonWidth,
       height: homeButtonHeight,

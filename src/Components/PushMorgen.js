@@ -201,7 +201,7 @@ const PushMorgen = () => {
   if (window.innerHeight < 660) {
     tuClickLlena = {
       marginBottom: "230px",
-      marginLeft: "220px",
+      marginLeft: "300px",
       fontFamily: "SemiBold",
       userSelect: "none",
       color: "white",

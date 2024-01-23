@@ -921,7 +921,7 @@ left: 180px; */
     left: 210px;
   }
   .fechas-titulo {
-    margin-left: 40px;
+    margin-left: 25px;
   }
   .right-agenda-cont {
     width: 54vw;
@@ -943,11 +943,16 @@ left: 180px; */
   }
   .entry {
     max-width: none;
-    padding-left: 40px;
+    padding-left: 0px;
     margin-left: 7%;
   }
   .core {
     width: auto;
+    margin-left: 30px;
+    margin-right: 25px;
+  }
+  .entry:after {
+    top: 16.5%;
   }
   .left-agenda-cont {
     height: 100vh;
@@ -956,12 +961,12 @@ left: 180px; */
     display: block;
   }
   .fechas-titulo {
-    font-size: 68px;
+    font-size: 58px;
     margin-top: 190px;
     margin-left: 70px;
   }
   .agenda-button {
-    position: fixed;
+    display: none;
   }
   .agenda-fixed-absolute {
     position: absolute;
@@ -1295,7 +1300,7 @@ left: 180px; */
 
 @media (max-height: 760px) {
   .modal {
-    width: 500px;
+    /* width: 500px; */
   }
 }
 
