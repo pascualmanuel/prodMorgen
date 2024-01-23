@@ -55,8 +55,7 @@ function App() {
             <Route path="/comunidad" element={<Comunidad />} />
             <Route path="/obras" element={<Obras />} />
             <Route path="/revista" element={<LaRevista />} />
-            <Route path="/agenda" element={<AgendaComming />} />
-            <Route path="/agendanueva" element={<Agenda />} />
+            <Route path="/agenda" element={<Agenda />} />
             <Route path="/prueba" element={<Prueba />} />
 
             <Route path="/morgenyo" element={<MorgenYo />} />

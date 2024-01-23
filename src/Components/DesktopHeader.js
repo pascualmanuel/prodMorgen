@@ -47,7 +47,7 @@ function HeaderDesktop() {
     colorStroke = "black";
   } else if (
     location.pathname === "/atendeme" ||
-    location.pathname === "/agendanueva" ||
+    location.pathname === "/agenda" ||
     location.pathname === "/gallery" ||
     location.pathname === "/obras" ||
     location.pathname === "/comunidad" ||
@@ -201,9 +201,9 @@ function HeaderDesktop() {
                 {translateText("Community", "Comunidad")}
               </h2>
             </Link>
-            <Link to={"/revista"}>
-              <h2 onClick={closeMenu} className="navbar-title revista">
-                {translateText("The magazine", "La revista")}
+            <Link to={"/agenda"}>
+              <h2 onClick={closeMenu} className="navbar-title agenda">
+                {translateText("Roadmap", "Fechas")}
               </h2>
             </Link>
             <Link to={"/interactivo"}>
@@ -220,9 +220,10 @@ function HeaderDesktop() {
                 MorgenMerch
               </h2>
             </a>
-            <Link to={"/agendanueva"}>
-              <h2 onClick={closeMenu} className="navbar-title agenda">
-                {translateText("Calendar", "Agenda")}
+
+            <Link to={"/revista"}>
+              <h2 onClick={closeMenu} className="navbar-title revista">
+                {translateText("The magazine", "La revista")}
               </h2>
             </Link>
           </section>

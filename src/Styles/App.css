@@ -1295,7 +1295,7 @@ left: 180px; */
 
 @media (max-height: 760px) {
   .modal {
-    width: 500px;
+    /* width: 500px; */
   }
 }
 

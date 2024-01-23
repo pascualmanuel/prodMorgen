@@ -170,7 +170,7 @@ function YoMorgenstern() {
           <div className="yoMor-text-grande">
             <p className="yoMor-text">
               {translateText(
-                "Morgenstern is an artistic essay concerning the ways in which we connect with others, the world, and information that circulates. Beginning from a single drawing, a single model, where there’s no place for an Other. He is one and at the same time a reiteration of unalterable, inexpressive, wireless men. He is a character and he is the stage.I, Morgenstern",
+                "Morgenstern is an artistic essay concerning the ways in which we connect with others, the world, and information that circulates. Beginning from a single drawing, a single model, where there’s no place for an Other. He is one and at the same time a reiteration of unalterable, inexpressive, wireless men. He is a character and he is the stage.",
                 "Morgenstern es un ensayo artístico acerca de los modos en que nos vinculamos con lxs otrxs, el mundo y la información circulante. Parte de un único dibujo, un único modelo, no hay lugar para un Otro. Es uno y a la vez una reiteración de hombres inalterables, inexpresivos, inalámbricos. Es personaje y al mismo tiempo escenario."
               )}
             </p>

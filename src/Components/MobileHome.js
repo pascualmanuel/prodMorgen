@@ -90,7 +90,7 @@ const MobileHome = () => {
       fontSize: "26px",
     },
     {
-      buttonText: "La Revista",
+      buttonText: "La Revista!",
       firstColor: "#AE79EF",
       secondColor: "#005DA2",
       thirdColor: "#4590E6",
@@ -178,16 +178,24 @@ const MobileHome = () => {
           ))} */}
           <div className="mob-links-cont">
             <Link to={"/yomorgenstern"}>
-              <h2 className="mob-links-home">Yo, Morgenstern</h2>
+              <h2 className="mob-links-home">
+                {translateText("I, Morgenstern", "Yo, Morgenstern")}
+              </h2>
             </Link>
             <Link to={"/obras"}>
-              <h2 className="mob-links-home">Obras</h2>
+              <h2 className="mob-links-home">
+                {translateText("Works", "Obras")}
+              </h2>
             </Link>
-            <Link to={"/revista"}>
-              <h2 className="mob-links-home">La Revista </h2>
+            <Link to={"/agenda"}>
+              <h2 className="mob-links-home">
+                {translateText("Roadmap", "Agenda")}
+              </h2>
             </Link>
             <Link to={"/interactivo"}>
-              <h2 className="mob-links-home">Interactivo </h2>
+              <h2 className="mob-links-home">
+                {translateText("Interactive", "Interactivo")}
+              </h2>
             </Link>
             <a
               href="https://morgenstern.flashcookie.com/"
@@ -197,10 +205,15 @@ const MobileHome = () => {
               <h2 className="mob-links-home">Morgen Merch</h2>
             </a>
             <Link to={"/comunidad"}>
-              <h2 className="mob-links-home">Comunidad</h2>
+              <h2 className="mob-links-home">
+                {translateText("Community", "Comunidad")}
+              </h2>
             </Link>
-            <Link to={"/agendanueva"}>
-              <h2 className="mob-links-home">Agenda </h2>
+
+            <Link to={"/revista"}>
+              <h2 className="mob-links-home">
+                {translateText("Magazine", "La Reivsta")}{" "}
+              </h2>
             </Link>
           </div>
         </div>

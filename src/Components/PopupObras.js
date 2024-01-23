@@ -33,11 +33,11 @@ const PopupObras = ({ selectedImage, closePopup }) => {
       );
     e.target.reset();
 
-    let welcomeMessage = translateText("Sent!", "Enviado!");
+    let welcomeMessage = translateText("Thanks!", "Gracias!");
 
     let communityMessage = translateText(
-      "Morgenstern will contact you soon :)",
-      "Morgenstern pronto se pondrá en contacto con vos:)"
+      "Your message will reach Morgen soon:)",
+      "Tu mensaje le llegará pronto a Morgen :)"
     );
 
     toast(

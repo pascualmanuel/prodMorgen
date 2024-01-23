@@ -249,9 +249,9 @@ function MobileHeader() {
                 {translateText("Community", "Comunidad")}
               </h2>
             </Link>
-            <Link to={"/revista"}>
-              <h2 onClick={closeMenu} className="navbar-title-mob revista">
-                {translateText("The magazine", "La revista")}
+            <Link to={"/agenda"}>
+              <h2 onClick={closeMenu} className="navbar-title-mob agenda">
+                {translateText("Roadmap", "Fechas")}
               </h2>
             </Link>
             <Link to={"/interactivo"}>
@@ -264,9 +264,9 @@ function MobileHeader() {
                 MorgenMerch
               </h2>
             </Link>
-            <Link to={"/agendanueva"}>
-              <h2 onClick={closeMenu} className="navbar-title-mob agenda">
-                {translateText("Calendar", "Agenda")}
+            <Link to={"/revista"}>
+              <h2 onClick={closeMenu} className="navbar-title-mob revista">
+                {translateText("The magazine", "La revista")}
               </h2>
             </Link>
           </section>

@@ -14,8 +14,8 @@ function SpikeButtonThree() {
   const { userLanguage, translateText } = useLanguage();
   let starImg = Img1;
   let spikeScale = "1";
-  if (location.pathname === "/agendanueva") {
-    spikeScale = "0.8";
+  if (location.pathname === "/agenda") {
+    spikeScale = "0.5";
   }
 
   if (userLanguage === "EN") {
