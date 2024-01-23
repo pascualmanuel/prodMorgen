@@ -189,7 +189,7 @@ const MobileHome = () => {
             </Link>
             <Link to={"/agenda"}>
               <h2 className="mob-links-home">
-                {translateText("Roadmap", "Agenda")}
+                {translateText("Roadmap", "Fechas")}
               </h2>
             </Link>
             <Link to={"/interactivo"}>
