@@ -212,7 +212,7 @@ const MobileHome = () => {
 
             <Link to={"/revista"}>
               <h2 className="mob-links-home">
-                {translateText("Magazine", "La Reivsta")}{" "}
+                {translateText("Magazine", "La Revista")}
               </h2>
             </Link>
           </div>
