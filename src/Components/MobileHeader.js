@@ -167,7 +167,7 @@ function MobileHeader() {
                     src={MailSVG}
                     width="15px"
                     className="contact-icons"
-                    style={{ marginRight: "15px" }}
+                    style={{ marginRight: "45px" }}
                     alt="React Logo"
                   />
                 </a>
@@ -177,17 +177,12 @@ function MobileHeader() {
                   </a>
                 </span>
               </h4>
-              <h4 style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={FbLogo}
-                  width="15px"
-                  className="contact-icons"
-                  style={{ marginRight: "15px" }}
-                  alt="React Logo"
-                />
-                <span className="contact-icons-text"> Morgenstern</span>
-              </h4>
-              <h4 style={{ display: "flex", alignItems: "center" }}>
+              <h4
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   href="https://www.instagram.com/holamorgenstern/"
                   target="_blank"
