@@ -1,12 +1,15 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
+
 import FbLogo from "../Assets/svg/fb-svg.svg";
 import IgLogo from "../Assets/svg/ig-svg.svg";
 import MailSVG from "../Assets/svg/mail-svg.svg";
 import CircleNav from "../Assets/svg/circle-nav-svg.svg";
 import CircleWhiteNav from "../Assets/svg/circle-nav-white-svg.svg";
 import { useLanguage } from "../Hooks/LanguageContext";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function HeaderDesktop() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -102,6 +105,49 @@ function HeaderDesktop() {
     setIsHome(isHomePage); // Update isHome based on the current location
   }, [location]);
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        "template_3asxblp",
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    const welcomeMessage = translateText("Welcome!", "¡Bienvenidx!");
+
+    const communityMessage = translateText(
+      "You are now part of the Morgensterns Community",
+      "Ya sos parte de la comunidad de Morgensterns"
+    );
+
+    toast(
+      <div>
+        <div>{welcomeMessage}</div>
+        <div style={{ marginTop: "10px", width: "233px" }}>
+          {communityMessage}
+        </div>
+      </div>,
+      {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 4500,
+        hideProgressBar: true,
+      }
+    );
+  };
+
   return (
     <>
       <div className={`menu ${menuOpen ? "menu-open" : ""}`}>
@@ -139,15 +185,6 @@ function HeaderDesktop() {
                   holamorgenstern@gmail.com
                 </a>
               </h4>
-              {/* <h4 style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={FbLogo}
-                  width="15px"
-                  style={{ marginRight: "15px" }}
-                  alt="React Logo"
-                />
-                Morgenstern
-              </h4> */}
               <h4 style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={IgLogo}
@@ -167,21 +204,26 @@ function HeaderDesktop() {
               <p className="news">
                 {translateText("Stay tuned", "Recibí Novedades")}
               </p>
-              {/* <input type="email" placeholder="Enter your email" /> */}
-              {/* <input /> */}
               <div className="email-container">
-                <input
-                  type="email"
-                  required
-                  placeholder={translateText(
-                    "e-mail address",
-                    "Dirección de e-mail"
-                  )}
-                  className="email-input"
-                />
-                <button type="submit" className="submit-button">
-                  {translateText("Send", "Enviar")}
-                </button>
+                <form
+                  style={{ display: "contents" }}
+                  ref={form}
+                  onSubmit={sendEmail}
+                >
+                  <input
+                    type="email"
+                    name="user_email"
+                    required
+                    placeholder={translateText(
+                      "e-mail address",
+                      "Dirección de e-mail!"
+                    )}
+                    className="email-input"
+                  />
+                  <button type="submit" className="submit-button">
+                    {translateText("Send", "Enviar")}
+                  </button>
+                </form>
               </div>
             </div>
           </section>
