@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import PushMorgen from "../Components/PushMorgen";
 import Bueno from "../Components/Bueno";
 import Malo from "../Components/Malo.js";
+import imageCircle from "../Assets/screenshot-circle.png";
 
 function Interactivo() {
   const [selectedColor, setSelectedColor] = useState("#FE6970");

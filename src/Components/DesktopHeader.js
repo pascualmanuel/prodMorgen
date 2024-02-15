@@ -139,7 +139,7 @@ function HeaderDesktop() {
                   holamorgenstern@gmail.com
                 </a>
               </h4>
-              <h4 style={{ display: "flex", alignItems: "center" }}>
+              {/* <h4 style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={FbLogo}
                   width="15px"
@@ -147,7 +147,7 @@ function HeaderDesktop() {
                   alt="React Logo"
                 />
                 Morgenstern
-              </h4>
+              </h4> */}
               <h4 style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src={IgLogo}
