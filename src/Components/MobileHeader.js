@@ -195,7 +195,7 @@ function MobileHeader() {
                     alt="React Logo"
                   />
                 </a>
-                <span className="contact-icons-text"> @holamorgenstern</span>
+                <span className="contact-icons-text">@holamorgenstern</span>
               </h4>
             </div>
 

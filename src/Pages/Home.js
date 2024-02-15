@@ -82,7 +82,7 @@ function Home() {
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
 
-  console.log(viewportWidth, viewportHeight, "hola");
+
 
   let agendaOffsetY = 100;
   let morgenmerchOffsetY = 170;
@@ -346,7 +346,7 @@ function Home() {
                     required
                     placeholder={translateText(
                       "e-mail address",
-                      "Dirección de e-mail"
+                      "Dirección de e-mail!"
                     )}
                     className="email-input"
                   />

@@ -71,7 +71,7 @@ function Comunidad() {
     setShowPopup(false);
   };
 
-  let buttonTextColab = "Ver trabajos colaborativos";
+  let buttonTextColab = "Ver trabajos colabora!tivos";
   let buttonTextVoces = "Leer las voces de la comunidad";
 
   if (userLanguage === "ES") {
@@ -101,8 +101,8 @@ function Comunidad() {
       backgroundPosition: "bottom",
     };
     buttonTextSize = "20px";
-    buttonTextColab = "Trabajos colaborativos";
-    buttonTextVoces = "Voces de la comunidad";
+    // buttonTextColab = "Trabajos colaborativos";
+    // buttonTextVoces = "Voces de la comunidad";
     hiddenDesktop = "";
   }
 
