@@ -82,8 +82,8 @@ function Agenda() {
       titulo: translateText("MORGEN UNFOLDS", "MORGEN EMPIEZA A RAMIFICARSE"),
       fechas: translateText("MARCH 2022", "MARZO 2022"),
       descripcion: translateText(
-        "Morgenstern en nuevos lenguajes y formatos que incluyen fotomontajes, pinturas, estampas, fanzines, entre otros.",
-        "Morgenstern in new languages ​​and formats that include photomontages, paintings, prints, fanzines, among others."
+        "Morgenstern in new languages ​​and formats that include photomontages, paintings, prints, fanzines, among others.",
+        "Morgenstern en nuevos lenguajes y formatos que incluyen fotomontajes, pinturas, estampas, fanzines, entre otros."
       ),
       color: "#4590E6",
       imagen: Roadmap3,
