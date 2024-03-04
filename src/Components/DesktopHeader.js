@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-
-import FbLogo from "../Assets/svg/fb-svg.svg";
+import VimeoLogo from "../Assets/svg/vimeo-icon.svg";
 import IgLogo from "../Assets/svg/ig-svg.svg";
 import MailSVG from "../Assets/svg/mail-svg.svg";
 import CircleNav from "../Assets/svg/circle-nav-svg.svg";
@@ -197,6 +196,23 @@ function HeaderDesktop() {
                   target="_blank"
                 >
                   @holamorgenstern
+                </a>
+              </h4>
+              <h4
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <a href="https://vimeo.com/holamorgenstern/" target="_blank">
+                  <img
+                    src={VimeoLogo}
+                    style={{ marginRight: "15px" }}
+                    width="15px"
+                    className="contact-icons"
+                    alt="React Logo"
+                  />
+                  holamorgenstern
                 </a>
               </h4>
             </div>
