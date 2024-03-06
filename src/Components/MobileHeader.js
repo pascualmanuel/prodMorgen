@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import FbLogo from "../Assets/svg/fb-svg.svg";
+import VimeoLogo from "../Assets/svg/vimeo-icon.svg";
 import IgLogo from "../Assets/svg/ig-svg.svg";
 import MailSVG from "../Assets/svg/mail-svg.svg";
 import CircleNav from "../Assets/svg/circle-nav-svg.svg";
@@ -191,7 +191,24 @@ function MobileHeader() {
                     src={IgLogo}
                     width="15px"
                     className="contact-icons"
-                    style={{ marginRight: "15px" }}
+                    style={{ marginRight: "45px" }}
+                    alt="React Logo"
+                  />
+                </a>
+                <span className="contact-icons-text">@holamorgenstern</span>
+              </h4>
+
+              <h4
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <a href="https://vimeo.com/holamorgenstern/" target="_blank">
+                  <img
+                    src={VimeoLogo}
+                    width="15px"
+                    className="contact-icons"
                     alt="React Logo"
                   />
                 </a>
@@ -254,11 +271,15 @@ function MobileHeader() {
                 {translateText("Interactive", "Interactivo")}
               </h2>
             </Link>
-            <Link>
+            <a
+              href="https://morgenstern.flashcookie.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h2 onClick={closeMenu} className="navbar-title-mob merch">
                 MorgenMerch
               </h2>
-            </Link>
+            </a>
             <Link to={"/revista"}>
               <h2 onClick={closeMenu} className="navbar-title-mob revista">
                 {translateText("The magazine", "La revista")}
