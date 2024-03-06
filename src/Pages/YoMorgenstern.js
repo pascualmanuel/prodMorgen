@@ -153,8 +153,8 @@ function YoMorgenstern() {
           <BackgroundDiv />
         ) : (
           <div className="yomor-cont-mob">
-            <h2 className="yomor-mob-title">
-              Yo, <br /> Morgenstern
+            <h2 className="yomor-mob-title" style={{ width: "340px" }}>
+              {translateText("I, Morgenstern", "Yo, Morgenstern.")}
             </h2>
             <img
               src={MorgenImgSvg}

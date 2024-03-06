@@ -271,11 +271,15 @@ function MobileHeader() {
                 {translateText("Interactive", "Interactivo")}
               </h2>
             </Link>
-            <Link>
+            <a
+              href="https://morgenstern.flashcookie.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <h2 onClick={closeMenu} className="navbar-title-mob merch">
                 MorgenMerch
               </h2>
-            </Link>
+            </a>
             <Link to={"/revista"}>
               <h2 onClick={closeMenu} className="navbar-title-mob revista">
                 {translateText("The magazine", "La revista")}

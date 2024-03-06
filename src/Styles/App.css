@@ -1984,7 +1984,17 @@ left: 180px; */
   }
 }
 
-.larevista-cont {
+.larevista-cont-EN {
+  height: 100vh;
+
+  background-image: url("../Assets/la-revista-cs-eng.png");
+  background-color: #e3cc00;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.larevista-cont-ES {
   height: 100vh;
   background-image: url("../Assets/la-revista-cs.png");
   background-color: #e3cc00;
@@ -1994,9 +2004,17 @@ left: 180px; */
 }
 
 @media (max-width: 720px) {
-  .larevista-cont {
+  .larevista-cont-ES {
     height: 100vh;
     background-image: url("../Assets/larevista-cs-mob.png");
+    background-color: #e3cc00;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .larevista-cont-EN {
+    height: 100vh;
+    background-image: url("../Assets/larevista-cs-mob-eng.png");
     background-color: #e3cc00;
     background-position: center;
     background-repeat: no-repeat;

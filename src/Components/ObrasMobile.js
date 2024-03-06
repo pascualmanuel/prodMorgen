@@ -10,6 +10,7 @@ import Desnudos from "./Desnudos";
 import Book from "./Book";
 import Estampas from "./Estampas";
 import FuturoInmediato from "./FuturoInmediato";
+import { useLanguage } from "../Hooks/LanguageContext";
 
 import Animaciones from "./Animaciones";
 import "../Styles/App.css";
@@ -51,6 +52,7 @@ const AccordionItem = ({
 // background-color: #fe6970;
 // padding-bottom: 20px;
 // border: solid #fe6970;
+
 const ObrasMobile = () => {
   const [activeAccordionItem, setActiveAccordionItem] = useState(null);
 
@@ -113,6 +115,7 @@ const ObrasMobile = () => {
       tabColor: "#DCCB00",
     },
   ];
+  const { userLanguage, translateText } = useLanguage();
 
   return (
     <>
@@ -121,7 +124,10 @@ const ObrasMobile = () => {
         style={{ paddingTop: 100 }}
       >
         <div className="obras-welcome">
-          <h2 style={{ fontSize: "50px" }}> Obras</h2>
+          <h2 style={{ fontSize: "50px" }}>
+            {" "}
+            {translateText("Works", "Obras")}
+          </h2>
           <span onClick={openPopup}>
             <SpikeButtonThree />
           </span>
