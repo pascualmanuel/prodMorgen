@@ -16,14 +16,12 @@ const MobileHome = () => {
   const [showPopup, setPopup] = useState(false);
   const { userLanguage, translateText } = useLanguage();
   useEffect(() => {
-    // Verificar si el pop-up ya se ha mostrado previamente
     const hasPopupShown = localStorage.getItem("popupShown");
 
     if (!hasPopupShown) {
-      // Si no se ha mostrado previamente, configurar un temporizador para mostrarlo después de 3 segundos
       const timer = setTimeout(() => {
         setPopup(true);
-        localStorage.setItem("popupShown", "true"); // Marcar que el pop-up se ha mostrado
+        localStorage.setItem("popupShown", "true");
       }, 4000);
 
       return () => clearTimeout(timer);
@@ -47,7 +45,6 @@ const MobileHome = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -60,92 +57,91 @@ const MobileHome = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const buttons = [
-    {
-      buttonText: "Yo, Morgenstern",
-      firstColor: "#FE6970",
-      secondColor: "#FF3910",
-      thirdColor: "#DC3349",
-      link: "/yomorgenstern",
-      backColor: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "24px",
-    },
-    {
-      buttonText: "Obras",
-      firstColor: "#DCCB00",
-      secondColor: "#7D9F00",
-      thirdColor: "#DFB000",
-      link: "/obras",
-      border: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "26px",
-    },
-    {
-      buttonText: "La Revista!",
-      firstColor: "#AE79EF",
-      secondColor: "#005DA2",
-      thirdColor: "#4590E6",
-      link: "/revista",
-      backColor: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "26px",
-    },
-    {
-      buttonText: "Interactivo",
-      firstColor: "#4590E6",
-      secondColor: "#7D9F00",
-      thirdColor: "#DFB000",
-      link: "/interactivo",
-      backColor: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "26px",
-    },
-    {
-      buttonText: "MorgenMerch",
-      firstColor: "#DFB000",
-      secondColor: "#DC3349",
-      thirdColor: "#AE79EF",
-      link: "/hola",
-      backColor: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "26px",
-    },
-    {
-      buttonText: "Comunidad",
-      firstColor: "#DC3349",
-      secondColor: "#7D9F00",
-      thirdColor: "#DFB000",
-      link: "/comunidad",
-      backColor: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "26px",
-    },
+  // const buttons = [
+  //   {
+  //     buttonText: "Yo, Morgenstern",
+  //     firstColor: "#FE6970",
+  //     secondColor: "#FF3910",
+  //     thirdColor: "#DC3349",
+  //     link: "/yomorgenstern",
+  //     backColor: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "24px",
+  //   },
+  //   {
+  //     buttonText: "Obras",
+  //     firstColor: "#DCCB00",
+  //     secondColor: "#7D9F00",
+  //     thirdColor: "#DFB000",
+  //     link: "/obras",
+  //     border: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "26px",
+  //   },
+  //   {
+  //     buttonText: "La Revista",
+  //     firstColor: "#AE79EF",
+  //     secondColor: "#005DA2",
+  //     thirdColor: "#4590E6",
+  //     link: "/revista",
+  //     backColor: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "26px",
+  //   },
+  //   {
+  //     buttonText: "Interactivo",
+  //     firstColor: "#4590E6",
+  //     secondColor: "#7D9F00",
+  //     thirdColor: "#DFB000",
+  //     link: "/interactivo",
+  //     backColor: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "26px",
+  //   },
+  //   {
+  //     buttonText: "MorgenMerch",
+  //     firstColor: "#DFB000",
+  //     secondColor: "#DC3349",
+  //     thirdColor: "#AE79EF",
+  //     link: "/hola",
+  //     backColor: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "26px",
+  //   },
+  //   {
+  //     buttonText: "Comunidad",
+  //     firstColor: "#DC3349",
+  //     secondColor: "#7D9F00",
+  //     thirdColor: "#DFB000",
+  //     link: "/comunidad",
+  //     backColor: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "26px",
+  //   },
 
-    {
-      buttonText: "Agenda",
-      firstColor: "#005DA2",
-      secondColor: "#DC3349",
-      thirdColor: "#DFB000",
-      link: "/agenda",
-      backColor: "",
-      width: homeButtonWidth,
-      height: homeButtonHeight,
-      fontSize: "26px",
-    },
-  ];
+  //   {
+  //     buttonText: "Agenda",
+  //     firstColor: "#005DA2",
+  //     secondColor: "#DC3349",
+  //     thirdColor: "#DFB000",
+  //     link: "/agenda",
+  //     backColor: "",
+  //     width: homeButtonWidth,
+  //     height: homeButtonHeight,
+  //     fontSize: "26px",
+  //   },
+  // ];
 
   let marginTopBack = "-77vh";
   let contPadTop = 0;

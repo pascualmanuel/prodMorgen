@@ -232,7 +232,7 @@ function HeaderDesktop() {
                     required
                     placeholder={translateText(
                       "e-mail address",
-                      "Dirección de e-mail!"
+                      "Dirección de e-mail"
                     )}
                     className="email-input"
                   />

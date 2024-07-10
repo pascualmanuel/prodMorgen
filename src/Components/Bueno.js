@@ -17,7 +17,7 @@ import Particle10 from "../Assets/interactivo/particles/particles-10.webp";
 import { useEffect } from "react";
 function Bueno() {
   const particlesInit = async (main) => {
-    console.log(main);
+    // console.log(main);
 
     await loadFull(main);
   };
