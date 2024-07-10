@@ -60,7 +60,7 @@ const Popup = ({ isOpen, onClose }) => {
     strokeColor = "black";
   }
 
-  console.log(location.pathname);
+  // console.log(location.pathname);
   if (locPath === "/gallery") {
     backColorPop = "#DC3349";
   } else if (locPath === "/atendeme") {

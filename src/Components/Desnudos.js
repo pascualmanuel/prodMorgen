@@ -21,7 +21,7 @@ const Desnudos = () => {
   const openPopup = (image) => {
     setSelectedImage(image);
     setShowPopup(true);
-    console.log(image);
+    // console.log(image);
   };
 
   const closePopup = () => {

@@ -82,8 +82,6 @@ function Home() {
   var homeButtonWidth = "210px";
   var homeButtonHeight = "55px";
 
-
-
   let agendaOffsetY = 100;
   let morgenmerchOffsetY = 170;
   let interactivoOffsetY = 190;
@@ -275,7 +273,7 @@ function Home() {
     return viewportWidth <= 768;
   };
 
-  console.log(form, "few");
+  // console.log(form, "few");
 
   return (
     <>
@@ -346,7 +344,7 @@ function Home() {
                     required
                     placeholder={translateText(
                       "e-mail address",
-                      "Dirección de e-mail!"
+                      "Dirección de e-mail"
                     )}
                     className="email-input"
                   />
