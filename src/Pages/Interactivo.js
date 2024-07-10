@@ -110,7 +110,7 @@ function Interactivo() {
   const squareWidth = window.innerWidth / squareCount;
   const squareHeight = 420 / squareCount;
 
-  console.log(squareWidth);
+  // console.log(squareWidth);
   if (window.innerWidth < 720) {
     columnStyle = {
       display: "flex",

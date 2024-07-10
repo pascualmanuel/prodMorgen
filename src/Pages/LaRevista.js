@@ -3,7 +3,7 @@ import "../Styles/App.css";
 import { useLanguage } from "../Hooks/LanguageContext";
 function LaRevista() {
   const { userLanguage, translateText } = useLanguage();
-  console.log(userLanguage);
+  // console.log(userLanguage);
 
   let eng = "eng";
 

@@ -69,7 +69,7 @@ const PushMorgen = () => {
   useEffect(() => {
     const updateWindowWidth = () => {
       setWindowWidth(window.innerWidth);
-      console.log("first");
+
     };
 
     window.addEventListener("resize", updateWindowWidth);
@@ -88,7 +88,7 @@ const PushMorgen = () => {
 
   const handleClick = (event) => {
     const { offsetX, offsetY } = event.nativeEvent;
-    console.log("Clicked coordinates:", offsetX, offsetY);
+    // console.log("Clicked coordinates:", offsetX, offsetY);
 
     const availableSounds = [Sound1, Sound2, Sound3, Sound4, Sound5, Sound6];
 

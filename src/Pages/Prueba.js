@@ -12,7 +12,7 @@ const GoogleSheetsApp = () => {
 
         if (response.ok) {
           const result = await response.json();
-          console.log("Google Sheets API Response:", result);
+          // console.log("Google Sheets API Response:", result);
           setData(result.values.slice(1));
         } else {
           console.error(
