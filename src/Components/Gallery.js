@@ -18,7 +18,7 @@ import Gallery11 from "../Assets/gallery-imgs/Gallery-100.webp";
 import Gallery12 from "../Assets/obras/inadvertido/inad-6.webp";
 import Gallery13 from "../Assets/obras/inadvertido/inad-8.webp";
 import Gallery14 from "../Assets/gallery-imgs/Gallery-101.png";
-
+import Gallery15 from "../Assets/obras/animaciones/animaciones-4.gif";
 // import Gallery12 from "../Assets/gallery-imgs/Gallery-101.webp";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
 import PrevIcon from "../Assets/svg/white-prev-icon.svg";
@@ -219,8 +219,9 @@ const ImageSection = () => {
     //   author: "Santiago Antín",
     // },
     {
-      media: "video",
-      source: "#7D9F00", // Provide the correct image URL here
+      media: "gif",
+      link: "https://vimeo.com/920063700",
+      source: Gallery15, // Provide the correct image URL here
       category: translateText("Photography", "Fotografía"),
       title: "",
       author: "Santiago Antín",
@@ -373,6 +374,26 @@ const ImageSection = () => {
                           <div className="hover-g-bottom"> </div>
                         </div>
                       </div>
+                    )}
+
+                    {item.media === "gif" && (
+                      <a href={item.link} target="_blank">
+                        <div
+                          key={index}
+                          className=" box pointer disableSave"
+                          style={{ backgroundImage: `url(${item.source})` }}
+                          // onClick={() => handleImageClick(index)}
+                        >
+                          <div className="image-text">
+                            <div className="hover-g-top">
+                              <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                                {item.author}
+                              </div>
+                            </div>
+                            <div className="hover-g-bottom"> </div>
+                          </div>
+                        </div>
+                      </a>
                     )}
                     {item.media === "video" && (
                       <video
