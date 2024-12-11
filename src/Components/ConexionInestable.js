@@ -61,11 +61,14 @@ import FirstImage55 from "../Assets/obras/conexion/conexioni-55.png";
 import IconTag from "../Assets/svg/icon-tag.svg";
 import StarPrueba from "../Assets/svg/star-apoyar.svg";
 import PopupObras from "./PopupObras";
+
+import { useLanguage } from "../Hooks/LanguageContext";
 const ConexionInestable = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const { userLanguage, translateText } = useLanguage();
 
   const openPopup = (image) => {
     setSelectedImage(image);
@@ -80,315 +83,471 @@ const ConexionInestable = () => {
   const allImages = [
     {
       img: FirstImage1,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage1 ",
     },
     {
       img: FirstImage2,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage2 ",
     },
     {
       img: FirstImage3,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage3 ",
     },
     {
       img: FirstImage4,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage4 ",
     },
     {
       img: FirstImage5,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage5 ",
     },
     {
       img: FirstImage6,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage6 ",
     },
     {
       img: FirstImage7,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage7 ",
     },
     {
       img: FirstImage8,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage8 ",
     },
     {
       img: FirstImage9,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage9 ",
     },
 
     {
       img: FirstImage10,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage10",
     },
     {
       img: FirstImage11,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage11",
     },
     {
       img: FirstImage12,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage12",
     },
     {
       img: FirstImage13,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage13",
     },
     {
       img: FirstImage14,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage14",
     },
     {
       img: FirstImage15,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage15",
     },
     {
       img: FirstImage16,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage16",
     },
     {
       img: FirstImage17,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage17",
     },
     {
       img: FirstImage18,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage18",
     },
     {
       img: FirstImage19,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage19",
     },
     {
       img: FirstImage20,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage20",
     },
     {
       img: FirstImage21,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage21",
     },
     {
       img: FirstImage22,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage22",
     },
     {
       img: FirstImage23,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage23",
     },
     {
       img: FirstImage24,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage24",
     },
     {
       img: FirstImage25,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: " FirstImage25",
     },
     {
       img: FirstImage26,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage27,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage28,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage29,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage30,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage31,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage32,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage33,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage34,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage35,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage36,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage37,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage38,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage39,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage40,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage41,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage42,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage43,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage44,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage45,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage46,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage47,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage48,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage49,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage50,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage51,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
     {
       img: FirstImage52,
-      dimension: "Postales en 20cm x 15cm y 10cm x 15cm",
-      details: "Papel telado 250gr",
+      dimension: translateText(
+        "Postcards in 20cm x 15cm and 10cm x 15cm",
+        "Postales en 20cm x 15cm y 10cm x 15cm"
+      ),
+      details: translateText("250gr Textured paper", "Papel telado 250gr"),
       imgName: "",
     },
   ];
