@@ -19,6 +19,11 @@ import Roadmap11 from "../Assets/fechas/roadmap11.png";
 import Roadmap12 from "../Assets/fechas/roadmap12.png";
 import Roadmap13 from "../Assets/fechas/roadmap13.png";
 import Roadmap14 from "../Assets/fechas/roadmap14.png";
+import Roadmap15 from "../Assets/fechas/roadmap15.png";
+import Roadmap16 from "../Assets/fechas/roadmap16.png";
+import Roadmap17 from "../Assets/fechas/roadmap17.png";
+import Roadmap18 from "../Assets/fechas/roadmap18.png";
+
 import "../Styles/App.css";
 import { useLanguage } from "../Hooks/LanguageContext";
 
@@ -184,6 +189,7 @@ function Agenda() {
       ),
       color: "#7D9F00",
       imagen: Roadmap12,
+      link: "https://vimeo.com/manage/videos/1022112801",
     },
     {
       titulo: translateText(
@@ -192,8 +198,8 @@ function Agenda() {
       ),
       fechas: translateText("AUGUST 2023", "AGOSTO 2023"),
       descripcion: translateText(
-        "The grant provides support for the creation of a “Material Scroll” device from the “Unstable Connection” series to be created together with the plastic artist Nicolás Castagna.",
-        "La beca otorga un apoyo a la realización de un dispositivo de “Scroll físico” de la serie “Conexión Inestable” a realizar junto al artista plástico Nicolás Castagna."
+        "The grant provides support for the creation of a “Infinite Scroll” device from the “Unstable Connection” series to be created together with the plastic artist Nicolás Castagna.",
+        "La beca otorga un apoyo a la realización de un dispositivo de “Scroll Infinito” de la serie “Conexión Inestable” a realizar junto al artista plástico Nicolás Castagna."
       ),
       color: "#4590E6",
       imagen: Roadmap13,
@@ -215,8 +221,8 @@ function Agenda() {
         "Visual scenes developed by Manuel Fernández.",
         "Escenas visuales desarrolladas por Manuel Fernández."
       ),
-      color: "#DC3349",
-      imagen: Roadmap14,
+      color: "#DFB000",
+      imagen: Roadmap15,
       link: "https://vimeo.com/manage/videos/1022112801",
     },
     {
@@ -226,8 +232,8 @@ function Agenda() {
         "Painted posters displayed on the streets of Buenos Aires.",
         "Afiches pintados y colgados en las calles de la Ciudad de Buenos Aires."
       ),
-      color: "#DC3349",
-      imagen: Roadmap14,
+      color: "#AE79EF",
+      imagen: Roadmap16,
       link: "https://www.instagram.com/stories/highlights/17908672565924445/",
     },
 
@@ -238,8 +244,8 @@ function Agenda() {
         "“Unstable connection” series, a unique run of (handwritten) intervened postcards. Textured paper 350 gr. 20x15cm and 15x10cm.",
         "Serie “Conexión Inestable” en tirada única de postales intervenidas a mano. Papel texturado 350 gr. 20x15cm y 15x10cm."
       ),
-      color: "#DC3349",
-      imagen: Roadmap14,
+      color: "#7D9F00",
+      imagen: Roadmap17,
     },
 
     {
@@ -249,8 +255,8 @@ function Agenda() {
         "Interactive installation: Material scrolling of the “Unstable Connection” series, developed in collaboration with visual artist Nicolás Castagna, with the support of the Metropolitan Arts Fund.",
         "Instalación interactiva: Scrolleo físico de la serie “Conexión Inestable” realizado junto al artista plástico Nicolás Castagna, con el apoyo del Fondo Metropolitano de las Artes."
       ),
-      color: "#DC3349",
-      imagen: Roadmap14,
+      color: "#4590E6",
+      imagen: Roadmap18,
       link: "https://vimeo.com/1023411631?share=copy#t=0",
     },
 
@@ -262,7 +268,6 @@ function Agenda() {
         "Charla y Taller: “¿Dónde está Morgenstern?”. El Faro Records & Strips, Presa 97 Centro Cultura” - Guanajuato, México."
       ),
       color: "#DC3349",
-      imagen: Roadmap14,
     },
   ];
 
@@ -297,47 +302,98 @@ function Agenda() {
                       onMouseEnter={() => setHoveredEntry(index)}
                       onMouseLeave={() => setHoveredEntry(index)}
                     >
-                      {hoveredEntry === index && (
-                        <img
-                          src={fechaAgenda.imagen}
-                          height={200}
-                          width={250}
-                          style={{
-                            position: "absolute",
-                            left: "-140px",
-                            zIndex: "100",
-                            objectFit: "contain",
-                          }}
-                          className="absolute left-[-10px]"
-                        />
+                      {fechaAgenda?.link ? (
+                        <Link to={fechaAgenda.link} target="_blank">
+                          {hoveredEntry === index && fechaAgenda?.imagen && (
+                            <img
+                              src={fechaAgenda.imagen}
+                              height={200}
+                              width={250}
+                              style={{
+                                position: "absolute",
+                                left: "-140px",
+                                zIndex: "100",
+                                objectFit: "contain",
+                              }}
+                              className="absolute left-[-10px]"
+                            />
+                          )}
+                          <div className="core">
+                            <h3
+                              style={{
+                                fontSize: "16px",
+                                fontFamily: "light",
+                                marginBottom: 10,
+                                color: fechaAgenda.color,
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              {fechaAgenda.fechas}
+                            </h3>
+                            <p
+                              className="title-fechas-pag"
+                              style={{
+                                color: fechaAgenda.color,
+                                fontFamily: "Medium",
+                              }}
+                            >
+                              {fechaAgenda.titulo}
+                            </p>
+                            <p
+                              className="fecha-desc"
+                              style={{ color: fechaAgenda.color }}
+                            >
+                              {fechaAgenda.descripcion}
+                            </p>
+                          </div>
+                        </Link>
+                      ) : (
+                        <div>
+                          {hoveredEntry === index && fechaAgenda?.imagen && (
+                            <img
+                              src={fechaAgenda.imagen}
+                              height={200}
+                              width={250}
+                              style={{
+                                position: "absolute",
+                                left: "-140px",
+                                zIndex: "100",
+                                objectFit: "contain",
+                              }}
+                              className="absolute left-[-10px]"
+                            />
+                          )}
+                          <div className="core">
+                            <h3
+                              style={{
+                                fontSize: "16px",
+                                fontFamily: "light",
+                                marginBottom: 10,
+                                color: fechaAgenda.color,
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              {fechaAgenda.fechas}
+                            </h3>
+                            <p
+                              className="title-fechas-pag"
+                              style={{
+                                color: fechaAgenda.color,
+                                fontFamily: "Medium",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              {fechaAgenda.titulo}
+                            </p>
+                            <p
+                              className="fecha-desc"
+                              style={{ color: fechaAgenda.color }}
+                            >
+                              {fechaAgenda.descripcion}
+                            </p>
+                          </div>
+                        </div>
                       )}
-                      <div className="core">
-                        <h3
-                          style={{
-                            fontSize: "16px",
-                            fontFamily: "light",
-                            marginBottom: 10,
-                            color: fechaAgenda.color,
-                          }}
-                        >
-                          {fechaAgenda.fechas}
-                        </h3>
-                        <p
-                          className="title-fechas-pag"
-                          style={{
-                            color: fechaAgenda.color,
-                            fontFamily: "Medium",
-                          }}
-                        >
-                          {fechaAgenda.titulo}
-                        </p>
-                        <p
-                          className="fecha-desc"
-                          style={{ color: fechaAgenda.color }}
-                        >
-                          {fechaAgenda.descripcion}
-                        </p>
-                      </div>
                     </div>
                     <br />
                     <br />
@@ -365,6 +421,7 @@ function Agenda() {
                           style={{
                             color: fechaAgenda.color,
                             fontFamily: "Medium",
+                            textTransform: "uppercase",
                           }}
                         >
                           {fechaAgenda.titulo}
@@ -375,18 +432,18 @@ function Agenda() {
                         >
                           {fechaAgenda.descripcion}
                         </p>
-                        <img
-                          src={fechaAgenda.imagen}
-                          height={200}
-                          width={250}
-                          style={{
-                            // position: "absolute",
-                            // left: "-140px",
-                            zIndex: "100",
-                            objectFit: "contain",
-                          }}
-                          className="absolute left-[-10px]"
-                        />
+                        {fechaAgenda?.imagen && (
+                          <img
+                            src={fechaAgenda.imagen}
+                            height={200}
+                            width={250}
+                            style={{
+                              zIndex: "100",
+                              objectFit: "contain",
+                            }}
+                            className="absolute left-[-10px]"
+                          />
+                        )}
                       </div>
                     </div>
                     <br />
