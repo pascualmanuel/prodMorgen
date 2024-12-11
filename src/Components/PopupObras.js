@@ -118,14 +118,16 @@ const PopupObras = ({ selectedImage, closePopup }) => {
         </p>
 
         <p className="popup-conexion-caracteristicas">
-          Dimensiones:&nbsp;
+          {translateText("Dimensions", "Dimensiones")}
+          :&nbsp;
           <span style={{ fontFamily: "Light" }}>{selectedImage.dimension}</span>
         </p>
         <p
           className="popup-conexion-caracteristicas"
           style={{ marginBottom: 50 }}
         >
-          Caracteristicas:&nbsp;
+          {translateText("Characteristics", "Caracteristicas")}
+          :&nbsp;
           <span style={{ fontFamily: "Light", textTransform: "capitalize" }}>
             {selectedImage.details}
           </span>
