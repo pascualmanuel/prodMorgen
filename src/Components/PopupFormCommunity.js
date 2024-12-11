@@ -74,7 +74,24 @@ const PopupFormCommunity = () => {
         </div>
         <div className="right-cont-pop-community">
           <div className="toggle-button-pay">
-            <div className="switches-container pointer">
+            <Link
+              to={"https://link.mercadopago.com.ar/holamorgenstern"}
+              target="_blank"
+            >
+              <div className="support-button" style={{ marginTop: "50px" }}>
+                {translateText("Mercado Pago", "Mercado Pago")}
+              </div>
+            </Link>
+
+            <Link
+              to={"https://www.paypal.com/paypalme/holamorgenstern"}
+              target="_blank"
+            >
+              <div className="support-button" style={{ marginTop: "10px" }}>
+                {translateText("PayPal", "PayPal")}
+              </div>
+            </Link>
+            {/* <div className="switches-container pointer">
               <input
                 type="radio"
                 id="switchMonthly"
@@ -159,7 +176,7 @@ const PopupFormCommunity = () => {
                   {translateText("Contribute 50 USD", "Aporta 50 USD")}
                 </div>
               </>
-            )}
+            )} */}
           </div>
         </div>
       </div>
