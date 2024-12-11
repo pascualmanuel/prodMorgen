@@ -9,7 +9,7 @@ import FirstImage7 from "../Assets/obras/desnudos/c1.png";
 import FirstImage8 from "../Assets/obras/desnudos/c2.png";
 import FirstImage9 from "../Assets/obras/desnudos/c3.png";
 import IconTag from "../Assets/svg/icon-tag.svg";
-import StarPrueba from "../Assets/svg/star-apoyar.svg";
+
 import PopupObras from "./PopupObras";
 import { useLanguage } from "../Hooks/LanguageContext";
 const Desnudos = () => {
