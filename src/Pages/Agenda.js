@@ -208,6 +208,62 @@ function Agenda() {
       color: "#DC3349",
       imagen: Roadmap14,
     },
+    {
+      titulo: translateText("MORGEN VJ", "MORGEN VJ"),
+      fechas: translateText("DECEMBER 2023", "DICIEMBRE 2023"),
+      descripcion: translateText(
+        "Visual scenes developed by Manuel Fernández.",
+        "Escenas visuales desarrolladas por Manuel Fernández."
+      ),
+      color: "#DC3349",
+      imagen: Roadmap14,
+      link: "https://vimeo.com/manage/videos/1022112801",
+    },
+    {
+      titulo: translateText("MORGEN IN THE STREET", "MORGEN EN LA CALLE"),
+      fechas: translateText("february 2024", "febrero 2024"),
+      descripcion: translateText(
+        "Painted posters displayed on the streets of Buenos Aires.",
+        "Afiches pintados y colgados en las calles de la Ciudad de Buenos Aires."
+      ),
+      color: "#DC3349",
+      imagen: Roadmap14,
+      link: "https://www.instagram.com/stories/highlights/17908672565924445/",
+    },
+
+    {
+      titulo: translateText("MORGEN POSTAL", "MORGEN POSTAL"),
+      fechas: translateText("april 2024", "abril 2024"),
+      descripcion: translateText(
+        "“Unstable connection” series, a unique run of (handwritten) intervened postcards. Textured paper 350 gr. 20x15cm and 15x10cm.",
+        "Serie “Conexión Inestable” en tirada única de postales intervenidas a mano. Papel texturado 350 gr. 20x15cm y 15x10cm."
+      ),
+      color: "#DC3349",
+      imagen: Roadmap14,
+    },
+
+    {
+      titulo: translateText("MORGEN SCROLL", "MORGEN SCROLL"),
+      fechas: translateText("august 2024", "agosto 2024"),
+      descripcion: translateText(
+        "Interactive installation: Material scrolling of the “Unstable Connection” series, developed in collaboration with visual artist Nicolás Castagna, with the support of the Metropolitan Arts Fund.",
+        "Instalación interactiva: Scrolleo físico de la serie “Conexión Inestable” realizado junto al artista plástico Nicolás Castagna, con el apoyo del Fondo Metropolitano de las Artes."
+      ),
+      color: "#DC3349",
+      imagen: Roadmap14,
+      link: "https://vimeo.com/1023411631?share=copy#t=0",
+    },
+
+    {
+      titulo: translateText("MORGEN GUANAJUATO", "MORGEN GUANAJUATO"),
+      fechas: translateText("january 2024", "enero 2024"),
+      descripcion: translateText(
+        "Presentation and Workshop: “Where is Morgenstern?”. The Faro Records & Strips, Presa 97 Cultural Center - Guanajuato, Mexico.",
+        "Charla y Taller: “¿Dónde está Morgenstern?”. El Faro Records & Strips, Presa 97 Centro Cultura” - Guanajuato, México."
+      ),
+      color: "#DC3349",
+      imagen: Roadmap14,
+    },
   ];
 
   const iFechasAgenda = fechasAgenda.reverse();
