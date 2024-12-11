@@ -206,7 +206,8 @@ const ImageSection = () => {
     },
 
     {
-      media: "image",
+      media: "gif",
+      link: "https://vimeo.com/1023411631",
       source: Gallery5,
       category: translateText("Interactive", "Interactivo"),
       title: "",
@@ -229,7 +230,9 @@ const ImageSection = () => {
     },
     // Number 8
     {
-      media: "image",
+      media: "gif",
+      link: "https://vimeo.com/920063700",
+
       source: Gallery16, // Provide the correct image URL here
       category: translateText("Photography", "Fotografía"),
       title: "",
@@ -284,8 +287,8 @@ const ImageSection = () => {
       author: "Santiago Antín",
     },
     {
-      media: "image",
-      link: "https://vimeo.com/920063700",
+      media: "gif",
+      link: "https://vimeo.com/1022112801",
       source: Gallery15, // Provide the correct image URL here
       category: translateText("VJ", "VJ"),
       title: "",
