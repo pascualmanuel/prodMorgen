@@ -44,7 +44,9 @@ body {
 .pointer {
   cursor: url("../Assets/svg/pointer-final.svg"), auto !important;
 }
-
+.grab {
+  cursor: url("../Assets/svg/cursor-grab.svg"), auto !important;
+}
 a {
   cursor: url("../Assets/svg/pointer-final.svg"), auto !important;
   text-decoration: none;
