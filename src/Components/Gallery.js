@@ -523,18 +523,30 @@ const ImageSection = () => {
                   </div>
                 </div>
               )}
-              {item.media === "video" && (
-                <video
-                  className="video"
-                  controlsList="nodownload"
-                  autoPlay
-                  muted
-                  playsInline
-                  loop
-                >
-                  <source src={item.source} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              {item.media === "gif" && (
+                <a href={item.link} target="_blank">
+                  <div
+                    key={index}
+                    className="box pointer disableSave"
+                    style={{
+                      backgroundImage: `url(${item.source})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      height: "100%", // Set height and width as needed
+                      width: "100%",
+                    }}
+                  >
+                    <div className="image-text">
+                      <div className="hover-g-top">
+                        <div style={{ marginBottom: 20, marginLeft: 20 }}>
+                          {item.author}
+                        </div>
+                      </div>
+                      <div className="hover-g-bottom"> </div>
+                    </div>
+                  </div>
+                </a>
               )}
             </div>
           ))}
