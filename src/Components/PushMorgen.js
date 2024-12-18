@@ -69,7 +69,6 @@ const PushMorgen = () => {
   useEffect(() => {
     const updateWindowWidth = () => {
       setWindowWidth(window.innerWidth);
-
     };
 
     window.addEventListener("resize", updateWindowWidth);
@@ -258,7 +257,7 @@ const PushMorgen = () => {
           onClick={handleScreenshot}
           onMouseEnter={changeImage}
           onMouseLeave={revertImage}
-          className="circle-screen"
+          className="circle-screen pointer"
         />
       </div>
     </>

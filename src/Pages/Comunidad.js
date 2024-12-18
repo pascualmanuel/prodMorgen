@@ -127,9 +127,9 @@ function Comunidad() {
 
             <p className="comunidad-p">
               {translateText(
-                "We don’t want to be Morgensterns, we want to create meeting spaces, build community, share ideas, concerns, promote creativity, reflection and laughter. Towards that, we propose different forms of interaction, such as collaborations, creation of collective works, events and more. We invite you to continue thinking and creating together!",
+                "We don’t want to be Morgensterns! Rather we seek to create opportunities for encounter that foster creativity, reflection and humor. We propose different interactions, such as collaborative works, workshops and events, to expand and redefine the Morgenstern universe. We seek to build a participatory, inter-generational and multidisciplinary community.",
 
-                "No queremos ser Morgensterns, queremos generar espacios de encuentro, construir comunidad para dar lugar a la creatividad, la reflexión, la risa. Para eso, proponemos diferentes formas de interacción, como colaboraciones, creación de obras colectivas, eventos y más. Te invitamos a seguir pensando y creando en conjunto como más te guste."
+                "No queremos ser Morgensterns, sino crear espacios de encuentro que fomenten la creatividad, la reflexión y el humor. Proponemos diversas interacciones, como obras colaborativas, talleres y eventos, para expandir y resignificar el universo Morgenstern. Buscamos construir una comunidad participativa, intergeneracional y multidisciplinaria."
               )}
             </p>
 

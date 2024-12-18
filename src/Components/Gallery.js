@@ -8,17 +8,20 @@ import Gallery1 from "../Assets/gallery-imgs/gallery-1.webp";
 import Gallery2 from "../Assets/gallery-imgs/gallery-2.webp";
 import Gallery3 from "../Assets/gallery-imgs/Gallery-10.jpeg";
 import Gallery4 from "../Assets/gallery-imgs/gallery-4.webp";
-import Gallery5 from "../Assets/obras/inadvertido/inad-3.webp";
+import Gallery5 from "../Assets/gallery-imgs/nicolas-1.webp";
 import Gallery6 from "../Assets/obras/inadvertido/inad-4.webp";
 import Gallery7 from "../Assets/obras/inadvertido/inad-5.webp";
 import Gallery8 from "../Assets/obras/inadvertido/inad-9.webp";
-import Gallery9 from "../Assets/obras/inadvertido/inad-12.webp";
+import Gallery9 from "../Assets/gallery-imgs/flor-1.webp";
+
 import Gallery10 from "../Assets/obras/inadvertido/inad-2.webp";
-import Gallery11 from "../Assets/gallery-imgs/Gallery-100.webp";
+import Gallery11 from "../Assets/gallery-imgs/hernan-1.webp";
 import Gallery12 from "../Assets/obras/inadvertido/inad-6.webp";
 import Gallery13 from "../Assets/obras/inadvertido/inad-8.webp";
 import Gallery14 from "../Assets/gallery-imgs/Gallery-101.png";
-import Gallery15 from "../Assets/obras/animaciones/animaciones-4.gif";
+import Gallery15 from "../Assets/gallery-imgs/manugif.gif";
+import Gallery16 from "../Assets/gallery-imgs/manugif-2.gif";
+
 // import Gallery12 from "../Assets/gallery-imgs/Gallery-101.webp";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
 import PrevIcon from "../Assets/svg/white-prev-icon.svg";
@@ -120,6 +123,7 @@ const ImageSection = () => {
   }, []);
 
   const galleryContent = [
+    // Number 1
     {
       media: "color",
       source: "#4590E6",
@@ -127,13 +131,16 @@ const ImageSection = () => {
       title: "",
       author: "Santiago Antín",
     },
+    // Number 2
+
     {
       media: "image",
-      source: Gallery1,
-      category: translateText("Photography", "Fotografía"),
+      source: Gallery4,
+      category: "Drawing",
       title: "",
-      author: "Kiki Ramos Sörvik",
+      author: "Júlia Barata",
     },
+    // Number 3
     {
       media: "color",
       source: "#DFB000",
@@ -141,13 +148,16 @@ const ImageSection = () => {
       title: "",
       author: "Santiago Antín",
     },
+    // Number 4
     {
       media: "image",
-      source: Gallery5,
+      source: Gallery1,
       category: translateText("Photography", "Fotografía"),
       title: "",
-      author: "Santiago Antín",
+      author: "Kiki Ramos Sörvik",
     },
+
+    // Number 5
     {
       media: "color",
       source: "#FF3910",
@@ -155,13 +165,15 @@ const ImageSection = () => {
       title: "",
       author: "Santiago Antín",
     },
+    // Number 6
     {
       media: "image",
-      source: Gallery6,
-      category: translateText("Photography", "Fotografía"),
+      source: Gallery14, // Provide the correct image URL here
+      category: "Máscara",
       title: "",
-      author: "Santiago Antín",
+      author: "Clara Dalmazzo",
     },
+
     {
       media: "image",
       source: Gallery13,
@@ -171,11 +183,12 @@ const ImageSection = () => {
     },
     {
       media: "image",
-      source: Gallery7,
-      category: translateText("Photography", "Fotografía"),
+      source: Gallery11,
+      category: translateText("Sound", "Sonido"),
       title: "",
-      author: "Santiago Antín",
+      author: "Hernán Kerlleñevich",
     },
+
     {
       media: "color",
       source: "#DC3349", // Provide the correct image URL here
@@ -183,13 +196,7 @@ const ImageSection = () => {
       title: "",
       author: "Santiago Antín",
     },
-    {
-      media: "image",
-      source: Gallery2, // Provide the correct image URL here
-      category: translateText("Photography", "Fotografía"),
-      title: "",
-      author: "Santiago Antín",
-    },
+
     {
       media: "image",
       source: Gallery8, // Provide the correct image URL here
@@ -197,12 +204,22 @@ const ImageSection = () => {
       title: "",
       author: "Santiago Antín",
     },
+
+    {
+      media: "gif",
+      link: "https://vimeo.com/1023411631",
+      source: Gallery5,
+      category: translateText("Interactive", "Interactivo"),
+      title: "",
+      author: "Nicolás Castagna",
+    },
+    // Number 7
     {
       media: "image",
-      source: Gallery14, // Provide the correct image URL here
-      category: "Máscara",
+      source: Gallery9,
+      category: translateText("Silkscreens", "Serigrafías"),
       title: "",
-      author: "Clara Dalmazzo",
+      author: "Flor Kligman",
     },
     {
       media: "image",
@@ -211,6 +228,49 @@ const ImageSection = () => {
       title: "",
       author: "Manuel Fernández",
     },
+    // Number 8
+    {
+      media: "gif",
+      link: "https://vimeo.com/920063700",
+
+      source: Gallery16, // Provide the correct image URL here
+      category: translateText("Photography", "Fotografía"),
+      title: "",
+      author: "Manuel Fernández",
+    },
+    {
+      media: "image",
+      source: Gallery7,
+      category: translateText("Photography", "Fotografía"),
+      title: "",
+      author: "Santiago Antín",
+    },
+    // Number 9
+    // Number 10
+    {
+      media: "image",
+      source: Gallery12, // Provide the correct image URL here
+      category: translateText("Photography", "Fotografía"),
+      title: "",
+      author: "Daniela Novak",
+    },
+    // Number 11
+    {
+      media: "image",
+      source: Gallery10, // Provide the correct image URL here
+      category: translateText("Photography", "Fotografía"),
+      title: "",
+      author: "Santiago Antín",
+    },
+    // Number 12
+    {
+      media: "color",
+      source: "#4590E6", // Provide the correct image URL here
+      category: "Máscara",
+      title: "",
+      author: "Clara Dalmazzo",
+    },
+    // Number 13
     // {
     //   media: "video",
     //   source: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -218,56 +278,25 @@ const ImageSection = () => {
     //   title: "",
     //   author: "Santiago Antín",
     // },
+    // Number 14
+    {
+      media: "image",
+      source: Gallery6,
+      category: translateText("Photography", "Fotografía"),
+      title: "",
+      author: "Santiago Antín",
+    },
     {
       media: "gif",
-      link: "https://vimeo.com/920063700",
+      link: "https://vimeo.com/1022112801",
       source: Gallery15, // Provide the correct image URL here
-      category: translateText("Photography", "Fotografía"),
-      title: "",
-      author: "Santiago Antín",
-    },
-    {
-      media: "image",
-      source: Gallery9,
-      category: translateText("Photography", "Fotografía"),
-      title: "",
-      author: "Santiago Antín",
-    },
-    {
-      media: "image",
-      source: Gallery12,
-      category: translateText("Photography", "Fotografía"),
-      title: "",
-      author: "Daniela Novak",
-    },
-    {
-      media: "image",
-      source: Gallery10,
-      category: translateText("Photography", "Fotografía"),
-      title: "",
-      author: "Santiago Antín",
-    },
-    {
-      media: "color",
-      source: "#005DA2",
-      category: translateText("Photography", "Fotografía"),
-      title: "",
-      author: "Santiago Antín",
-    },
-    {
-      media: "image",
-      source: Gallery4,
-      category: "Drawing",
-      title: "",
-      author: "Júlia Barata",
-    },
-    {
-      media: "image",
-      source: Gallery11,
-      category: "VJ",
+      category: translateText("VJ", "VJ"),
       title: "",
       author: "Manuel Fernández",
     },
+    // Number 15
+
+    // Number 16
   ];
 
   const selectedImageData =
