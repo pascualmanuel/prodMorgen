@@ -61,7 +61,6 @@ function Comunidad() {
     // };
   }
 
-  console.log(showPopup);
 
   const openPopup = () => {
     setShowPopup(true);

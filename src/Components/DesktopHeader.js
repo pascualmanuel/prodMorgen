@@ -118,10 +118,9 @@ function HeaderDesktop() {
       )
       .then(
         (result) => {
-          console.log(result.text);
         },
         (error) => {
-          console.log(error.text);
+          console.error(error.text);
         }
       );
     e.target.reset();

@@ -1,6 +1,5 @@
 import React from "react";
 import "../Styles/Atendeme.css"; // Import the CSS file
-import axios from "axios";
 import { useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import Popup from "./PopUp";
