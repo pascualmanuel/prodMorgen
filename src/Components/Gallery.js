@@ -19,13 +19,30 @@ import Gallery11 from "../Assets/gallery-imgs/hernan-1.webp";
 import Gallery12 from "../Assets/obras/inadvertido/inad-6.webp";
 import Gallery13 from "../Assets/obras/inadvertido/inad-8.webp";
 import Gallery14 from "../Assets/gallery-imgs/Gallery-101.png";
-import Gallery15 from "../Assets/gallery-imgs/manugif.gif";
-import Gallery16 from "../Assets/gallery-imgs/manugif-2.gif";
+import Gallery15 from "../Assets/gallery-imgs/manugif.mp4";
+import Gallery16 from "../Assets/gallery-imgs/manugif-2.mp4";
 
 // import Gallery12 from "../Assets/gallery-imgs/Gallery-101.webp";
 import NextIcon from "../Assets/svg/white-next-icon.svg";
 import PrevIcon from "../Assets/svg/white-prev-icon.svg";
 import { useLanguage } from "../Hooks/LanguageContext";
+
+const isVideoSource = (src) => typeof src === "string" && src.endsWith(".mp4");
+
+const LoopVideo = ({ src }) => (
+  <video
+    className="gallery-loop"
+    src={src}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    controlsList="nodownload"
+    disablePictureInPicture
+  />
+);
+
 const ImageSection = () => {
   const [transformStyle, setTransformStyle] = useState();
   const [showPopup, setShowPopup] = useState(false);
@@ -410,9 +427,16 @@ const ImageSection = () => {
                         <div
                           key={index}
                           className=" box pointer disableSave"
-                          style={{ backgroundImage: `url(${item.source})` }}
+                          style={
+                            isVideoSource(item.source)
+                              ? undefined
+                              : { backgroundImage: `url(${item.source})` }
+                          }
                           // onClick={() => handleImageClick(index)}
                         >
+                          {isVideoSource(item.source) && (
+                            <LoopVideo src={item.source} />
+                          )}
                           <div className="image-text">
                             <div className="hover-g-top">
                               <div style={{ marginBottom: 20, marginLeft: 20 }}>
@@ -529,7 +553,9 @@ const ImageSection = () => {
                     key={index}
                     className="box pointer disableSave"
                     style={{
-                      backgroundImage: `url(${item.source})`,
+                      backgroundImage: isVideoSource(item.source)
+                        ? undefined
+                        : `url(${item.source})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
@@ -537,6 +563,9 @@ const ImageSection = () => {
                       width: "100%",
                     }}
                   >
+                    {isVideoSource(item.source) && (
+                      <LoopVideo src={item.source} />
+                    )}
                     <div className="image-text">
                       <div className="hover-g-top">
                         <div style={{ marginBottom: 20, marginLeft: 20 }}>

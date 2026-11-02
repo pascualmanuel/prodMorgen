@@ -134,6 +134,19 @@
   object-fit: cover;
 }
 
+/* Looping MP4s that replace the gallery GIFs: fill the box like a background image */
+.box video.gallery-loop,
+.box:hover video.gallery-loop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  transform: none;
+  pointer-events: none;
+}
+
 /* Styling for the image text overlay */
 .image-text {
   position: absolute;
