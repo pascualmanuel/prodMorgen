@@ -90,11 +90,10 @@ const PopupForm = ({ onClose }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           onClose(); // Close t
         },
         (error) => {
-          console.log(error.text);
+          console.error(error.text);
         }
       );
 
@@ -122,7 +121,6 @@ const PopupForm = ({ onClose }) => {
   const handleButtonClick = () => {
     // Trigger the form submission by programmatically clicking the hidden submit button
     form.current.querySelector('button[type="submit"]').click();
-    console.log("first");
   };
 
   return (

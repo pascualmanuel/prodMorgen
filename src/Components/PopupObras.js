@@ -25,10 +25,9 @@ const PopupObras = ({ selectedImage, closePopup }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
         },
         (error) => {
-          console.log(error.text);
+          console.error(error.text);
         }
       );
     e.target.reset();
@@ -91,7 +90,6 @@ const PopupObras = ({ selectedImage, closePopup }) => {
     };
   }, [closePopup]);
 
-  console.log(selectedImage.details);
 
   return (
     <div className="popup-conexion">

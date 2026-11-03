@@ -52,7 +52,6 @@ const MatterJSDemo = () => {
     const angleInDegrees = getRandomAngle();
 
     const angleInRadians = (angleInDegrees * Math.PI) / 180; // Convert the angle from degrees to radians
-    console.log(angleInDegrees);
 
     let widthBody = 80;
     let heightBody = 230;
